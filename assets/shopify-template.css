@@ -307,6 +307,7 @@ h4 {
   margin-right: auto;
   position: relative;
   bottom: -3rem;
+  z-index: 10;
 }
 
 .search-box-wrapper {
@@ -1044,7 +1045,7 @@ h4 {
 }
 
 .nav-dropdown_list {
-  background-color: #0000;
+  background-color: #0000 !important;
 }
 
 .nav-dropdown_list.w--open {
@@ -1058,6 +1059,8 @@ h4 {
   width: 12rem;
   margin-top: .25rem;
   padding: .5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .dropdown_list.is-more {
@@ -1078,6 +1081,7 @@ h4 {
   width: 100%;
   padding: .5rem 0;
   line-height: 120%;
+  color: var(--primary);
   transition: all .3s cubic-bezier(.645, .045, .355, 1);
 }
 
@@ -1088,6 +1092,7 @@ h4 {
 .dropdown-link.is-small {
   border-bottom-color: var(--grey);
   font-size: .875rem;
+  padding: 0;
 }
 
 .dropdown-link.is-small:hover {
@@ -1145,6 +1150,7 @@ h4 {
     width: 100%;
     padding-top: .75rem;
     padding-bottom: .75rem;
+    text-align: left;
   }
 
   .whatsapp-burger {

@@ -410,16 +410,6 @@ textarea.w-select {
   clear: both;
 }
 
-.w-radio-input {
-  margin: 4px 0 0;
-  line-height: normal;
-  float: left;
-  margin-left: -20px;
-}
-
-.w-radio-input {
-  margin-top: 3px;
-}
 
 .w-file-upload {
   display: block;
@@ -1212,8 +1202,6 @@ textarea.w-select {
   display: inline-block;
   position: relative;
   text-align: left;
-  margin-left: auto;
-  margin-right: auto;
   z-index: 900;
 }
 
@@ -1223,8 +1211,6 @@ textarea.w-select {
   position: relative;
   vertical-align: top;
   text-decoration: none;
-  margin-left: auto;
-  margin-right: auto;
   white-space: nowrap;
 }
 
@@ -1808,7 +1794,7 @@ textarea.w-select {
   top: 100%;
   left: 0;
   right: 0;
-  background: #C8C8C8;
+  background: #fff;
   text-align: center;
   overflow: visible;
   min-width: 200px;
@@ -1872,7 +1858,7 @@ textarea.w-select {
 }
 
 .w-nav-button.w--open {
-  background-color: #C8C8C8;
+  background-color: transparent;
   color: white;
 }
 
@@ -1889,7 +1875,7 @@ textarea.w-select {
 }
 
 .w--nav-dropdown-toggle-open {
-  display: block;
+  display: flex;
 }
 
 .w--nav-dropdown-list-open {
