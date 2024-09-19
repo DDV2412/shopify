@@ -77,7 +77,11 @@
   </head>
   <body>
     <div class="page_wrapper">
-      {% render 'header' %}
+      {% if secondary_header contains "secondary_header" %}
+        {% render 'secondary-header' %}
+      {% else %}
+        {% render 'header' %}
+      {% endif %}
       <main class="main_wrapper">
         {{ content_for_layout }}
       </main>
