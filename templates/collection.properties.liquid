@@ -2,6 +2,7 @@
 {% assign secondary_header = "secondary_header" %}
 
 
+{% paginate collection.products by 12 %}
 <section class="section_component sticky-top">
     <div class="filter-search-wrapper">
         <div class="container">
@@ -478,7 +479,7 @@
         <div data-w-id="a89511ed-a22c-1a36-7890-1bcc708e042c" style="opacity:0" class="search-results-wrapper">
             <div id="w-node-f32977aa-7d08-0af9-ddb1-d62e4f915c59-c258cdc7" class="heading-left">
                 <h1 class="search-results-heading">Properties for sale in Dubai</h1>
-                <p class="search-results-count">770 results</p>
+                <p class="search-results-count">{{ collection.products_count }} results</p>
             </div>
             <div id="w-node-f59c1c80-b0ec-cde7-64dd-6f34fcd094d9-c258cdc7" class="heading-right">
                 <div class="button is-secondary">
@@ -534,6 +535,7 @@
             </div>
         </div>
         <div class="property-card-wrapper-main">
+            {% for product in collection.products %}
             <div data-w-id="7b98f7e7-e9bc-eab0-cdb4-7c2718763063" style="opacity:0" class="property-card-wrapper">
                 <div class="img-wrapper">
                     <div class="search-result-images">
@@ -542,14 +544,20 @@
                         <div id="w-node-f00db9f5-186c-b423-d383-58a3266a8399-c258cdc7"
                             class="search-result-grid-images">
                             <div id="w-node-e6a83049-b0dc-c808-2c08-4fca82fb07ec-c258cdc7"
-                                class="search-result-grid-image-single"><img src="{{'ADM243613_02.webp' | asset_url}}"
-                                    loading="lazy" width="136" height="117" alt="" class="propery-other-image"></div>
+                                class="search-result-grid-image-single">
+                                <img src="{{'ADM243613_02.webp' | asset_url}}" loading="lazy" width="136" height="117"
+                                    alt="" class="propery-other-image">
+                            </div>
                             <div id="w-node-_8e36418d-6667-b8cf-b608-932484bf717d-c258cdc7"
-                                class="search-result-grid-image-single"><img src="{{'ADM243613_04.webp' | asset_url}}"
-                                    loading="lazy" width="136" height="117" alt="" class="propery-other-image"></div>
+                                class="search-result-grid-image-single">
+                                <img src="{{'ADM243613_04.webp' | asset_url}}" loading="lazy" width="136" height="117"
+                                    alt="" class="propery-other-image">
+                            </div>
                             <div id="w-node-_255e00db-fb62-4667-ab45-ca25903b9f35-c258cdc7"
-                                class="search-result-grid-image-single"><img src="{{'ADM243613_03.webp' | asset_url}}"
-                                    loading="lazy" width="136" height="117" alt="" class="propery-other-image"></div>
+                                class="search-result-grid-image-single">
+                                <img src="{{'ADM243613_03.webp' | asset_url}}" loading="lazy" width="136" height="117"
+                                    alt="" class="propery-other-image">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -590,25 +598,27 @@
                                         xml:space="preserve">
                                         <g>
                                             <g>
-                                                <path d="M469.343,53.383H42.657C19.136,53.383,0,72.513,0,96.025v163.863v68.257v60.596v55.421
-			c0,7.982,6.472,14.455,14.455,14.455h69.76c7.984,0,14.455-6.473,14.455-14.455v-40.966h314.659v40.966
-			c0,7.982,6.472,14.455,14.455,14.455h69.76c7.984,0,14.455-6.473,14.455-14.455v-55.421v-60.596v-68.257V96.025
-			C512,72.513,492.864,53.383,469.343,53.383z M69.76,429.707H28.91v-26.511h40.85V429.707z M84.215,374.286H28.91v-31.686h288.524
-			c7.984,0,14.455-6.473,14.455-14.455s-6.472-14.455-14.455-14.455H28.91v-53.802c0-13.08,10.64-23.721,23.721-23.721h28.982
-			h145.953h56.866h145.953h28.982c13.08,0,23.721,10.64,23.721,23.721v53.802h-64.716c-7.984,0-14.455,6.473-14.455,14.455
-			s6.472,14.455,14.455,14.455h64.716v31.686h-55.305H84.215z M96.069,207.259v-24.342c0-16.524,13.442-29.965,29.965-29.965h57.112
-			c16.524-0.001,29.965,13.442,29.965,29.965v24.342H96.069z M298.888,207.259v-24.342c0-16.524,13.442-29.965,29.965-29.965h57.112
-			c16.524-0.001,29.965,13.442,29.965,29.965v24.342H298.888z M483.09,429.707h-40.85v-26.511h40.85V429.707z M483.09,212.912
-			c-7.132-3.617-15.192-5.655-23.721-5.655h-14.527v-24.342c0-32.465-26.411-58.876-58.876-58.876h-57.112
-			c-32.463,0-58.876,26.411-58.876,58.876v24.342h-27.956v-24.342c0-32.465-26.411-58.876-58.876-58.876h-57.112
-			c-32.463,0-58.876,26.411-58.876,58.876v24.342H52.631c-8.529,0-16.589,2.038-23.721,5.655V96.025
-			c0-7.572,6.167-13.732,13.747-13.732h426.686c7.58,0,13.747,6.161,13.747,13.732V212.912z"></path>
+                                                <path
+                                                    d="M469.343,53.383H42.657C19.136,53.383,0,72.513,0,96.025v163.863v68.257v60.596v55.421
+                                c0,7.982,6.472,14.455,14.455,14.455h69.76c7.984,0,14.455-6.473,14.455-14.455v-40.966h314.659v40.966
+                                c0,7.982,6.472,14.455,14.455,14.455h69.76c7.984,0,14.455-6.473,14.455-14.455v-55.421v-60.596v-68.257V96.025
+                                C512,72.513,492.864,53.383,469.343,53.383z M69.76,429.707H28.91v-26.511h40.85V429.707z M84.215,374.286H28.91v-31.686h288.524
+                                c7.984,0,14.455-6.473,14.455-14.455s-6.472-14.455-14.455-14.455H28.91v-53.802c0-13.08,10.64-23.721,23.721-23.721h28.982
+                                h145.953h56.866h145.953h28.982c13.08,0,23.721,10.64,23.721,23.721v53.802h-64.716c-7.984,0-14.455,6.473-14.455,14.455
+                                s6.472,14.455,14.455,14.455h64.716v31.686h-55.305H84.215z M96.069,207.259v-24.342c0-16.524,13.442-29.965,29.965-29.965h57.112
+                                c16.524-0.001,29.965,13.442,29.965,29.965v24.342H96.069z M298.888,207.259v-24.342c0-16.524,13.442-29.965,29.965-29.965h57.112
+                                c16.524-0.001,29.965,13.442,29.965,29.965v24.342H298.888z M483.09,429.707h-40.85v-26.511h40.85V429.707z M483.09,212.912
+                                c-7.132-3.617-15.192-5.655-23.721-5.655h-14.527v-24.342c0-32.465-26.411-58.876-58.876-58.876h-57.112
+                                c-32.463,0-58.876,26.411-58.876,58.876v24.342h-27.956v-24.342c0-32.465-26.411-58.876-58.876-58.876h-57.112
+                                c-32.463,0-58.876,26.411-58.876,58.876v24.342H52.631c-8.529,0-16.589,2.038-23.721,5.655V96.025
+                                c0-7.572,6.167-13.732,13.747-13.732h426.686c7.58,0,13.747,6.161,13.747,13.732V212.912z">
+                                                </path>
                                             </g>
                                         </g>
                                         <g>
                                             <g>
                                                 <path d="M371.034,313.69h-7.589c-7.984,0-14.455,6.473-14.455,14.455s6.472,14.455,14.455,14.455h7.589
-			c7.984,0,14.455-6.473,14.455-14.455S379.017,313.69,371.034,313.69z"></path>
+                                c7.984,0,14.455-6.473,14.455-14.455S379.017,313.69,371.034,313.69z"></path>
                                             </g>
                                         </g>
                                     </svg></div>
@@ -716,6 +726,7 @@
                     </div>
                 </div>
             </div>
+            {% unless product.available %}
             <div data-w-id="7472359a-8876-8f2b-563f-7439c7f662a7" style="opacity:0" class="property-card-wrapper">
                 <div class="img-wrapper">
                     <div class="search-result-images">
@@ -734,18 +745,21 @@
                         <div id="w-node-_7472359a-8876-8f2b-563f-7439c7f662ac-c258cdc7"
                             class="search-result-grid-images">
                             <div id="w-node-_7472359a-8876-8f2b-563f-7439c7f662ad-c258cdc7"
-                                class="search-result-grid-image-single"><img src="{{'ADM243613_02.webp' | asset_url}}"
-                                    loading="lazy" width="136" height="117" alt="" class="propery-other-image">
+                                class="search-result-grid-image-single">
+                                <img src="{{'ADM243613_02.webp' | asset_url}}" loading="lazy" width="136" height="117"
+                                    alt="" class="propery-other-image">
                                 <div class="blur-cardimage"></div>
                             </div>
                             <div id="w-node-_7472359a-8876-8f2b-563f-7439c7f662af-c258cdc7"
-                                class="search-result-grid-image-single"><img src="{{'ADM243613_04.webp' | asset_url}}"
-                                    loading="lazy" width="136" height="117" alt="" class="propery-other-image">
+                                class="search-result-grid-image-single">
+                                <img src="{{'ADM243613_04.webp' | asset_url}}" loading="lazy" width="136" height="117"
+                                    alt="" class="propery-other-image">
                                 <div class="blur-cardimage"></div>
                             </div>
                             <div id="w-node-_7472359a-8876-8f2b-563f-7439c7f662b1-c258cdc7"
-                                class="search-result-grid-image-single"><img src="{{'ADM243613_03.webp' | asset_url}}"
-                                    loading="lazy" width="136" height="117" alt="" class="propery-other-image">
+                                class="search-result-grid-image-single">
+                                <img src="{{'ADM243613_03.webp' | asset_url}}" loading="lazy" width="136" height="117"
+                                    alt="" class="propery-other-image">
                                 <div class="blur-cardimage"></div>
                             </div>
                         </div>
@@ -789,24 +803,24 @@
                                         <g>
                                             <g>
                                                 <path d="M469.343,53.383H42.657C19.136,53.383,0,72.513,0,96.025v163.863v68.257v60.596v55.421
-			c0,7.982,6.472,14.455,14.455,14.455h69.76c7.984,0,14.455-6.473,14.455-14.455v-40.966h314.659v40.966
-			c0,7.982,6.472,14.455,14.455,14.455h69.76c7.984,0,14.455-6.473,14.455-14.455v-55.421v-60.596v-68.257V96.025
-			C512,72.513,492.864,53.383,469.343,53.383z M69.76,429.707H28.91v-26.511h40.85V429.707z M84.215,374.286H28.91v-31.686h288.524
-			c7.984,0,14.455-6.473,14.455-14.455s-6.472-14.455-14.455-14.455H28.91v-53.802c0-13.08,10.64-23.721,23.721-23.721h28.982
-			h145.953h56.866h145.953h28.982c13.08,0,23.721,10.64,23.721,23.721v53.802h-64.716c-7.984,0-14.455,6.473-14.455,14.455
-			s6.472,14.455,14.455,14.455h64.716v31.686h-55.305H84.215z M96.069,207.259v-24.342c0-16.524,13.442-29.965,29.965-29.965h57.112
-			c16.524-0.001,29.965,13.442,29.965,29.965v24.342H96.069z M298.888,207.259v-24.342c0-16.524,13.442-29.965,29.965-29.965h57.112
-			c16.524-0.001,29.965,13.442,29.965,29.965v24.342H298.888z M483.09,429.707h-40.85v-26.511h40.85V429.707z M483.09,212.912
-			c-7.132-3.617-15.192-5.655-23.721-5.655h-14.527v-24.342c0-32.465-26.411-58.876-58.876-58.876h-57.112
-			c-32.463,0-58.876,26.411-58.876,58.876v24.342h-27.956v-24.342c0-32.465-26.411-58.876-58.876-58.876h-57.112
-			c-32.463,0-58.876,26.411-58.876,58.876v24.342H52.631c-8.529,0-16.589,2.038-23.721,5.655V96.025
-			c0-7.572,6.167-13.732,13.747-13.732h426.686c7.58,0,13.747,6.161,13.747,13.732V212.912z"></path>
+                			c0,7.982,6.472,14.455,14.455,14.455h69.76c7.984,0,14.455-6.473,14.455-14.455v-40.966h314.659v40.966
+                			c0,7.982,6.472,14.455,14.455,14.455h69.76c7.984,0,14.455-6.473,14.455-14.455v-55.421v-60.596v-68.257V96.025
+                			C512,72.513,492.864,53.383,469.343,53.383z M69.76,429.707H28.91v-26.511h40.85V429.707z M84.215,374.286H28.91v-31.686h288.524
+                			c7.984,0,14.455-6.473,14.455-14.455s-6.472-14.455-14.455-14.455H28.91v-53.802c0-13.08,10.64-23.721,23.721-23.721h28.982
+                			h145.953h56.866h145.953h28.982c13.08,0,23.721,10.64,23.721,23.721v53.802h-64.716c-7.984,0-14.455,6.473-14.455,14.455
+                			s6.472,14.455,14.455,14.455h64.716v31.686h-55.305H84.215z M96.069,207.259v-24.342c0-16.524,13.442-29.965,29.965-29.965h57.112
+                			c16.524-0.001,29.965,13.442,29.965,29.965v24.342H96.069z M298.888,207.259v-24.342c0-16.524,13.442-29.965,29.965-29.965h57.112
+                			c16.524-0.001,29.965,13.442,29.965,29.965v24.342H298.888z M483.09,429.707h-40.85v-26.511h40.85V429.707z M483.09,212.912
+                			c-7.132-3.617-15.192-5.655-23.721-5.655h-14.527v-24.342c0-32.465-26.411-58.876-58.876-58.876h-57.112
+                			c-32.463,0-58.876,26.411-58.876,58.876v24.342h-27.956v-24.342c0-32.465-26.411-58.876-58.876-58.876h-57.112
+                			c-32.463,0-58.876,26.411-58.876,58.876v24.342H52.631c-8.529,0-16.589,2.038-23.721,5.655V96.025
+                			c0-7.572,6.167-13.732,13.747-13.732h426.686c7.58,0,13.747,6.161,13.747,13.732V212.912z"></path>
                                             </g>
                                         </g>
                                         <g>
                                             <g>
                                                 <path d="M371.034,313.69h-7.589c-7.984,0-14.455,6.473-14.455,14.455s6.472,14.455,14.455,14.455h7.589
-			c7.984,0,14.455-6.473,14.455-14.455S379.017,313.69,371.034,313.69z"></path>
+                			c7.984,0,14.455-6.473,14.455-14.455S379.017,313.69,371.034,313.69z"></path>
                                             </g>
                                         </g>
                                     </svg></div>
@@ -900,7 +914,7 @@
                                         xmlns:xlink="http://www.w3.org/1999/xlink">
                                         <title>mail-filled</title>
                                         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                            <g id="mail-filled-white" fill="currentColor"
+                                            <g id="mail-filled-white" fill="currentColor" div
                                                 transform="translate(42.686667, 85.339333)">
                                                 <path
                                                     d="M3.55271368e-14,28.7 L213.333914,220.70134 L426.667,28.701 L426.667248,341.333608 L0.00058094128,341.333608 L3.55271368e-14,28.7 Z M394.776,1.42108547e-14 L213.333914,163.285608 L31.89,1.42108547e-14 L394.776,1.42108547e-14 Z"
@@ -914,7 +928,10 @@
                     </div>
                 </div>
             </div>
-            <div data-w-id="8e0a29b4-e5d9-839d-7596-c7a56c9e20dd" style="opacity:0" class="res-offplan-container">
+            {% endunless %}
+            {% endfor %}
+
+            <!-- <div data-w-id="8e0a29b4-e5d9-839d-7596-c7a56c9e20dd" style="opacity:0" class="res-offplan-container">
                 <h1 class="search-results-heading">Thinking of buying an Off Plan property?</h1>
                 <p class="description">We&#x27;ve selected some available projects that we think you might like.
                     <span class="text-link">View all Off Plan projects</span>
@@ -1031,54 +1048,65 @@
                         <div class="slide-nav w-slider-nav w-round w-num"></div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
+
+
+
         <div data-w-id="adf5edab-5bb2-f371-2e8f-e18a899536b5" style="opacity:0" class="load-more-wrap">
-            <a href="#" class="button is-secondary is-results-btn is-left w-inline-block">
-                <div class="icon_small w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16"
-                        fill="none" viewbox="0 0 17 16">
-                        <path stroke="#ADB4AF" stroke-linecap="round" stroke-linejoin="round" d="M11 13 6 8l5-5">
-                        </path>
-                    </svg></div>
+            {% if paginate.previous %}
+            <a href="{{ paginate.previous.url }}" class="button is-secondary is-results-btn is-left w-inline-block">
+                <div class="icon_small w-embed">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" fill="none" viewbox="0 0 17 16">
+                        <path stroke="#ADB4AF" stroke-linecap="round" stroke-linejoin="round" d="M11 13 6 8l5-5"></path>
+                    </svg>
+                </div>
                 <p class="pagination_title">Back</p>
             </a>
+            {% endif %}
+
             <div class="pages-count">
                 <p class="paragraph">Page</p>
                 <div class="select-wrapper no-border">
                     <div data-hover="false" data-delay="0" class="buy_select-wrapper w-dropdown">
                         <div class="control-select w-dropdown-toggle">
-                            <div>1</div>
-                            <div class="icon_small w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                    height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round"
+                            <div>{{ paginate.current_page }}</div>
+                            <div class="icon_small w-embed">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"
                                     class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                    <path d="M6 9l6 6l6 -6"></path>
-                                </svg></div>
+                                    <path d="M6 9l6 6l6-6"></path>
+                                </svg>
+                            </div>
                         </div>
                         <nav class="property-list w-dropdown-list">
-                            <a href="#" class="page-count w-dropdown-link">1</a>
-                            <a href="#" class="page-count w-dropdown-link">2</a>
-                            <a href="#" class="page-count w-dropdown-link">3</a>
-                            <a href="#" class="page-count w-dropdown-link">4</a>
+                            {% for i in (1..paginate.pages) %}
+                            <a href="{{ paginate | page_url: i }}" class="page-count w-dropdown-link">{{ i }}</a>
+                            {% endfor %}
                         </nav>
                     </div>
                 </div>
-                <p class="paragraph">of 97</p>
+                <p class="paragraph">of {{ paginate.pages }}</p>
             </div>
-            <a href="#" class="button is-secondary is-results-btn is-right w-inline-block">
+
+            {% if paginate.next %}
+            <a href="{{ paginate.next.url }}" class="button is-secondary is-results-btn is-right w-inline-block">
                 <p class="pagination_title">Next</p>
-                <div class="icon_small w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16"
-                        fill="none" viewbox="0 0 17 16">
-                        <path stroke="#ADB4AF" stroke-linecap="round" stroke-linejoin="round" d="m6 3 5 5-5 5">
-                        </path>
-                    </svg></div>
+                <div class="icon_small w-embed">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" fill="none" viewbox="0 0 17 16">
+                        <path stroke="#ADB4AF" stroke-linecap="round" stroke-linejoin="round" d="m6 3 5 5-5 5"></path>
+                    </svg>
+                </div>
             </a>
+            {% endif %}
         </div>
+
+
+
     </div>
 </section>
-
-
 <section data-w-id="15316579-8e67-27ac-7a5c-7be7bf3cd337" class="section_component is-dialog">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -1178,3 +1206,5 @@
     </div>
     <div class="dialog-overlay"></div>
 </section>
+
+{% endpaginate %}
