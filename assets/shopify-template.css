@@ -1,10 +1,10 @@
 :root {
-  --primary: #083819;
+  --primary: #1d0c4b;
   --white: white;
-  --secondary: #36dea4;
+  --secondary: #6622f4;
   --border-color: #e0e3e2;
-  --grey: #f6f6f1;
   --text-primary: #565e59;
+  --grey: #f6f6f1;
   --text-grey: #adb4af;
   --horizontal-line: #f3f3f3;
   --black: #000;
@@ -60,7 +60,7 @@
 
 .w-checkbox-input--inputType-custom.w--redirected-checked {
   background-color: #3898ec;
-  background-image: url('https://d3e54v103j8qbb.cloudfront.net/static/custom-checkbox-checkmark.589d534424.svg');
+  background-image: url(custom-checkbox-checkmark.589d534424.svg);
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -272,7 +272,7 @@ p {
   grid-row-gap: .75rem;
   border: 1px solid var(--secondary);
   background-color: var(--secondary);
-  color: var(--primary);
+  color: var(--white);
   cursor: pointer;
   border-radius: 3rem;
   justify-content: center;
@@ -308,6 +308,7 @@ p {
 .button.is-secondary {
   border-color: var(--border-color);
   background-color: var(--white);
+  color: var(--primary);
   white-space: nowrap;
   border-radius: .5rem;
   padding-left: 1.25rem;
@@ -349,6 +350,7 @@ p {
 .button.is-text {
   border-style: none none solid;
   border-bottom-color: var(--primary);
+  color: var(--primary);
   letter-spacing: 2px;
   text-transform: uppercase;
   background-color: #0000;
@@ -369,7 +371,6 @@ p {
 .button.is-contact {
   grid-column-gap: 8px;
   grid-row-gap: 8px;
-  background-color: var(--grey);
   border-style: none;
   border-radius: 8px;
   width: 140px;
@@ -381,7 +382,7 @@ p {
 }
 
 .button.is-contact:hover {
-  color: var(--primary);
+  color: var(--white);
   font-weight: 700;
 }
 
@@ -407,6 +408,7 @@ p {
 }
 
 .overlay-background {
+  color: var(--primary);
   background-color: #0006;
   width: 100%;
   height: 100%;
@@ -422,7 +424,6 @@ p {
   margin-right: auto;
   position: relative;
   bottom: -3rem;
-  z-index: 10;
 }
 
 .search-box-wrapper {
@@ -443,7 +444,6 @@ p {
   width: 100%;
   display: flex;
 }
-
 
 .checkbox-component {
   background-color: #f6f6f1;
@@ -745,7 +745,6 @@ p {
   background-color: var(--grey);
 }
 
-.property-item.background-grey:hover,
 .property-item.background-grey.w--redirected-checked {
   background-color: var(--secondary);
 }
@@ -856,7 +855,7 @@ p {
 
 .cta-tag {
   background-color: var(--secondary);
-  color: var(--primary);
+  color: var(--white);
   border-radius: .5rem;
   justify-content: center;
   align-items: center;
@@ -1923,7 +1922,8 @@ p {
 }
 
 .image-section._2 {
-  max-height: 276px;
+  height: 100%;
+  max-height: 17.25rem;
 }
 
 .content-btn-section {
@@ -2030,7 +2030,7 @@ p {
   line-height: 140%;
 }
 
-.paragraph-3 {
+.text-align-center {
   text-align: center;
   max-width: 400px;
   margin-bottom: 0;
@@ -2042,12 +2042,6 @@ p {
   padding-top: 48px;
   padding-bottom: 88px;
   display: flex;
-}
-
-.paragraph-4 {
-  color: var(--primary);
-  margin-bottom: 0;
-  font-weight: 700;
 }
 
 .pages-count {
@@ -2134,18 +2128,7 @@ p {
   text-decoration: none;
 }
 
-.paragraph-5 {
-  margin-bottom: 0;
-}
-
-.landing-content-wrapper {
-  padding-top: 64px;
-}
-
-.heading-2 {
-  margin-bottom: 0;
-}
-
+.landing-content-wrapper,
 .feature-developer-wrapper {
   padding-top: 64px;
 }
@@ -2167,10 +2150,6 @@ p {
   display: flex;
 }
 
-.image-3 {
-  border-radius: 8px 8px 0 0;
-}
-
 .developer-image {
   background-color: var(--white);
   border-radius: 8px;
@@ -2183,17 +2162,8 @@ p {
   inset: 3% auto auto 2%;
 }
 
-._28px {
-  font-size: 28px;
-}
-
 .developer-content-section {
   padding: 20px;
-}
-
-._20px {
-  color: var(--primary);
-  font-size: 1.25rem;
 }
 
 .prop-developer-items {
@@ -2218,7 +2188,15 @@ p {
 }
 
 .developer-logo {
-  max-height: 80px;
+  object-fit: contain;
+  width: 70%;
+  height: 100%;
+  max-height: 5rem;
+}
+
+.developer-logo.is-small {
+  width: 60%;
+  height: auto;
 }
 
 .guides_card_wrapper {
@@ -2266,7 +2244,7 @@ p {
   line-height: 140%;
 }
 
-.image-4 {
+.guide-image {
   object-fit: cover;
   border-radius: 8px 0 0 8px;
   width: 100%;
@@ -2366,7 +2344,7 @@ p {
   display: grid;
 }
 
-.top-24 {
+.top-large {
   margin-top: 24px;
 }
 
@@ -3068,7 +3046,7 @@ p {
 
 @font-face {
   font-family: 'Neuzeit Office';
-  src: url(fonts/NeuzeitOfficeBold.woff2) format('woff2');
+  src: url(NeuzeitOfficeBold.woff2) format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
