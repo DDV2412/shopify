@@ -565,7 +565,7 @@ p {
   border: 1px solid var(--border-color);
   background-color: var(--white);
   border-radius: 8px;
-  max-width: 360px;
+  max-width: 500px;
 }
 
 .search-wrapper.background-white.is-filter {

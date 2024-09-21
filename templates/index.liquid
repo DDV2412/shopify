@@ -1,5 +1,16 @@
 {% assign page_id = "66e6ed97469869045902b714"%}
 
+{% assign all_tags = "" %}
+{% for product in collections.all.products %}
+{% for tag in product.tags %}
+{% unless all_tags contains tag %}
+{% assign all_tags = all_tags | append: tag | append: "," %}
+{% endunless %}
+{% endfor %}
+{% endfor %}
+
+{% assign tags_array = all_tags | split: "," %}
+
 
 <section class="section_hero">
   <div class="background-hero">
@@ -148,12 +159,7 @@
                   value="">
               </div>
             </form>
-            <div class="w-form-done">
-              <div>Thank you! Your submission has been received!</div>
-            </div>
-            <div class="w-form-fail">
-              <div>Oops! Something went wrong while submitting the form.</div>
-            </div>
+
           </div>
         </div>
       </div>
@@ -173,458 +179,30 @@
         </div>
       </div>
       <div class="features-list is-sale">
+
+        {% for tag in tags_array %}
+        {% if tag != "" %}
         <a data-w-id="9454dd57-782d-df81-f37d-9c66c5d486b9"
-          style="background-color:rgb(255,255,255);color:rgb(29,12,75)" href="#"
-          class="button is-secondary w-inline-block">
-          <div style="color:rgb(29,12,75)" class="icon_tiny is-color w-embed"><svg xmlns="http://www.w3.org/2000/svg"
-              width="17" height="16" viewbox="0 0 17 16" fill="none">
-              <g clip-path="url(#clip0_9851_70466)">
-                <path
-                  d="M15.9284 15.43H15.357C14.7508 15.43 14.1694 15.1892 13.7408 14.7605C13.3121 14.3319 13.0713 13.7505 13.0713 13.1443C13.0713 13.7505 12.8305 14.3319 12.4018 14.7605C11.9732 15.1892 11.3918 15.43 10.7856 15.43C10.1794 15.43 9.59798 15.1892 9.16933 14.7605C8.74068 14.3319 8.49986 13.7505 8.49986 13.1443C8.49986 13.7505 8.25904 14.3319 7.83039 14.7605C7.40174 15.1892 6.82036 15.43 6.21415 15.43C5.60794 15.43 5.02656 15.1892 4.5979 14.7605C4.16925 14.3319 3.92843 13.7505 3.92843 13.1443C3.92843 13.7505 3.68762 14.3319 3.25896 14.7605C2.83031 15.1892 2.24893 15.43 1.64272 15.43H1.07129"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path
-                  d="M3.35742 2.85859C3.35742 2.25238 3.59824 1.671 4.02689 1.24235C4.45555 0.813692 5.03693 0.572876 5.64314 0.572876C6.24935 0.572876 6.83073 0.813692 7.25938 1.24235C7.68804 1.671 7.92885 2.25238 7.92885 2.85859V10.8586"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path
-                  d="M11.3574 0.572876C11.9636 0.572876 12.545 0.813692 12.9737 1.24235C13.4023 1.671 13.6431 2.25238 13.6431 2.85859V10.8586"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M7.92871 5.14429H13.643" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                </path>
-                <path d="M7.92871 8.57288H13.643" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                </path>
-              </g>
-              <defs>
-                <clippath id="clip0_9851_70466">
-                  <rect width="16" height="16" fill="white" transform="translate(0.5 0.000976562)"></rect>
-                </clippath>
-              </defs>
-            </svg></div>
-          <div>Private Pool</div>
+          style="background-color:rgb(255,255,255);color:rgb(29,12,75)"
+          href="/collections/real-estate-listings/{{ tag | handle }}" class="button is-secondary w-inline-block">
+          <div>{{tag}}</div>
         </a>
-        <a data-w-id="bf88fe90-e5dc-43f0-ef1d-b257cc1d19bb"
-          style="background-color:rgb(255,255,255);color:rgb(29,12,75)" href="#"
-          class="button is-secondary w-inline-block">
-          <div style="color:rgb(29,12,75)" class="icon_tiny is-color w-embed"><svg xmlns="http://www.w3.org/2000/svg"
-              width="17" height="16" viewbox="0 0 17 16" fill="none">
-              <g clip-path="url(#clip0_9851_70466)">
-                <path
-                  d="M15.9284 15.43H15.357C14.7508 15.43 14.1694 15.1892 13.7408 14.7605C13.3121 14.3319 13.0713 13.7505 13.0713 13.1443C13.0713 13.7505 12.8305 14.3319 12.4018 14.7605C11.9732 15.1892 11.3918 15.43 10.7856 15.43C10.1794 15.43 9.59798 15.1892 9.16933 14.7605C8.74068 14.3319 8.49986 13.7505 8.49986 13.1443C8.49986 13.7505 8.25904 14.3319 7.83039 14.7605C7.40174 15.1892 6.82036 15.43 6.21415 15.43C5.60794 15.43 5.02656 15.1892 4.5979 14.7605C4.16925 14.3319 3.92843 13.7505 3.92843 13.1443C3.92843 13.7505 3.68762 14.3319 3.25896 14.7605C2.83031 15.1892 2.24893 15.43 1.64272 15.43H1.07129"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path
-                  d="M3.35742 2.85859C3.35742 2.25238 3.59824 1.671 4.02689 1.24235C4.45555 0.813692 5.03693 0.572876 5.64314 0.572876C6.24935 0.572876 6.83073 0.813692 7.25938 1.24235C7.68804 1.671 7.92885 2.25238 7.92885 2.85859V10.8586"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path
-                  d="M11.3574 0.572876C11.9636 0.572876 12.545 0.813692 12.9737 1.24235C13.4023 1.671 13.6431 2.25238 13.6431 2.85859V10.8586"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M7.92871 5.14429H13.643" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                </path>
-                <path d="M7.92871 8.57288H13.643" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                </path>
-              </g>
-              <defs>
-                <clippath id="clip0_9851_70466">
-                  <rect width="16" height="16" fill="white" transform="translate(0.5 0.000976562)"></rect>
-                </clippath>
-              </defs>
-            </svg></div>
-          <div>Private Pool</div>
-        </a>
-        <a data-w-id="8277a448-0e35-8c0e-0ba5-001a51a98092"
-          style="background-color:rgb(255,255,255);color:rgb(29,12,75)" href="#"
-          class="button is-secondary w-inline-block">
-          <div style="color:rgb(29,12,75)" class="icon_tiny is-color w-embed"><svg xmlns="http://www.w3.org/2000/svg"
-              width="17" height="16" viewbox="0 0 17 16" fill="none">
-              <g clip-path="url(#clip0_9851_70466)">
-                <path
-                  d="M15.9284 15.43H15.357C14.7508 15.43 14.1694 15.1892 13.7408 14.7605C13.3121 14.3319 13.0713 13.7505 13.0713 13.1443C13.0713 13.7505 12.8305 14.3319 12.4018 14.7605C11.9732 15.1892 11.3918 15.43 10.7856 15.43C10.1794 15.43 9.59798 15.1892 9.16933 14.7605C8.74068 14.3319 8.49986 13.7505 8.49986 13.1443C8.49986 13.7505 8.25904 14.3319 7.83039 14.7605C7.40174 15.1892 6.82036 15.43 6.21415 15.43C5.60794 15.43 5.02656 15.1892 4.5979 14.7605C4.16925 14.3319 3.92843 13.7505 3.92843 13.1443C3.92843 13.7505 3.68762 14.3319 3.25896 14.7605C2.83031 15.1892 2.24893 15.43 1.64272 15.43H1.07129"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path
-                  d="M3.35742 2.85859C3.35742 2.25238 3.59824 1.671 4.02689 1.24235C4.45555 0.813692 5.03693 0.572876 5.64314 0.572876C6.24935 0.572876 6.83073 0.813692 7.25938 1.24235C7.68804 1.671 7.92885 2.25238 7.92885 2.85859V10.8586"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path
-                  d="M11.3574 0.572876C11.9636 0.572876 12.545 0.813692 12.9737 1.24235C13.4023 1.671 13.6431 2.25238 13.6431 2.85859V10.8586"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M7.92871 5.14429H13.643" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                </path>
-                <path d="M7.92871 8.57288H13.643" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                </path>
-              </g>
-              <defs>
-                <clippath id="clip0_9851_70466">
-                  <rect width="16" height="16" fill="white" transform="translate(0.5 0.000976562)"></rect>
-                </clippath>
-              </defs>
-            </svg></div>
-          <div>Private Pool</div>
-        </a>
-        <a data-w-id="c74a9db2-6359-7868-d882-f6e6ad04d382"
-          style="background-color:rgb(255,255,255);color:rgb(29,12,75)" href="#"
-          class="button is-secondary w-inline-block">
-          <div style="color:rgb(29,12,75)" class="icon_tiny is-color w-embed"><svg xmlns="http://www.w3.org/2000/svg"
-              width="17" height="16" viewbox="0 0 17 16" fill="none">
-              <g clip-path="url(#clip0_9851_70466)">
-                <path
-                  d="M15.9284 15.43H15.357C14.7508 15.43 14.1694 15.1892 13.7408 14.7605C13.3121 14.3319 13.0713 13.7505 13.0713 13.1443C13.0713 13.7505 12.8305 14.3319 12.4018 14.7605C11.9732 15.1892 11.3918 15.43 10.7856 15.43C10.1794 15.43 9.59798 15.1892 9.16933 14.7605C8.74068 14.3319 8.49986 13.7505 8.49986 13.1443C8.49986 13.7505 8.25904 14.3319 7.83039 14.7605C7.40174 15.1892 6.82036 15.43 6.21415 15.43C5.60794 15.43 5.02656 15.1892 4.5979 14.7605C4.16925 14.3319 3.92843 13.7505 3.92843 13.1443C3.92843 13.7505 3.68762 14.3319 3.25896 14.7605C2.83031 15.1892 2.24893 15.43 1.64272 15.43H1.07129"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path
-                  d="M3.35742 2.85859C3.35742 2.25238 3.59824 1.671 4.02689 1.24235C4.45555 0.813692 5.03693 0.572876 5.64314 0.572876C6.24935 0.572876 6.83073 0.813692 7.25938 1.24235C7.68804 1.671 7.92885 2.25238 7.92885 2.85859V10.8586"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path
-                  d="M11.3574 0.572876C11.9636 0.572876 12.545 0.813692 12.9737 1.24235C13.4023 1.671 13.6431 2.25238 13.6431 2.85859V10.8586"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M7.92871 5.14429H13.643" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                </path>
-                <path d="M7.92871 8.57288H13.643" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                </path>
-              </g>
-              <defs>
-                <clippath id="clip0_9851_70466">
-                  <rect width="16" height="16" fill="white" transform="translate(0.5 0.000976562)"></rect>
-                </clippath>
-              </defs>
-            </svg></div>
-          <div>Private Pool</div>
-        </a>
-        <a data-w-id="852d95f7-49ef-11b7-a1f4-797229551dd8"
-          style="background-color:rgb(255,255,255);color:rgb(29,12,75)" href="#"
-          class="button is-secondary w-inline-block">
-          <div style="color:rgb(29,12,75)" class="icon_tiny is-color w-embed"><svg xmlns="http://www.w3.org/2000/svg"
-              width="17" height="16" viewbox="0 0 17 16" fill="none">
-              <g clip-path="url(#clip0_9851_70466)">
-                <path
-                  d="M15.9284 15.43H15.357C14.7508 15.43 14.1694 15.1892 13.7408 14.7605C13.3121 14.3319 13.0713 13.7505 13.0713 13.1443C13.0713 13.7505 12.8305 14.3319 12.4018 14.7605C11.9732 15.1892 11.3918 15.43 10.7856 15.43C10.1794 15.43 9.59798 15.1892 9.16933 14.7605C8.74068 14.3319 8.49986 13.7505 8.49986 13.1443C8.49986 13.7505 8.25904 14.3319 7.83039 14.7605C7.40174 15.1892 6.82036 15.43 6.21415 15.43C5.60794 15.43 5.02656 15.1892 4.5979 14.7605C4.16925 14.3319 3.92843 13.7505 3.92843 13.1443C3.92843 13.7505 3.68762 14.3319 3.25896 14.7605C2.83031 15.1892 2.24893 15.43 1.64272 15.43H1.07129"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path
-                  d="M3.35742 2.85859C3.35742 2.25238 3.59824 1.671 4.02689 1.24235C4.45555 0.813692 5.03693 0.572876 5.64314 0.572876C6.24935 0.572876 6.83073 0.813692 7.25938 1.24235C7.68804 1.671 7.92885 2.25238 7.92885 2.85859V10.8586"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path
-                  d="M11.3574 0.572876C11.9636 0.572876 12.545 0.813692 12.9737 1.24235C13.4023 1.671 13.6431 2.25238 13.6431 2.85859V10.8586"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M7.92871 5.14429H13.643" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                </path>
-                <path d="M7.92871 8.57288H13.643" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                </path>
-              </g>
-              <defs>
-                <clippath id="clip0_9851_70466">
-                  <rect width="16" height="16" fill="white" transform="translate(0.5 0.000976562)"></rect>
-                </clippath>
-              </defs>
-            </svg></div>
-          <div>Private Pool</div>
-        </a>
-        <a data-w-id="48ee7dd5-b305-8666-902f-628b96217e27"
-          style="background-color:rgb(255,255,255);color:rgb(29,12,75)" href="#"
-          class="button is-secondary w-inline-block">
-          <div style="color:rgb(29,12,75)" class="icon_tiny is-color w-embed"><svg xmlns="http://www.w3.org/2000/svg"
-              width="17" height="16" viewbox="0 0 17 16" fill="none">
-              <g clip-path="url(#clip0_9851_70466)">
-                <path
-                  d="M15.9284 15.43H15.357C14.7508 15.43 14.1694 15.1892 13.7408 14.7605C13.3121 14.3319 13.0713 13.7505 13.0713 13.1443C13.0713 13.7505 12.8305 14.3319 12.4018 14.7605C11.9732 15.1892 11.3918 15.43 10.7856 15.43C10.1794 15.43 9.59798 15.1892 9.16933 14.7605C8.74068 14.3319 8.49986 13.7505 8.49986 13.1443C8.49986 13.7505 8.25904 14.3319 7.83039 14.7605C7.40174 15.1892 6.82036 15.43 6.21415 15.43C5.60794 15.43 5.02656 15.1892 4.5979 14.7605C4.16925 14.3319 3.92843 13.7505 3.92843 13.1443C3.92843 13.7505 3.68762 14.3319 3.25896 14.7605C2.83031 15.1892 2.24893 15.43 1.64272 15.43H1.07129"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path
-                  d="M3.35742 2.85859C3.35742 2.25238 3.59824 1.671 4.02689 1.24235C4.45555 0.813692 5.03693 0.572876 5.64314 0.572876C6.24935 0.572876 6.83073 0.813692 7.25938 1.24235C7.68804 1.671 7.92885 2.25238 7.92885 2.85859V10.8586"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path
-                  d="M11.3574 0.572876C11.9636 0.572876 12.545 0.813692 12.9737 1.24235C13.4023 1.671 13.6431 2.25238 13.6431 2.85859V10.8586"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M7.92871 5.14429H13.643" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                </path>
-                <path d="M7.92871 8.57288H13.643" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                </path>
-              </g>
-              <defs>
-                <clippath id="clip0_9851_70466">
-                  <rect width="16" height="16" fill="white" transform="translate(0.5 0.000976562)"></rect>
-                </clippath>
-              </defs>
-            </svg></div>
-          <div>Private Pool</div>
-        </a>
-        <a data-w-id="18ee5925-28fe-b369-3dcf-378fed9ebc86"
-          style="background-color:rgb(255,255,255);color:rgb(29,12,75)" href="#"
-          class="button is-secondary w-inline-block">
-          <div style="color:rgb(29,12,75)" class="icon_tiny is-color w-embed"><svg xmlns="http://www.w3.org/2000/svg"
-              width="17" height="16" viewbox="0 0 17 16" fill="none">
-              <g clip-path="url(#clip0_9851_70466)">
-                <path
-                  d="M15.9284 15.43H15.357C14.7508 15.43 14.1694 15.1892 13.7408 14.7605C13.3121 14.3319 13.0713 13.7505 13.0713 13.1443C13.0713 13.7505 12.8305 14.3319 12.4018 14.7605C11.9732 15.1892 11.3918 15.43 10.7856 15.43C10.1794 15.43 9.59798 15.1892 9.16933 14.7605C8.74068 14.3319 8.49986 13.7505 8.49986 13.1443C8.49986 13.7505 8.25904 14.3319 7.83039 14.7605C7.40174 15.1892 6.82036 15.43 6.21415 15.43C5.60794 15.43 5.02656 15.1892 4.5979 14.7605C4.16925 14.3319 3.92843 13.7505 3.92843 13.1443C3.92843 13.7505 3.68762 14.3319 3.25896 14.7605C2.83031 15.1892 2.24893 15.43 1.64272 15.43H1.07129"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path
-                  d="M3.35742 2.85859C3.35742 2.25238 3.59824 1.671 4.02689 1.24235C4.45555 0.813692 5.03693 0.572876 5.64314 0.572876C6.24935 0.572876 6.83073 0.813692 7.25938 1.24235C7.68804 1.671 7.92885 2.25238 7.92885 2.85859V10.8586"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path
-                  d="M11.3574 0.572876C11.9636 0.572876 12.545 0.813692 12.9737 1.24235C13.4023 1.671 13.6431 2.25238 13.6431 2.85859V10.8586"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M7.92871 5.14429H13.643" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                </path>
-                <path d="M7.92871 8.57288H13.643" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                </path>
-              </g>
-              <defs>
-                <clippath id="clip0_9851_70466">
-                  <rect width="16" height="16" fill="white" transform="translate(0.5 0.000976562)"></rect>
-                </clippath>
-              </defs>
-            </svg></div>
-          <div>Private Pool</div>
-        </a>
-        <a data-w-id="76d34733-7981-b05d-5d1a-20c9ade5d922"
-          style="background-color:rgb(255,255,255);color:rgb(29,12,75)" href="#"
-          class="button is-secondary w-inline-block">
-          <div style="color:rgb(29,12,75)" class="icon_tiny is-color w-embed"><svg xmlns="http://www.w3.org/2000/svg"
-              width="17" height="16" viewbox="0 0 17 16" fill="none">
-              <g clip-path="url(#clip0_9851_70466)">
-                <path
-                  d="M15.9284 15.43H15.357C14.7508 15.43 14.1694 15.1892 13.7408 14.7605C13.3121 14.3319 13.0713 13.7505 13.0713 13.1443C13.0713 13.7505 12.8305 14.3319 12.4018 14.7605C11.9732 15.1892 11.3918 15.43 10.7856 15.43C10.1794 15.43 9.59798 15.1892 9.16933 14.7605C8.74068 14.3319 8.49986 13.7505 8.49986 13.1443C8.49986 13.7505 8.25904 14.3319 7.83039 14.7605C7.40174 15.1892 6.82036 15.43 6.21415 15.43C5.60794 15.43 5.02656 15.1892 4.5979 14.7605C4.16925 14.3319 3.92843 13.7505 3.92843 13.1443C3.92843 13.7505 3.68762 14.3319 3.25896 14.7605C2.83031 15.1892 2.24893 15.43 1.64272 15.43H1.07129"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path
-                  d="M3.35742 2.85859C3.35742 2.25238 3.59824 1.671 4.02689 1.24235C4.45555 0.813692 5.03693 0.572876 5.64314 0.572876C6.24935 0.572876 6.83073 0.813692 7.25938 1.24235C7.68804 1.671 7.92885 2.25238 7.92885 2.85859V10.8586"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path
-                  d="M11.3574 0.572876C11.9636 0.572876 12.545 0.813692 12.9737 1.24235C13.4023 1.671 13.6431 2.25238 13.6431 2.85859V10.8586"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M7.92871 5.14429H13.643" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                </path>
-                <path d="M7.92871 8.57288H13.643" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                </path>
-              </g>
-              <defs>
-                <clippath id="clip0_9851_70466">
-                  <rect width="16" height="16" fill="white" transform="translate(0.5 0.000976562)"></rect>
-                </clippath>
-              </defs>
-            </svg></div>
-          <div>Private Pool</div>
-        </a>
+        {% endif %}
+        {% endfor %}
       </div>
       <div
         style="-webkit-transform:translate3d(0, 4rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 4rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 4rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 4rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
         class="features-list is-rent">
-        <a data-w-id="c0603586-f16b-ed91-5490-a41ba27c5cae"
-          style="background-color:rgb(255,255,255);color:rgb(29,12,75)" href="#"
-          class="button is-secondary w-inline-block">
-          <div style="color:rgb(29,12,75)" class="icon_tiny is-color w-embed"><svg xmlns="http://www.w3.org/2000/svg"
-              width="17" height="16" viewbox="0 0 17 16" fill="none">
-              <g clip-path="url(#clip0_9851_70466)">
-                <path
-                  d="M15.9284 15.43H15.357C14.7508 15.43 14.1694 15.1892 13.7408 14.7605C13.3121 14.3319 13.0713 13.7505 13.0713 13.1443C13.0713 13.7505 12.8305 14.3319 12.4018 14.7605C11.9732 15.1892 11.3918 15.43 10.7856 15.43C10.1794 15.43 9.59798 15.1892 9.16933 14.7605C8.74068 14.3319 8.49986 13.7505 8.49986 13.1443C8.49986 13.7505 8.25904 14.3319 7.83039 14.7605C7.40174 15.1892 6.82036 15.43 6.21415 15.43C5.60794 15.43 5.02656 15.1892 4.5979 14.7605C4.16925 14.3319 3.92843 13.7505 3.92843 13.1443C3.92843 13.7505 3.68762 14.3319 3.25896 14.7605C2.83031 15.1892 2.24893 15.43 1.64272 15.43H1.07129"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path
-                  d="M3.35742 2.85859C3.35742 2.25238 3.59824 1.671 4.02689 1.24235C4.45555 0.813692 5.03693 0.572876 5.64314 0.572876C6.24935 0.572876 6.83073 0.813692 7.25938 1.24235C7.68804 1.671 7.92885 2.25238 7.92885 2.85859V10.8586"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path
-                  d="M11.3574 0.572876C11.9636 0.572876 12.545 0.813692 12.9737 1.24235C13.4023 1.671 13.6431 2.25238 13.6431 2.85859V10.8586"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M7.92871 5.14429H13.643" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                </path>
-                <path d="M7.92871 8.57288H13.643" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                </path>
-              </g>
-              <defs>
-                <clippath id="clip0_9851_70466">
-                  <rect width="16" height="16" fill="white" transform="translate(0.5 0.000976562)"></rect>
-                </clippath>
-              </defs>
-            </svg></div>
-          <div>Private Pool</div>
+        {% for tag in tags_array %}
+        {% if tag != "" %}
+        <a data-w-id="9454dd57-782d-df81-f37d-9c66c5d486b9"
+          style="background-color:rgb(255,255,255);color:rgb(29,12,75)"
+          href="/collections/rentals-in-dubai/{{ tag | handle }}" class="button is-secondary w-inline-block">
+          <div>{{tag}}</div>
         </a>
-        <a data-w-id="c0603586-f16b-ed91-5490-a41ba27c5cb2"
-          style="background-color:rgb(255,255,255);color:rgb(29,12,75)" href="#"
-          class="button is-secondary w-inline-block">
-          <div style="color:rgb(29,12,75)" class="icon_tiny is-color w-embed"><svg xmlns="http://www.w3.org/2000/svg"
-              width="17" height="16" viewbox="0 0 17 16" fill="none">
-              <g clip-path="url(#clip0_9851_70466)">
-                <path
-                  d="M15.9284 15.43H15.357C14.7508 15.43 14.1694 15.1892 13.7408 14.7605C13.3121 14.3319 13.0713 13.7505 13.0713 13.1443C13.0713 13.7505 12.8305 14.3319 12.4018 14.7605C11.9732 15.1892 11.3918 15.43 10.7856 15.43C10.1794 15.43 9.59798 15.1892 9.16933 14.7605C8.74068 14.3319 8.49986 13.7505 8.49986 13.1443C8.49986 13.7505 8.25904 14.3319 7.83039 14.7605C7.40174 15.1892 6.82036 15.43 6.21415 15.43C5.60794 15.43 5.02656 15.1892 4.5979 14.7605C4.16925 14.3319 3.92843 13.7505 3.92843 13.1443C3.92843 13.7505 3.68762 14.3319 3.25896 14.7605C2.83031 15.1892 2.24893 15.43 1.64272 15.43H1.07129"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path
-                  d="M3.35742 2.85859C3.35742 2.25238 3.59824 1.671 4.02689 1.24235C4.45555 0.813692 5.03693 0.572876 5.64314 0.572876C6.24935 0.572876 6.83073 0.813692 7.25938 1.24235C7.68804 1.671 7.92885 2.25238 7.92885 2.85859V10.8586"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path
-                  d="M11.3574 0.572876C11.9636 0.572876 12.545 0.813692 12.9737 1.24235C13.4023 1.671 13.6431 2.25238 13.6431 2.85859V10.8586"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M7.92871 5.14429H13.643" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                </path>
-                <path d="M7.92871 8.57288H13.643" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                </path>
-              </g>
-              <defs>
-                <clippath id="clip0_9851_70466">
-                  <rect width="16" height="16" fill="white" transform="translate(0.5 0.000976562)"></rect>
-                </clippath>
-              </defs>
-            </svg></div>
-          <div>Private Pool</div>
-        </a>
-        <a data-w-id="c0603586-f16b-ed91-5490-a41ba27c5cb6"
-          style="background-color:rgb(255,255,255);color:rgb(29,12,75)" href="#"
-          class="button is-secondary w-inline-block">
-          <div style="color:rgb(29,12,75)" class="icon_tiny is-color w-embed"><svg xmlns="http://www.w3.org/2000/svg"
-              width="17" height="16" viewbox="0 0 17 16" fill="none">
-              <g clip-path="url(#clip0_9851_70466)">
-                <path
-                  d="M15.9284 15.43H15.357C14.7508 15.43 14.1694 15.1892 13.7408 14.7605C13.3121 14.3319 13.0713 13.7505 13.0713 13.1443C13.0713 13.7505 12.8305 14.3319 12.4018 14.7605C11.9732 15.1892 11.3918 15.43 10.7856 15.43C10.1794 15.43 9.59798 15.1892 9.16933 14.7605C8.74068 14.3319 8.49986 13.7505 8.49986 13.1443C8.49986 13.7505 8.25904 14.3319 7.83039 14.7605C7.40174 15.1892 6.82036 15.43 6.21415 15.43C5.60794 15.43 5.02656 15.1892 4.5979 14.7605C4.16925 14.3319 3.92843 13.7505 3.92843 13.1443C3.92843 13.7505 3.68762 14.3319 3.25896 14.7605C2.83031 15.1892 2.24893 15.43 1.64272 15.43H1.07129"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path
-                  d="M3.35742 2.85859C3.35742 2.25238 3.59824 1.671 4.02689 1.24235C4.45555 0.813692 5.03693 0.572876 5.64314 0.572876C6.24935 0.572876 6.83073 0.813692 7.25938 1.24235C7.68804 1.671 7.92885 2.25238 7.92885 2.85859V10.8586"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path
-                  d="M11.3574 0.572876C11.9636 0.572876 12.545 0.813692 12.9737 1.24235C13.4023 1.671 13.6431 2.25238 13.6431 2.85859V10.8586"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M7.92871 5.14429H13.643" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                </path>
-                <path d="M7.92871 8.57288H13.643" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                </path>
-              </g>
-              <defs>
-                <clippath id="clip0_9851_70466">
-                  <rect width="16" height="16" fill="white" transform="translate(0.5 0.000976562)"></rect>
-                </clippath>
-              </defs>
-            </svg></div>
-          <div>Private Pool</div>
-        </a>
-        <a data-w-id="c0603586-f16b-ed91-5490-a41ba27c5cba"
-          style="background-color:rgb(255,255,255);color:rgb(29,12,75)" href="#"
-          class="button is-secondary w-inline-block">
-          <div style="color:rgb(29,12,75)" class="icon_tiny is-color w-embed"><svg xmlns="http://www.w3.org/2000/svg"
-              width="17" height="16" viewbox="0 0 17 16" fill="none">
-              <g clip-path="url(#clip0_9851_70466)">
-                <path
-                  d="M15.9284 15.43H15.357C14.7508 15.43 14.1694 15.1892 13.7408 14.7605C13.3121 14.3319 13.0713 13.7505 13.0713 13.1443C13.0713 13.7505 12.8305 14.3319 12.4018 14.7605C11.9732 15.1892 11.3918 15.43 10.7856 15.43C10.1794 15.43 9.59798 15.1892 9.16933 14.7605C8.74068 14.3319 8.49986 13.7505 8.49986 13.1443C8.49986 13.7505 8.25904 14.3319 7.83039 14.7605C7.40174 15.1892 6.82036 15.43 6.21415 15.43C5.60794 15.43 5.02656 15.1892 4.5979 14.7605C4.16925 14.3319 3.92843 13.7505 3.92843 13.1443C3.92843 13.7505 3.68762 14.3319 3.25896 14.7605C2.83031 15.1892 2.24893 15.43 1.64272 15.43H1.07129"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path
-                  d="M3.35742 2.85859C3.35742 2.25238 3.59824 1.671 4.02689 1.24235C4.45555 0.813692 5.03693 0.572876 5.64314 0.572876C6.24935 0.572876 6.83073 0.813692 7.25938 1.24235C7.68804 1.671 7.92885 2.25238 7.92885 2.85859V10.8586"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path
-                  d="M11.3574 0.572876C11.9636 0.572876 12.545 0.813692 12.9737 1.24235C13.4023 1.671 13.6431 2.25238 13.6431 2.85859V10.8586"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M7.92871 5.14429H13.643" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                </path>
-                <path d="M7.92871 8.57288H13.643" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                </path>
-              </g>
-              <defs>
-                <clippath id="clip0_9851_70466">
-                  <rect width="16" height="16" fill="white" transform="translate(0.5 0.000976562)"></rect>
-                </clippath>
-              </defs>
-            </svg></div>
-          <div>Private Pool</div>
-        </a>
-        <a data-w-id="c0603586-f16b-ed91-5490-a41ba27c5cbe"
-          style="background-color:rgb(255,255,255);color:rgb(29,12,75)" href="#"
-          class="button is-secondary w-inline-block">
-          <div style="color:rgb(29,12,75)" class="icon_tiny is-color w-embed"><svg xmlns="http://www.w3.org/2000/svg"
-              width="17" height="16" viewbox="0 0 17 16" fill="none">
-              <g clip-path="url(#clip0_9851_70466)">
-                <path
-                  d="M15.9284 15.43H15.357C14.7508 15.43 14.1694 15.1892 13.7408 14.7605C13.3121 14.3319 13.0713 13.7505 13.0713 13.1443C13.0713 13.7505 12.8305 14.3319 12.4018 14.7605C11.9732 15.1892 11.3918 15.43 10.7856 15.43C10.1794 15.43 9.59798 15.1892 9.16933 14.7605C8.74068 14.3319 8.49986 13.7505 8.49986 13.1443C8.49986 13.7505 8.25904 14.3319 7.83039 14.7605C7.40174 15.1892 6.82036 15.43 6.21415 15.43C5.60794 15.43 5.02656 15.1892 4.5979 14.7605C4.16925 14.3319 3.92843 13.7505 3.92843 13.1443C3.92843 13.7505 3.68762 14.3319 3.25896 14.7605C2.83031 15.1892 2.24893 15.43 1.64272 15.43H1.07129"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path
-                  d="M3.35742 2.85859C3.35742 2.25238 3.59824 1.671 4.02689 1.24235C4.45555 0.813692 5.03693 0.572876 5.64314 0.572876C6.24935 0.572876 6.83073 0.813692 7.25938 1.24235C7.68804 1.671 7.92885 2.25238 7.92885 2.85859V10.8586"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path
-                  d="M11.3574 0.572876C11.9636 0.572876 12.545 0.813692 12.9737 1.24235C13.4023 1.671 13.6431 2.25238 13.6431 2.85859V10.8586"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M7.92871 5.14429H13.643" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                </path>
-                <path d="M7.92871 8.57288H13.643" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                </path>
-              </g>
-              <defs>
-                <clippath id="clip0_9851_70466">
-                  <rect width="16" height="16" fill="white" transform="translate(0.5 0.000976562)"></rect>
-                </clippath>
-              </defs>
-            </svg></div>
-          <div>Private Pool</div>
-        </a>
-        <a data-w-id="c0603586-f16b-ed91-5490-a41ba27c5cc2"
-          style="background-color:rgb(255,255,255);color:rgb(29,12,75)" href="#"
-          class="button is-secondary w-inline-block">
-          <div style="color:rgb(29,12,75)" class="icon_tiny is-color w-embed"><svg xmlns="http://www.w3.org/2000/svg"
-              width="17" height="16" viewbox="0 0 17 16" fill="none">
-              <g clip-path="url(#clip0_9851_70466)">
-                <path
-                  d="M15.9284 15.43H15.357C14.7508 15.43 14.1694 15.1892 13.7408 14.7605C13.3121 14.3319 13.0713 13.7505 13.0713 13.1443C13.0713 13.7505 12.8305 14.3319 12.4018 14.7605C11.9732 15.1892 11.3918 15.43 10.7856 15.43C10.1794 15.43 9.59798 15.1892 9.16933 14.7605C8.74068 14.3319 8.49986 13.7505 8.49986 13.1443C8.49986 13.7505 8.25904 14.3319 7.83039 14.7605C7.40174 15.1892 6.82036 15.43 6.21415 15.43C5.60794 15.43 5.02656 15.1892 4.5979 14.7605C4.16925 14.3319 3.92843 13.7505 3.92843 13.1443C3.92843 13.7505 3.68762 14.3319 3.25896 14.7605C2.83031 15.1892 2.24893 15.43 1.64272 15.43H1.07129"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path
-                  d="M3.35742 2.85859C3.35742 2.25238 3.59824 1.671 4.02689 1.24235C4.45555 0.813692 5.03693 0.572876 5.64314 0.572876C6.24935 0.572876 6.83073 0.813692 7.25938 1.24235C7.68804 1.671 7.92885 2.25238 7.92885 2.85859V10.8586"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path
-                  d="M11.3574 0.572876C11.9636 0.572876 12.545 0.813692 12.9737 1.24235C13.4023 1.671 13.6431 2.25238 13.6431 2.85859V10.8586"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M7.92871 5.14429H13.643" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                </path>
-                <path d="M7.92871 8.57288H13.643" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                </path>
-              </g>
-              <defs>
-                <clippath id="clip0_9851_70466">
-                  <rect width="16" height="16" fill="white" transform="translate(0.5 0.000976562)"></rect>
-                </clippath>
-              </defs>
-            </svg></div>
-          <div>Private Pool</div>
-        </a>
-        <a data-w-id="c0603586-f16b-ed91-5490-a41ba27c5cc6"
-          style="background-color:rgb(255,255,255);color:rgb(29,12,75)" href="#"
-          class="button is-secondary w-inline-block">
-          <div style="color:rgb(29,12,75)" class="icon_tiny is-color w-embed"><svg xmlns="http://www.w3.org/2000/svg"
-              width="17" height="16" viewbox="0 0 17 16" fill="none">
-              <g clip-path="url(#clip0_9851_70466)">
-                <path
-                  d="M15.9284 15.43H15.357C14.7508 15.43 14.1694 15.1892 13.7408 14.7605C13.3121 14.3319 13.0713 13.7505 13.0713 13.1443C13.0713 13.7505 12.8305 14.3319 12.4018 14.7605C11.9732 15.1892 11.3918 15.43 10.7856 15.43C10.1794 15.43 9.59798 15.1892 9.16933 14.7605C8.74068 14.3319 8.49986 13.7505 8.49986 13.1443C8.49986 13.7505 8.25904 14.3319 7.83039 14.7605C7.40174 15.1892 6.82036 15.43 6.21415 15.43C5.60794 15.43 5.02656 15.1892 4.5979 14.7605C4.16925 14.3319 3.92843 13.7505 3.92843 13.1443C3.92843 13.7505 3.68762 14.3319 3.25896 14.7605C2.83031 15.1892 2.24893 15.43 1.64272 15.43H1.07129"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path
-                  d="M3.35742 2.85859C3.35742 2.25238 3.59824 1.671 4.02689 1.24235C4.45555 0.813692 5.03693 0.572876 5.64314 0.572876C6.24935 0.572876 6.83073 0.813692 7.25938 1.24235C7.68804 1.671 7.92885 2.25238 7.92885 2.85859V10.8586"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path
-                  d="M11.3574 0.572876C11.9636 0.572876 12.545 0.813692 12.9737 1.24235C13.4023 1.671 13.6431 2.25238 13.6431 2.85859V10.8586"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M7.92871 5.14429H13.643" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                </path>
-                <path d="M7.92871 8.57288H13.643" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                </path>
-              </g>
-              <defs>
-                <clippath id="clip0_9851_70466">
-                  <rect width="16" height="16" fill="white" transform="translate(0.5 0.000976562)"></rect>
-                </clippath>
-              </defs>
-            </svg></div>
-          <div>Private Pool</div>
-        </a>
-        <a data-w-id="c0603586-f16b-ed91-5490-a41ba27c5cca"
-          style="background-color:rgb(255,255,255);color:rgb(29,12,75)" href="#"
-          class="button is-secondary w-inline-block">
-          <div style="color:rgb(29,12,75)" class="icon_tiny is-color w-embed"><svg xmlns="http://www.w3.org/2000/svg"
-              width="17" height="16" viewbox="0 0 17 16" fill="none">
-              <g clip-path="url(#clip0_9851_70466)">
-                <path
-                  d="M15.9284 15.43H15.357C14.7508 15.43 14.1694 15.1892 13.7408 14.7605C13.3121 14.3319 13.0713 13.7505 13.0713 13.1443C13.0713 13.7505 12.8305 14.3319 12.4018 14.7605C11.9732 15.1892 11.3918 15.43 10.7856 15.43C10.1794 15.43 9.59798 15.1892 9.16933 14.7605C8.74068 14.3319 8.49986 13.7505 8.49986 13.1443C8.49986 13.7505 8.25904 14.3319 7.83039 14.7605C7.40174 15.1892 6.82036 15.43 6.21415 15.43C5.60794 15.43 5.02656 15.1892 4.5979 14.7605C4.16925 14.3319 3.92843 13.7505 3.92843 13.1443C3.92843 13.7505 3.68762 14.3319 3.25896 14.7605C2.83031 15.1892 2.24893 15.43 1.64272 15.43H1.07129"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path
-                  d="M3.35742 2.85859C3.35742 2.25238 3.59824 1.671 4.02689 1.24235C4.45555 0.813692 5.03693 0.572876 5.64314 0.572876C6.24935 0.572876 6.83073 0.813692 7.25938 1.24235C7.68804 1.671 7.92885 2.25238 7.92885 2.85859V10.8586"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path
-                  d="M11.3574 0.572876C11.9636 0.572876 12.545 0.813692 12.9737 1.24235C13.4023 1.671 13.6431 2.25238 13.6431 2.85859V10.8586"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M7.92871 5.14429H13.643" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                </path>
-                <path d="M7.92871 8.57288H13.643" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                </path>
-              </g>
-              <defs>
-                <clippath id="clip0_9851_70466">
-                  <rect width="16" height="16" fill="white" transform="translate(0.5 0.000976562)"></rect>
-                </clippath>
-              </defs>
-            </svg></div>
-          <div>Private Pool</div>
-        </a>
+        {% endif %}
+        {% endfor %}
+
       </div>
     </div>
   </div>
