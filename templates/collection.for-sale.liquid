@@ -533,24 +533,17 @@
         <div class="property-card-wrapper-main">
             {% for product in products %}
             <div data-w-id="7b98f7e7-e9bc-eab0-cdb4-7c2718763063" style="opacity:0" class="property-card-wrapper">
-                {{product | json}}
                 <div class="img-wrapper">
                     <div class="search-result-images">
                         <div class="search-result-single-image">
                             <a href="#" class="property-image w-inline-block w-lightbox" aria-label="open lightbox"
                                 aria-haspopup="dialog">
-                                <img src="{{product.images[0].src  }}" loading="lazy" alt="" loading="lazy" alt=""
-                                    class="property-image" width="544" height="356">
+                                <img src="{{ product.images[0] | asset_url }}" loading="lazy" alt="" loading="lazy"
+                                    alt="" class="property-image" width="544" height="356">
                                 <script type="application/json" class="w-json">{
   "items": [
     {
-      "_id": "66ea7dd501d8c66d013d5a8f",
-      "origFileName": "ADM243613_02.webp",
-      "fileName": "ADM243613_02.webp",
-      "fileSize": 22704,
-      "height": 130,
-      "url": "https://cdn.prod.website-files.com/66e6ed97469869045902b70e/66ea7dd501d8c66d013d5a8f_ADM243613_02.webp",
-      "width": 176,
+      "url": "{{product.images[0]}}",
       "type": "image"
     }
   ],
@@ -562,18 +555,54 @@
                             class="search-result-grid-images">
                             <div id="w-node-e6a83049-b0dc-c808-2c08-4fca82fb07ec-c258cdc7"
                                 class="search-result-grid-image-single">
-                                <img src="{{'ADM243613_02.webp' | asset_url}}" loading="lazy" width="136" height="117"
-                                    alt="" class="propery-other-image">
+                                <a href="#" class="property-image w-inline-block w-lightbox" aria-label="open lightbox"
+                                    aria-haspopup="dialog">
+                                    <img src="{{product.images[1] | asset_url}}" loading="lazy" alt="" loading="lazy"
+                                        alt="" class="property-image" width="544" height="356">
+                                    <script type="application/json" class="w-json">{
+                                  "items": [
+                                    {
+                                      "url": "{{product.images[1]}}",
+                                      "type": "image"
+                                    }
+                                  ],
+                                  "group": "collection"
+                                }</script>
+                                </a>
                             </div>
                             <div id="w-node-_8e36418d-6667-b8cf-b608-932484bf717d-c258cdc7"
                                 class="search-result-grid-image-single">
-                                <img src="{{'ADM243613_04.webp' | asset_url}}" loading="lazy" width="136" height="117"
-                                    alt="" class="propery-other-image">
+                                <a href="#" class="property-image w-inline-block w-lightbox" aria-label="open lightbox"
+                                    aria-haspopup="dialog">
+                                    <img src="{{product.images[2] | asset_url}}" loading="lazy" alt="" loading="lazy"
+                                        alt="" class="property-image" width="544" height="356">
+                                    <script type="application/json" class="w-json">{
+                                  "items": [
+                                    {
+                                      "url": "{{product.images[2]}}",
+                                      "type": "image"
+                                    }
+                                  ],
+                                  "group": "collection"
+                                }</script>
+                                </a>
                             </div>
                             <div id="w-node-_255e00db-fb62-4667-ab45-ca25903b9f35-c258cdc7"
                                 class="search-result-grid-image-single">
-                                <img src="{{'ADM243613_03.webp' | asset_url}}" loading="lazy" width="136" height="117"
-                                    alt="" class="propery-other-image">
+                                <a href="#" class="property-image w-inline-block w-lightbox" aria-label="open lightbox"
+                                    aria-haspopup="dialog">
+                                    <img src="{{product.images[3] | asset_url}}" loading="lazy" alt="" loading="lazy"
+                                        alt="" class="property-image" width="544" height="356">
+                                    <script type="application/json" class="w-json">{
+                                  "items": [
+                                    {
+                                      "url": "{{product.images[3]}}",
+                                      "type": "image"
+                                    }
+                                  ],
+                                  "group": "collection"
+                                }</script>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -581,7 +610,7 @@
                 <div id="w-node-_007edf24-3ea1-9691-a434-a220bed36ad7-c258cdc7"
                     class="property-card-text-wrapper-properties">
                     <div class="property-card-text-top">
-                        <p class="price">AED 3,250,000</p>
+                        <p class="price">{{ shop.currency }} {{ product.price | money_without_currency }}</p>
                         <div class="title">
                             <div class="icon_tiny w-embed">
                                 <svg width="800px" height="800px" viewbox="-4 0 32 32" version="1.1"
@@ -602,11 +631,11 @@
                                     </g>
                                 </svg>
                             </div>
-                            <p class="title-text">Springs 14, The Springs, Dubai</p>
+                            <p class="title-text">{{product.variants[2].option2}}</p>
                         </div>
-                        <p class="intro-text-property">Exclusive Renovated 4M | Opposite Park</p>
+                        <a href="{{product.url}}" class="intro-text-property">{{product.title}}</a>
                         <div class="icon-items">
-                            <p class="bulding_type-prop">Villa</p>
+                            <p class="bulding_type-prop">{{product.type}}</p>
                             <div class="vetical-line-property"></div>
                             <div class="icon-bk-bedroom">
                                 <div class="icon_tiny w-embed"><svg fill="#000000" height="800px" width="800px"
@@ -617,29 +646,31 @@
                                             <g>
                                                 <path
                                                     d="M469.343,53.383H42.657C19.136,53.383,0,72.513,0,96.025v163.863v68.257v60.596v55.421
-                                c0,7.982,6.472,14.455,14.455,14.455h69.76c7.984,0,14.455-6.473,14.455-14.455v-40.966h314.659v40.966
-                                c0,7.982,6.472,14.455,14.455,14.455h69.76c7.984,0,14.455-6.473,14.455-14.455v-55.421v-60.596v-68.257V96.025
-                                C512,72.513,492.864,53.383,469.343,53.383z M69.76,429.707H28.91v-26.511h40.85V429.707z M84.215,374.286H28.91v-31.686h288.524
-                                c7.984,0,14.455-6.473,14.455-14.455s-6.472-14.455-14.455-14.455H28.91v-53.802c0-13.08,10.64-23.721,23.721-23.721h28.982
-                                h145.953h56.866h145.953h28.982c13.08,0,23.721,10.64,23.721,23.721v53.802h-64.716c-7.984,0-14.455,6.473-14.455,14.455
-                                s6.472,14.455,14.455,14.455h64.716v31.686h-55.305H84.215z M96.069,207.259v-24.342c0-16.524,13.442-29.965,29.965-29.965h57.112
-                                c16.524-0.001,29.965,13.442,29.965,29.965v24.342H96.069z M298.888,207.259v-24.342c0-16.524,13.442-29.965,29.965-29.965h57.112
-                                c16.524-0.001,29.965,13.442,29.965,29.965v24.342H298.888z M483.09,429.707h-40.85v-26.511h40.85V429.707z M483.09,212.912
-                                c-7.132-3.617-15.192-5.655-23.721-5.655h-14.527v-24.342c0-32.465-26.411-58.876-58.876-58.876h-57.112
-                                c-32.463,0-58.876,26.411-58.876,58.876v24.342h-27.956v-24.342c0-32.465-26.411-58.876-58.876-58.876h-57.112
-                                c-32.463,0-58.876,26.411-58.876,58.876v24.342H52.631c-8.529,0-16.589,2.038-23.721,5.655V96.025
-                                c0-7.572,6.167-13.732,13.747-13.732h426.686c7.58,0,13.747,6.161,13.747,13.732V212.912z">
+                                                        c0,7.982,6.472,14.455,14.455,14.455h69.76c7.984,0,14.455-6.473,14.455-14.455v-40.966h314.659v40.966
+                                                        c0,7.982,6.472,14.455,14.455,14.455h69.76c7.984,0,14.455-6.473,14.455-14.455v-55.421v-60.596v-68.257V96.025
+                                                        C512,72.513,492.864,53.383,469.343,53.383z M69.76,429.707H28.91v-26.511h40.85V429.707z M84.215,374.286H28.91v-31.686h288.524
+                                                        c7.984,0,14.455-6.473,14.455-14.455s-6.472-14.455-14.455-14.455H28.91v-53.802c0-13.08,10.64-23.721,23.721-23.721h28.982
+                                                        h145.953h56.866h145.953h28.982c13.08,0,23.721,10.64,23.721,23.721v53.802h-64.716c-7.984,0-14.455,6.473-14.455,14.455
+                                                        s6.472,14.455,14.455,14.455h64.716v31.686h-55.305H84.215z M96.069,207.259v-24.342c0-16.524,13.442-29.965,29.965-29.965h57.112
+                                                        c16.524-0.001,29.965,13.442,29.965,29.965v24.342H96.069z M298.888,207.259v-24.342c0-16.524,13.442-29.965,29.965-29.965h57.112
+                                                        c16.524-0.001,29.965,13.442,29.965,29.965v24.342H298.888z M483.09,429.707h-40.85v-26.511h40.85V429.707z M483.09,212.912
+                                                        c-7.132-3.617-15.192-5.655-23.721-5.655h-14.527v-24.342c0-32.465-26.411-58.876-58.876-58.876h-57.112
+                                                        c-32.463,0-58.876,26.411-58.876,58.876v24.342h-27.956v-24.342c0-32.465-26.411-58.876-58.876-58.876h-57.112
+                                                        c-32.463,0-58.876,26.411-58.876,58.876v24.342H52.631c-8.529,0-16.589,2.038-23.721,5.655V96.025
+                                                        c0-7.572,6.167-13.732,13.747-13.732h426.686c7.58,0,13.747,6.161,13.747,13.732V212.912z">
                                                 </path>
                                             </g>
                                         </g>
                                         <g>
                                             <g>
-                                                <path d="M371.034,313.69h-7.589c-7.984,0-14.455,6.473-14.455,14.455s6.472,14.455,14.455,14.455h7.589
-                                c7.984,0,14.455-6.473,14.455-14.455S379.017,313.69,371.034,313.69z"></path>
+                                                <path
+                                                    d="M371.034,313.69h-7.589c-7.984,0-14.455,6.473-14.455,14.455s6.472,14.455,14.455,14.455h7.589
+                                                        c7.984,0,14.455-6.473,14.455-14.455S379.017,313.69,371.034,313.69z">
+                                                </path>
                                             </g>
                                         </g>
                                     </svg></div>
-                                <p class="icon-text">2</p>
+                                <p class="icon-text">{{product.variants[1].option2}}</p>
                             </div>
                             <div class="vetical-line-property"></div>
                             <div class="icon-bk-bathroom">
@@ -652,7 +683,7 @@
                                             stroke-width="2"></path>
                                     </svg>
                                 </div>
-                                <p class="icon-text">3</p>
+                                <p class="icon-text">{{product.variants[0].option2}}</p>
                             </div>
                             <div class="vetical-line-property"></div>
                             <div class="icon-bk-bathroom">
@@ -674,26 +705,24 @@
                                             </g>
                                         </g>
                                     </svg></div>
-                                <p class="icon-text">BUA: 1,849 sq.ft</p>
+                                <p class="icon-text">Lot Area: {{product.variants[3].option2}}</p>
                             </div>
-                            <div class="slide-line"></div>
-                            <p class="icon-text">Plot: 82,764,000 sq.ft</p>
+
                         </div>
                     </div>
                     <div class="propery-agent">
                         <div class="contact-items">
                             <div class="person-img-data">
-                                <div class="person-img"><img
-                                        src="{{'Andrew_Harris_ES_2024_ec874b9539.png' | asset_url}}" loading="lazy"
-                                        width="48" height="48" alt="" class="person-img"></div>
+                                <div class="person-img"><img src="{{'jcon.jpeg' | asset_url}}" loading="lazy" width="48"
+                                        height="48" alt="" class="person-img"></div>
                                 <div class="person-data">
-                                    <p class="name">Andrew Harris</p>
-                                    <p class="job-title">Speaks English</p>
+                                    <p class="name">{{product.vendor}}</p>
+                                    <p class="job-title">Real State In Dubai</p>
                                 </div>
                             </div>
                         </div>
                         <div class="person-contact">
-                            <a href="#" class="button is-contact w-inline-block">
+                            <a href="tel:+971585583349" class="button is-contact w-inline-block">
                                 <div class="icon_small w-embed"><svg fill="currentColor" width="800px" height="800px"
                                         viewbox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -702,7 +731,7 @@
                                     </svg></div>
                                 <div>Call</div>
                             </a>
-                            <a href="#" class="button is-contact w-inline-block">
+                            <a href="https://wa.me/+971585583349" class="button is-contact w-inline-block">
                                 <div class="icon_small w-embed"><svg width="800px" height="800px" viewbox="0 0 20 20"
                                         version="1.1" xmlns="http://www.w3.org/2000/svg"
                                         xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -723,35 +752,30 @@
                                     </svg></div>
                                 <div>Whatsapp</div>
                             </a>
-                            <a href="#" class="button is-contact _2 w-inline-block">
-                                <div class="icon_small w-embed"><svg width="800px" height="800px" viewbox="0 0 512 512"
-                                        version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink">
-                                        <title>mail-filled</title>
-                                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                            <g id="mail-filled-white" fill="currentColor"
-                                                transform="translate(42.686667, 85.339333)">
-                                                <path
-                                                    d="M3.55271368e-14,28.7 L213.333914,220.70134 L426.667,28.701 L426.667248,341.333608 L0.00058094128,341.333608 L3.55271368e-14,28.7 Z M394.776,1.42108547e-14 L213.333914,163.285608 L31.89,1.42108547e-14 L394.776,1.42108547e-14 Z"
-                                                    id="Combined-Shape"></path>
-                                            </g>
-                                        </g>
-                                    </svg></div>
-                                <div>Book a Viewing</div>
-                            </a>
+
                         </div>
                     </div>
                 </div>
             </div>
             {% unless product.available %}
-            <div data-w-id="7472359a-8876-8f2b-563f-7439c7f662a7" style="opacity:0" class="property-card-wrapper">
+            <div data-w-id="7b98f7e7-e9bc-eab0-cdb4-7c2718763063" style="opacity:0" class="property-card-wrapper">
                 <div class="img-wrapper">
                     <div class="search-result-images">
-                        <div class="search-result-single-image"><img src="{{'ADM243613_01.webp' | asset_url}}"
-                                loading="lazy" alt="" width="544" height="362" class="property-image">
-                            <div class="status-flag">
-                                <p class="paragraph-2">Off Market Listing</p>
-                            </div>
+                        <div class="search-result-single-image">
+                            <a href="#" class="property-image w-inline-block w-lightbox" aria-label="open lightbox"
+                                aria-haspopup="dialog">
+                                <img src="{{product.images[0] | asset_url}}" loading="lazy" alt="" loading="lazy" alt=""
+                                    class="property-image" width="544" height="356">
+                                <script type="application/json" class="w-json">{
+              "items": [
+                {
+                  "url": "{{product.images[0]}}",
+                  "type": "image"
+                }
+              ],
+              "group": "collection"
+            }</script>
+                            </a>
                             <div class="blur-cardimage">
                                 <div class="offmarket-image-content">
                                     <p class="text-align-center">40% of our properties are sold before they go on
@@ -759,33 +783,69 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="w-node-_7472359a-8876-8f2b-563f-7439c7f662ac-c258cdc7"
+                        <div id="w-node-f00db9f5-186c-b423-d383-58a3266a8399-c258cdc7"
                             class="search-result-grid-images">
-                            <div id="w-node-_7472359a-8876-8f2b-563f-7439c7f662ad-c258cdc7"
+                            <div id="w-node-e6a83049-b0dc-c808-2c08-4fca82fb07ec-c258cdc7"
                                 class="search-result-grid-image-single">
-                                <img src="{{'ADM243613_02.webp' | asset_url}}" loading="lazy" width="136" height="117"
-                                    alt="" class="propery-other-image">
+                                <a href="#" class="property-image w-inline-block w-lightbox" aria-label="open lightbox"
+                                    aria-haspopup="dialog">
+                                    <img src="{{product.images[1] | asset_url}}" loading="lazy" alt="" loading="lazy"
+                                        alt="" class="property-image" width="544" height="356">
+                                    <script type="application/json" class="w-json">{
+                                              "items": [
+                                                {
+                                                  "url": "{{product.images[1]}}",
+                                                  "type": "image"
+                                                }
+                                              ],
+                                              "group": "collection"
+                                            }</script>
+                                </a>
                                 <div class="blur-cardimage"></div>
                             </div>
-                            <div id="w-node-_7472359a-8876-8f2b-563f-7439c7f662af-c258cdc7"
+                            <div id="w-node-_8e36418d-6667-b8cf-b608-932484bf717d-c258cdc7"
                                 class="search-result-grid-image-single">
-                                <img src="{{'ADM243613_04.webp' | asset_url}}" loading="lazy" width="136" height="117"
-                                    alt="" class="propery-other-image">
+                                <a href="#" class="property-image w-inline-block w-lightbox" aria-label="open lightbox"
+                                    aria-haspopup="dialog">
+                                    <img src="{{product.images[2] | asset_url}}" loading="lazy" alt="" loading="lazy"
+                                        alt="" class="property-image" width="544" height="356">
+                                    <script type="application/json" class="w-json">{
+                                              "items": [
+                                                {
+                                                  "url": "{{product.images[2]}}",
+                                                  "type": "image"
+                                                }
+                                              ],
+                                              "group": "collection"
+                                            }</script>
+                                </a>
                                 <div class="blur-cardimage"></div>
                             </div>
-                            <div id="w-node-_7472359a-8876-8f2b-563f-7439c7f662b1-c258cdc7"
+                            <div id="w-node-_255e00db-fb62-4667-ab45-ca25903b9f35-c258cdc7"
                                 class="search-result-grid-image-single">
-                                <img src="{{'ADM243613_03.webp' | asset_url}}" loading="lazy" width="136" height="117"
-                                    alt="" class="propery-other-image">
+                                <a href="#" class="property-image w-inline-block w-lightbox" aria-label="open lightbox"
+                                    aria-haspopup="dialog">
+                                    <img src="{{product.images[3] | asset_url}}" loading="lazy" alt="" loading="lazy"
+                                        alt="" class="property-image" width="544" height="356">
+                                    <script type="application/json" class="w-json">{
+                                              "items": [
+                                                {
+                                                  "url": "{{product.images[3]}}",
+                                                  "type": "image"
+                                                }
+                                              ],
+                                              "group": "collection"
+                                            }</script>
+                                </a>
                                 <div class="blur-cardimage"></div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div id="w-node-_7472359a-8876-8f2b-563f-7439c7f662b3-c258cdc7"
+                <div id="w-node-_007edf24-3ea1-9691-a434-a220bed36ad7-c258cdc7"
                     class="property-card-text-wrapper-properties">
                     <div class="property-card-text-top">
-                        <p class="price">AED 3,250,000</p>
+                        <p class="price">{{ shop.currency }} {{ product.price | money_without_currency }}</p>
                         <div class="title">
                             <div class="icon_tiny w-embed">
                                 <svg width="800px" height="800px" viewbox="-4 0 32 32" version="1.1"
@@ -806,11 +866,11 @@
                                     </g>
                                 </svg>
                             </div>
-                            <p class="title-text">Springs 14, The Springs, Dubai</p>
+                            <p class="title-text">{{product.variants[2].option2}}</p>
                         </div>
-                        <p class="intro-text-property">Exclusive Renovated 4M | Opposite Park</p>
+                        <p class="intro-text-property">{{product.title}}</p>
                         <div class="icon-items">
-                            <p class="bulding_type-prop">Villa</p>
+                            <p class="bulding_type-prop">{{product.type}}</p>
                             <div class="vetical-line-property"></div>
                             <div class="icon-bk-bedroom">
                                 <div class="icon_tiny w-embed"><svg fill="#000000" height="800px" width="800px"
@@ -819,29 +879,33 @@
                                         xml:space="preserve">
                                         <g>
                                             <g>
-                                                <path d="M469.343,53.383H42.657C19.136,53.383,0,72.513,0,96.025v163.863v68.257v60.596v55.421
-                			c0,7.982,6.472,14.455,14.455,14.455h69.76c7.984,0,14.455-6.473,14.455-14.455v-40.966h314.659v40.966
-                			c0,7.982,6.472,14.455,14.455,14.455h69.76c7.984,0,14.455-6.473,14.455-14.455v-55.421v-60.596v-68.257V96.025
-                			C512,72.513,492.864,53.383,469.343,53.383z M69.76,429.707H28.91v-26.511h40.85V429.707z M84.215,374.286H28.91v-31.686h288.524
-                			c7.984,0,14.455-6.473,14.455-14.455s-6.472-14.455-14.455-14.455H28.91v-53.802c0-13.08,10.64-23.721,23.721-23.721h28.982
-                			h145.953h56.866h145.953h28.982c13.08,0,23.721,10.64,23.721,23.721v53.802h-64.716c-7.984,0-14.455,6.473-14.455,14.455
-                			s6.472,14.455,14.455,14.455h64.716v31.686h-55.305H84.215z M96.069,207.259v-24.342c0-16.524,13.442-29.965,29.965-29.965h57.112
-                			c16.524-0.001,29.965,13.442,29.965,29.965v24.342H96.069z M298.888,207.259v-24.342c0-16.524,13.442-29.965,29.965-29.965h57.112
-                			c16.524-0.001,29.965,13.442,29.965,29.965v24.342H298.888z M483.09,429.707h-40.85v-26.511h40.85V429.707z M483.09,212.912
-                			c-7.132-3.617-15.192-5.655-23.721-5.655h-14.527v-24.342c0-32.465-26.411-58.876-58.876-58.876h-57.112
-                			c-32.463,0-58.876,26.411-58.876,58.876v24.342h-27.956v-24.342c0-32.465-26.411-58.876-58.876-58.876h-57.112
-                			c-32.463,0-58.876,26.411-58.876,58.876v24.342H52.631c-8.529,0-16.589,2.038-23.721,5.655V96.025
-                			c0-7.572,6.167-13.732,13.747-13.732h426.686c7.58,0,13.747,6.161,13.747,13.732V212.912z"></path>
+                                                <path
+                                                    d="M469.343,53.383H42.657C19.136,53.383,0,72.513,0,96.025v163.863v68.257v60.596v55.421
+                                                                    c0,7.982,6.472,14.455,14.455,14.455h69.76c7.984,0,14.455-6.473,14.455-14.455v-40.966h314.659v40.966
+                                                                    c0,7.982,6.472,14.455,14.455,14.455h69.76c7.984,0,14.455-6.473,14.455-14.455v-55.421v-60.596v-68.257V96.025
+                                                                    C512,72.513,492.864,53.383,469.343,53.383z M69.76,429.707H28.91v-26.511h40.85V429.707z M84.215,374.286H28.91v-31.686h288.524
+                                                                    c7.984,0,14.455-6.473,14.455-14.455s-6.472-14.455-14.455-14.455H28.91v-53.802c0-13.08,10.64-23.721,23.721-23.721h28.982
+                                                                    h145.953h56.866h145.953h28.982c13.08,0,23.721,10.64,23.721,23.721v53.802h-64.716c-7.984,0-14.455,6.473-14.455,14.455
+                                                                    s6.472,14.455,14.455,14.455h64.716v31.686h-55.305H84.215z M96.069,207.259v-24.342c0-16.524,13.442-29.965,29.965-29.965h57.112
+                                                                    c16.524-0.001,29.965,13.442,29.965,29.965v24.342H96.069z M298.888,207.259v-24.342c0-16.524,13.442-29.965,29.965-29.965h57.112
+                                                                    c16.524-0.001,29.965,13.442,29.965,29.965v24.342H298.888z M483.09,429.707h-40.85v-26.511h40.85V429.707z M483.09,212.912
+                                                                    c-7.132-3.617-15.192-5.655-23.721-5.655h-14.527v-24.342c0-32.465-26.411-58.876-58.876-58.876h-57.112
+                                                                    c-32.463,0-58.876,26.411-58.876,58.876v24.342h-27.956v-24.342c0-32.465-26.411-58.876-58.876-58.876h-57.112
+                                                                    c-32.463,0-58.876,26.411-58.876,58.876v24.342H52.631c-8.529,0-16.589,2.038-23.721,5.655V96.025
+                                                                    c0-7.572,6.167-13.732,13.747-13.732h426.686c7.58,0,13.747,6.161,13.747,13.732V212.912z">
+                                                </path>
                                             </g>
                                         </g>
                                         <g>
                                             <g>
-                                                <path d="M371.034,313.69h-7.589c-7.984,0-14.455,6.473-14.455,14.455s6.472,14.455,14.455,14.455h7.589
-                			c7.984,0,14.455-6.473,14.455-14.455S379.017,313.69,371.034,313.69z"></path>
+                                                <path
+                                                    d="M371.034,313.69h-7.589c-7.984,0-14.455,6.473-14.455,14.455s6.472,14.455,14.455,14.455h7.589
+                                                                    c7.984,0,14.455-6.473,14.455-14.455S379.017,313.69,371.034,313.69z">
+                                                </path>
                                             </g>
                                         </g>
                                     </svg></div>
-                                <p class="icon-text">2</p>
+                                <p class="icon-text">{{product.variants[1].option2}}</p>
                             </div>
                             <div class="vetical-line-property"></div>
                             <div class="icon-bk-bathroom">
@@ -854,7 +918,7 @@
                                             stroke-width="2"></path>
                                     </svg>
                                 </div>
-                                <p class="icon-text">3</p>
+                                <p class="icon-text">{{product.variants[0].option2}}</p>
                             </div>
                             <div class="vetical-line-property"></div>
                             <div class="icon-bk-bathroom">
@@ -876,26 +940,24 @@
                                             </g>
                                         </g>
                                     </svg></div>
-                                <p class="icon-text">BUA: 1,849 sq.ft</p>
+                                <p class="icon-text">Lot Area: {{product.variants[3].option2}}</p>
                             </div>
-                            <div class="slide-line"></div>
-                            <p class="icon-text">Plot: 82,764,000 sq.ft</p>
+
                         </div>
                     </div>
                     <div class="propery-agent">
                         <div class="contact-items">
                             <div class="person-img-data">
-                                <div class="person-img"><img
-                                        src="{{'Andrew_Harris_ES_2024_ec874b9539.png' | asset_url}}" loading="lazy"
-                                        width="316" height="216" alt="" class="person-img"></div>
+                                <div class="person-img"><img src="{{'jcon.jpeg' | asset_url}}" loading="lazy" width="48"
+                                        height="48" alt="" class="person-img"></div>
                                 <div class="person-data">
-                                    <p class="name">Andrew Harris</p>
-                                    <p class="job-title">Speaks English</p>
+                                    <p class="name">{{product.vendor}}</p>
+                                    <p class="job-title">Real State In Dubai</p>
                                 </div>
                             </div>
                         </div>
                         <div class="person-contact">
-                            <a href="#" class="button is-contact w-inline-block">
+                            <a href="tel:+971585583349" class="button is-contact w-inline-block">
                                 <div class="icon_small w-embed"><svg fill="currentColor" width="800px" height="800px"
                                         viewbox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -904,7 +966,7 @@
                                     </svg></div>
                                 <div>Call</div>
                             </a>
-                            <a href="#" class="button is-contact w-inline-block">
+                            <a href="https://wa.me/+971585583349" class="button is-contact w-inline-block">
                                 <div class="icon_small w-embed"><svg width="800px" height="800px" viewbox="0 0 20 20"
                                         version="1.1" xmlns="http://www.w3.org/2000/svg"
                                         xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -925,26 +987,12 @@
                                     </svg></div>
                                 <div>Whatsapp</div>
                             </a>
-                            <a href="#" class="button is-contact _2 w-inline-block">
-                                <div class="icon_small w-embed"><svg width="800px" height="800px" viewbox="0 0 512 512"
-                                        version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink">
-                                        <title>mail-filled</title>
-                                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                            <g id="mail-filled-white" fill="currentColor" div
-                                                transform="translate(42.686667, 85.339333)">
-                                                <path
-                                                    d="M3.55271368e-14,28.7 L213.333914,220.70134 L426.667,28.701 L426.667248,341.333608 L0.00058094128,341.333608 L3.55271368e-14,28.7 Z M394.776,1.42108547e-14 L213.333914,163.285608 L31.89,1.42108547e-14 L394.776,1.42108547e-14 Z"
-                                                    id="Combined-Shape"></path>
-                                            </g>
-                                        </g>
-                                    </svg></div>
-                                <div>Book a Viewing</div>
-                            </a>
+
                         </div>
                     </div>
                 </div>
             </div>
+
             {% endunless %}
             {% endfor %}
 
@@ -1100,7 +1148,8 @@
                         </div>
                         <nav class="property-list w-dropdown-list">
                             {% for i in (1..paginate.pages) %}
-                            <a href="{{ paginate | page_url: i }}" class="page-count w-dropdown-link">{{ i }}</a>
+                            <a href="{{ paginate | default_pagination: i }}" class="page-count w-dropdown-link">{{ i
+                                }}</a>
                             {% endfor %}
                         </nav>
                     </div>

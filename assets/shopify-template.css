@@ -1745,6 +1745,8 @@ p {
   margin-top: 16px;
   margin-bottom: 0;
   font-weight: 700;
+  text-decoration: none;
+  color: var(--primary);
 }
 
 .icon-items {
@@ -1831,9 +1833,10 @@ p {
 }
 
 .person-img {
-  object-fit: contain;
-  width: 44px;
-  height: 44px;
+  object-fit: cover;
+  width: 3rem;
+  height: 2.75rem;
+  border-radius: 0.25rem;
 }
 
 .name {
