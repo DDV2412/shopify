@@ -282,7 +282,7 @@ p {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   font-weight: 700;
-  line-height: 1;
+  line-height: 1 !important;
   text-decoration: none;
   transition: all .3s cubic-bezier(.645, .045, .355, 1);
   display: flex;
@@ -1736,6 +1736,7 @@ p {
   display: flex;
 }
 
+
 .title-text {
   color: var(--text-primary);
   margin-bottom: 0;
@@ -1747,6 +1748,11 @@ p {
   font-weight: 700;
   text-decoration: none;
   color: var(--primary);
+}
+
+.intro-text-property a {
+  color: var(--primary);
+  text-decoration: none;
 }
 
 .icon-items {

@@ -505,8 +505,8 @@
                     </div>
                 </div>
                 <div class="button is-secondary left-0"><img
-                        src="{{'map-view-icon-efde59c838d7b464646be4c8a4ce33b0.svg' | asset_url}}" loading="lazy" alt=""
-                        width="48" height="48">
+                        src="{{'map-view-icon-efde59c838d7b464646be4c8a4ce33b0.svg' | asset_url}}" loading="lazy"
+                        alt="{{product.title}}" width="48" height="48">
                     <div class="icon_small w-embed">
                         <svg width="800px" height="800px" viewbox="-4 0 32 32" version="1.1"
                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -538,17 +538,18 @@
                         <div class="search-result-single-image">
                             <a href="#" class="property-image w-inline-block w-lightbox" aria-label="open lightbox"
                                 aria-haspopup="dialog">
-                                <img src="{{ product.images[0] | asset_url }}" loading="lazy" alt="" loading="lazy"
-                                    alt="" class="property-image" width="544" height="356">
+                                <img src="{{ product.images[0] | img_url: 'original' }}" loading="lazy"
+                                    alt="{{product.title}}" loading="lazy" alt="{{product.title}}"
+                                    class="property-image" width="544" height="356" />
                                 <script type="application/json" class="w-json">{
-  "items": [
-    {
-      "url": "{{product.images[0]}}",
-      "type": "image"
-    }
-  ],
-  "group": "collection"
-}</script>
+                                  "items": [
+                                    {
+                                      "url": "{{ product.images[0] | img_url: 'original' }}",
+                                      "type": "image"
+                                    }
+                                  ],
+                                  "group": "collection"
+                                }</script>
                             </a>
                         </div>
                         <div id="w-node-f00db9f5-186c-b423-d383-58a3266a8399-c258cdc7"
@@ -557,51 +558,51 @@
                                 class="search-result-grid-image-single">
                                 <a href="#" class="property-image w-inline-block w-lightbox" aria-label="open lightbox"
                                     aria-haspopup="dialog">
-                                    <img src="{{product.images[1] | asset_url}}" loading="lazy" alt="" loading="lazy"
-                                        alt="" class="property-image" width="544" height="356">
+                                    <img src="{{ product.images[1] | img_url: 'original' }}" loading="lazy"
+                                        alt="{{product.title}}" class="property-image" width="544" height="356" />
                                     <script type="application/json" class="w-json">{
-                                  "items": [
-                                    {
-                                      "url": "{{product.images[1]}}",
-                                      "type": "image"
-                                    }
-                                  ],
-                                  "group": "collection"
-                                }</script>
+                                                                      "items": [
+                                                                        {
+                                                                          "url": "{{ product.images[1] | img_url: 'original' }}",
+                                                                          "type": "image"
+                                                                        }
+                                                                      ],
+                                                                      "group": "collection"
+                                                                    }</script>
                                 </a>
                             </div>
                             <div id="w-node-_8e36418d-6667-b8cf-b608-932484bf717d-c258cdc7"
                                 class="search-result-grid-image-single">
                                 <a href="#" class="property-image w-inline-block w-lightbox" aria-label="open lightbox"
                                     aria-haspopup="dialog">
-                                    <img src="{{product.images[2] | asset_url}}" loading="lazy" alt="" loading="lazy"
-                                        alt="" class="property-image" width="544" height="356">
+                                    <img src="{{ product.images[2] | img_url: 'original' }}" loading="lazy"
+                                        alt="{{product.title}}" class="property-image" width="544" height="356" />
                                     <script type="application/json" class="w-json">{
-                                  "items": [
-                                    {
-                                      "url": "{{product.images[2]}}",
-                                      "type": "image"
-                                    }
-                                  ],
-                                  "group": "collection"
-                                }</script>
+                                                                      "items": [
+                                                                        {
+                                                                          "url": "{{ product.images[2] | img_url: 'original' }}",
+                                                                          "type": "image"
+                                                                        }
+                                                                      ],
+                                                                      "group": "collection"
+                                                                    }</script>
                                 </a>
                             </div>
                             <div id="w-node-_255e00db-fb62-4667-ab45-ca25903b9f35-c258cdc7"
                                 class="search-result-grid-image-single">
                                 <a href="#" class="property-image w-inline-block w-lightbox" aria-label="open lightbox"
                                     aria-haspopup="dialog">
-                                    <img src="{{product.images[3] | asset_url}}" loading="lazy" alt="" loading="lazy"
-                                        alt="" class="property-image" width="544" height="356">
+                                    <img src="{{ product.images[3] | img_url: 'original' }}" loading="lazy"
+                                        alt="{{product.title}}" class="property-image" width="544" height="356" />
                                     <script type="application/json" class="w-json">{
-                                  "items": [
-                                    {
-                                      "url": "{{product.images[3]}}",
-                                      "type": "image"
-                                    }
-                                  ],
-                                  "group": "collection"
-                                }</script>
+                                                                      "items": [
+                                                                        {
+                                                                          "url": "{{ product.images[3] | img_url: 'original' }}",
+                                                                          "type": "image"
+                                                                        }
+                                                                      ],
+                                                                      "group": "collection"
+                                                                    }</script>
                                 </a>
                             </div>
                         </div>
@@ -633,7 +634,9 @@
                             </div>
                             <p class="title-text">{{product.variants[2].option2}}</p>
                         </div>
-                        <a href="{{product.url}}" class="intro-text-property">{{product.title}}</a>
+                        <p class="intro-text-property">
+                            <a href="{{product.url}}">{{product.title}}</a>
+                        </p>
                         <div class="icon-items">
                             <p class="bulding_type-prop">{{product.type}}</p>
                             <div class="vetical-line-property"></div>
@@ -670,7 +673,7 @@
                                             </g>
                                         </g>
                                     </svg></div>
-                                <p class="icon-text">{{product.variants[1].option2}}</p>
+                                <p class="icon-text">{{product.variants[0].option2 | plus: 0}}</p>
                             </div>
                             <div class="vetical-line-property"></div>
                             <div class="icon-bk-bathroom">
@@ -683,7 +686,8 @@
                                             stroke-width="2"></path>
                                     </svg>
                                 </div>
-                                <p class="icon-text">{{product.variants[0].option2}}</p>
+
+                                <p class="icon-text">{{ product.variants[1].option2 | replace: '"', "" }}</p>
                             </div>
                             <div class="vetical-line-property"></div>
                             <div class="icon-bk-bathroom">
@@ -714,7 +718,7 @@
                         <div class="contact-items">
                             <div class="person-img-data">
                                 <div class="person-img"><img src="{{'jcon.jpeg' | asset_url}}" loading="lazy" width="48"
-                                        height="48" alt="" class="person-img"></div>
+                                        height="48" alt="{{product.vendor}}" class="person-img"></div>
                                 <div class="person-data">
                                     <p class="name">{{product.vendor}}</p>
                                     <p class="job-title">Real State In Dubai</p>
@@ -722,7 +726,7 @@
                             </div>
                         </div>
                         <div class="person-contact">
-                            <a href="tel:+971585583349" class="button is-contact w-inline-block">
+                            <a href="tel:+971585583349"  target="_blank" class="button is-contact w-inline-block">
                                 <div class="icon_small w-embed"><svg fill="currentColor" width="800px" height="800px"
                                         viewbox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -731,7 +735,7 @@
                                     </svg></div>
                                 <div>Call</div>
                             </a>
-                            <a href="https://wa.me/+971585583349" class="button is-contact w-inline-block">
+                            <a href="https://wa.me/+971585583349"  target="_blank" class="button is-contact w-inline-block">
                                 <div class="icon_small w-embed"><svg width="800px" height="800px" viewbox="0 0 20 20"
                                         version="1.1" xmlns="http://www.w3.org/2000/svg"
                                         xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -764,17 +768,18 @@
                         <div class="search-result-single-image">
                             <a href="#" class="property-image w-inline-block w-lightbox" aria-label="open lightbox"
                                 aria-haspopup="dialog">
-                                <img src="{{product.images[0] | asset_url}}" loading="lazy" alt="" loading="lazy" alt=""
-                                    class="property-image" width="544" height="356">
+                                <img src="{{ product.images[0] | img_url: 'original' }}" loading="lazy"
+                                    alt="{{product.title}}" loading="lazy" alt="{{product.title}}"
+                                    class="property-image" width="544" height="356" />
                                 <script type="application/json" class="w-json">{
-              "items": [
-                {
-                  "url": "{{product.images[0]}}",
-                  "type": "image"
-                }
-              ],
-              "group": "collection"
-            }</script>
+                                                              "items": [
+                                                                {
+                                                                  "url": "{{ product.images[0] | img_url: 'original' }}",
+                                                                  "type": "image"
+                                                                }
+                                                              ],
+                                                              "group": "collection"
+                                                            }</script>
                             </a>
                             <div class="blur-cardimage">
                                 <div class="offmarket-image-content">
@@ -789,17 +794,17 @@
                                 class="search-result-grid-image-single">
                                 <a href="#" class="property-image w-inline-block w-lightbox" aria-label="open lightbox"
                                     aria-haspopup="dialog">
-                                    <img src="{{product.images[1] | asset_url}}" loading="lazy" alt="" loading="lazy"
-                                        alt="" class="property-image" width="544" height="356">
+                                    <img src="{{ product.images[1] | img_url: 'original' }}" loading="lazy"
+                                        alt="{{product.title}}" class="property-image" width="544" height="356" />
                                     <script type="application/json" class="w-json">{
-                                              "items": [
-                                                {
-                                                  "url": "{{product.images[1]}}",
-                                                  "type": "image"
-                                                }
-                                              ],
-                                              "group": "collection"
-                                            }</script>
+                                                                                                      "items": [
+                                                                                                        {
+                                                                                                          "url": "{{ product.images[1] | img_url: 'original' }}",
+                                                                                                          "type": "image"
+                                                                                                        }
+                                                                                                      ],
+                                                                                                      "group": "collection"
+                                                                                                    }</script>
                                 </a>
                                 <div class="blur-cardimage"></div>
                             </div>
@@ -807,17 +812,17 @@
                                 class="search-result-grid-image-single">
                                 <a href="#" class="property-image w-inline-block w-lightbox" aria-label="open lightbox"
                                     aria-haspopup="dialog">
-                                    <img src="{{product.images[2] | asset_url}}" loading="lazy" alt="" loading="lazy"
-                                        alt="" class="property-image" width="544" height="356">
+                                    <img src="{{ product.images[2] | img_url: 'original' }}" loading="lazy"
+                                        alt="{{product.title}}" class="property-image" width="544" height="356" />
                                     <script type="application/json" class="w-json">{
-                                              "items": [
-                                                {
-                                                  "url": "{{product.images[2]}}",
-                                                  "type": "image"
-                                                }
-                                              ],
-                                              "group": "collection"
-                                            }</script>
+                                                                                                      "items": [
+                                                                                                        {
+                                                                                                          "url": "{{ product.images[2] | img_url: 'original' }}",
+                                                                                                          "type": "image"
+                                                                                                        }
+                                                                                                      ],
+                                                                                                      "group": "collection"
+                                                                                                    }</script>
                                 </a>
                                 <div class="blur-cardimage"></div>
                             </div>
@@ -825,17 +830,17 @@
                                 class="search-result-grid-image-single">
                                 <a href="#" class="property-image w-inline-block w-lightbox" aria-label="open lightbox"
                                     aria-haspopup="dialog">
-                                    <img src="{{product.images[3] | asset_url}}" loading="lazy" alt="" loading="lazy"
-                                        alt="" class="property-image" width="544" height="356">
+                                    <img src="{{ product.images[3] | img_url: 'original' }}" loading="lazy"
+                                        alt="{{product.title}}" class="property-image" width="544" height="356" />
                                     <script type="application/json" class="w-json">{
-                                              "items": [
-                                                {
-                                                  "url": "{{product.images[3]}}",
-                                                  "type": "image"
-                                                }
-                                              ],
-                                              "group": "collection"
-                                            }</script>
+                                                                                                      "items": [
+                                                                                                        {
+                                                                                                          "url": "{{ product.images[3] | img_url: 'original' }}",
+                                                                                                          "type": "image"
+                                                                                                        }
+                                                                                                      ],
+                                                                                                      "group": "collection"
+                                                                                                    }</script>
                                 </a>
                                 <div class="blur-cardimage"></div>
                             </div>
@@ -949,7 +954,7 @@
                         <div class="contact-items">
                             <div class="person-img-data">
                                 <div class="person-img"><img src="{{'jcon.jpeg' | asset_url}}" loading="lazy" width="48"
-                                        height="48" alt="" class="person-img"></div>
+                                        height="48" alt="{{product.vendor}}" class="person-img"></div>
                                 <div class="person-data">
                                     <p class="name">{{product.vendor}}</p>
                                     <p class="job-title">Real State In Dubai</p>
@@ -1013,7 +1018,7 @@
                                             width="316" height="210" loading="lazy"
                                             sizes="(max-width: 479px) 91vw, (max-width: 991px) 44vw, 21vw"
                                             srcset="{{'Damac_Sun_City_hausandhaus_1_66afe34385-p-500.webp' | asset_url}} 500w, {{'Damac_Sun_City_hausandhaus_1_66afe34385.webp' | asset_url}} 750w"
-                                            alt="" class="image-section"></div>
+                                             alt="{{product.title}}" class="image-section"></div>
                                     <div class="content-btn-section">
                                         <div class="content-section">
                                             <h3 class="developer">DAMAC Sun City</h3>
