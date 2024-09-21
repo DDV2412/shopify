@@ -1,8 +1,10 @@
 {% assign page_id = "66ea5ed1c7dd6ce3c258cdc7" %}
 {% assign secondary_header = "secondary_header" %}
 
+{% assign products = collection.products %}
 
-{% paginate collection.products by 12 %}
+
+{% paginate products by 12 %}
 <section class="section_component sticky-top">
     <div class="filter-search-wrapper">
         <div class="container">
@@ -225,12 +227,6 @@
                                 class="button-submit-icon w-button" value="Search">
                         </div>
                     </form>
-                    <div class="w-form-done">
-                        <div>Thank you! Your submission has been received!</div>
-                    </div>
-                    <div class="w-form-fail">
-                        <div>Oops! Something went wrong while submitting the form.</div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -479,7 +475,7 @@
         <div data-w-id="a89511ed-a22c-1a36-7890-1bcc708e042c" style="opacity:0" class="search-results-wrapper">
             <div id="w-node-f32977aa-7d08-0af9-ddb1-d62e4f915c59-c258cdc7" class="heading-left">
                 <h1 class="search-results-heading">Properties for sale in Dubai</h1>
-                <p class="search-results-count">{{ collection.products_count }} results</p>
+                <p class="search-results-count">{{ products.size }} results</p>
             </div>
             <div id="w-node-f59c1c80-b0ec-cde7-64dd-6f34fcd094d9-c258cdc7" class="heading-right">
                 <div class="button is-secondary">
@@ -535,12 +531,33 @@
             </div>
         </div>
         <div class="property-card-wrapper-main">
-            {% for product in collection.products %}
+            {% for product in products %}
             <div data-w-id="7b98f7e7-e9bc-eab0-cdb4-7c2718763063" style="opacity:0" class="property-card-wrapper">
+                {{product | json}}
                 <div class="img-wrapper">
                     <div class="search-result-images">
-                        <div class="search-result-single-image"><img src="{{'ADM243613_01.webp' | asset_url}}"
-                                loading="lazy" alt="" width="544" height="362" class="property-image"></div>
+                        <div class="search-result-single-image">
+                            <a href="#" class="property-image w-inline-block w-lightbox" aria-label="open lightbox"
+                                aria-haspopup="dialog">
+                                <img src="{{product.images[0].src  }}" loading="lazy" alt="" loading="lazy" alt=""
+                                    class="property-image" width="544" height="356">
+                                <script type="application/json" class="w-json">{
+  "items": [
+    {
+      "_id": "66ea7dd501d8c66d013d5a8f",
+      "origFileName": "ADM243613_02.webp",
+      "fileName": "ADM243613_02.webp",
+      "fileSize": 22704,
+      "height": 130,
+      "url": "https://cdn.prod.website-files.com/66e6ed97469869045902b70e/66ea7dd501d8c66d013d5a8f_ADM243613_02.webp",
+      "width": 176,
+      "type": "image"
+    }
+  ],
+  "group": "collection"
+}</script>
+                            </a>
+                        </div>
                         <div id="w-node-f00db9f5-186c-b423-d383-58a3266a8399-c258cdc7"
                             class="search-result-grid-images">
                             <div id="w-node-e6a83049-b0dc-c808-2c08-4fca82fb07ec-c258cdc7"
