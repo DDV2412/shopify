@@ -1,7 +1,9 @@
 {% assign page_id = "66ea5ed1c7dd6ce3c258cdc7" %}
 {% assign secondary_header = "secondary_header" %}
 
+
 {% assign products = collection.products | sort: 'created_at' | reverse %}
+
 
 {% assign all_tags = "" %}
 {% for product in collections.all.products %}
@@ -14,6 +16,22 @@
 
 {% assign tags_array = all_tags | split: "," %}
 
+{% assign product_types = products | map: 'type' | uniq %}
+
+{% assign all_tags = "" %}
+{% for product in collections.all.products %}
+{% for tag in product.tags %}
+{% unless all_tags contains tag %}
+{% assign all_tags = all_tags | append: tag | append: "," %}
+{% endunless %}
+{% endfor %}
+{% endfor %}
+
+{% assign tags_array = all_tags | split: "," %}
+
+{% assign product_types = products | map: 'type' | uniq %}
+
+
 {% paginate products by 12 %}
 <section class="section_component sticky-top">
     <div class="filter-search-wrapper">
@@ -21,39 +39,10 @@
             <div class="filter-search-features">
                 <div data-w-id="da1f4836-e90d-fd7b-4dd3-fd605015895e" style="opacity:0"
                     class="search-form bottom-0 w-form">
-                    <form id="search-box" name="email-form" data-name="Email Form" method="get"
-                        class="search_content is-filtered" data-wf-page-id="66ea5ed1c7dd6ce3c258cdc7"
+                    <form action="/search" id="search-box" name="email-form" data-name="Email Form" method="get"
+                        role="search" class="search_content is-filtered" data-wf-page-id="66ea5ed1c7dd6ce3c258cdc7"
                         data-wf-element-id="da1f4836-e90d-fd7b-4dd3-fd605015895f">
-                        <div class="select-wrapper no-border hide-tablet">
-                            <div data-hover="true" data-delay="0"
-                                class="property_select-wrapper dropdown-filter background-white w-dropdown">
-                                <div class="property-select w-dropdown-toggle">
-                                    <div class="property-selected">Buy</div>
-                                    <div class="icon_small w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                            height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor"
-                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                            class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
-                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                            <path d="M6 9l6 6l6 -6"></path>
-                                        </svg></div>
-                                </div>
-                                <nav class="property-list w-dropdown-list">
-                                    <div class="property-wrapper"><label class="propert-radio w-radio">
-                                            <div
-                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="Buy" data-name="Buy"
-                                                style="opacity:0;position:absolute;z-index:-1" value="Buy"><span
-                                                class="type-label w-form-label" for="Buy">Buy</span>
-                                        </label><label class="propert-radio w-radio">
-                                            <div
-                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="property-type" data-name="property-type"
-                                                style="opacity:0;position:absolute;z-index:-1" value="Rent"><span
-                                                class="type-label w-form-label" for="Rent">Rent</span>
-                                        </label></div>
-                                </nav>
-                            </div>
-                        </div>
+
                         <div class="search-wrapper background-white is-filter">
                             <div class="icon_small w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="24"
                                     height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -62,9 +51,9 @@
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                     <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
                                     <path d="M21 21l-6 -6"></path>
-                                </svg></div><input class="search-field w-input" maxlength="256" name="Search-2"
-                                data-name="Search 2" placeholder="City, building or community" type="text"
-                                id="Search-2">
+                                </svg></div><input class="search-field w-input" maxlength="256" name="q"
+                                value="{{search.terms | escape}}" data-name="Search 2"
+                                placeholder="City, building or community" type="text" id="Search-2">
                         </div>
                         <div class="select-wrapper no-border hide-tablet">
                             <div data-hover="true" data-delay="0"
@@ -80,21 +69,18 @@
                                         </svg></div>
                                 </div>
                                 <nav class="property-list w-dropdown-list">
-                                    <div class="property-wrapper"><label class="propert-radio w-radio">
+                                    <div class="property-wrapper">
+                                        {% for type in product_types %}
+                                        <label class="propert-radio w-radio">
                                             <div
                                                 class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="Property-Type" id="property-type-2"
-                                                data-name="Property Type" style="opacity:0;position:absolute;z-index:-1"
-                                                value="property type"><span class="type-label w-form-label"
-                                                for="property-type-2">Property Type</span>
-                                        </label><label class="propert-radio w-radio">
-                                            <div
-                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="property-type" id="apartment"
-                                                data-name="property-type" style="opacity:0;position:absolute;z-index:-1"
-                                                value="apartment"><span class="type-label w-form-label"
-                                                for="apartment">Apartment</span>
-                                        </label></div>
+                                            </div>
+                                            <input type="radio" name="type" id="property-type-2" data-name="{{type}}"
+                                                style="opacity:0;position:absolute;z-index:-1" value="{{type}}"><span
+                                                class="type-label w-form-label" for="property-type-2">{{type}}</span>
+                                        </label>
+                                        {% endfor %}
+                                    </div>
                                 </nav>
                             </div>
                         </div>
@@ -112,14 +98,97 @@
                                         </svg></div>
                                 </div>
                                 <nav class="property-list w-dropdown-list">
-                                    <div class="property-wrapper"><label class="propert-radio w-radio">
+                                    <div class="property-wrapper">
+                                        <label class="propert-radio w-radio">
                                             <div
                                                 class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="Min-Price" id="min-price-2"
-                                                data-name="Min Price 2" style="opacity:0;position:absolute;z-index:-1"
-                                                value="min price"><span class="type-label w-form-label"
-                                                for="min-price-2">Min Price</span>
-                                        </label></div>
+                                            </div><input type="radio" name="min-price" id="min-price"
+                                                data-name="Min Price" style="opacity:0;position:absolute;z-index:-1"
+                                                value="AED 300,000"><span class="type-label w-form-label"
+                                                for="min-price">AED 300,000</span>
+                                        </label>
+                                        <label class="propert-radio w-radio">
+                                            <div
+                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
+                                            </div><input type="radio" name="min-price" id="min-price"
+                                                data-name="Min Price" style="opacity:0;position:absolute;z-index:-1"
+                                                value="AED 500,000"><span class="type-label w-form-label"
+                                                for="min-price">AED 500,000</span>
+                                        </label>
+                                        <label class="propert-radio w-radio">
+                                            <div
+                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
+                                            </div><input type="radio" name="min-price" id="min-price"
+                                                data-name="Min Price" style="opacity:0;position:absolute;z-index:-1"
+                                                value="AED 700,000"><span class="type-label w-form-label"
+                                                for="min-price">AED 700,000</span>
+                                        </label>
+                                        <label class="propert-radio w-radio">
+                                            <div
+                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
+                                            </div><input type="radio" name="min-price" id="min-price"
+                                                data-name="Min Price" style="opacity:0;position:absolute;z-index:-1"
+                                                value="AED 1,000,000"><span class="type-label w-form-label"
+                                                for="min-price">AED 1,000,000</span>
+                                        </label>
+                                        <label class="propert-radio w-radio">
+                                            <div
+                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
+                                            </div><input type="radio" name="min-price" id="min-price"
+                                                data-name="Min Price" style="opacity:0;position:absolute;z-index:-1"
+                                                value="AED 2,000,000"><span class="type-label w-form-label"
+                                                for="min-price">AED 2,000,000</span>
+                                        </label>
+                                        <label class="propert-radio w-radio">
+                                            <div
+                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
+                                            </div><input type="radio" name="min-price" id="min-price"
+                                                data-name="Min Price" style="opacity:0;position:absolute;z-index:-1"
+                                                value="AED 3,000,000"><span class="type-label w-form-label"
+                                                for="min-price">AED 3,000,000</span>
+                                        </label>
+                                        <label class="propert-radio w-radio">
+                                            <div
+                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
+                                            </div><input type="radio" name="min-price" id="min-price"
+                                                data-name="Min Price" style="opacity:0;position:absolute;z-index:-1"
+                                                value="AED 5,000,000"><span class="type-label w-form-label"
+                                                for="min-price">AED 5,000,000</span>
+                                        </label>
+                                        <label class="propert-radio w-radio">
+                                            <div
+                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
+                                            </div><input type="radio" name="min-price" id="min-price"
+                                                data-name="Min Price" style="opacity:0;position:absolute;z-index:-1"
+                                                value="AED 8,000,000"><span class="type-label w-form-label"
+                                                for="min-price">AED 8,000,000</span>
+                                        </label>
+                                        <label class="propert-radio w-radio">
+                                            <div
+                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
+                                            </div><input type="radio" name="min-price" id="min-price"
+                                                data-name="Min Price" style="opacity:0;position:absolute;z-index:-1"
+                                                value="AED 10,000,000"><span class="type-label w-form-label"
+                                                for="min-price">AED 10,000,000</span>
+                                        </label>
+                                        <label class="propert-radio w-radio">
+                                            <div
+                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
+                                            </div><input type="radio" name="min-price" id="min-price"
+                                                data-name="Min Price" style="opacity:0;position:absolute;z-index:-1"
+                                                value="AED 20,000,000"><span class="type-label w-form-label"
+                                                for="min-price">AED 20,000,000</span>
+                                        </label>
+                                        <label class="propert-radio w-radio">
+                                            <div
+                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
+                                            </div><input type="radio" name="min-price" id="min-price"
+                                                data-name="Min Price" style="opacity:0;position:absolute;z-index:-1"
+                                                value="AED 50,000,000"><span class="type-label w-form-label"
+                                                for="min-price">AED 50,000,000+</span>
+                                        </label>
+
+                                    </div>
                                 </nav>
                             </div>
                         </div>
@@ -137,14 +206,97 @@
                                         </svg></div>
                                 </div>
                                 <nav class="property-list w-dropdown-list">
-                                    <div class="property-wrapper"><label class="propert-radio w-radio">
+                                    <div class="property-wrapper">
+                                        <label class="propert-radio w-radio">
                                             <div
                                                 class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="Max-Price" id="max-price-2"
-                                                data-name="Max Price 2" style="opacity:0;position:absolute;z-index:-1"
-                                                value="max price"><span class="type-label w-form-label"
-                                                for="max-price-2">Max Price</span>
-                                        </label></div>
+                                            </div><input type="radio" name="max-price" id="max-price"
+                                                data-name="Max Price" style="opacity:0;position:absolute;z-index:-1"
+                                                value="AED 300,000"><span class="type-label w-form-label"
+                                                for="max-price">AED 300,000</span>
+                                        </label>
+                                        <label class="propert-radio w-radio">
+                                            <div
+                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
+                                            </div><input type="radio" name="max-price" id="max-price"
+                                                data-name="Max Price" style="opacity:0;position:absolute;z-index:-1"
+                                                value="AED 500,000"><span class="type-label w-form-label"
+                                                for="max-price">AED 500,000</span>
+                                        </label>
+                                        <label class="propert-radio w-radio">
+                                            <div
+                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
+                                            </div><input type="radio" name="max-price" id="max-price"
+                                                data-name="Max Price" style="opacity:0;position:absolute;z-index:-1"
+                                                value="AED 700,000"><span class="type-label w-form-label"
+                                                for="max-price">AED 700,000</span>
+                                        </label>
+                                        <label class="propert-radio w-radio">
+                                            <div
+                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
+                                            </div><input type="radio" name="max-price" id="max-price"
+                                                data-name="Max Price" style="opacity:0;position:absolute;z-index:-1"
+                                                value="AED 1,000,000"><span class="type-label w-form-label"
+                                                for="max-price">AED 1,000,000</span>
+                                        </label>
+                                        <label class="propert-radio w-radio">
+                                            <div
+                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
+                                            </div><input type="radio" name="max-price" id="max-price"
+                                                data-name="Max Price" style="opacity:0;position:absolute;z-index:-1"
+                                                value="AED 2,000,000"><span class="type-label w-form-label"
+                                                for="max-price">AED 2,000,000</span>
+                                        </label>
+                                        <label class="propert-radio w-radio">
+                                            <div
+                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
+                                            </div><input type="radio" name="max-price" id="max-price"
+                                                data-name="Max Price" style="opacity:0;position:absolute;z-index:-1"
+                                                value="AED 3,000,000"><span class="type-label w-form-label"
+                                                for="max-price">AED 3,000,000</span>
+                                        </label>
+                                        <label class="propert-radio w-radio">
+                                            <div
+                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
+                                            </div><input type="radio" name="max-price" id="max-price"
+                                                data-name="Max Price" style="opacity:0;position:absolute;z-index:-1"
+                                                value="AED 5,000,000"><span class="type-label w-form-label"
+                                                for="max-price">AED 5,000,000</span>
+                                        </label>
+                                        <label class="propert-radio w-radio">
+                                            <div
+                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
+                                            </div><input type="radio" name="max-price" id="max-price"
+                                                data-name="Max Price" style="opacity:0;position:absolute;z-index:-1"
+                                                value="AED 8,000,000"><span class="type-label w-form-label"
+                                                for="max-price">AED 8,000,000</span>
+                                        </label>
+                                        <label class="propert-radio w-radio">
+                                            <div
+                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
+                                            </div><input type="radio" name="max-price" id="max-price"
+                                                data-name="Max Price" style="opacity:0;position:absolute;z-index:-1"
+                                                value="AED 10,000,000"><span class="type-label w-form-label"
+                                                for="max-price">AED 10,000,000</span>
+                                        </label>
+                                        <label class="propert-radio w-radio">
+                                            <div
+                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
+                                            </div><input type="radio" name="max-price" id="max-price"
+                                                data-name="Max Price" style="opacity:0;position:absolute;z-index:-1"
+                                                value="AED 20,000,000"><span class="type-label w-form-label"
+                                                for="max-price">AED 20,000,000</span>
+                                        </label>
+                                        <label class="propert-radio w-radio">
+                                            <div
+                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
+                                            </div><input type="radio" name="max-price" id="max-price"
+                                                data-name="Max Price" style="opacity:0;position:absolute;z-index:-1"
+                                                value="AED 50,000,000"><span class="type-label w-form-label"
+                                                for="max-price">AED 50,000,000+</span>
+                                        </label>
+
+                                    </div>
                                 </nav>
                             </div>
                         </div>
@@ -161,13 +313,29 @@
                                         </svg></div>
                                 </div>
                                 <nav class="property-list w-dropdown-list">
-                                    <div class="property-wrapper"><label class="propert-radio w-radio">
+                                    <div class="property-wrapper">
+                                        <label class="propert-radio w-radio">
                                             <div
                                                 class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="Beds-Type" id="beds" data-name="Beds Type"
-                                                style="opacity:0;position:absolute;z-index:-1" value="beds"><span
-                                                class="type-label w-form-label" for="beds">Beds</span>
-                                        </label></div>
+                                            </div><input type="radio" name="Bet" id="bet" data-name="Bet Type"
+                                                style="opacity:0;position:absolute;z-index:-1" value="0-2"><span
+                                                class="type-label w-form-label" for="bet">0-2</span>
+                                        </label>
+                                        <label class="propert-radio w-radio">
+                                            <div
+                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
+                                            </div><input type="radio" name="Bet" id="bet" data-name="Bet Type"
+                                                style="opacity:0;position:absolute;z-index:-1" value="3-5"><span
+                                                class="type-label w-form-label" for="bet">3-5</span>
+                                        </label>
+                                        <label class="propert-radio w-radio">
+                                            <div
+                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
+                                            </div><input type="radio" name="Bet" id="bet" data-name="Bet Type"
+                                                style="opacity:0;position:absolute;z-index:-1" value="6-10"><span
+                                                class="type-label w-form-label" for="bet">6-10</span>
+                                        </label>
+                                    </div>
                                 </nav>
                             </div>
                         </div>
@@ -184,43 +352,46 @@
                                         </svg></div>
                                 </div>
                                 <nav class="property-list w-dropdown-list">
-                                    <div class="property-wrapper"><label class="propert-radio w-radio">
+                                    <div class="property-wrapper">
+                                        <label class="propert-radio w-radio">
                                             <div
                                                 class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="Baths-Type" id="baths-2"
-                                                data-name="Baths Type" style="opacity:0;position:absolute;z-index:-1"
-                                                value="baths"><span class="type-label w-form-label"
-                                                for="baths-2">Baths</span>
-                                        </label></div>
+                                            </div><input type="radio" name="Baths" id="baths" data-name="Baths Type"
+                                                style="opacity:0;position:absolute;z-index:-1" value="1"><span
+                                                class="type-label w-form-label" for="baths">1</span>
+                                        </label>
+                                        <label class="propert-radio w-radio">
+                                            <div
+                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
+                                            </div><input type="radio" name="Baths" id="baths" data-name="Baths Type"
+                                                style="opacity:0;position:absolute;z-index:-1" value="2"><span
+                                                class="type-label w-form-label" for="baths">2</span>
+                                        </label>
+                                        <label class="propert-radio w-radio">
+                                            <div
+                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
+                                            </div><input type="radio" name="Baths" id="baths" data-name="Baths Type"
+                                                style="opacity:0;position:absolute;z-index:-1" value="3"><span
+                                                class="type-label w-form-label" for="baths">3</span>
+                                        </label>
+                                        <label class="propert-radio w-radio">
+                                            <div
+                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
+                                            </div><input type="radio" name="Baths" id="baths" data-name="Baths Type"
+                                                style="opacity:0;position:absolute;z-index:-1" value="4"><span
+                                                class="type-label w-form-label" for="baths">4</span>
+                                        </label>
+                                        <label class="propert-radio w-radio">
+                                            <div
+                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
+                                            </div><input type="radio" name="Baths" id="baths" data-name="Baths Type"
+                                                style="opacity:0;position:absolute;z-index:-1" value="5"><span
+                                                class="type-label w-form-label" for="baths">5</span>
+                                        </label>
+                                    </div>
                                 </nav>
                             </div>
                         </div>
-                        <a data-w-id="da1f4836-e90d-fd7b-4dd3-fd60501589ff"
-                            style="background-color:rgb(255,255,255);color:rgb(29,12,75)" href="#"
-                            class="button-filter is-secondary filter_title w-inline-block">
-                            <div class="filter_title">More Filters</div>
-                            <div style="color:rgb(29,12,75)" class="icon_tiny is-color w-embed">
-                                <svg width="24px" height="24px" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                                    <title>filter-horizontal-solid</title>
-                                    <g id="Layer_2" data-name="Layer 2">
-                                        <g id="invisible_box" data-name="invisible box">
-                                            <rect width="48" height="48" fill="none"></rect>
-                                        </g>
-                                        <g id="icons_Q2" data-name="icons Q2">
-                                            <path
-                                                d="M41.8,8H21.7A6.2,6.2,0,0,0,16,4a6,6,0,0,0-5.6,4H6.2A2.1,2.1,0,0,0,4,10a2.1,2.1,0,0,0,2.2,2h4.2A6,6,0,0,0,16,16a6.2,6.2,0,0,0,5.7-4H41.8A2.1,2.1,0,0,0,44,10,2.1,2.1,0,0,0,41.8,8Z">
-                                            </path>
-                                            <path
-                                                d="M41.8,22H37.7A6.2,6.2,0,0,0,32,18a6,6,0,0,0-5.6,4H6.2a2,2,0,1,0,0,4H26.4A6,6,0,0,0,32,30a6.2,6.2,0,0,0,5.7-4h4.1a2,2,0,1,0,0-4Z">
-                                            </path>
-                                            <path
-                                                d="M41.8,36H24.7A6.2,6.2,0,0,0,19,32a6,6,0,0,0-5.6,4H6.2a2,2,0,1,0,0,4h7.2A6,6,0,0,0,19,44a6.2,6.2,0,0,0,5.7-4H41.8a2,2,0,1,0,0-4Z">
-                                            </path>
-                                        </g>
-                                    </g>
-                                </svg>
-                            </div>
-                        </a>
                         <div class="button is-icon">
                             <div class="icon_small w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="24"
                                     height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -285,52 +456,78 @@
                                 </svg></div>
                         </div>
                         <nav class="property-list w-dropdown-list">
-                            <div class="property-wrapper">
-                                <label class="propert-radio w-radio">
+                            <div id="sort-list" class="property-wrapper">
+                                <label class="propert-radio sort-data w-radio">
                                     <div
                                         class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                    </div>
-                                    <input type="radio" name="property-type" id="Most-Recent" data-name="property-type"
-                                        style="opacity:0;position:absolute;z-index:-1" value="Most Recent">
-                                    <span class="type-label w-form-label" for="Most Recent">Most
+                                    </div><input type="radio" name="property-type" data-name="property-type"
+                                        id="Most-Recent" style="opacity:0;position:absolute;z-index:-1"
+                                        value="Most Recent"><span class="type-label w-form-label" for="Most Recent">Most
                                         Recent</span>
                                 </label>
-                                <label class="propert-radio w-radio">
+                                <label class="propert-radio sort-data w-radio">
                                     <div
                                         class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
                                     </div><input type="radio" name="property-type" data-name="property-type"
                                         style="opacity:0;position:absolute;z-index:-1" value="Highest Price"><span
                                         class="type-label w-form-label" for="Highest Price">Highest Price</span>
                                 </label>
-                                <label class="propert-radio w-radio">
+                                <label class="propert-radio sort-data w-radio">
                                     <div
                                         class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
                                     </div><input type="radio" name="property-type" data-name="property-type"
                                         style="opacity:0;position:absolute;z-index:-1" value="Lowest Price"><span
                                         class="type-label w-form-label" for="Lowest Price">Lowest Price</span>
                                 </label>
-                                <label class="propert-radio w-radio">
+                                <label class="propert-radio sort-data w-radio">
                                     <div
                                         class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
                                     </div><input type="radio" name="property-type" data-name="property-type"
                                         style="opacity:0;position:absolute;z-index:-1" value="Most Betrooms"><span
                                         class="type-label w-form-label" for="Most Betrooms">Most Betrooms</span>
                                 </label>
-                                <label class="propert-radio w-radio">
+                                <label class="propert-radio sort-data w-radio">
                                     <div
                                         class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
                                     </div><input type="radio" name="property-type" data-name="property-type"
                                         style="opacity:0;position:absolute;z-index:-1" value="Least Betrooms"><span
                                         class="type-label w-form-label" for="Least Betrooms">Least Betrooms</span>
                                 </label>
-
                             </div>
                         </nav>
                     </div>
                 </div>
+                <a data-w-id="da1f4836-e90d-fd7b-4dd3-fd60501589ff"
+                    style="background-color:rgb(255,255,255);color:rgb(29,12,75)" href="#"
+                    class="button-filter is-secondary filter_title w-inline-block hide-desktop">
+                    <div class="filter_title">More Filters</div>
+                    <div style="color:rgb(29,12,75)" class="icon_tiny is-color w-embed">
+                        <svg width="24px" height="24px" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <title>filter-horizontal-solid</title>
+                            <g id="Layer_2" data-name="Layer 2">
+                                <g id="invisible_box" data-name="invisible box">
+                                    <rect width="48" height="48" fill="none"></rect>
+                                </g>
+                                <g id="icons_Q2" data-name="icons Q2">
+                                    <path
+                                        d="M41.8,8H21.7A6.2,6.2,0,0,0,16,4a6,6,0,0,0-5.6,4H6.2A2.1,2.1,0,0,0,4,10a2.1,2.1,0,0,0,2.2,2h4.2A6,6,0,0,0,16,16a6.2,6.2,0,0,0,5.7-4H41.8A2.1,2.1,0,0,0,44,10,2.1,2.1,0,0,0,41.8,8Z">
+                                    </path>
+                                    <path
+                                        d="M41.8,22H37.7A6.2,6.2,0,0,0,32,18a6,6,0,0,0-5.6,4H6.2a2,2,0,1,0,0,4H26.4A6,6,0,0,0,32,30a6.2,6.2,0,0,0,5.7-4h4.1a2,2,0,1,0,0-4Z">
+                                    </path>
+                                    <path
+                                        d="M41.8,36H24.7A6.2,6.2,0,0,0,19,32a6,6,0,0,0-5.6,4H6.2a2,2,0,1,0,0,4h7.2A6,6,0,0,0,19,44a6.2,6.2,0,0,0,5.7-4H41.8a2,2,0,1,0,0-4Z">
+                                    </path>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                </a>
             </div>
         </div>
+
         <div class="property-card-wrapper-main">
+
             {% for product in products %}
             <div data-w-id="7b98f7e7-e9bc-eab0-cdb4-7c2718763063" style="opacity:0" class="property-card-wrapper">
                 <div class="img-wrapper">
@@ -983,7 +1180,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <p>More Filters</p>
+                <p>Filters</p>
                 <a data-w-id="84c5c7ff-982d-81cd-e8ef-a658028c5156" href="#" class="btn-close w-inline-block">
                     <div class="w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" fill="none"
                             viewbox="0 0 16 17">
@@ -997,81 +1194,25 @@
                     <form id="wf-form-Filter" name="wf-form-Filter" data-name="Filter" method="get" class="form"
                         data-wf-page-id="66ea5ed1c7dd6ce3c258cdc7"
                         data-wf-element-id="6bb153d8-7d69-fb04-3751-ae463fd1e1d0">
-                        <div class="grid-2"><label class="w-checkbox list-inline-item-checkbox">
-                                <div class="w-checkbox-input w-checkbox-input--inputType-custom list-inline-item"></div>
-                                <input type="checkbox" name="checkbox" id="checkbox" data-name="Checkbox"
-                                    style="opacity:0;position:absolute;z-index:-1"><span class="type-label w-form-label"
-                                    for="checkbox">Off plan Only</span>
-                            </label><label id="w-node-_78943ed0-19ef-4cef-fcf6-99b3eb63158d-c258cdc7"
-                                class="w-checkbox list-inline-item-checkbox">
-                                <div class="w-checkbox-input w-checkbox-input--inputType-custom list-inline-item"></div>
-                                <input type="checkbox" name="checkbox-4" id="checkbox-4" data-name="Checkbox 4"
-                                    style="opacity:0;position:absolute;z-index:-1"><span class="type-label w-form-label"
-                                    for="checkbox-4">Ready Homes Only</span>
-                            </label></div><label class="w-checkbox list-inline-item-checkbox">
-                            <div class="w-checkbox-input w-checkbox-input--inputType-custom list-inline-item"></div>
-                            <input type="checkbox" name="checkbox-5" id="checkbox-5" data-name="Checkbox 5"
-                                style="opacity:0;position:absolute;z-index:-1"><span class="type-label w-form-label"
-                                for="checkbox-5">Include Sold</span>
-                        </label>
+
                         <h4 class="top-large">Features</h4>
-                        <div class="modal-filter-item"><label id="w-node-_041a4ce2-e3b8-760f-d8eb-4bc7e35b69be-c258cdc7"
+                        <div class="modal-filter-item">
+                            {% for tag in tags_array %}
+                            {% if tag != "" %}
+                            <label id="w-node-_041a4ce2-e3b8-760f-d8eb-4bc7e35b69be-c258cdc7"
                                 class="w-checkbox list-inline-item-checkbox">
                                 <div class="w-checkbox-input w-checkbox-input--inputType-custom list-inline-item"></div>
                                 <input type="checkbox" name="checkbox-5" id="checkbox-5" data-name="Checkbox 5"
                                     style="opacity:0;position:absolute;z-index:-1"><span class="type-label w-form-label"
-                                    for="checkbox-5">Private Pool</span>
-                            </label><label id="w-node-bb35a75c-663a-2b37-51da-104cb2663b95-c258cdc7"
-                                class="w-checkbox list-inline-item-checkbox">
-                                <div class="w-checkbox-input w-checkbox-input--inputType-custom list-inline-item"></div>
-                                <input type="checkbox" name="checkbox-5" id="checkbox-5" data-name="Checkbox 5"
-                                    style="opacity:0;position:absolute;z-index:-1"><span class="type-label w-form-label"
-                                    for="checkbox-5">Upgraded</span>
-                            </label><label id="w-node-_4a27d55b-a448-8f5e-a9e1-5e2bd555b497-c258cdc7"
-                                class="w-checkbox list-inline-item-checkbox">
-                                <div class="w-checkbox-input w-checkbox-input--inputType-custom list-inline-item"></div>
-                                <input type="checkbox" name="checkbox-5" id="checkbox-5" data-name="Checkbox 5"
-                                    style="opacity:0;position:absolute;z-index:-1"><span class="type-label w-form-label"
-                                    for="checkbox-5">Large Plot</span>
-                            </label><label id="w-node-_99a78026-6cd8-c65f-e862-c415fb313d9a-c258cdc7"
-                                class="w-checkbox list-inline-item-checkbox">
-                                <div class="w-checkbox-input w-checkbox-input--inputType-custom list-inline-item"></div>
-                                <input type="checkbox" name="checkbox-5" id="checkbox-5" data-name="Checkbox 5"
-                                    style="opacity:0;position:absolute;z-index:-1"><span class="type-label w-form-label"
-                                    for="checkbox-5">Close to Park</span>
-                            </label><label id="w-node-_03e8b39a-48e9-cdbb-1e5f-87d3e3dab76e-c258cdc7"
-                                class="w-checkbox list-inline-item-checkbox">
-                                <div class="w-checkbox-input w-checkbox-input--inputType-custom list-inline-item"></div>
-                                <input type="checkbox" name="checkbox-5" id="checkbox-5" data-name="Checkbox 5"
-                                    style="opacity:0;position:absolute;z-index:-1"><span class="type-label w-form-label"
-                                    for="checkbox-5">Brand New</span>
-                            </label><label id="w-node-a6bf0189-46ef-0b07-ef44-a8949fea2bce-c258cdc7"
-                                class="w-checkbox list-inline-item-checkbox">
-                                <div class="w-checkbox-input w-checkbox-input--inputType-custom list-inline-item"></div>
-                                <input type="checkbox" name="checkbox-5" id="checkbox-5" data-name="Checkbox 5"
-                                    style="opacity:0;position:absolute;z-index:-1"><span class="type-label w-form-label"
-                                    for="checkbox-5">Furnished</span>
-                            </label><label id="w-node-_010cdd65-9176-5832-96bf-5e01a7011bcf-c258cdc7"
-                                class="w-checkbox list-inline-item-checkbox">
-                                <div class="w-checkbox-input w-checkbox-input--inputType-custom list-inline-item"></div>
-                                <input type="checkbox" name="checkbox-5" id="checkbox-5" data-name="Checkbox 5"
-                                    style="opacity:0;position:absolute;z-index:-1"><span class="type-label w-form-label"
-                                    for="checkbox-5">Vacant on Transfer</span>
-                            </label><label id="w-node-_35092e5f-2c17-c188-83e0-6b52bc274a17-c258cdc7"
-                                class="w-checkbox list-inline-item-checkbox">
-                                <div class="w-checkbox-input w-checkbox-input--inputType-custom list-inline-item"></div>
-                                <input type="checkbox" name="checkbox-5" id="checkbox-5" data-name="Checkbox 5"
-                                    style="opacity:0;position:absolute;z-index:-1"><span class="type-label w-form-label"
-                                    for="checkbox-5">Waterviews</span>
-                            </label></div><input type="submit" data-wait="Please wait..."
-                            class="button top-large w-button" value="Update">
+                                    for="checkbox-5">{{tag}}</span>
+                            </label>
+                            {% endif %}
+                            {% endfor %}
+
+
+                        </div><input type="submit" data-wait="Please wait..." class="button top-large w-button"
+                            value="Update">
                     </form>
-                    <div class="w-form-done">
-                        <div>Thank you! Your submission has been received!</div>
-                    </div>
-                    <div class="w-form-fail">
-                        <div>Oops! Something went wrong while submitting the form.</div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -1105,7 +1246,7 @@
                         const radioInput = radio.querySelector('input[type="radio"]');
                         const typeLabel = radio.querySelector('.type-label');
                         if (radioInput) {
-                            propertyListing.forEach((listing) => {
+                            propertySelected.forEach((listing) => {
                                 const siblingRadio = listing.querySelector('input[type="radio"]');
                                 if (siblingRadio) {
                                     siblingRadio.previousElementSibling.classList.remove('w--redirected-checked');

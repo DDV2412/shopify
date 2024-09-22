@@ -30,55 +30,11 @@
     </div>
     <div class="search-box">
       <div data-w-id="8b6865d9-c0b5-6d09-871d-e16f70b69cd0" style="opacity:0" class="search-box-wrapper w-form">
-        <form id="search-box" name="email-form" data-name="Email Form" method="get" class="search_content"
-          data-wf-page-id="66e6ed97469869045902b714" data-wf-element-id="8b6865d9-c0b5-6d09-871d-e16f70b69cd1">
-          <div class="checkbox-component"><label class="checkbox-field w-radio">
-              <div class="w-form-formradioinput w-form-formradioinput--inputType-custom type-checkbox w-radio-input">
-              </div><input type="radio" name="type" id="property-type-buy" data-name="type"
-                style="opacity:0;position:absolute;z-index:-1" value="Buy"><span class="type-label w-form-label"
-                for="property-type-buy">Buy</span>
-            </label><label class="checkbox-field w-radio">
-              <div class="w-form-formradioinput w-form-formradioinput--inputType-custom type-checkbox w-radio-input">
-              </div><input type="radio" name="type" id="property-type-rent" data-name="type"
-                style="opacity:0;position:absolute;z-index:-1" value="Rent"><span class="type-label w-form-label"
-                for="property-type-rent">Rent</span>
-            </label></div>
+        <form action="/search" role="search" id="search-box" name="email-form" data-name="Email Form" method="get"
+          class="search_content" data-wf-page-id="66e6ed97469869045902b714"
+          data-wf-element-id="8b6865d9-c0b5-6d09-871d-e16f70b69cd1">
+          
           <div class="property-form">
-            <div class="select-wrapper">
-              <div data-hover="true" data-delay="0" id="property-dropdown-content"
-                class="property_select-wrapper w-dropdown">
-                <div id="property-dropdown-select" class="property-select w-dropdown-toggle">
-                  <div id="property-selected">Residential</div>
-                  <div class="icon_small w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                      viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                      <path d="M6 9l6 6l6 -6"></path>
-                    </svg></div>
-                </div>
-                <nav id="property-dropdown-nav" class="property-list w-dropdown-list">
-                  <div class="property-wrapper"><label class="propert-radio w-radio">
-                      <div
-                        class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                      </div><input type="radio" name="property-type" id="Residential" data-name="property-type"
-                        style="opacity:0;position:absolute;z-index:-1" value="Residential"><span
-                        class="type-label w-form-label" for="Residential">Residential</span>
-                    </label><label class="propert-radio w-radio">
-                      <div
-                        class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                      </div><input type="radio" name="property-type" id="Commercial" data-name="property-type"
-                        style="opacity:0;position:absolute;z-index:-1" value="Commercial"><span
-                        class="type-label w-form-label" for="Commercial">Commercial</span>
-                    </label><label class="propert-radio w-radio">
-                      <div
-                        class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                      </div><input type="radio" name="property-type" id="Off-Plan" data-name="property-type"
-                        style="opacity:0;position:absolute;z-index:-1" value="Off Plan"><span
-                        class="type-label w-form-label" for="Off-Plan">Off Plan</span>
-                    </label></div>
-                </nav>
-              </div>
-            </div>
             <div class="search-wrapper">
               <div class="icon_small w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                   viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -86,17 +42,11 @@
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                   <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
                   <path d="M21 21l-6 -6"></path>
-                </svg></div><input class="search-field w-input" maxlength="256" name="Search" data-name="Search"
+                </svg></div><input class="search-field w-input" maxlength="256" name="q" data-name="q"
                 placeholder="City, building or community" type="text" id="Search">
             </div>
           </div><input type="submit" data-wait="Please wait..." class="button w-button" value="Search">
         </form>
-        <div class="w-form-done">
-          <div>Thank you! Your submission has been received!</div>
-        </div>
-        <div class="w-form-fail">
-          <div>Oops! Something went wrong while submitting the form.</div>
-        </div>
       </div>
     </div>
   </div>
@@ -133,8 +83,9 @@
         <div>Search our team of 289 property experts to get <br>professional guidance.<br></div>
         <div class="button-wrapper padding-top-large align-left">
           <div class="w-form">
-            <form id="email-form-2" name="email-form-2" data-name="Email Form 2" method="get" class="find_content"
-              data-wf-page-id="66e6ed97469869045902b714" data-wf-element-id="dae0f266-6909-60a6-7f6a-29508525f9df">
+            <form action="/search" role="search" id="email-form-2" name="email-form-2" data-name="Email Form 2"
+              method="get" class="find_content" data-wf-page-id="66e6ed97469869045902b714"
+              data-wf-element-id="dae0f266-6909-60a6-7f6a-29508525f9df">
               <div class="property-search">
                 <div class="search-wrapper">
                   <div class="icon_tiny w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -143,9 +94,9 @@
                       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                       <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
                       <path d="M21 21l-6 -6"></path>
-                    </svg></div><input class="search-field w-input" maxlength="256" name="Find-your-consultant"
-                    data-name="Find your consultant" placeholder="Name or department" type="text"
-                    id="Find-your-consultant">
+                    </svg></div><input class="search-field w-input" maxlength="256" name="q"
+                    value="{{search.terms | escape}}" data-name="Find your consultant" placeholder="Name or department"
+                    type="text" id="Find-your-consultant">
                 </div>
               </div>
               <div class="button is-icon">
@@ -243,25 +194,30 @@
           data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0"
           data-nav-spacing="3" data-duration="500" data-infinite="true">
           <div class="w-slider-mask">
-            <div class="article-slide w-slide">
-              <a id="w-node-a07ff5be-ff10-9d67-7e0b-0ab3038fffa4-5902b714" href="#" class="article-card w-inline-block">
+            {% for article in blogs.news.articles %}
+            {% if forloop.index <=4 %} <div class="article-slide w-slide">
+              <a id="w-node-a07ff5be-ff10-9d67-7e0b-0ab3038fffa4-5902b714" href="{{article.url}}"
+                class="article-card w-inline-block">
                 <div data-w-id="a07ff5be-ff10-9d67-7e0b-0ab3038fffa5" class="article_thumbnail"><img
-                    src="{{'home_banner.webp' | asset_url}}" loading="lazy" width="318" height="160"
+                    src="{{article.image | img_url : 'original'}}" loading="lazy" width="318" height="160"
+                    alt="{{article.title}}"
                     style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                    sizes="(max-width: 479px) 92vw, (max-width: 767px) 45vw, (max-width: 991px) 28vw, 22vw" alt=""
-                    srcset="{{'home_banner-p-500.webp' | asset_url}} 500w, {{'home_banner-p-800.webp' | asset_url}} 800w, {{'home_banner.webp' | asset_url}} 1080w"
                     class="article-image"></div>
                 <div class="article_detail">
-                  <div>What are Property Registration Trustees in Dubai?</div>
+                  <div>{{article.title}}</div>
                 </div>
-                <div class="article-date">2 mins / Sep 10, 2024</div>
+
+                <div class="article-date">{{
+                  article.published_at | date: '%b %d, %Y' }}</div>
               </a>
-            </div>
           </div>
-          <div class="slide-dot w-slider-nav w-slider-nav-invert w-round"></div>
+          {% endif %}
+          {% endfor %}
         </div>
+        <div class="slide-dot w-slider-nav w-slider-nav-invert w-round"></div>
       </div>
     </div>
+  </div>
   </div>
 </section>
 <section class="section_faq">
@@ -393,38 +349,3 @@
     </div>
   </div>
 </section>
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const defaultPropertyType = document.getElementById("property-type-buy");
-    const residentialRadio = document.getElementById("Residential");
-    const propertySelected = document.getElementById("property-selected");
-    propertySelected.textContent = residentialRadio.value;
-    residentialRadio.checked = true;
-    residentialRadio.previousElementSibling.classList.add('w--redirected-checked');
-    residentialRadio.nextElementSibling.classList.add('is-active');
-    defaultPropertyType.checked = true;
-    defaultPropertyType.previousElementSibling.classList.add('w--redirected-checked');
-    const dropdownList = document.getElementById("property-dropdown-nav");
-    const dropdownToggle = document.getElementById("property-dropdown-select");
-    const dowpdownContent = document.getElementById("property-dropdown-content");
-    const propertyListing = document.querySelectorAll(".propert-radio");
-    propertyListing.forEach((item) => {
-      item.addEventListener('click', () => {
-        const radioInput = item.querySelector('input[type="radio"]');
-        const typeLabel = item.querySelector('.type-label');
-        if (radioInput) {
-          propertySelected.textContent = radioInput.value;
-          dropdownList.classList.remove('w--open');
-          dropdownToggle.classList.remove('w--open');
-          dropdownToggle.setAttribute('aria-expanded', 'false');
-          dowpdownContent.style = "";
-          document.querySelectorAll('.type-label').forEach(label => {
-            label.classList.remove('is-active');
-          });
-          typeLabel.classList.add('is-active');
-        }
-      });
-    });
-  });
-</script>

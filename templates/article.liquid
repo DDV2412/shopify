@@ -1,1 +1,88 @@
-<h1>Article</h1>
+{% assign page_id = "66ef7b005928ea9fe8e1886b" %}
+{% assign secondary_header = "secondary_header" %}
+
+
+    <section class="section_component">
+        <div class="container">
+            <div data-w-id="b8d99177-7a75-1733-ef97-6fd2592f23e3" class="breadcrumb-module-wrapper">
+                <a href="{{shop.url}}" class="breadcrumb-item w-inline-block">
+                    <p>Home</p>
+                </a>
+                <div class="icon_tiny w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="none" viewbox="0 0 16 16" transform="rotate(-90)">
+                        <path stroke="#ADB4AF" stroke-linecap="round" stroke-linejoin="round" d="m13 5.5-5 5-5-5">
+                        </path>
+                    </svg></div>
+                <a href="{{blog.url}}" class="breadcrumb-item w-inline-block">
+                    <p>{{blog.title}}</p>
+                </a>
+                <div class="icon_tiny w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="none" viewbox="0 0 16 16" transform="rotate(-90)">
+                        <path stroke="#ADB4AF" stroke-linecap="round" stroke-linejoin="round" d="m13 5.5-5 5-5-5">
+                        </path>
+                    </svg></div>
+                <a href="{{article.url}}" class="breadcrumb-item w-inline-block">
+                    <p>{{article.title}}</p>
+                </a>
+                 
+
+            </div>
+        </div>
+    </section>
+    <section class="section_component">
+        <div class="container">
+            <div class="landing-content-wrapper blog">
+                <div class="blog-wrapper">
+                    <div data-w-id="6d0810a6-30a0-8221-b449-7b6a878beb82" style="opacity:0"
+                        class="content-section padding-0">
+                        <h1>{{article.title}}</h1>
+                    </div>
+                    <div data-w-id="2ca453c6-39a3-3564-7bfc-6eba71fccdc5" style="opacity:0" class="richtext">
+                        {{article.content}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section_component">
+        <div class="container">
+            <div class="section_title-wrapper">
+                <div data-w-id="a7ebce3f-5379-9f6e-f761-487f3c6319d1" style="opacity:0" class="news-title">
+                    <h2>You might also be interested in...</h2>
+
+                </div>
+                <div data-w-id="a7ebce3f-5379-9f6e-f761-487f3c6319d9" style="opacity:0" class="article-wrapper">
+                    <div data-delay="4000" data-animation="slide" class="article_slider w-slider" data-autoplay="false"
+                        data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0"
+                        data-nav-spacing="3" data-duration="500" data-infinite="true">
+                        <div class="w-slider-mask">
+                            {% for interested in blogs.news.articles %}
+                            {% if unless interested._id == article._id %}
+                            {% if forloop.index <=4 %} <div class="article-slide w-slide">
+
+                                <a id="w-node-a07ff5be-ff10-9d67-7e0b-0ab3038fffa4-5902b714" href="{{interested.url}}"
+                                    class="article-card w-inline-block">
+                                    <div data-w-id="a07ff5be-ff10-9d67-7e0b-0ab3038fffa5" class="article_thumbnail"><img
+                                            src="{{interested.image | img_url : 'original'}}" loading="lazy" width="318"
+                                            height="160" alt="{{interested.title}}"
+                                            style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+                                            class="article-image"></div>
+                                    <div class="article_detail">
+                                        <div>{{interested.title}}</div>
+                                    </div>
+
+                                    <div class="article-date">{{
+                                        interested.published_at | date: '%b %d, %Y' }}</div>
+                                </a>
+
+                        </div>
+                        {% endif %}
+                        {%endif%}
+                        {% endfor %}
+                    </div>
+                    <div class="slide-dot w-slider-nav w-slider-nav-invert w-round"></div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>

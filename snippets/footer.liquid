@@ -29,67 +29,49 @@
               <div id="w-node-a400b528-9370-88bc-deb3-e2cb1563d76a-1563d74a" class="footer-menu">
                 <h4>Services</h4>
                 <ul role="list" class="footer-menu-list w-list-unstyled">
-                  <li class="footer-menu-item">
-                    <a href="#" class="footer-link">Residential Sales</a>
+                   {% assign footer = linklists.footer.links %}
+
+                    {% for link in footer %}
+                      <li class="footer-menu-item">
+                    <a href="{{link.url}}" class="footer-link">{{link.title}}</a>
                   </li>
-                  <li class="footer-menu-item">
-                    <a href="#" class="footer-link">Residential Leasing</a>
-                  </li>
-                  <li class="footer-menu-item">
-                    <a href="#" class="footer-link">Off Plan</a>
-                  </li>
-                  <li class="footer-menu-item">
-                    <a href="#" class="footer-link">Commercial Properties</a>
-                  </li>
-                  <li class="footer-menu-item">
-                    <a href="#" class="footer-link">Property Management</a>
-                  </li>
+                    {% endfor %}
+                  
+            
                 </ul>
               </div>
               <div id="w-node-a400b528-9370-88bc-deb3-e2cb1563d77d-1563d74a" class="footer-menu is-resources">
                 <h4>Resources</h4>
                 <ul role="list" class="footer-menu-list w-list-unstyled">
-                  <li class="footer-menu-item">
-                    <a href="#" class="footer-link">Real Estate Guides</a>
+                  <ul role="list" class="footer-menu-list w-list-unstyled">
+                   {% assign resource = linklists.resource.links %}
+
+                    {% for link in resource %}
+                      <li class="footer-menu-item">
+                    <a href="{{link.url}}" class="footer-link">{{link.title}}</a>
                   </li>
-                  <li class="footer-menu-item">
-                    <a href="#" class="footer-link">News &amp; Insights</a>
-                  </li>
-                  <li class="footer-menu-item">
-                    <a href="#" class="footer-link">Market Reports</a>
-                  </li>
-                  <li class="footer-menu-item">
-                    <a href="#" class="footer-link">Instant Property Valuation</a>
-                  </li>
-                  <li class="footer-menu-item">
-                    <a href="#" class="footer-link">Podcast</a>
-                  </li>
+                    {% endfor %}
+                  
+            
+                </ul>
                 </ul>
               </div>
               <div id="w-node-a400b528-9370-88bc-deb3-e2cb1563d790-1563d74a" class="footer-menu">
                 <h4>About</h4>
                 <ul role="list" class="footer-menu-list w-list-unstyled">
-                  <li class="footer-menu-item">
-                    <a href="#" class="footer-link">Our Story</a>
+                  {% assign about = linklists.about.links %}
+
+                    {% for link in about %}
+                      <li class="footer-menu-item">
+                    <a href="{{link.url}}" class="footer-link">{{link.title}}</a>
                   </li>
-                  <li class="footer-menu-item">
-                    <a href="#" class="footer-link">Our Team</a>
-                  </li>
-                  <li class="footer-menu-item">
-                    <a href="#" class="footer-link">Client Reviews</a>
-                  </li>
-                  <li class="footer-menu-item">
-                    <a href="#" class="footer-link">Careers</a>
-                  </li>
-                  <li class="footer-menu-item">
-                    <a href="#" class="footer-link">Contact</a>
-                  </li>
+                    {% endfor %}
                 </ul>
               </div>
             </div>
           </div>
           <div class="popular-search">
-            <div data-w-id="a400b528-9370-88bc-deb3-e2cb1563d7a4" class="popular-content">
+            <div data-w-id="a400b528-9370-88bc-deb3-e2cb1563d7a4" class="popular-content hidden">
               <div class="popular-button">
                 <div>Popular Search</div>
                 <div class="popular-icon">
@@ -176,15 +158,12 @@
           <div class="footer-bottom-links">
             <div class="footer-bottom-content">
               <div class="internal-static-links">
-                <a href="#" class="footer-link is-small">Residential Sales</a>
-                <div>/</div>
-                <a href="#" class="footer-link is-small">Residential Sales</a>
-                <div>/</div>
-                <a href="#" class="footer-link is-small">Residential Sales</a>
-                <div>/</div>
-                <a href="#" class="footer-link is-small">Residential Sales</a>
-                <div>/</div>
-                <a href="#" class="footer-link is-small">Residential Sales</a>
+        
+                {% assign terms = linklists.terms.links %}
+
+                    {% for link in terms %}
+                      <a href="{{link.url}}" class="footer-link is-small">{{link.title}}</a>
+                    {% endfor %}
               </div>
               <div class="terms-and-privacy">© 2024 haus &amp; haus Group. All Rights Reserved.</div>
               <div class="terms-and-privacy">Site by <a href="#" class="terms-and-privacy">BarkahLabs.</a>
