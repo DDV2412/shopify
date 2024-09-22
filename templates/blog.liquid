@@ -1,1 +1,106 @@
-<h1>Blog</h1>
+{% assign page_id = "66ef7b005928ea9fe8e1886b" %}
+{% assign secondary_header = "secondary_header" %}
+
+<main class="main_wrapper">
+  <section class="section_component">
+    <div class="container">
+      <div data-w-id="b8d99177-7a75-1733-ef97-6fd2592f23e3" class="breadcrumb-module-wrapper">
+        <a href="{{shop.url}}" class="breadcrumb-item w-inline-block">
+          <p>Home</p>
+        </a>
+        <div class="icon_tiny w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+            viewbox="0 0 16 16" transform="rotate(-90)">
+            <path stroke="#ADB4AF" stroke-linecap="round" stroke-linejoin="round" d="m13 5.5-5 5-5-5">
+            </path>
+          </svg></div>
+        <a href="{{blog.url}}" class="breadcrumb-item w-inline-block">
+          <p>{{blog.title}}</p>
+        </a>
+
+      </div>
+    </div>
+  </section>
+  <section class="section_component">
+    <div class="container">
+      <div class="landing-content-wrapper blog">
+        <div class="blog-wrapper">
+          <div data-w-id="6d0810a6-30a0-8221-b449-7b6a878beb82" style="opacity:0" class="content-section padding-0">
+            <h1>{{blog.title}}</h1>
+            {{blog | json}}
+            <img src="{{blog}}" loading="lazy" alt="" class="blog-image">
+          </div>
+          <div data-w-id="2ca453c6-39a3-3564-7bfc-6eba71fccdc5" style="opacity:0" class="w-richtext">
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6</h6>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+              fugiat nulla pariatur.</p>
+            <blockquote>Block quote</blockquote>
+            <p>Ordered list</p>
+            <ol role="list">
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Item 3</li>
+            </ol>
+            <p>Unordered list</p>
+            <ul role="list">
+              <li>Item A</li>
+              <li>Item B</li>
+              <li>Item C</li>
+            </ul>
+            <p>
+              <a href="https://university.webflow.com/lesson/add-and-nest-text-links-in-webflow">Text link</a>
+            </p>
+            <p><strong>Bold text</strong></p>
+            <p><em>Emphasis</em></p>
+            <p><sup>Superscript</sup></p>
+            <p><sub>Subscript</sub></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section_component">
+    <div class="container">
+      <div class="section_title-wrapper">
+        <div data-w-id="a7ebce3f-5379-9f6e-f761-487f3c6319d1" style="opacity:0" class="news-title">
+          <h2>News &amp; Insights<br></h2>
+          <div class="button-wrapper gap-large">
+            <a href="#" class="button is-text w-inline-block">
+              <div>GO to all news</div>
+            </a>
+          </div>
+        </div>
+        <div data-w-id="a7ebce3f-5379-9f6e-f761-487f3c6319d9" style="opacity:0" class="article-wrapper">
+          <div data-delay="4000" data-animation="slide" class="article_slider w-slider" data-autoplay="false"
+            data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0"
+            data-nav-spacing="3" data-duration="500" data-infinite="true">
+            <div class="w-slider-mask">
+              <div class="article-slide w-slide">
+                <a id="w-node-a7ebce3f-5379-9f6e-f761-487f3c6319dd-e8e1886b" href="#"
+                  class="article-card w-inline-block">
+                  <div data-w-id="a7ebce3f-5379-9f6e-f761-487f3c6319de" class="article_thumbnail"><img
+                      src="../images/home_banner.webp" loading="lazy"
+                      style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+                      sizes="(max-width: 479px) 92vw, (max-width: 767px) 45vw, (max-width: 991px) 28vw, 22vw" alt=""
+                      srcset="../images/home_banner-p-500.webp 500w, ../images/home_banner-p-800.webp 800w, ../images/home_banner.webp 1080w"
+                      class="article-image"></div>
+                  <div class="article_detail">
+                    <div>What are Property Registration Trustees in Dubai?</div>
+                  </div>
+                  <div class="article-date">2 mins / Sep 10, 2024</div>
+                </a>
+              </div>
+            </div>
+            <div class="slide-dot w-slider-nav w-slider-nav-invert w-round"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
