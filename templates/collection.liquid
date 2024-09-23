@@ -24,11 +24,12 @@
             <div class="filter-search-features">
                 <div data-w-id="da1f4836-e90d-fd7b-4dd3-fd605015895e" style="opacity:0"
                     class="search-form bottom-0 w-form">
-                    <form action="/search" id="search-box" name="email-form" data-name="Email Form" method="get"
-                        role="search" class="search_content is-filtered" data-wf-page-id="66ea5ed1c7dd6ce3c258cdc7"
+                    <div id="search-box" name="email-form" data-name="Email Form" class="search_content is-filtered"
+                        data-wf-page-id="66ea5ed1c7dd6ce3c258cdc7"
                         data-wf-element-id="da1f4836-e90d-fd7b-4dd3-fd605015895f">
 
-                        <div class="search-wrapper background-white is-filter">
+                        <form action="/search" method="get" role="search"
+                            class="search-wrapper background-white is-filter" id="query-search">
                             <div class="icon_small w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="24"
                                     height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                     stroke-linecap="round" stroke-linejoin="round"
@@ -39,7 +40,7 @@
                                 </svg></div><input class="search-field w-input" maxlength="256" name="q"
                                 value="{{search.terms | escape}}" data-name="Search 2"
                                 placeholder="City, building or community" type="text" id="Search-2">
-                        </div>
+                        </form>
                         <div class="select-wrapper no-border hide-tablet">
                             <div data-hover="true" data-delay="0"
                                 class="property_select-wrapper dropdown-filter background-white w-dropdown">
@@ -60,7 +61,7 @@
                                             <div
                                                 class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
                                             </div>
-                                            <input type="radio" name="filter.v.option.product_type" id="property-type-2"
+                                            <input type="radio" name="filter.p.product_type" id="property-type-2"
                                                 data-name="{{type}}" style="opacity:0;position:absolute;z-index:-1"
                                                 value="{{type}}"><span class="type-label w-form-label"
                                                 for="property-type-2">{{type}}</span>
@@ -414,7 +415,7 @@
                                 </nav>
                             </div>
                         </div>
-                        <div class="button is-icon">
+                        <div id="button-submit-search" class="button is-icon">
                             <div class="icon_small w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="24"
                                     height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                     stroke-linecap="round" stroke-linejoin="round"
@@ -422,10 +423,9 @@
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                     <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
                                     <path d="M21 21l-6 -6"></path>
-                                </svg></div><input type="submit" data-wait="Please wait..."
-                                class="button-submit-icon w-button" value="Search">
+                                </svg></div>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1224,7 +1224,7 @@
                                 <div
                                     class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
                                 </div><input type="radio" data-name="{{type}}" id="{{type}}"
-                                    name="filter.v.option.product_type" style="opacity:0;position:absolute;z-index:-1"
+                                    name="filter.p.product_type" style="opacity:0;position:absolute;z-index:-1"
                                     value="{{type}}"><span class="type-label w-form-label" for="radio">{{type}}</span>
                             </label>
                             {% endfor %}
@@ -1466,33 +1466,50 @@
         mostRecentRadio.previousElementSibling.classList.add('w--redirected-checked');
         mostRecentRadio.nextElementSibling.classList.add('is-active');
 
+        const submitSearch = document.getElementById("button-submit-search");
+        const searchField = document.getElementById("query-search");
+
+        submitSearch.addEventListener('click', () => {
+            searchField.submit()
+        })
+
         const propertyListing = document.querySelectorAll(".dropdown-filter");
 
         const query = new URLSearchParams(window.location.search);
         const sortData = query.get('sort_by');
-
-        const sortDataRadio = document.querySelectorAll('.sort-data');
-
-        if (sortData) {
-            sortDataRadio.forEach((radio) => {
-                const radioInput = radio.querySelector('input[type="radio"]');
-                const typeLabel = radio.querySelector('.type-label');
-                if (radioInput.value === sortData) {
-                    radioInput.checked = true;
-                    radioInput.previousElementSibling.classList.add('w--redirected-checked');
-                    radioInput.nextElementSibling.classList.add('is-active');
-                    propertySelected.textContent = typeLabel.innerHTML;
-                } else {
-                    radioInput.checked = false;
-                    radioInput.previousElementSibling.classList.remove('w--redirected-checked');
-                    radioInput.nextElementSibling.classList.remove('is-active');
-                }
-            });
-        }
-
+        const productTypeQuery = query.get('filter.p.product_type');
+        const minPriceQuery = query.get('filter.v.price.gte');
+        const maxPriceQuery = query.get('filter.v.price.lte');
+        const featuresQuery = query.get('features');
+        const bathQuery = query.get('filter.v.option.bathroom');
+        const betQuery = query.get('filter.v.option.betroom');
 
 
         propertyListing.forEach((item) => {
+            const selectedLabel = item.querySelector(".property-selected");
+            const selectedQuery = item.querySelectorAll('.propert-radio');
+
+            if (selectedQuery) {
+                selectedQuery.forEach((radio) => {
+                    const radioInput = radio.querySelector('input[type="radio"]');
+                    const typeLabel = radio.querySelector('.type-label');
+
+                    const queries = [sortData, productTypeQuery, minPriceQuery, maxPriceQuery, featuresQuery, bathQuery, betQuery];
+                    queries.forEach(query => {
+                        if (radioInput.value === query) {
+                            radioInput.checked = true;
+                            radioInput.previousElementSibling.classList.add('w--redirected-checked');
+                            radioInput.nextElementSibling.classList.add('is-active');
+                            selectedLabel.textContent = typeLabel.innerHTML;
+                        } else {
+                            radioInput.checked = false;
+                            radioInput.previousElementSibling.classList.remove('w--redirected-checked');
+                            radioInput.nextElementSibling.classList.remove('is-active');
+                        }
+                    });
+                });
+            }
+
             item.addEventListener('click', () => {
                 const propertySelected = item.querySelectorAll(".propert-radio");
                 const propertySelectedName = item.querySelector(".property-selected");
@@ -1520,7 +1537,14 @@
                             if (radio.className.includes('sort-data')) {
                                 const sortData = radioInput.value;
                                 query.set('sort_by', sortData);
-                                window.location.search = query.toString();
+                                const newUrl = `${window.location.pathname}?${query.toString()}`;
+                                window.history.pushState(null, '', newUrl);
+                            } else {
+                                const radioName = radioInput.name;
+                                const radioValue = radioInput.value;
+                                query.set(radioName, radioValue);
+                                const newUrl = `${window.location.pathname}?${query.toString()}`;
+                                window.history.pushState(null, '', newUrl);
                             }
 
                             dropdownList.classList.remove('w--open');
