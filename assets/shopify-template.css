@@ -27,7 +27,9 @@
 }
 
 .notfound-wrapper {
-  align-items: center;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 40vh;
 }
 
 .notfound-wrapper h1 {
