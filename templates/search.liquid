@@ -1,9 +1,8 @@
 {% assign page_id = "66ea5ed1c7dd6ce3c258cdc7" %}
-{% assign secondary_header = "secondary_header" %}
+
 
 {% assign products = search.results %}
 
-{% assign current_handle = handle %}
 
 {% assign all_tags = "" %}
 {% for product in collections.all.products %}
@@ -16,21 +15,7 @@
 
 {% assign tags_array = all_tags | split: "," %}
 
-{% assign product_types = products | map: 'type' | uniq %}
-
-{% assign all_tags = "" %}
-{% for product in collections.all.products %}
-{% for tag in product.tags %}
-{% unless all_tags contains tag %}
-{% assign all_tags = all_tags | append: tag | append: "," %}
-{% endunless %}
-{% endfor %}
-{% endfor %}
-
-{% assign tags_array = all_tags | split: "," %}
-
-{% assign product_types = products | map: 'type' | uniq %}
-
+{% assign product_types = collections.all.products | map: 'type' | uniq %}
 
 <section class="section_component sticky-top">
     <div class="filter-search-wrapper">
@@ -74,9 +59,10 @@
                                             <div
                                                 class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
                                             </div>
-                                            <input type="radio" name="type" id="property-type-2" data-name="{{type}}"
-                                                style="opacity:0;position:absolute;z-index:-1" value="{{type}}"><span
-                                                class="type-label w-form-label" for="property-type-2">{{type}}</span>
+                                            <input type="radio" name="filter.v.option.product_type" id="property-type-2"
+                                                data-name="{{type}}" style="opacity:0;position:absolute;z-index:-1"
+                                                value="{{type}}"><span class="type-label w-form-label"
+                                                for="property-type-2">{{type}}</span>
                                         </label>
                                         {% endfor %}
                                     </div>
@@ -101,57 +87,57 @@
                                         <label class="propert-radio w-radio">
                                             <div
                                                 class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="min-price" id="min-price"
+                                            </div><input type="radio" name="filter.v.price.gte" id="min-price"
                                                 data-name="Min Price" style="opacity:0;position:absolute;z-index:-1"
-                                                value="AED 300,000"><span class="type-label w-form-label"
-                                                for="min-price">AED 300,000</span>
+                                                value="300000"><span class="type-label w-form-label" for="min-price">AED
+                                                300,000</span>
                                         </label>
                                         <label class="propert-radio w-radio">
                                             <div
                                                 class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="min-price" id="min-price"
+                                            </div><input type="radio" name="filter.v.price.gte" id="min-price"
                                                 data-name="Min Price" style="opacity:0;position:absolute;z-index:-1"
-                                                value="AED 500,000"><span class="type-label w-form-label"
-                                                for="min-price">AED 500,000</span>
+                                                value="500000"><span class="type-label w-form-label" for="min-price">AED
+                                                500,000</span>
                                         </label>
                                         <label class="propert-radio w-radio">
                                             <div
                                                 class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="min-price" id="min-price"
+                                            </div><input type="radio" name="filter.v.price.gte" id="min-price"
                                                 data-name="Min Price" style="opacity:0;position:absolute;z-index:-1"
-                                                value="AED 700,000"><span class="type-label w-form-label"
+                                                value="AED 700000"><span class="type-label w-form-label"
                                                 for="min-price">AED 700,000</span>
                                         </label>
                                         <label class="propert-radio w-radio">
                                             <div
                                                 class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="min-price" id="min-price"
+                                            </div><input type="radio" name="filter.v.price.gte" id="min-price"
                                                 data-name="Min Price" style="opacity:0;position:absolute;z-index:-1"
-                                                value="AED 1,000,000"><span class="type-label w-form-label"
+                                                value="1000000"><span class="type-label w-form-label"
                                                 for="min-price">AED 1,000,000</span>
                                         </label>
                                         <label class="propert-radio w-radio">
                                             <div
                                                 class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="min-price" id="min-price"
+                                            </div><input type="radio" name="filter.v.price.gte" id="min-price"
                                                 data-name="Min Price" style="opacity:0;position:absolute;z-index:-1"
-                                                value="AED 2,000,000"><span class="type-label w-form-label"
+                                                value="2000000"><span class="type-label w-form-label"
                                                 for="min-price">AED 2,000,000</span>
                                         </label>
                                         <label class="propert-radio w-radio">
                                             <div
                                                 class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="min-price" id="min-price"
+                                            </div><input type="radio" name="filter.v.price.gte" id="min-price"
                                                 data-name="Min Price" style="opacity:0;position:absolute;z-index:-1"
-                                                value="AED 3,000,000"><span class="type-label w-form-label"
+                                                value="AED 3000000"><span class="type-label w-form-label"
                                                 for="min-price">AED 3,000,000</span>
                                         </label>
                                         <label class="propert-radio w-radio">
                                             <div
                                                 class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="min-price" id="min-price"
+                                            </div><input type="radio" name="filter.v.price.gte" id="min-price"
                                                 data-name="Min Price" style="opacity:0;position:absolute;z-index:-1"
-                                                value="AED 5,000,000"><span class="type-label w-form-label"
+                                                value="5,000,000"><span class="type-label w-form-label"
                                                 for="min-price">AED 5,000,000</span>
                                         </label>
                                         <label class="propert-radio w-radio">
@@ -159,31 +145,31 @@
                                                 class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
                                             </div><input type="radio" name="min-price" id="min-price"
                                                 data-name="Min Price" style="opacity:0;position:absolute;z-index:-1"
-                                                value="AED 8,000,000"><span class="type-label w-form-label"
+                                                value="8000000"><span class="type-label w-form-label"
                                                 for="min-price">AED 8,000,000</span>
                                         </label>
                                         <label class="propert-radio w-radio">
                                             <div
                                                 class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="min-price" id="min-price"
+                                            </div><input type="radio" name="filter.v.price.gte" id="min-price"
                                                 data-name="Min Price" style="opacity:0;position:absolute;z-index:-1"
-                                                value="AED 10,000,000"><span class="type-label w-form-label"
+                                                value="10000000"><span class="type-label w-form-label"
                                                 for="min-price">AED 10,000,000</span>
                                         </label>
                                         <label class="propert-radio w-radio">
                                             <div
                                                 class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="min-price" id="min-price"
+                                            </div><input type="radio" name="filter.v.price.gte" id="min-price"
                                                 data-name="Min Price" style="opacity:0;position:absolute;z-index:-1"
-                                                value="AED 20,000,000"><span class="type-label w-form-label"
+                                                value="20000000"><span class="type-label w-form-label"
                                                 for="min-price">AED 20,000,000</span>
                                         </label>
                                         <label class="propert-radio w-radio">
                                             <div
                                                 class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="min-price" id="min-price"
+                                            </div><input type="radio" name="filter.v.price.gte" id="min-price"
                                                 data-name="Min Price" style="opacity:0;position:absolute;z-index:-1"
-                                                value="AED 50,000,000"><span class="type-label w-form-label"
+                                                value="50000000"><span class="type-label w-form-label"
                                                 for="min-price">AED 50,000,000+</span>
                                         </label>
 
@@ -209,89 +195,89 @@
                                         <label class="propert-radio w-radio">
                                             <div
                                                 class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="max-price" id="max-price"
+                                            </div><input type="radio" name="filter.v.price.lte" id="max-price"
                                                 data-name="Max Price" style="opacity:0;position:absolute;z-index:-1"
-                                                value="AED 300,000"><span class="type-label w-form-label"
-                                                for="max-price">AED 300,000</span>
+                                                value="300000"><span class="type-label w-form-label" for="max-price">AED
+                                                300,000</span>
                                         </label>
                                         <label class="propert-radio w-radio">
                                             <div
                                                 class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="max-price" id="max-price"
+                                            </div><input type="radio" name="filter.v.price.lte" id="max-price"
                                                 data-name="Max Price" style="opacity:0;position:absolute;z-index:-1"
-                                                value="AED 500,000"><span class="type-label w-form-label"
-                                                for="max-price">AED 500,000</span>
+                                                value="500000"><span class="type-label w-form-label" for="max-price">AED
+                                                500,000</span>
                                         </label>
                                         <label class="propert-radio w-radio">
                                             <div
                                                 class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="max-price" id="max-price"
+                                            </div><input type="radio" name="filter.v.price.lte" id="max-price"
                                                 data-name="Max Price" style="opacity:0;position:absolute;z-index:-1"
-                                                value="AED 700,000"><span class="type-label w-form-label"
-                                                for="max-price">AED 700,000</span>
+                                                value="700000"><span class="type-label w-form-label" for="max-price">AED
+                                                700,000</span>
                                         </label>
                                         <label class="propert-radio w-radio">
                                             <div
                                                 class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="max-price" id="max-price"
+                                            </div><input type="radio" name="filter.v.price.lte" id="max-price"
                                                 data-name="Max Price" style="opacity:0;position:absolute;z-index:-1"
-                                                value="AED 1,000,000"><span class="type-label w-form-label"
+                                                value="1000000"><span class="type-label w-form-label"
                                                 for="max-price">AED 1,000,000</span>
                                         </label>
                                         <label class="propert-radio w-radio">
                                             <div
                                                 class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="max-price" id="max-price"
+                                            </div><input type="radio" name="filter.v.price.lte" id="max-price"
                                                 data-name="Max Price" style="opacity:0;position:absolute;z-index:-1"
-                                                value="AED 2,000,000"><span class="type-label w-form-label"
+                                                value="AED 2000000"><span class="type-label w-form-label"
                                                 for="max-price">AED 2,000,000</span>
                                         </label>
                                         <label class="propert-radio w-radio">
                                             <div
                                                 class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="max-price" id="max-price"
+                                            </div><input type="radio" name="filter.v.price.lte" id="max-price"
                                                 data-name="Max Price" style="opacity:0;position:absolute;z-index:-1"
-                                                value="AED 3,000,000"><span class="type-label w-form-label"
+                                                value="3,000,000"><span class="type-label w-form-label"
                                                 for="max-price">AED 3,000,000</span>
                                         </label>
                                         <label class="propert-radio w-radio">
                                             <div
                                                 class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="max-price" id="max-price"
+                                            </div><input type="radio" name="filter.v.price.lte" id="max-price"
                                                 data-name="Max Price" style="opacity:0;position:absolute;z-index:-1"
-                                                value="AED 5,000,000"><span class="type-label w-form-label"
+                                                value="5000000"><span class="type-label w-form-label"
                                                 for="max-price">AED 5,000,000</span>
                                         </label>
                                         <label class="propert-radio w-radio">
                                             <div
                                                 class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="max-price" id="max-price"
+                                            </div><input type="radio" name="filter.v.price.lte" id="max-price"
                                                 data-name="Max Price" style="opacity:0;position:absolute;z-index:-1"
-                                                value="AED 8,000,000"><span class="type-label w-form-label"
+                                                value="8000000"><span class="type-label w-form-label"
                                                 for="max-price">AED 8,000,000</span>
                                         </label>
                                         <label class="propert-radio w-radio">
                                             <div
                                                 class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="max-price" id="max-price"
+                                            </div><input type="radio" name="filter.v.price.lte" id="max-price"
                                                 data-name="Max Price" style="opacity:0;position:absolute;z-index:-1"
-                                                value="AED 10,000,000"><span class="type-label w-form-label"
+                                                value="10000000"><span class="type-label w-form-label"
                                                 for="max-price">AED 10,000,000</span>
                                         </label>
                                         <label class="propert-radio w-radio">
                                             <div
                                                 class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="max-price" id="max-price"
+                                            </div><input type="radio" name="filter.v.price.lte" id="max-price"
                                                 data-name="Max Price" style="opacity:0;position:absolute;z-index:-1"
-                                                value="AED 20,000,000"><span class="type-label w-form-label"
+                                                value="20000000"><span class="type-label w-form-label"
                                                 for="max-price">AED 20,000,000</span>
                                         </label>
                                         <label class="propert-radio w-radio">
                                             <div
                                                 class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="max-price" id="max-price"
+                                            </div><input type="radio" name="filter.v.price.lte" id="max-price"
                                                 data-name="Max Price" style="opacity:0;position:absolute;z-index:-1"
-                                                value="AED 50,000,000"><span class="type-label w-form-label"
+                                                value="50000000"><span class="type-label w-form-label"
                                                 for="max-price">AED 50,000,000+</span>
                                         </label>
 
@@ -300,9 +286,10 @@
                             </div>
                         </div>
                         <div class="select-wrapper no-border hide-tablet">
-                            <div data-hover="true" data-delay="0" class="buy_select-wrapper dropdown-filter w-dropdown">
-                                <div class="beds-select property-select w-dropdown-toggle">
-                                    <div class="property-selected">Beds</div>
+                            <div data-hover="true" data-delay="0"
+                                class="property_select-wrapper dropdown-filter background-white w-dropdown">
+                                <div class="property-select w-dropdown-toggle">
+                                    <div class="property-selected">Bath</div>
                                     <div class="icon_small w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="24"
                                             height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor"
                                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -316,32 +303,57 @@
                                         <label class="propert-radio w-radio">
                                             <div
                                                 class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="Bet" id="bet" data-name="Bet Type"
-                                                style="opacity:0;position:absolute;z-index:-1" value="0-2"><span
-                                                class="type-label w-form-label" for="bet">0-2</span>
+                                            </div>
+                                            <input type="radio" name="filter.v.option.bathroom" id="property-type-2"
+                                                data-name="1" style="opacity:0;position:absolute;z-index:-1"
+                                                value="1"><span class="type-label w-form-label"
+                                                for="property-type-2">1</span>
                                         </label>
                                         <label class="propert-radio w-radio">
                                             <div
                                                 class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="Bet" id="bet" data-name="Bet Type"
-                                                style="opacity:0;position:absolute;z-index:-1" value="3-5"><span
-                                                class="type-label w-form-label" for="bet">3-5</span>
+                                            </div>
+                                            <input type="radio" name="filter.v.option.bathroom" id="property-type-2"
+                                                data-name="1" style="opacity:0;position:absolute;z-index:-1"
+                                                value="2"><span class="type-label w-form-label"
+                                                for="property-type-2">2</span>
                                         </label>
                                         <label class="propert-radio w-radio">
                                             <div
                                                 class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="Bet" id="bet" data-name="Bet Type"
-                                                style="opacity:0;position:absolute;z-index:-1" value="6-10"><span
-                                                class="type-label w-form-label" for="bet">6-10</span>
+                                            </div>
+                                            <input type="radio" name="filter.v.option.bathroom" id="property-type-2"
+                                                data-name="1" style="opacity:0;position:absolute;z-index:-1"
+                                                value="3"><span class="type-label w-form-label"
+                                                for="property-type-2">3</span>
+                                        </label>
+                                        <label class="propert-radio w-radio">
+                                            <div
+                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
+                                            </div>
+                                            <input type="radio" name="filter.v.option.bathroom" id="property-type-2"
+                                                data-name="1" style="opacity:0;position:absolute;z-index:-1"
+                                                value="4"><span class="type-label w-form-label"
+                                                for="property-type-2">4</span>
+                                        </label>
+                                        <label class="propert-radio w-radio">
+                                            <div
+                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
+                                            </div>
+                                            <input type="radio" name="filter.v.option.bathroom" id="property-type-2" div
+                                                data-name="1" style="opacity:0;position:absolute;z-index:-1"
+                                                value="5"><span class="type-label w-form-label"
+                                                for="property-type-2">5</span>
                                         </label>
                                     </div>
                                 </nav>
                             </div>
                         </div>
                         <div class="select-wrapper no-border hide-tablet">
-                            <div data-hover="true" data-delay="0" class="buy_select-wrapper dropdown-filter w-dropdown">
-                                <div class="beds-select property-select w-dropdown-toggle">
-                                    <div class="property-selected">Baths</div>
+                            <div data-hover="true" data-delay="0"
+                                class="property_select-wrapper dropdown-filter background-white w-dropdown">
+                                <div class="property-select w-dropdown-toggle">
+                                    <div class="property-selected">Bet</div>
                                     <div class="icon_small w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="24"
                                             height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor"
                                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -355,38 +367,81 @@
                                         <label class="propert-radio w-radio">
                                             <div
                                                 class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="Baths" id="baths" data-name="Baths Type"
-                                                style="opacity:0;position:absolute;z-index:-1" value="1"><span
-                                                class="type-label w-form-label" for="baths">1</span>
+                                            </div>
+                                            <input type="radio" name="filter.v.option.betroom" id="property-type-2"
+                                                data-name="1" style="opacity:0;position:absolute;z-index:-1"
+                                                value="1"><span class="type-label w-form-label"
+                                                for="property-type-2">1</span>
                                         </label>
                                         <label class="propert-radio w-radio">
                                             <div
                                                 class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="Baths" id="baths" data-name="Baths Type"
-                                                style="opacity:0;position:absolute;z-index:-1" value="2"><span
-                                                class="type-label w-form-label" for="baths">2</span>
+                                            </div>
+                                            <input type="radio" name="filter.v.option.betroom" id="property-type-2"
+                                                data-name="1" style="opacity:0;position:absolute;z-index:-1"
+                                                value="2"><span class="type-label w-form-label"
+                                                for="property-type-2">2</span>
                                         </label>
                                         <label class="propert-radio w-radio">
                                             <div
                                                 class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="Baths" id="baths" data-name="Baths Type"
-                                                style="opacity:0;position:absolute;z-index:-1" value="3"><span
-                                                class="type-label w-form-label" for="baths">3</span>
+                                            </div>
+                                            <input type="radio" name="filter.v.option.betroom" id="property-type-2"
+                                                data-name="1" style="opacity:0;position:absolute;z-index:-1"
+                                                value="3"><span class="type-label w-form-label"
+                                                for="property-type-2">3</span>
                                         </label>
                                         <label class="propert-radio w-radio">
                                             <div
                                                 class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="Baths" id="baths" data-name="Baths Type"
-                                                style="opacity:0;position:absolute;z-index:-1" value="4"><span
-                                                class="type-label w-form-label" for="baths">4</span>
+                                            </div>
+                                            <input type="radio" name="filter.v.option.betroom" id="property-type-2"
+                                                data-name="1" style="opacity:0;position:absolute;z-index:-1"
+                                                value="4"><span class="type-label w-form-label"
+                                                for="property-type-2">4</span>
                                         </label>
                                         <label class="propert-radio w-radio">
                                             <div
                                                 class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="Baths" id="baths" data-name="Baths Type"
-                                                style="opacity:0;position:absolute;z-index:-1" value="5"><span
-                                                class="type-label w-form-label" for="baths">5</span>
+                                            </div>
+                                            <input type="radio" name="filter.v.option.betroom" id="property-type-2"
+                                                data-name="1" style="opacity:0;position:absolute;z-index:-1"
+                                                value="5"><span class="type-label w-form-label"
+                                                for="property-type-2">5</span>
                                         </label>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="select-wrapper no-border hide-tablet">
+                            <div data-hover="true" data-delay="0"
+                                class="max_price_select-wrapper dropdown-filter background-white w-dropdown">
+                                <div class="max-price-select property-select w-dropdown-toggle">
+                                    <div class="property-selected">Features</div>
+                                    <div class="icon_small w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                            <path d="M6 9l6 6l6 -6"></path>
+                                        </svg></div>
+                                </div>
+                                <nav class="property-list w-dropdown-list">
+                                    <div class="property-wrapper">
+
+                                        {% for tag in tags_array %}
+                                        {% if tag != "" %}
+                                        <label class="propert-radio w-radio">
+                                            <div
+                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
+                                            </div><input type="radio" name="filter.v.option.tag" id="max-price"
+                                                data-name="Max Price" style="opacity:0;position:absolute;z-index:-1"
+                                                value="{{tag}}"><span class="type-label w-form-label"
+                                                for="max-price">{{tag}}</span>
+                                        </label>
+                                        {% endif %}
+                                        {% endfor %}
+
                                     </div>
                                 </nav>
                             </div>
@@ -408,21 +463,6 @@
         </div>
     </div>
 </section>
-<div class="container">
-    <div class="slick-slider">
-        <div data-w-id="5cde5414-8a3c-1f55-2882-e27aba60beab" style="opacity:0" class="features-list is-sale top-0">
-            {% for tag in tags_array %}
-            {% if tag != "" %}
-            <a data-w-id="9454dd57-782d-df81-f37d-9c66c5d486b9"
-                style="background-color:rgb(255,255,255);color:rgb(29,12,75)"
-                href="{{collection.url}}/{{ tag | handle }}" class="button is-secondary w-inline-block">
-                <div>{{tag}}</div>
-            </a>
-            {% endif %}
-            {% endfor %}
-        </div>
-    </div>
-</div>
 <section class="section_component">
     <div class="container">
         <div data-w-id="a89511ed-a22c-1a36-7890-1bcc708e042c" style="opacity:0" class="search-results-wrapper">
@@ -461,36 +501,23 @@
                                         class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
                                     </div><input type="radio" name="property-type" data-name="property-type"
                                         id="Most-Recent" style="opacity:0;position:absolute;z-index:-1"
-                                        value="Most Recent"><span class="type-label w-form-label" for="Most Recent">Most
+                                        value="created-descending"><span class="type-label w-form-label"
+                                        for="Most Recent">Most
                                         Recent</span>
                                 </label>
                                 <label class="propert-radio sort-data w-radio">
                                     <div
                                         class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
                                     </div><input type="radio" name="property-type" data-name="property-type"
-                                        style="opacity:0;position:absolute;z-index:-1" value="Highest Price"><span
+                                        style="opacity:0;position:absolute;z-index:-1" value="price-descending"><span
                                         class="type-label w-form-label" for="Highest Price">Highest Price</span>
                                 </label>
                                 <label class="propert-radio sort-data w-radio">
                                     <div
                                         class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
                                     </div><input type="radio" name="property-type" data-name="property-type"
-                                        style="opacity:0;position:absolute;z-index:-1" value="Lowest Price"><span
+                                        style="opacity:0;position:absolute;z-index:-1" value="price-ascending"><span
                                         class="type-label w-form-label" for="Lowest Price">Lowest Price</span>
-                                </label>
-                                <label class="propert-radio sort-data w-radio">
-                                    <div
-                                        class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                    </div><input type="radio" name="property-type" data-name="property-type"
-                                        style="opacity:0;position:absolute;z-index:-1" value="Most Betrooms"><span
-                                        class="type-label w-form-label" for="Most Betrooms">Most Betrooms</span>
-                                </label>
-                                <label class="propert-radio sort-data w-radio">
-                                    <div
-                                        class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                    </div><input type="radio" name="property-type" data-name="property-type"
-                                        style="opacity:0;position:absolute;z-index:-1" value="Least Betrooms"><span
-                                        class="type-label w-form-label" for="Least Betrooms">Least Betrooms</span>
                                 </label>
                             </div>
                         </nav>
@@ -528,6 +555,7 @@
         <div class="property-card-wrapper-main">
 
             {% for product in products %}
+
             <div data-w-id="7b98f7e7-e9bc-eab0-cdb4-7c2718763063" style="opacity:0" class="property-card-wrapper">
                 <div class="img-wrapper">
                     <div class="search-result-images">
@@ -628,7 +656,7 @@
                                     </g>
                                 </svg>
                             </div>
-                            <p class="title-text">{{product.variants[2].option2}}</p>
+                            <p class="title-text">{{product.variants[0].option3}}</p>
                         </div>
                         <p class="intro-text-property">
                             <a href="{{product.url}}">{{product.title}}</a>
@@ -669,7 +697,7 @@
                                             </g>
                                         </g>
                                     </svg></div>
-                                <p class="icon-text">{{product.variants[0].option2 | plus: 0}}</p>
+                                <p class="icon-text">{{product.variants[0].option1 | plus: 0}}</p>
                             </div>
                             <div class="vetical-line-property"></div>
                             <div class="icon-bk-bathroom">
@@ -683,7 +711,7 @@
                                     </svg>
                                 </div>
 
-                                <p class="icon-text">{{ product.variants[1].option2 | replace: '"', "" }}</p>
+                                <p class="icon-text">{{ product.variants[0].option2 | plus: 0}}</p>
                             </div>
                             <div class="vetical-line-property"></div>
                             <div class="icon-bk-bathroom">
@@ -705,7 +733,7 @@
                                             </g>
                                         </g>
                                     </svg></div>
-                                <p class="icon-text">Lot Area: {{product.variants[3].option2}}</p>
+                                <p class="icon-text">Lot Area: {{product.variants[1].option3}}</p>
                             </div>
 
                         </div>
@@ -1121,54 +1149,7 @@
 
 
         <div data-w-id="adf5edab-5bb2-f371-2e8f-e18a899536b5" style="opacity:0" class="load-more-wrap">
-            {% if paginate.previous %}
-            <a href="{{ paginate.previous.url }}" class="button is-secondary is-results-btn is-left w-inline-block">
-                <div class="icon_small w-embed">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" fill="none" viewbox="0 0 17 16">
-                        <path stroke="#ADB4AF" stroke-linecap="round" stroke-linejoin="round" d="M11 13 6 8l5-5"></path>
-                    </svg>
-                </div>
-                <p class="pagination_title">Back</p>
-            </a>
-            {% endif %}
 
-            <div class="pages-count">
-                <p class="paragraph">Page</p>
-                <div class="select-wrapper no-border">
-                    <div data-hover="false" data-delay="0" class="buy_select-wrapper w-dropdown">
-                        <div class="control-select w-dropdown-toggle">
-                            <div>{{ paginate.current_page }}</div>
-                            <div class="icon_small w-embed">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                    <path d="M6 9l6 6l6-6"></path>
-                                </svg>
-                            </div>
-                        </div>
-                        <nav class="property-list w-dropdown-list">
-                            {% for i in (1..paginate.pages) %}
-                            <a href="{{ paginate | default_pagination: i }}" class="page-count w-dropdown-link">{{ i
-                                }}</a>
-                            {% endfor %}
-                        </nav>
-                    </div>
-                </div>
-                <p class="paragraph">of {{ paginate.pages }}</p>
-            </div>
-
-            {% if paginate.next %}
-            <a href="{{ paginate.next.url }}" class="button is-secondary is-results-btn is-right w-inline-block">
-                <p class="pagination_title">Next</p>
-                <div class="icon_small w-embed">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" fill="none" viewbox="0 0 17 16">
-                        <path stroke="#ADB4AF" stroke-linecap="round" stroke-linejoin="round" d="m6 3 5 5-5 5"></path>
-                    </svg>
-                </div>
-            </a>
-            {% endif %}
         </div>
 
 
@@ -1219,20 +1200,51 @@
     <div class="dialog-overlay"></div>
 </section>
 
-
-
 <script>
     document.addEventListener("DOMContentLoaded", () => {
         const mostRecentRadio = document.getElementById("Most-Recent");
         const propertySelected = document.getElementById("property-selected");
-        propertySelected.textContent = mostRecentRadio.value;
         mostRecentRadio.checked = true;
         mostRecentRadio.previousElementSibling.classList.add('w--redirected-checked');
         mostRecentRadio.nextElementSibling.classList.add('is-active');
 
         const propertyListing = document.querySelectorAll(".dropdown-filter");
 
+        const query = new URLSearchParams(window.location.search);
+        const sortData = query.get('sort_by');
+        const productTypeQuery = query.get('filter.v.option.product_type');
+        const minPriceQuery = query.get('filter.v.price.gte');
+        const maxPriceQuery = query.get('filter.v.price.lte');
+        const featuresQuery = query.get('features');
+        const bathQuery = query.get('filter.v.option.bathroom');
+        const betQuery = query.get('filter.v.option.betroom');
+
+
         propertyListing.forEach((item) => {
+            const selectedLabel = item.querySelector(".property-selected");
+            const selectedQuery = item.querySelectorAll('.propert-radio');
+
+            if (selectedQuery) {
+                selectedQuery.forEach((radio) => {
+                    const radioInput = radio.querySelector('input[type="radio"]');
+                    const typeLabel = radio.querySelector('.type-label');
+
+                    const queries = [sortData, productTypeQuery, minPriceQuery, maxPriceQuery, featuresQuery, bathQuery, betQuery];
+                    queries.forEach(query => {
+                        if (radioInput.value === query) {
+                            radioInput.checked = true;
+                            radioInput.previousElementSibling.classList.add('w--redirected-checked');
+                            radioInput.nextElementSibling.classList.add('is-active');
+                            selectedLabel.textContent = typeLabel.innerHTML;
+                        } else {
+                            radioInput.checked = false;
+                            radioInput.previousElementSibling.classList.remove('w--redirected-checked');
+                            radioInput.nextElementSibling.classList.remove('is-active');
+                        }
+                    });
+                });
+            }
+
             item.addEventListener('click', () => {
                 const propertySelected = item.querySelectorAll(".propert-radio");
                 const propertySelectedName = item.querySelector(".property-selected");
@@ -1253,9 +1265,15 @@
                                 }
                             });
 
-                            propertySelectedName.textContent = radioInput.value;
+                            propertySelectedName.textContent = typeLabel.innerHTML;
                             radioInput.previousElementSibling.classList.add('w--redirected-checked');
                             radioInput.nextElementSibling.classList.add('is-active');
+
+                            if (radio.className.includes('sort-data')) {
+                                const sortData = radioInput.value;
+                                query.set('sort_by', sortData);
+                                window.location.search = query.toString();
+                            }
 
                             dropdownList.classList.remove('w--open');
                             dropdownToggle.classList.remove('w--open');
