@@ -1190,10 +1190,10 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <p>Filters</p>
-                <a data-w-id="84c5c7ff-982d-81cd-e8ef-a658028c5156" href="#" class="btn-close w-inline-block">
+                <p> Filters</p><a data-w-id="84c5c7ff-982d-81cd-e8ef-a658028c5156" href="#"
+                    class="btn-close w-inline-block">
                     <div class="w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" fill="none"
-                            viewbox="0 0 16 17">
+                            viewBox="0 0 16 17">
                             <path stroke="#434343" stroke-linecap="round" stroke-linejoin="round"
                                 d="m12.5 4-9 9M12.5 13l-9-9"></path>
                         </svg></div>
@@ -1201,27 +1201,253 @@
             </div>
             <div class="modal-body">
                 <div class="modal-form w-form">
-                    <form id="wf-form-Filter" name="wf-form-Filter" data-name="Filter" method="get" class="form"
-                        data-wf-page-id="66ea5ed1c7dd6ce3c258cdc7"
-                        data-wf-element-id="6bb153d8-7d69-fb04-3751-ae463fd1e1d0">
+                    <form action="/search" role="search" id="email-form-4" name="email-form-4" data-name="Email Form 4"
+                        method="get" class="form" data-wf-page-id="66ea5ed1c7dd6ce3c258cdc7"
+                        data-wf-element-id="163f6524-6e97-0d61-5277-717b038f7a2d" aria-label="Email Form 4">
+                        <div class="search-wrapper background-white is-filter">
+                            <div class="icon_small w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="icon icon-tabler icons-tabler-outline icon-tabler-search">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
+                                    <path d="M21 21l-6 -6"></path>
+                                </svg></div><input class="search-field w-input" maxlength="256" name="q"
+                                data-name="Search 2" placeholder="City, building or community" type="text" id="Search-2"
+                                value="{{search.terms | escape}}">
+                        </div>
+                        <h4 class="top-large">Property Type</h4>
+                        <div class="modal-filter-item">
+                            {% for type in product_types %}
+                            <label id="w-node-_27104503-d968-1013-59f5-c148c81c47d4-c258cdc7"
+                                class="list-inline-item-checkbox w-radio">
+                                <div
+                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
+                                </div><input type="radio" data-name="{{type}}" id="{{type}}"
+                                    name="filter.v.option.product_type" style="opacity:0;position:absolute;z-index:-1"
+                                    value="{{type}}"><span class="type-label w-form-label" for="radio">{{type}}</span>
+                            </label>
+                            {% endfor %}
 
+                        </div>
+                        <h4 class="top-large">Min Price</h4>
+                        <div class="modal-filter-item">
+                            <label id="w-node-_27104503-d968-1013-59f5-c148c81c47d4-c258cdc7"
+                                class="list-inline-item-checkbox w-radio">
+                                <div
+                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
+                                </div><input type="radio" data-name="price_range" id="price_range"
+                                    name="filter.v.price.gte" style="opacity:0;position:absolute;z-index:-1"
+                                    value="300000"><span class="type-label w-form-label" for="min_price">300,000</span>
+                            </label>
+                            <label id="w-node-_27104503-d968-1013-59f5-c148c81c47d4-c258cdc7"
+                                class="list-inline-item-checkbox w-radio">
+                                <div
+                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
+                                </div><input type="radio" data-name="price_range" id="price_range"
+                                    name="filter.v.price.gte" style="opacity:0;position:absolute;z-index:-1"
+                                    value="500000"><span class="type-label w-form-label" for="min_price">500,000</span>
+                            </label>
+                            <label id="w-node-_27104503-d968-1013-59f5-c148c81c47d4-c258cdc7"
+                                class="list-inline-item-checkbox w-radio">
+                                <div
+                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
+                                </div><input type="radio" data-name="price_range" id="price_range"
+                                    name="filter.v.price.gte" style="opacity:0;position:absolute;z-index:-1"
+                                    value="1000000"><span class="type-label w-form-label"
+                                    for="min_price">1,000,000</span>
+                            </label>
+                            <label id="w-node-_27104503-d968-1013-59f5-c148c81c47d4-c258cdc7"
+                                class="list-inline-item-checkbox w-radio">
+                                <div
+                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
+                                </div><input type="radio" data-name="price_range" id="price_range"
+                                    name="filter.v.price.gte" style="opacity:0;position:absolute;z-index:-1"
+                                    value="5000000"><span class="type-label w-form-label"
+                                    for="min_price">5,000,000</span>
+                            </label>
+                            <label id="w-node-_27104503-d968-1013-59f5-c148c81c47d4-c258cdc7"
+                                class="list-inline-item-checkbox w-radio">
+                                <div
+                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
+                                </div><input type="radio" data-name="price_range" id="price_range"
+                                    name="filter.v.price.gte" style="opacity:0;position:absolute;z-index:-1"
+                                    value="10000000"><span class="type-label w-form-label"
+                                    for="min_price">10,000,000</span>
+                            </label>
+                            <label id="w-node-_27104503-d968-1013-59f5-c148c81c47d4-c258cdc7"
+                                class="list-inline-item-checkbox w-radio">
+                                <div
+                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
+                                </div><input type="radio" data-name="price_range" id="price_range"
+                                    name="filter.v.price.gte" style="opacity:0;position:absolute;z-index:-1"
+                                    value="50000000"><span class="type-label w-form-label"
+                                    for="min_price">50,000,000</span>
+                            </label>
+
+
+                        </div>
+                        <h4 class="top-large">Max Price</h4>
+                        <div class="modal-filter-item">
+                            <label id="w-node-_27104503-d968-1013-59f5-c148c81c47d4-c258cdc7"
+                                class="list-inline-item-checkbox w-radio">
+                                <div
+                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
+                                </div><input type="radio" data-name="price_range" id="price_range"
+                                    name="filter.v.price.lte" style="opacity:0;position:absolute;z-index:-1"
+                                    value="300000"><span class="type-label w-form-label" for="min_price">300,000</span>
+                            </label>
+                            <label id="w-node-_27104503-d968-1013-59f5-c148c81c47d4-c258cdc7"
+                                class="list-inline-item-checkbox w-radio">
+                                <div
+                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
+                                </div><input type="radio" data-name="price_range" id="price_range"
+                                    name="filter.v.price.lte" style="opacity:0;position:absolute;z-index:-1"
+                                    value="500000"><span class="type-label w-form-label" for="min_price">500,000</span>
+                            </label>
+                            <label id="w-node-_27104503-d968-1013-59f5-c148c81c47d4-c258cdc7"
+                                class="list-inline-item-checkbox w-radio">
+                                <div
+                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
+                                </div><input type="radio" data-name="price_range" id="price_range"
+                                    name="filter.v.price.lte" style="opacity:0;position:absolute;z-index:-1"
+                                    value="1000000"><span class="type-label w-form-label"
+                                    for="min_price">1,000,000</span>
+                            </label>
+                            <label id="w-node-_27104503-d968-1013-59f5-c148c81c47d4-c258cdc7"
+                                class="list-inline-item-checkbox w-radio">
+                                <div
+                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
+                                </div><input type="radio" data-name="price_range" id="price_range"
+                                    name="filter.v.price.lte" style="opacity:0;position:absolute;z-index:-1"
+                                    value="5000000"><span class="type-label w-form-label"
+                                    for="min_price">5,000,000</span>
+                            </label>
+                            <label id="w-node-_27104503-d968-1013-59f5-c148c81c47d4-c258cdc7"
+                                class="list-inline-item-checkbox w-radio">
+                                <div
+                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
+                                </div><input type="radio" data-name="price_range" id="price_range"
+                                    name="filter.v.price.lte" style="opacity:0;position:absolute;z-index:-1"
+                                    value="10000000"><span class="type-label w-form-label"
+                                    for="min_price">10,000,000</span>
+                            </label>
+                            <label id="w-node-_27104503-d968-1013-59f5-c148c81c47d4-c258cdc7"
+                                class="list-inline-item-checkbox w-radio">
+                                <div
+                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
+                                </div><input type="radio" data-name="price_range" id="price_range"
+                                    name="filter.v.price.lte" style="opacity:0;position:absolute;z-index:-1"
+                                    value="50000000"><span class="type-label w-form-label"
+                                    for="min_price">50,000,000</span>
+                            </label>
+
+
+                        </div>
+                        <h4 class="top-large">Room</h4>
+                        <div class="modal-filter-item">
+                            <label id="w-node-_27104503-d968-1013-59f5-c148c81c47d4-c258cdc7"
+                                class="list-inline-item-checkbox w-radio">
+                                <div
+                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
+                                </div><input type="radio" data-name="1-Betroom" id="1-Betroom"
+                                    name="filter.v.option.betroom" style="opacity:0;position:absolute;z-index:-1"
+                                    value="1"><span class="type-label w-form-label" for="radio">1 Betroom</span>
+                            </label>
+                            <label id="w-node-_27104503-d968-1013-59f5-c148c81c47d4-c258cdc7"
+                                class="list-inline-item-checkbox w-radio">
+                                <div
+                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
+                                </div><input type="radio" data-name="1-Bathroom" id="1-Bathroom"
+                                    name="filter.v.option.bathroom" style="opacity:0;position:absolute;z-index:-1"
+                                    value="1"><span class="type-label w-form-label" for="radio">1 Bathroom</span>
+                            </label>
+                            <label id="w-node-_27104503-d968-1013-59f5-c148c81c47d4-c258cdc7"
+                                class="list-inline-item-checkbox w-radio">
+                                <div
+                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
+                                </div><input type="radio" data-name="2-Betroom" id="2-Betroom"
+                                    name="filter.v.option.betroom" style="opacity:0;position:absolute;z-index:-1"
+                                    value="2"><span class="type-label w-form-label" for="radio">2 Betroom</span>
+                            </label>
+                            <label id="w-node-_27104503-d968-1013-59f5-c148c81c47d4-c258cdc7"
+                                class="list-inline-item-checkbox w-radio">
+                                <div
+                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
+                                </div><input type="radio" data-name="2-Bathroom" id="2-Bathroom"
+                                    name="filter.v.option.bathroom" style="opacity:0;position:absolute;z-index:-1"
+                                    value="2"><span class="type-label w-form-label" for="radio">2 Bathroom</span>
+                            </label>
+                            <label id="w-node-_27104503-d968-1013-59f5-c148c81c47d4-c258cdc7"
+                                class="list-inline-item-checkbox w-radio">
+                                <div
+                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
+                                </div><input type="radio" data-name="3-Betroom" id="3-Betroom"
+                                    name="filter.v.option.betroom" style="opacity:0;position:absolute;z-index:-1"
+                                    value="3"><span class="type-label w-form-label" for="radio">3 Betroom</span>
+                            </label>
+                            <label id="w-node-_27104503-d968-1013-59f5-c148c81c47d4-c258cdc7"
+                                class="list-inline-item-checkbox w-radio">
+                                <div
+                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
+                                </div><input type="radio" data-name="3-Bathroom" id="3-Bathroom"
+                                    name="filter.v.option.bathroom" style="opacity:0;position:absolute;z-index:-1"
+                                    value="3"><span class="type-label w-form-label" for="radio">3 Bathroom</span>
+                            </label>
+                            <label id="w-node-_27104503-d968-1013-59f5-c148c81c47d4-c258cdc7"
+                                class="list-inline-item-checkbox w-radio">
+                                <div
+                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
+                                </div><input type="radio" data-name="4-Betroom" id="4-Betroom"
+                                    name="filter.v.option.betroom" style="opacity:0;position:absolute;z-index:-1"
+                                    value="4"><span class="type-label w-form-label" for="radio">4
+                                    Betroom</span>
+                            </label>
+                            <label id="w-node-_27104503-d968-1013-59f5-c148c81c47d4-c258cdc7"
+                                class="list-inline-item-checkbox w-radio">
+                                <div
+                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
+                                </div><input type="radio" data-name="4-Bathroom" id="4-Bathroom"
+                                    name="filter.v.option.bathroom" style="opacity:0;position:absolute;z-index:-1"
+                                    value="4"><span class="type-label w-form-label" for="radio">4
+                                    Bathroom</span>
+                            </label>
+                            <label id="w-node-_27104503-d968-1013-59f5-c148c81c47d4-c258cdc7"
+                                class="list-inline-item-checkbox w-radio">
+                                <div
+                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
+                                </div><input type="radio" data-name="5-Betroom" id="5-Betroom"
+                                    name="filter.v.option.betroom" style="opacity:0;position:absolute;z-index:-1"
+                                    value="5"><span class="type-label w-form-label" for="radio">5
+                                    Betroom</span>
+                            </label>
+                            <label id="w-node-_27104503-d968-1013-59f5-c148c81c47d4-c258cdc7"
+                                class="list-inline-item-checkbox w-radio">
+                                <div
+                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
+                                </div><input type="radio" data-name="5-Bathroom" id="5-Bathroom"
+                                    name="filter.v.option.bathroom" style="opacity:0;position:absolute;z-index:-1"
+                                    value="5"><span class="type-label w-form-label" for="radio">5
+                                    Bathroom</span>
+                            </label>
+                        </div>
                         <h4 class="top-large">Features</h4>
                         <div class="modal-filter-item">
                             {% for tag in tags_array %}
                             {% if tag != "" %}
-                            <label id="w-node-_041a4ce2-e3b8-760f-d8eb-4bc7e35b69be-c258cdc7"
-                                class="w-checkbox list-inline-item-checkbox">
-                                <div class="w-checkbox-input w-checkbox-input--inputType-custom list-inline-item"></div>
-                                <input type="checkbox" name="checkbox-5" id="checkbox-5" data-name="Checkbox 5"
-                                    style="opacity:0;position:absolute;z-index:-1"><span class="type-label w-form-label"
-                                    for="checkbox-5">{{tag}}</span>
+                            <label id="w-node-_27104503-d968-1013-59f5-c148c81c47d4-c258cdc7"
+                                class="list-inline-item-checkbox w-radio">
+                                <div
+                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
+                                </div><input type="radio" data-name="{{tag}}" id="{{tag}}" name="filter.v.option.tag"
+                                    style="opacity:0;position:absolute;z-index:-1" value="{{tag}}"><span
+                                    class="type-label w-form-label" for="radio">{{tag}}</span>
                             </label>
                             {% endif %}
                             {% endfor %}
 
-
                         </div><input type="submit" data-wait="Please wait..." class="button top-large w-button"
-                            value="Update">
+                            value="Filter">
                     </form>
                 </div>
             </div>
