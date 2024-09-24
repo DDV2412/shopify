@@ -4,7 +4,11 @@
     "Default": {
       "settings": {
         "color_primary": "#1d0c4b",
-        "color_secondary": "#6622f4"
+        "color_secondary": "#6622f4",
+        "favicon": "https://cdn.shopify.com/s/files/1/0270/2098/4401/files/favicon.png",
+        "hero_heading": "Welcome to Real Estate",
+        "hero_subheading": "Find your dream home",
+        "hero_image": "https://cdn.shopify.com/s/files/1/0270/2098/4401/files/hero-image.jpg"
       }
     }
   }

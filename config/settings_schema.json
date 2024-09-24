@@ -27,5 +27,39 @@
         "default": "#6622f4"
       }
     ]
+  },
+  {
+    "name": "Favicon",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "favicon",
+        "label": "Favicon",
+        "default": "https://cdn.shopify.com/s/files/1/0270/2098/4401/files/favicon.png"
+      }
+    ]
+  },
+  {
+    "name": "Hero Content",
+    "settings": [
+      {
+        "type": "text",
+        "id": "hero_heading",
+        "label": "Hero Heading",
+        "default": "Welcome to Real Estate"
+      },
+      {
+        "type": "text",
+        "id": "hero_subheading",
+        "label": "Hero Subheading",
+        "default": "Find your dream home"
+      },
+      {
+        "type": "image_picker",
+        "id": "hero_image",
+        "label": "Hero Image",
+        "default": "https://cdn.shopify.com/s/files/1/0270/2098/4401/files/hero-image.jpg"
+      }
+    ]
   }
 ]
