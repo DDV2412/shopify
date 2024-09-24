@@ -1,7 +1,7 @@
 {
   "current": "Default",
   "presets": {
-    "default": {
+    "Default": {
       "settings": {
         "color_primary": "#1d0c4b",
         "color_secondary": "#6622f4"
