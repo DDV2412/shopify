@@ -2,6 +2,10 @@
 {% assign secondary_header = "secondary_header" %}
 
 {% assign all_tags = "" %}
+
+{% assign max_tags = 8 %}
+{% assign tag_count = 0 %}
+
 {% for product in collections.all.products %}
 {% for tag in product.tags %}
 {% unless all_tags contains tag %}
@@ -13,111 +17,9 @@
 {% assign tags_array = all_tags | split: "," %}
 
 
-<section class="section_hero">
-  <div class="background-hero">
-    <div class="overlay-background"></div>
-  </div>
-  <div class="container">
-    <div class="hero-wrapper">
-      <div data-w-id="cd70fec6-cb71-dd90-8474-3ea641b7eda6" style="opacity:0" class="hero_content">
-        <h1>{{settings.hero_heading}}</h1>
-        <div>{{settings.hero_subheading}}</div>
-        <div class="button-wrapper padding-top-medium">
-          <a href="{{blogs.news.url}}" class="button w-inline-block">
-            <div>Read the full article</div>
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="search-box">
-      <div data-w-id="8b6865d9-c0b5-6d09-871d-e16f70b69cd0" style="opacity:0" class="search-box-wrapper w-form">
-        <form action="/search" role="search" id="search-box" name="email-form" data-name="Email Form" method="get"
-          class="search_content" data-wf-page-id="66e6ed97469869045902b714"
-          data-wf-element-id="8b6865d9-c0b5-6d09-871d-e16f70b69cd1">
-          
-          <div class="property-form">
-            <div class="search-wrapper">
-              <div class="icon_small w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                  viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-search">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
-                  <path d="M21 21l-6 -6"></path>
-                </svg></div><input class="search-field w-input" maxlength="256" name="q" data-name="q"
-                placeholder="City, building or community" type="text" id="Search">
-            </div>
-          </div><input type="submit" data-wait="Please wait..." class="button w-button" value="Search">
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="section_component">
-  <div class="container">
-    <div data-w-id="1b157cdd-77c0-89ae-59cb-0551c4abcf15" style="opacity:0" class="reviews-wrapper">
-      <h2>&quot;I rented my apt in DIFC through h&amp;h. Excellent follow up, approach and service from Sean Fennessy.
-        Highly recommended.&quot;<br></h2>
-      <div class="review-wrapper">
-        <div class="review_content"><img src="{{'google-reviews.svg'| asset_url}}" loading="lazy" alt="Google Review"
-            width="245" height="22">
-        </div>
-        <div class="vertical-line"></div>
-        <div class="review_content"><img src="{{'feefo.svg'| asset_url}}" loading="lazy" alt="Feefo Logo" width="86"
-            height="20"><img src="{{'start.svg'| asset_url}}" loading="lazy" alt="Start Icon" width="90" height="14">
-        </div>
-      </div>
-    </div>
-    <div class="featured-wrapper">
-      <div id="w-node-a356be9e-ceb1-ecc8-33ad-a49cb4398195-5902b714" data-w-id="a356be9e-ceb1-ecc8-33ad-a49cb4398195"
-        style="opacity:0" class="featured-card">
-        <h3>Dubai Communities</h3>
-        <div>Covering 100+ communities, we can help you find one <br>that ticks your boxes.</div>
-        <div class="button-wrapper padding-top-large align-left">
-          <a href="#" class="button w-inline-block">
-            <div>Explore Dubai</div>
-          </a>
-        </div>
-      </div>
-      <div id="w-node-_5139ffa8-01a6-ffbd-51cb-9ea264e36456-5902b714" data-w-id="5139ffa8-01a6-ffbd-51cb-9ea264e36456"
-        style="opacity:0" class="featured-card item-2">
-        <h3>Find your consultant</h3>
-        <div>Search our team of 289 property experts to get <br>professional guidance.<br></div>
-        <div class="button-wrapper padding-top-large align-left">
-          <div class="w-form">
-            <form action="/search" role="search" id="email-form-2" name="email-form-2" data-name="Email Form 2"
-              method="get" class="find_content" data-wf-page-id="66e6ed97469869045902b714"
-              data-wf-element-id="dae0f266-6909-60a6-7f6a-29508525f9df">
-              <div class="property-search">
-                <div class="search-wrapper">
-                  <div class="icon_tiny w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                      viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-search">
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                      <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
-                      <path d="M21 21l-6 -6"></path>
-                    </svg></div><input class="search-field w-input" maxlength="256" name="q"
-                    value="{{search.terms | escape}}" data-name="Find your consultant" placeholder="Name or department"
-                    type="text" id="Find-your-consultant">
-                </div>
-              </div>
-              <div class="button is-icon">
-                <div class="icon_small w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                    viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-search">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
-                    <path d="M21 21l-6 -6"></path>
-                  </svg></div><input type="submit" data-wait="Please wait..." class="button-submit-icon w-button"
-                  value="">
-              </div>
-            </form>
+{%section 'home-hero'%}
 
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+{%section 'review'%}
 <section class="section_component">
   <div class="container">
     <div data-w-id="bfc4d178-00ac-eaca-3287-e9c8a4d4f084" style="opacity:0" class="section_title-wrapper">
@@ -133,14 +35,15 @@
       <div class="features-list is-sale">
 
         {% for tag in tags_array %}
-        {% if tag != "" %}
-        <a data-w-id="9454dd57-782d-df81-f37d-9c66c5d486b9"
+        {% if tag != "" and tag_count < max_tags %} <a data-w-id="9454dd57-782d-df81-f37d-9c66c5d486b9"
           style="background-color:rgb(255,255,255);color:rgb(29,12,75)"
-          href="/collections/real-estate-listings/{{ tag | handle }}" class="button is-secondary w-inline-block">
+          href="/collections/real-estate-listings/{{ tag | handle }}"
+          class="button is-secondary search-featured w-inline-block">
           <div>{{tag}}</div>
-        </a>
-        {% endif %}
-        {% endfor %}
+          </a>
+          {% assign tag_count = tag_count | plus: 1 %}
+          {% endif %}
+          {% endfor %}
       </div>
       <div
         style="-webkit-transform:translate3d(0, 4rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 4rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 4rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 4rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
@@ -175,7 +78,41 @@
           </a>
         </div>
       </div>
-      <div id="w-node-_945e2639-c983-fe4e-e3d4-c659ec73937e-5902b714" class="cta-image"></div>
+      <div id="w-node-_945e2639-c983-fe4e-e3d4-c659ec73937e-5902b714" class="cta-image">
+        <div id="w-node-_47b31cac-d4a1-5a81-391a-6c2882c542e3-5902b714"
+          style="-webkit-transform:translate3d(0, -20%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -20%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -20%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -20%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+          class="cta_image-wrapper _1">
+          {% for product in collections.all.products %}
+          {% if product.featured_image %}
+          <img src="{{product.featured_image | img_url : 'original'}}" alt="{{product.featured_image}}" width="220"
+            height="110" loading="lazy" alt="" class="cta_image">
+          {% break %}
+          {% endif %}
+          {% endfor %}
+        </div>
+        <div id="w-node-_5a500f77-a0c7-9a53-4206-555707edb633-5902b714"
+          style="-webkit-transform:translate3d(0, -47.5%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -47.5%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -47.5%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -47.5%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+          class="cta_image-wrapper _2">
+          {% for product in collections.all.products %}
+          {% if product.featured_image %}
+          <img src="{{product.featured_image | img_url : 'original'}}" alt="{{product.featured_image}}" width="220"
+            height="110" loading="lazy" alt="" class="cta_image">
+          {% break %}
+          {% endif %}
+          {% endfor %}
+        </div>
+        <div id="w-node-e30a1f8b-88bc-8a7d-afeb-a47ff5c0bcb1-5902b714"
+          style="-webkit-transform:translate3d(0, -5%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -5%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -5%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -5%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+          class="cta_image-wrapper _3">
+          {% for product in collections.all.products %}
+          {% if product.featured_image %}
+          <img src="{{product.featured_image | img_url : 'original'}}" alt="{{product.featured_image}}" width="220"
+            height="110" loading="lazy" alt="" class="cta_image">
+          {% break %}
+          {% endif %}
+          {% endfor %}
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -221,4 +158,4 @@
   </div>
   </div>
 </section>
-{% render 'faq'%}
+{% section 'faq'%}
