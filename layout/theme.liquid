@@ -50,44 +50,47 @@
     {%- endif -%}
     {{ content_for_header }}
 
-    <style>
-      .property-select {
-        appearance: none !important;
-      }
-      .navbar-menu::-webkit-scrollbar {
-        width: 0 !important;
-      }
-      .navbar-menu::-webkit-scrollbar-track {
-        background: transparent !important;
-      }
-      .w-slider-dot {
-        width: 0.75rem !important;
-        height: 0.75rem !important;
-        background-color: #adb4af !important;
-      }
-      .w-slider-dot.w-active {
-        background-color: #083819 !important;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="page_wrapper">
-      {% if secondary_header contains "secondary_header" %}
-        {% render 'header' %}
-      {% else %}
-        {% render 'secondary-header' %}
-      {% endif %}
-      <main class="main_wrapper">
-        {{ content_for_layout }}
-      </main>
-      {% render 'footer' %}
+    <style > :root
+    {
+      --primary: {{ settings.color_primary }};
+      --secondary: {{ settings.color_secondary }};
+    }
+    .property-select {
+      appearance: none !important;
+    }
+    .navbar-menu::-webkit-scrollbar {
+      width: 0 !important;
+    }
+    .navbar-menu::-webkit-scrollbar-track {
+      background: transparent !important;
+    }
+    .w-slider-dot {
+      width: 0.75rem !important;
+      height: 0.75rem !important;
+      background-color: #adb4af !important;
+    }
+    .w-slider-dot.w-active {
+      background-color: #083819 !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="page_wrapper">
+    {% if secondary_header contains "secondary_header" %}
+      {% render 'header' %}
+    {% else %}
+      {% render 'secondary-header' %}
+    {% endif %}
+    <main class="main_wrapper">
+      {{ content_for_layout }}
+    </main>
+    {% render 'footer' %}
 
-    </div>
+  </div>
 
-    <script
-      src="{{ 'jquery-3.5.1.min.js' | asset_url }}"
-      type="text/javascript"
-      defer></script>
-    <script src="{{ 'shopify.js' | asset_url }}" defer></script>
-  </body>
-</html>
+  <script
+    src="{{ 'jquery-3.5.1.min.js' | asset_url }}"
+    type="text/javascript"
+    defer></script>
+  <script src="{{ 'shopify.js' | asset_url }}" defer></script>
+</body></html>

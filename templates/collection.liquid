@@ -45,7 +45,7 @@
                             <div data-hover="true" data-delay="0"
                                 class="property_select-wrapper dropdown-filter background-white w-dropdown">
                                 <div class="property-select w-dropdown-toggle">
-                                    <div class="property-selected">Property Type</div>
+                                    <div class="property-selected" id="property-label">Property Type</div>
                                     <div class="icon_small w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="24"
                                             height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor"
                                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -75,7 +75,7 @@
                             <div data-hover="true" data-delay="0"
                                 class="min_price_select-wrapper dropdown-filter background-white w-dropdown">
                                 <div class="min-price-select property-select w-dropdown-toggle">
-                                    <div class="property-selected">Min Price</div>
+                                    <div class="property-selected" id="min-label">Min Price</div>
                                     <div class="icon_small w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="24"
                                             height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor"
                                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -183,7 +183,7 @@
                             <div data-hover="true" data-delay="0"
                                 class="max_price_select-wrapper dropdown-filter background-white w-dropdown">
                                 <div class="max-price-select property-select w-dropdown-toggle">
-                                    <div class="property-selected">Max Price</div>
+                                    <div class="property-selected" id="max-label">Max Price</div>
                                     <div class="icon_small w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="24"
                                             height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor"
                                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -291,7 +291,7 @@
                             <div data-hover="true" data-delay="0"
                                 class="property_select-wrapper dropdown-filter background-white w-dropdown">
                                 <div class="property-select w-dropdown-toggle">
-                                    <div class="property-selected">Bath</div>
+                                    <div class="property-selected" id="bath-label">Bath</div>
                                     <div class="icon_small w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="24"
                                             height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor"
                                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -355,7 +355,7 @@
                             <div data-hover="true" data-delay="0"
                                 class="property_select-wrapper dropdown-filter background-white w-dropdown">
                                 <div class="property-select w-dropdown-toggle">
-                                    <div class="property-selected">Bet</div>
+                                    <div class="property-selected" id="bet-label">Bet</div>
                                     <div class="icon_small w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="24"
                                             height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor"
                                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -1461,7 +1461,6 @@
 <script>
     document.addEventListener("DOMContentLoaded", () => {
         const mostRecentRadio = document.getElementById("Most-Recent");
-        const propertySelected = document.getElementById("property-selected");
         mostRecentRadio.checked = true;
         mostRecentRadio.previousElementSibling.classList.add('w--redirected-checked');
         mostRecentRadio.nextElementSibling.classList.add('is-active');
@@ -1470,8 +1469,8 @@
         const searchField = document.getElementById("query-search");
 
         submitSearch.addEventListener('click', () => {
-            searchField.submit()
-        })
+            searchField.submit();
+        });
 
         const propertyListing = document.querySelectorAll(".dropdown-filter");
 
@@ -1484,7 +1483,6 @@
         const bathQuery = query.get('filter.v.option.bathroom');
         const betQuery = query.get('filter.v.option.betroom');
 
-
         propertyListing.forEach((item) => {
             const selectedLabel = item.querySelector(".property-selected");
             const selectedQuery = item.querySelectorAll('.propert-radio');
@@ -1494,21 +1492,66 @@
                     const radioInput = radio.querySelector('input[type="radio"]');
                     const typeLabel = radio.querySelector('.type-label');
 
-                    const queries = [sortData, productTypeQuery, minPriceQuery, maxPriceQuery, featuresQuery, bathQuery, betQuery];
-                    queries.forEach(query => {
-                        if (radioInput.value === query) {
+                    const queries = [productTypeQuery, minPriceQuery, maxPriceQuery, bathQuery, betQuery];
+                    const labelIds = {
+                        [productTypeQuery]: {
+                            label: 'property-label',
+                            queryKey: 'filter.p.product_type'
+                        },
+                        [minPriceQuery]: {
+                            label: 'min-label',
+                            queryKey: 'filter.v.price.gte'
+                        },
+                        [maxPriceQuery]: {
+                            label: 'max-label',
+                            queryKey: 'filter.v.price.lte'
+                        },
+                        [bathQuery]: {
+                            label: 'bath-label',
+                            queryKey: 'filter.v.option.bathroom'
+                        },
+                        [betQuery]: {
+                            label: 'bet-label',
+                            queryKey: 'filter.v.option.betroom'
+                        },
+                    };
+
+                    selectedQuery.forEach((radio) => {
+                        const radioInput = radio.querySelector('input[type="radio"]');
+                        const typeLabel = radio.querySelector('.type-label');
+
+                        let isChecked = false;
+
+                        for (const query of queries) {
+                            if (query && query === radioInput.value) {
+                                const labelId = labelIds[query].label;
+                                const queryKey = labelIds[query].queryKey;
+                                if (labelId && radioInput.name === queryKey) {
+                                    document.getElementById(labelId).textContent = typeLabel.innerHTML;
+                                    isChecked = true;
+                                }
+                                break;
+                            }
+                        }
+
+                        if (isChecked) {
                             radioInput.checked = true;
                             radioInput.previousElementSibling.classList.add('w--redirected-checked');
                             radioInput.nextElementSibling.classList.add('is-active');
-                            selectedLabel.textContent = typeLabel.innerHTML;
                         } else {
                             radioInput.checked = false;
                             radioInput.previousElementSibling.classList.remove('w--redirected-checked');
                             radioInput.nextElementSibling.classList.remove('is-active');
                         }
                     });
+
+
+
                 });
             }
+
+
+
 
             item.addEventListener('click', () => {
                 const propertySelected = item.querySelectorAll(".propert-radio");
@@ -1534,18 +1577,17 @@
                             radioInput.previousElementSibling.classList.add('w--redirected-checked');
                             radioInput.nextElementSibling.classList.add('is-active');
 
+                            radioInput.checked = true;
+
+                            const radioName = radioInput.name;
+                            const radioValue = radioInput.value;
                             if (radio.className.includes('sort-data')) {
-                                const sortData = radioInput.value;
-                                query.set('sort_by', sortData);
-                                const newUrl = `${window.location.pathname}?${query.toString()}`;
-                                window.history.pushState(null, '', newUrl);
+                                query.set('sort_by', radioValue);
                             } else {
-                                const radioName = radioInput.name;
-                                const radioValue = radioInput.value;
                                 query.set(radioName, radioValue);
-                                const newUrl = `${window.location.pathname}?${query.toString()}`;
-                                window.history.pushState(null, '', newUrl);
                             }
+                            const newUrl = `${window.location.pathname}?${query.toString()}`;
+                            window.location.href = newUrl;
 
                             dropdownList.classList.remove('w--open');
                             dropdownToggle.classList.remove('w--open');
@@ -1558,4 +1600,5 @@
         });
 
     });
+
 </script>
