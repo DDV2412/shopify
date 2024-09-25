@@ -136,37 +136,16 @@
             }
           }
         },
-        "list": {
-          "items": {
-            "question_1": {
-              "question": {
-                "label": "Question",
-                "default": "What is the return policy?"
-              },
-              "answer": {
-                "label": "Answer",
-                "default": "We accept returns within 30 days of purchase."
-              }
+        "text": {
+          "type": "text",
+          "settings": {
+            "question": {
+              "label": "Question",
+              "default": "What is the return policy?"
             },
-            "question_2": {
-              "question": {
-                "label": "Question",
-                "default": "How do I track my order?"
-              },
-              "answer": {
-                "label": "Answer",
-                "default": "You can track your order by following these steps."
-              }
-            },
-            "question_3": {
-              "question": {
-                "label": "Question",
-                "default": "How do I return an item?"
-              },
-              "answer": {
-                "label": "Answer",
-                "default": "You can return an item by following these steps."
-              }
+            "answer": {
+              "label": "Answer",
+              "default": "Provide details about the return policy here."
             }
           }
         }

@@ -737,6 +737,7 @@ p {
   justify-content: center;
   align-items: center;
   display: flex;
+  color: var(--secondary);
 }
 
 .vertical-line {

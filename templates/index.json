@@ -81,31 +81,15 @@
             "heading": "FAQ"
           }
         },
-        "list": {
-          "type": "list",
+        "text": {
+          "type": "text",
           "settings": {
-            "items": [
-              {
-                "question": "What is the return policy?",
-                "answer": "We accept"
-              },
-              {
-                "question": "How do I track my order?",
-                "answer": "You can track your order"
-              },
-              {
-                "question": "How do I return an item?",
-                "answer": "You can return an item"
-              },
-              {
-                "question": "How do I exchange an item?",
-                "answer": "You can exchange an item"
-              }
-            ]
+            "question": "What is the return policy?",
+            "answer": "Provide details about the return policy here."
           }
         }
       },
-      "block_order": ["heading", "list"]
+      "block_order": ["heading", "text"]
     }
   },
   "order": ["home_hero", "features_review", "blog", "faq"]
