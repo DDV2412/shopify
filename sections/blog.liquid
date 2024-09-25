@@ -1,0 +1,121 @@
+<section class="section_component">
+  <div class="container">
+    <div class="section_title-wrapper">
+      <div
+        data-w-id="109e477e-983f-ec40-c5af-e5876ebdd651"
+        style="opacity:0"
+        class="news-title">
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'heading' -%}
+              <h2>{{ block.settings.heading }}</h2>
+
+            {%- when 'button' -%}
+              <div class="button-wrapper gap-large">
+                <a href="{{block.settings.button_link}}" class="button is-text w-inline-block">
+                  <div>{{ block.settings.button_title }}</div>
+                </a>
+              </div>
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
+      <div
+        data-w-id="109e477e-983f-ec40-c5af-e5876ebdd65a"
+        style="opacity:0"
+        class="article-wrapper">
+        <div
+          data-delay="4000"
+          data-animation="slide"
+          class="article_slider w-slider"
+          data-autoplay="false"
+          data-easing="ease"
+          data-hide-arrows="false"
+          data-disable-swipe="false"
+          data-autoplay-limit="0"
+          data-nav-spacing="3"
+          data-duration="500"
+          data-infinite="true">
+          <div class="w-slider-mask">
+            {% for article in blogs.news.articles %}
+              {% if forloop.index <= 4 %}
+                <div class="article-slide w-slide">
+                  <a
+                    id="w-node-a07ff5be-ff10-9d67-7e0b-0ab3038fffa4-5902b714"
+                    href="{{article.url}}"
+                    class="article-card w-inline-block">
+                    <div data-w-id="a07ff5be-ff10-9d67-7e0b-0ab3038fffa5" class="article_thumbnail"><img
+                        src="{{article.image | img_url : 'original'}}"
+                        loading="lazy"
+                        width="318"
+                        height="160"
+                        alt="{{article.title}}"
+                        style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+                        class="article-image"></div>
+                    <div class="article_detail">
+                      <div>{{ article.title }}</div>
+                    </div>
+
+                    <div class="article-date">{{
+article.published_at | date: '%b %d, %Y' }}</div>
+                  </a>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+          <div class="slide-dot w-slider-nav w-slider-nav-invert w-round"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Blog",
+    "blocks": [
+      {
+        "type": "heading",
+        "name": "Heading Block",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "heading",
+            "default": "t:sections.blog.blocks.heading.settings.heading.default",
+            "label": "t:sections.blog.blocks.heading.settings.heading.label"
+          }
+        ]
+      }, {
+        "type": "button",
+        "name": "Blog Button",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "button_title",
+            "default": "t:sections.blog.blocks.button.settings.text.default",
+            "label": "t:sections.blog.blocks.button.settings.text.label"
+          }, {
+            "type": "url",
+            "id": "button_link",
+            "default": "t:sections.blog.blocks.button.settings.url.default",
+            "label": "t:sections.blog.blocks.button.settings.url.label"
+          }
+        ]
+      }
+
+    ],
+    "presets": [
+      {
+        "name": "Blog",
+        "blocks": [
+          {
+            "type": "heading"
+          }, {
+            "type": "button"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

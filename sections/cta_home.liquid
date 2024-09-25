@@ -1,0 +1,77 @@
+<section class="section_component">
+  <div class="container">
+    <div
+      data-w-id="51e0d9d6-05fa-2d90-7819-59c864987622"
+      style="opacity:0"
+      class="cta-wrapper">
+      <div id="w-node-_63d6b63f-d07d-6339-07d1-6f30e4c2710b-5902b714" class="cta-content">
+        <div class="cta-title">
+          <h2>{{ section.settings.cta_heading }}</h2>
+          <div class="cta-tag">{{ section.settings.cta_tag }}</div>
+        </div>
+        <div>{{ section.settings.cta_description }}</div>
+        <div class="button-wrapper padding-top-large align-left">
+          <a href="{{section.settings.cta_link}}" class="button is-light w-inline-block">
+            <div>{{ section.settings.cta_button }}</div>
+          </a>
+        </div>
+      </div>
+      <div id="w-node-_945e2639-c983-fe4e-e3d4-c659ec73937e-5902b714" class="cta-image">
+        <div
+          id="w-node-_47b31cac-d4a1-5a81-391a-6c2882c542e3-5902b714"
+          style="-webkit-transform:translate3d(0, -20%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -20%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -20%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -20%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+          class="cta_image-wrapper _1">
+          {% for product in collections.all.products %}
+            {% if product.featured_image %}
+              <img
+                src="{{product.featured_image | img_url : 'original'}}"
+                alt="{{product.featured_image}}"
+                width="220"
+                height="110"
+                loading="lazy"
+                alt=""
+                class="cta_image">
+              {% break %}
+            {% endif %}
+          {% endfor %}
+        </div>
+        <div
+          id="w-node-_5a500f77-a0c7-9a53-4206-555707edb633-5902b714"
+          style="-webkit-transform:translate3d(0, -47.5%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -47.5%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -47.5%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -47.5%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+          class="cta_image-wrapper _2">
+          {% for product in collections.all.products %}
+            {% if product.featured_image %}
+              <img
+                src="{{product.featured_image | img_url : 'original'}}"
+                alt="{{product.featured_image}}"
+                width="220"
+                height="110"
+                loading="lazy"
+                alt=""
+                class="cta_image">
+              {% break %}
+            {% endif %}
+          {% endfor %}
+        </div>
+        <div
+          id="w-node-e30a1f8b-88bc-8a7d-afeb-a47ff5c0bcb1-5902b714"
+          style="-webkit-transform:translate3d(0, -5%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -5%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -5%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -5%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+          class="cta_image-wrapper _3">
+          {% for product in collections.all.products %}
+            {% if product.featured_image %}
+              <img
+                src="{{product.featured_image | img_url : 'original'}}"
+                alt="{{product.featured_image}}"
+                width="220"
+                height="110"
+                loading="lazy"
+                alt=""
+                class="cta_image">
+              {% break %}
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

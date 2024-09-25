@@ -1,108 +1,62 @@
 <section class="section_faq">
   <div class="container">
     <div class="faq-wrapper">
-      <h2 data-w-id="f73b16f2-ed5b-0d41-7358-0d1b4c6ed194">Why choose JCON Properties<br></h2>
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'heading' -%}
+            <h2 data-w-id="f73b16f2-ed5b-0d41-7358-0d1b4c6ed194">{{ block.settings.heading }}</h2>
+        {%- endcase -%}
+      {%- endfor -%}
+
       <div data-w-id="f73b16f2-ed5b-0d41-7358-0d1b4c6ed197" class="faq_component">
-        <div data-w-id="f73b16f2-ed5b-0d41-7358-0d1b4c6ed198" class="faq_content">
-          <div class="faq_title">
-            <div>What real estate services do JCON Properties offer?</div>
-            <div class="faq_icon">
-              <div class="plus_icon vertical"></div>
-              <div class="plus_icon horizontal"></div>
+        {% for item in section.settings.faq_items %}
+          <div data-w-id="f73b16f2-ed5b-0d41-7358-0d1b4c6ed198" class="faq_content">
+            <div class="faq_title">
+              <div>{{ item.title }}</div>
+              <div class="faq_icon">
+                <div class="plus_icon vertical"></div>
+                <div class="plus_icon horizontal"></div>
+              </div>
+            </div>
+            <div class="answer-wrapper">
+              <div class="answer-text">
+                <p>{{ item.content }}</p>
+              </div>
             </div>
           </div>
-          <div class="answer-wrapper">
-            <div class="answer-text">Our services include
-              <a target="_blank" href="/collections/real-estate-listings">Residential Sales</a>
-              and
-              <a target="_blank" href="/collections/rentals-in-dubai">Leasing</a>, Holiday Rentals,
-              <a target="_blank" href="/off-plan">Off Plan properties</a>
-              and Investments, Property Management, and
-              <a target="_blank" href="/commercial-properties">Commercial Sales</a>
-              and
-              <a target="_blank" href="/commercial-properties">Commercial Leasing</a>. We also support clients through our home maintenance company Breathe, and our project management group Bauhaus is on hand for property renovations, design, upgrades, and more.  If there&#x27;s something we don&#x27;t cover, our extensive network of partners can take care of it – including conveyancing support, mortgage solutions, currency services, professional furnishing, and more.
-            </div>
-          </div>
-        </div>
-        <div data-w-id="f73b16f2-ed5b-0d41-7358-0d1b4c6ed1b1" class="faq_content">
-          <div class="faq_title">
-            <div>Which Dubai communities do JCON Properties cover?</div>
-            <div class="faq_icon">
-              <div class="plus_icon vertical"></div>
-              <div class="plus_icon horizontal"></div>
-            </div>
-          </div>
-          <div class="answer-wrapper">
-            <div class="answer-text">We cover 100+ communities, including waterfront destinations like Dubai Marina and Emaar Beachfront, serene communities such as Arabian Ranches, Jumeirah Golf Estates, and Dubai Hills Estate, and key tourist locations like Downtown Dubai, Palm Jumeirah, and Jumeirah Beach Residence (JBR).</div>
-          </div>
-        </div>
-        <div data-w-id="f73b16f2-ed5b-0d41-7358-0d1b4c6ed1bb" class="faq_content">
-          <div class="faq_title">
-            <div>Is JCON Properties Group a leading real estate agency?</div>
-            <div class="faq_icon">
-              <div class="plus_icon vertical"></div>
-              <div class="plus_icon horizontal"></div>
-            </div>
-          </div>
-          <div class="answer-wrapper">
-            <div class="answer-text">We&#x27;re proud to be a leading, award winning real estate agency with over 10 years of experience and a strong team of 220+ property experts. Our client focused approach has led us to where we are, because while others are fighting to get the deal, we have our eyes set on supporting each person and building long lasting relationships. Take a look at our
-              <a href="#">client testimonials</a>
-              and find out why we are one of Dubai&#x27;s top agencies.</div>
-          </div>
-        </div>
-        <div data-w-id="f73b16f2-ed5b-0d41-7358-0d1b4c6ed1c8" class="faq_content">
-          <div class="faq_title">
-            <div>Can JCON Properties help me with real estate investments?</div>
-            <div class="faq_icon">
-              <div class="plus_icon vertical"></div>
-              <div class="plus_icon horizontal"></div>
-            </div>
-          </div>
-          <div class="answer-wrapper">
-            <div class="answer-text">Yes. Whether you&#x27;re looking to invest in a ready property or are searching for an off plan investment, our property experts are on hand to help you find the best opportunities that suit your needs.Maybe you&#x27;re a seasoned investor, or perhaps you just want some extra info – whatever your case, we&#x27;ll provide useful advice to steer you in the right direction.</div>
-          </div>
-        </div>
-        <div data-w-id="f73b16f2-ed5b-0d41-7358-0d1b4c6ed1d2" class="faq_content">
-          <div class="faq_title">
-            <div>Can JCON Properties manage my property?</div>
-            <div class="faq_icon">
-              <div class="plus_icon vertical"></div>
-              <div class="plus_icon horizontal"></div>
-            </div>
-          </div>
-          <div class="answer-wrapper">
-            <div class="answer-text">Luckily, our
-              <a target="_blank" href="#">Property Management department</a>
-              can take the weight off your shoulders. From leased apartments and villas to entire buildings, we&#x27;ll take care of general maintenance, repairs, cleaning, and even look after your tenants.</div>
-          </div>
-        </div>
-        <div data-w-id="f73b16f2-ed5b-0d41-7358-0d1b4c6ed1e2" class="faq_content">
-          <div class="faq_title">
-            <div>Do JCON Properties provide insights into Dubai&#x27;s real estate market?</div>
-            <div class="faq_icon">
-              <div class="plus_icon vertical"></div>
-              <div class="plus_icon horizontal"></div>
-            </div>
-          </div>
-          <div class="answer-wrapper">
-            <div class="answer-text">Absolutely. We&#x27;ll take every opportunity we can get to inform you of the latest insights, market news, and relevant data. No matter your goal, the best decision is always the one that&#x27;s backed up by accurate information and professional advice – so leave it to us to keep you in the loop of the current market with guides, blog posts, market reports, and more.</div>
-          </div>
-        </div>
-        <div data-w-id="f73b16f2-ed5b-0d41-7358-0d1b4c6ed1ec" class="faq_content">
-          <div class="faq_title">
-            <div>Do JCON Properties Property Consultants provide a free consultation?</div>
-            <div class="faq_icon">
-              <div class="plus_icon vertical"></div>
-              <div class="plus_icon horizontal"></div>
-            </div>
-          </div>
-          <div class="answer-wrapper">
-            <div class="answer-text">Yes – we&#x27;re always happy to meet new people and talk about real estate (it&#x27;s kind of our thing). We offer free consultations through different channels like phone calls, WhatsApp messages, video calls or in-person meetings. Depending on your specific goals we&#x27;ll get you through to a dedicated specialist. Just
-              <a href="/contact/">get in touch</a>
-              to book your preferred date and time.</div>
-          </div>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </div>
 </section>
+
+{% schema %}
+  {
+    "name": "FAQ",
+    "blocks": [
+      {
+        "type": "heading",
+        "name": "Heading Block",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "heading",
+            "default": "t:sections.faq.blocks.heading.settings.heading.default",
+            "label": "t:sections.faq.blocks.heading.settings.heading.label"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "FAQ",
+        "blocks": [
+          {
+            "type": "heading"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

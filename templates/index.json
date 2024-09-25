@@ -1,0 +1,89 @@
+{
+  "sections": {
+    "home_hero": {
+      "type": "home-hero",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "Provide details about the banner image(s) or content here."
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "text": "Shop now",
+            "url": "/shop"
+          }
+        }
+      },
+      "block_order": ["heading", "text", "button"]
+    },
+    "features_review": {
+      "type": "review",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "highlight": "Customer Reviews",
+            "communities_heading": "Shop now",
+            "consultant_heading": "Shop now"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "communities_description": "Provide details about the banner image(s) or content here.",
+            "consultant_description": "Provide details about the banner image(s) or content here."
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "text": "Shop now",
+            "url": "/shop"
+          }
+        }
+      },
+      "block_order": ["heading", "text", "button"]
+    },
+    "blog": {
+      "type": "blog",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Blog"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "text": "Shop now",
+            "url": "/shop"
+          }
+        }
+      },
+      "block_order": ["heading", "button"]
+    },
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "FAQ"
+          }
+        }
+      },
+      "block_order": ["heading"]
+    }
+  },
+  "order": ["home_hero", "features_review", "blog", "faq"]
+}

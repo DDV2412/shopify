@@ -2,8 +2,8 @@
 
 <html
   lang="en"
-  data-wf-page="{{ page_id }}"
-  data-wf-site="66e6ed97469869045902b70e">
+  data-wf-site="66e6ed97469869045902b70e"
+  data-wf-page="{% if template == 'index' %}{{ settings.home_page_id }}{% else %}{{ settings.page_id }}{% endif %}">
   <head>
     <meta charset="utf-8">
     <title>
@@ -75,13 +75,13 @@
 
 
     .background-hero {
-      background-image: url('{{ settings.hero_image | img_url: '1920x' }}');
+      background-image: url('{{ settings.hero_background | img_url: '1920x' }}');
     }
   </style>
 </head>
 <body>
   <div class="page_wrapper">
-    {% if secondary_header contains "secondary_header" %}
+    {% if template == 'index' %}
       {% render 'header' %}
     {% else %}
       {% render 'secondary-header' %}

@@ -1,0 +1,101 @@
+{
+  "sections": {
+    "home_hero": {
+      "blocks": {
+        "heading": {
+          "settings": {
+            "heading": {
+              "default": "Image banner"
+            }
+          }
+        },
+        "text": {
+          "settings": {
+            "text": {
+              "default": "Provide details about the banner image(s) or content here."
+            }
+          }
+        },
+        "button": {
+          "settings": {
+            "text": {
+              "default": "Shop now"
+            },
+            "url": {
+              "default": "/shop"
+            }
+          }
+        }
+      }
+    },
+    "features_review": {
+      "blocks": {
+        "heading": {
+          "settings": {
+            "highlight": {
+              "default": "Customer Reviews"
+            },
+            "communities_heading": {
+              "default": "Shop now"
+            },
+            "communities_description": {
+              "default": "Shop now"
+            }
+          }
+        },
+        "button": {
+          "settings": {
+            "text": {
+              "default": "Shop now"
+            },
+            "url": {
+              "default": "/shop"
+            }
+          }
+        },
+        "text": {
+          "settings": {
+            "communities_description": {
+              "default": "Provide details about the banner image(s) or content here."
+            },
+            "consultant_description": {
+              "default": "Provide details about the banner image(s) or content here."
+            }
+          }
+        }
+      }
+    },
+    "blog": {
+      "blocks": {
+        "heading": {
+          "settings": {
+            "heading": {
+              "default": "Blog"
+            }
+          }
+        },
+        "button": {
+          "settings": {
+            "text": {
+              "default": "Shop now"
+            },
+            "url": {
+              "default": "/shop"
+            }
+          }
+        }
+      }
+    },
+    "faq": {
+      "blocks": {
+        "heading": {
+          "settings": {
+            "heading": {
+              "default": "Blog"
+            }
+          }
+        }
+      }
+    }
+  }
+}

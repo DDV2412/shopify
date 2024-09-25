@@ -5,13 +5,20 @@
   <div class="container">
     <div class="hero-wrapper">
       <div data-w-id="cd70fec6-cb71-dd90-8474-3ea641b7eda6" style="opacity:0" class="hero_content">
-        <h1>{{settings.hero_heading}}</h1>
-        <div>{{settings.hero_subheading}}</div>
-        <div class="button-wrapper padding-top-medium">
-          <a href="{{blogs.news.url}}" class="button w-inline-block">
-            <div>Read the full article</div>
-          </a>
+        {%- for block in section.blocks -%}
+        {%- case block.type -%}
+        {%- when 'heading' -%}
+        <h1>{{ block.settings.heading }}</h1>
+        {%- when 'text' -%}
+        <div>{{ block.settings.text }}</div>
+        {%- when 'button' -%}
+           <div class="button-wrapper padding-top-medium">
+          <a href="{{block.settings.button_link}}" class="button w-inline-block">
+            <div>{{block.settings.button_cta}}</div>
+          </a> 
         </div>
+        {%- endcase -%}
+        {%- endfor -%}
       </div>
     </div>
     <div class="search-box">
@@ -37,3 +44,72 @@
     </div>
   </div>
 </section>
+
+{% schema %}
+  {
+  "name": "Home Hero",
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "Heading Block",
+      "limit": 1,
+      "settings": [
+          {
+            "type": "text",
+            "id": "heading",
+            "default": "t:sections.home_hero.blocks.heading.settings.heading.default",
+            "label": "t:sections.home_hero.blocks.heading.settings.heading.label"
+          }
+        ]
+    },
+    {
+      "type": "text",
+      "name": "Text Block",
+      "limit": 1,
+      "settings": [
+          {
+            "type": "text",
+            "id": "text",
+            "default": "t:sections.home_hero.blocks.text.settings.text.default",
+            "label": "t:sections.home_hero.blocks.text.settings.text.label"
+          }
+        ]
+      },
+      {
+      "type": "button",
+      "name": "Button CTA",
+      "limit": 1,
+      "settings": [
+          {
+            "type": "text",
+            "id": "button_cta",
+            "default": "t:sections.home_hero.blocks.button.settings.text.default",
+            "label": "t:sections.home_hero.blocks.button.settings.text.label"
+          },
+           {
+            "type": "url",
+            "id": "button_link",
+            "default": "t:sections.home_hero.blocks.button.settings.url.default",
+            "label": "t:sections.home_hero.blocks.button.settings.url.label"
+          }
+        ]
+      }
+    ],
+    "presets": [
+    {
+    "name": "Home Hero",
+    "blocks": [
+    {
+    "type": "heading"
+    },
+    {
+    "type": "text"
+    },
+    {
+    "type": "button"
+    }
+    ]
+    }
+    ]
+  }
+{% endschema %}

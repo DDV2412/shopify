@@ -1,0 +1,68 @@
+{% assign all_tags = "" %}
+
+{% assign max_tags = 8 %}
+{% assign tag_count = 0 %}
+
+{% for product in collections.all.products %}
+  {% for tag in product.tags %}
+    {% unless all_tags contains tag %}
+      {% assign all_tags = all_tags | append: tag | append: "," %}
+    {% endunless %}
+  {% endfor %}
+{% endfor %}
+
+{% assign tags_array = all_tags | split: "," %}
+
+<section class="section_component">
+  <div class="container">
+    <div
+      data-w-id="bfc4d178-00ac-eaca-3287-e9c8a4d4f084"
+      style="opacity:0"
+      class="section_title-wrapper">
+      <div class="features-wrapper">
+        <h2>Search properties by feature<br></h2>
+        <div class="button-wrapper gap-large">
+          <a
+            data-w-id="c70e3164-7149-9545-7b3c-24eecd07dddc"
+            href="#"
+            class="featured-button is-sale w-button">For  
+            Salet</a>
+          <a
+            data-w-id="0aa040e7-4578-d890-7559-1c602c123682"
+            href="#"
+            class="featured-button is-rent w-button">For  
+            Rent</a>
+        </div>
+      </div>
+      <div class="features-list is-sale">
+
+        {% for tag in tags_array %}
+          {% if tag != "" and tag_count < max_tags %}
+            <a
+              data-w-id="9454dd57-782d-df81-f37d-9c66c5d486b9"
+              style="background-color:rgb(255,255,255);color:rgb(29,12,75)"
+              href="/collections/real-estate-listings/{{ tag | handle }}"
+              class="button is-secondary search-featured w-inline-block">
+              <div>{{ tag }}</div>
+            </a>
+            {% assign tag_count = tag_count | plus: 1 %}
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div style="-webkit-transform:translate3d(0, 4rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 4rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 4rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 4rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="features-list is-rent">
+        {% for tag in tags_array %}
+          {% if tag != "" %}
+            <a
+              data-w-id="9454dd57-782d-df81-f37d-9c66c5d486b9"
+              style="background-color:rgb(255,255,255);color:rgb(29,12,75)"
+              href="/collections/rentals-in-dubai/{{ tag | handle }}"
+              class="button is-secondary w-inline-block">
+              <div>{{ tag }}</div>
+            </a>
+          {% endif %}
+        {% endfor %}
+
+      </div>
+    </div>
+  </div>
+</section>

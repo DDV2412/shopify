@@ -1,0 +1,145 @@
+{
+  "settings_schema": {
+    "home-hero": {
+      "name": "Home hero",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": {
+              "label": "Heading",
+              "default": "Image banner"
+            }
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": {
+              "label": "Description",
+              "default": "Give customers details about the banner image(s) or content on the template."
+            }
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "text": {
+              "label": "Button text",
+              "default": "Button text"
+            },
+            "url": {
+              "label": "Button URL",
+              "default": "/shop"
+            }
+          }
+        }
+      },
+      "present": {
+        "name": "Home hero"
+      }
+    },
+    "review": {
+      "name": "Features Review",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "highlight": {
+              "label": "Heading",
+              "default": "Customer Reviews"
+            },
+            "communities_heading": {
+              "settings": {
+                "label": "Shop now",
+                "default": "Shop now"
+              }
+            },
+            "consultant_heading": {
+              "settings": {
+                "label": "Shop now",
+                "default": "Shop now"
+              }
+            }
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "communities_description": {
+              "label": "Description",
+              "default": "Give customers details about the banner image(s) or content on the template."
+            },
+            "consultant_description": {
+              "label": "Description",
+              "default": "Give customers details about the banner image(s) or content on the template."
+            }
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "text": {
+              "label": "Button text",
+              "default": "Button text"
+            },
+            "url": {
+              "label": "Button URL",
+              "default": "/shop"
+            }
+          }
+        }
+      },
+      "present": {
+        "name": "Features Review"
+      }
+    },
+    "blog": {
+      "name": "Blog",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": {
+              "label": "Heading",
+              "default": "Blog"
+            }
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "text": {
+              "label": "Button text",
+              "default": "Button text"
+            },
+            "url": {
+              "label": "Button URL",
+              "default": "/shop"
+            }
+          }
+        }
+      },
+      "present": {
+        "name": "Blog"
+      }
+    },
+    "faq": {
+      "name": "FAQ",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": {
+              "label": "Heading",
+              "default": "Blog"
+            }
+          }
+        }
+      },
+      "present": {
+        "name": "FAQ"
+      }
+    }
+  }
+}
