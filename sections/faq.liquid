@@ -5,27 +5,28 @@
         {%- case block.type -%}
           {%- when 'heading' -%}
             <h2 data-w-id="f73b16f2-ed5b-0d41-7358-0d1b4c6ed194">{{ block.settings.heading }}</h2>
+
+          {%- when 'list' -%}
+            <div data-w-id="f73b16f2-ed5b-0d41-7358-0d1b4c6ed197" class="faq_component">
+              {% for item in block.settings.items %}
+                <div data-w-id="f73b16f2-ed5b-0d41-7358-0d1b4c6ed198" class="faq_content">
+                  <div class="faq_title">
+                    <div>{{ item.question }}</div>
+                    <div class="faq_icon">
+                      <div class="plus_icon vertical"></div>
+                      <div class="plus_icon horizontal"></div>
+                    </div>
+                  </div>
+                  <div class="answer-wrapper">
+                    <div class="answer-text">
+                      <p>{{ item.answer }}</p>
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
         {%- endcase -%}
       {%- endfor -%}
-
-      <div data-w-id="f73b16f2-ed5b-0d41-7358-0d1b4c6ed197" class="faq_component">
-        {% for item in section.settings.faq_items %}
-          <div data-w-id="f73b16f2-ed5b-0d41-7358-0d1b4c6ed198" class="faq_content">
-            <div class="faq_title">
-              <div>{{ item.title }}</div>
-              <div class="faq_icon">
-                <div class="plus_icon vertical"></div>
-                <div class="plus_icon horizontal"></div>
-              </div>
-            </div>
-            <div class="answer-wrapper">
-              <div class="answer-text">
-                <p>{{ item.content }}</p>
-              </div>
-            </div>
-          </div>
-        {% endfor %}
-      </div>
     </div>
   </div>
 </section>
@@ -46,6 +47,22 @@
             "label": "t:sections.faq.blocks.heading.settings.heading.label"
           }
         ]
+      }, {
+        "type": "list",
+        "name": "FAQ Items",
+        "settings": [
+          {
+            "type": "text",
+            "id": "question",
+            "default": "t:sections.faq.blocks.list.items.question_1.question.default",
+            "label": "t:sections.faq.blocks.list.items.question_1.question.label"
+          }, {
+            "type": "richtext",
+            "id": "answer",
+            "default": "t:sections.faq.blocks.list.items.question_1.answer.default",
+            "label": "t:sections.faq.blocks.list.items.question_1.answer.label"
+          }
+        ]
       }
     ],
     "presets": [
@@ -54,6 +71,8 @@
         "blocks": [
           {
             "type": "heading"
+          }, {
+            "type": "list"
           }
         ]
       }

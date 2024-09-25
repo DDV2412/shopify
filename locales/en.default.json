@@ -94,6 +94,26 @@
               "default": "Blog"
             }
           }
+        },
+        "list": {
+          "items": {
+            "question_1": {
+              "question": "What is the return policy?",
+              "answer": "We accept returns within 30 days of purchase."
+            },
+            "question_2": {
+              "question": "How do I track my order?",
+              "answer": "You can track your order using the tracking number provided."
+            },
+            "question_3": {
+              "question": "How do I return an item?",
+              "answer": "You can return an item by following the return instructions."
+            },
+            "question_4": {
+              "question": "How do I exchange an item?",
+              "answer": "You can exchange an item by contacting customer support."
+            }
+          }
         }
       }
     }
