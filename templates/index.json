@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "home-hero": {
@@ -6,7 +15,7 @@
         "background": {
           "type": "select",
           "settings": {
-            "image": "/images/home-hero.jpg"
+            "background_image": "shopify://shop_images/1726504234500_Screenshot_2024-09-16_at_8.21.35PM.png"
           }
         },
         "heading": {
@@ -24,12 +33,19 @@
         "button": {
           "type": "button",
           "settings": {
-            "text": "Read the full article",
-            "url": "/blogs/news"
+            "button_cta": "Read the full article",
+            "button_link": ""
           }
         }
       },
-      "block_order": ["background", "heading", "text", "button"]
+      "block_order": [
+        "background",
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+      }
     },
     "review-highlight": {
       "type": "review-highlight",
@@ -52,12 +68,18 @@
         "button": {
           "type": "button",
           "settings": {
-            "text": "Explore Dubai",
-            "url": "/collections/all"
+            "button_title": "Explore Dubai",
+            "button_link": ""
           }
         }
       },
-      "block_order": ["heading", "text", "button"]
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+      }
     },
     "features": {
       "type": "features",
@@ -71,14 +93,17 @@
         "button": {
           "type": "button",
           "settings": {
-            "button_for_sale_text": "For sale",
             "button_for_sale_url": "/collections/all",
-            "button_for_rent_text": "For rent",
             "button_for_rent_url": "/collections/all"
           }
         }
       },
-      "block_order": ["heading", "button"]
+      "block_order": [
+        "heading",
+        "button"
+      ],
+      "settings": {
+      }
     },
     "cta-home": {
       "type": "cta-home",
@@ -99,12 +124,18 @@
         "button": {
           "type": "button",
           "settings": {
-            "text": "Get Started",
-            "url": "/collections/all"
+            "cta_button": "Search properties",
+            "cta_link": ""
           }
         }
       },
-      "block_order": ["heading", "text", "button"]
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+      }
     },
     "news": {
       "type": "news",
@@ -118,12 +149,17 @@
         "button": {
           "type": "button",
           "settings": {
-            "text": "Go To All News",
-            "url": "/blogs/news"
+            "button_title": "Read more",
+            "button_link": ""
           }
         }
       },
-      "block_order": ["heading", "button"]
+      "block_order": [
+        "heading",
+        "button"
+      ],
+      "settings": {
+      }
     },
     "faq": {
       "type": "faq",
@@ -131,19 +167,79 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "FAQ"
+            "heading": "Why choose JCON Properties"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "question": "What real estate services do haus & haus offer?",
-            "answer": "<p>Our services include Residential Sales and Leasing, Holiday Rentals, Off Plan properties and Investments, Property Management, and Commercial Sales and Commercial Leasing. We also support clients through our home maintenance company Breathe, and our project management group Bauhaus is on hand for property renovations, design, upgrades, and more. If there's something we don't cover, our extensive network of partners can take care of it – including conveyancing support, mortgage solutions, currency services, professional furnishing, and more.  </p>"
+            "question": "What real estate services do JCON Properties offer?",
+            "answer": "<p>Our services include Residential Sales and Leasing, Holiday Rentals, Off Plan properties and Investments, Property Management, and Commercial Sales and Commercial Leasing. We also support clients through our home maintenance company Breathe, and our project management group Bauhaus is on hand for property renovations, design, upgrades, and more.  </p><p>If there's something we don't cover, our extensive network of partners can take care of it – including conveyancing support, mortgage solutions, currency services, professional furnishing, and more.  </p>"
+          }
+        },
+        "text_f9JWtx": {
+          "type": "text",
+          "settings": {
+            "question": "Which Dubai communities do JCON Properties cover?",
+            "answer": "<p>We cover 100+ communities, including waterfront destinations like Dubai Marina and Emaar Beachfront, serene communities such as Arabian Ranches, Jumeirah Golf Estates, and Dubai Hills Estate, and key tourist locations like Downtown Dubai, Palm Jumeirah, and Jumeirah Beach Residence (JBR).</p>"
+          }
+        },
+        "text_fAREHG": {
+          "type": "text",
+          "settings": {
+            "question": "Is JCON Properties Group a leading real estate agency?",
+            "answer": "<p>We're proud to be a leading, award winning real estate agency with over 10 years of experience and a strong team of 220+ property experts. Our client focused approach has led us to where we are, because while others are fighting to get the deal, we have our eyes set on supporting each person and building long lasting relationships. </p>"
+          }
+        },
+        "text_kPzkDz": {
+          "type": "text",
+          "settings": {
+            "question": "Can JCON Properties help me with real estate investments?",
+            "answer": "<p>Yes. Whether you're looking to invest in a ready property or are searching for an off plan investment, our property experts are on hand to help you find the best opportunities that suit your needs.</p><p>Maybe you're a seasoned investor, or perhaps you just want some extra info – whatever your case, we'll provide useful advice to steer you in the right direction.</p>"
+          }
+        },
+        "text_B7nRfP": {
+          "type": "text",
+          "settings": {
+            "question": "Can JCON Properties manage my property?",
+            "answer": "<p>Luckily, our Property Management department can take the weight off your shoulders. From leased apartments and villas to entire buildings, we'll take care of general maintenance, repairs, cleaning, and even look after your tenants. <a href=\"/pages/contact\" title=\"Contact\">Get started here</a>.</p>"
+          }
+        },
+        "text_mkhYBT": {
+          "type": "text",
+          "settings": {
+            "question": "Do JCON Properties provide insights into Dubai's real estate market?",
+            "answer": "<p>Absolutely. We'll take every opportunity we can get to inform you of the latest insights, market news, and relevant data. No matter your goal, the best decision is always the one that's backed up by accurate information and professional advice – so leave it to us to keep you in the loop of the current market with guides, blog posts, market reports, and more. </p><h2></h2>"
+          }
+        },
+        "text_UhqikL": {
+          "type": "text",
+          "settings": {
+            "question": "Do JCON Properties Property Consultants provide a free consultation?",
+            "answer": "<p>Yes – we're always happy to meet new people and talk about real estate (it's kind of our thing). We offer free consultations through different channels like phone calls, WhatsApp messages, video calls or in-person meetings. Depending on your specific goals we'll get you through to a dedicated specialist. Just <a href=\"/pages/contact\" title=\"Contact\">get in touch </a>to book your preferred date and time. </p>"
           }
         }
       },
-      "block_order": ["heading", "text"]
+      "block_order": [
+        "heading",
+        "text",
+        "text_f9JWtx",
+        "text_fAREHG",
+        "text_kPzkDz",
+        "text_B7nRfP",
+        "text_mkhYBT",
+        "text_UhqikL"
+      ],
+      "settings": {
+      }
     }
   },
-  "order": ["home-hero", "review-highlight", "features", "cta-home", "news", "faq"]
+  "order": [
+    "home-hero",
+    "review-highlight",
+    "features",
+    "cta-home",
+    "news",
+    "faq"
+  ]
 }
