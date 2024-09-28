@@ -1,111 +1,65 @@
 {
   "sections": {
-    "home_hero": {
-      "blocks": {
-        "heading": {
-          "settings": {
-            "heading": {
-              "default": "Image banner"
-            }
-          }
-        },
-        "text": {
-          "settings": {
-            "text": {
-              "default": "Provide details about the banner image(s) or content here."
-            }
-          }
-        },
-        "button": {
-          "settings": {
-            "text": {
-              "default": "Shop now"
-            },
-            "url": {
-              "default": "/shop"
-            }
-          }
-        }
+    "home-hero": {
+      "background": "/images/home-hero.jpg",
+      "heading": "Dubai's affordable housing segment heating up",
+      "text": "With the Dubai population increasing, so is the demand for affordable housing. Read the full article now for the best hotspots.",
+      "button": {
+        "text": "Read the full article",
+        "url": "/blogs/news"
       }
     },
-    "features_review": {
-      "blocks": {
-        "heading": {
-          "settings": {
-            "highlight": {
-              "default": "Customer Reviews"
-            },
-            "communities_heading": {
-              "default": "Shop now"
-            },
-            "communities_description": {
-              "default": "Shop now"
-            }
-          }
-        },
-        "button": {
-          "settings": {
-            "text": {
-              "default": "Shop now"
-            },
-            "url": {
-              "default": "/shop"
-            }
-          }
-        },
-        "text": {
-          "settings": {
-            "communities_description": {
-              "default": "Provide details about the banner image(s) or content here."
-            },
-            "consultant_description": {
-              "default": "Provide details about the banner image(s) or content here."
-            }
-          }
-        }
+    "review-highlight": {
+      "heading": {
+        "highlight": "I had a great experience with haus & haus, special thanks to Farzonai who helped me find the perfect place and made my relocation to Dubai easy and without stress.",
+        "communities_heading": "Dubai Communities",
+        "consultant_heading": "Find your consultant"
+      },
+      "text": {
+        "communities_description": "Covering 100+ communities, we can help you find one that ticks your boxes.",
+        "consultant_description": "Search our team of {{ products.size }} property experts to get professional guidance."
+      },
+      "button": {
+        "text": "Explore Dubai",
+        "url": "/collections/all"
       }
     },
-    "blog": {
-      "blocks": {
-        "heading": {
-          "settings": {
-            "heading": {
-              "default": "Blog"
-            }
-          }
-        },
-        "button": {
-          "settings": {
-            "text": {
-              "default": "Shop now"
-            },
-            "url": {
-              "default": "/shop"
-            }
-          }
-        }
+    "features": {
+      "heading": "Search properties by feature",
+      "button": {
+        "button_for_sale_url": "/collections/all",
+        "button_for_rent_url": "/collections/all"
+      }
+    },
+    "cta-home": {
+      "heading": {
+        "heading": "Get an instant property valuation",
+        "tagline": "New"
+      },
+      "text": "Search our extensive range of properties to find your dream home in Dubai.",
+      "button": {
+        "text": "Search properties",
+        "url": "/collections/all"
+      }
+    },
+    "news": {
+      "heading": "Latest news",
+      "text": "Stay up to date with the latest news and insights from the Dubai property market.",
+      "button": {
+        "text": "Read more",
+        "url": "/blogs/news"
       }
     },
     "faq": {
-      "blocks": {
-        "heading": {
-          "settings": {
-            "heading": {
-              "default": "Blog"
-            }
-          }
-        },
-        "text": {
-          "settings": {
-            "question": {
-              "default": "Provide details about the banner image(s) or content here."
-            },
-            "answer": {
-              "default": "Provide details about the banner image(s) or content here."
-            }
-          }
-        }
+      "heading": "Frequently asked questions",
+      "text": {
+        "question": "What is the process of buying a property in Dubai?",
+        "answer": "The process of buying a property in Dubai is relatively straightforward. Once you have found a property you wish to purchase, you will need to pay a reservation fee to secure the property. This is usually 5-10% of the purchase price. You will then need to appoint a conveyancer to handle the legal aspects of the purchase. Once the legal checks have been completed, you will need to pay the remaining balance of the purchase price, as well as any associated fees. Once the purchase has been completed, the property will be transferred into your name and you will be the legal owner."
       }
+    },
+    "header-title": {
+      "heading": "We're here to help",
+      "text": "Looking for expert advice or further support?"
     }
   }
 }

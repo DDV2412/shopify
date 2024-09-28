@@ -1,0 +1,8 @@
+{
+  "sections": {
+    "breadcrumb": {
+      "type": "breadcrumb"
+    }
+  },
+  "order": ["breadcrumb"]
+}

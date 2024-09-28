@@ -3,7 +3,7 @@
 <html
   lang="en"
   data-wf-site="66e6ed97469869045902b70e"
-  data-wf-page="{% if template == 'index' %}{{ settings.home_page_id }}{% else %}{{ settings.page_id }}{% endif %}">
+  data-wf-page="{% if template == 'index' %}{{ settings.home_page_id }}{% else %}{{ settings.default_page_id }}{% endif %}">
   <head>
     <meta charset="utf-8">
     <title>
@@ -71,11 +71,6 @@
     }
     .w-slider-dot.w-active {
       background-color: #083819 !important;
-    }
-
-
-    .background-hero {
-      background-image: url('{{ settings.hero_background | img_url: '1920x' }}');
     }
   </style>
 </head>

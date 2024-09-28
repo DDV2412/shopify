@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "breadcrumb": {
+      "type": "breadcrumb"
+    },
+    "blog_list": {
+      "type": "blog-list"
+    }
+  },
+  "order": ["breadcrumb", "blog_list"]
+}

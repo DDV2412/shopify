@@ -2,21 +2,85 @@
   <div class="container">
     <div class="cta_component">
       <div data-w-id="ef5ee9f9-bd82-d625-53bd-57b2728050ff" class="cta-wrapper padding">
-        <div id="w-node-ef5ee9f9-bd82-d625-53bd-57b272805100-728050fd" class="cta-content">
-          <div class="cta-title">
-            <h2>{{ section.settings.cta_heading }}</h2>
-            <div class="cta-tag">{{ section.settings.cta_tag }}</div>
-          </div>
-          <div>{{ section.settings.cta_description }}</div>
-        </div>
-        <div id="w-node-ef5ee9f9-bd82-d625-53bd-57b272805109-728050fd" class="cta-content">
-          <div class="button-wrapper">
-            <a href="{{section.settings.cta_link}}" class="button is-light w-inline-block">
-              <div>{{ section.settings.cta_button }}</div>
-            </a>
-          </div>
-        </div>
-      </div>
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            <div id="w-node-ef5ee9f9-bd82-d625-53bd-57b272805100-728050fd" class="cta-content">
+              <div class="cta-title">
+                <h2>{{ section.settings.heading }}</h2>
+                <div class="cta-tag">{{ section.settings.tagline }}</div>
+              </div>
+              <div>{{ section.settings.text }}</div>
+            </div>
+          {%- when 'button' - %}
+            <div id="w-node-ef5ee9f9-bd82-d625-53bd-57b272805109-728050fd" class="cta-content">
+              <div class="button-wrapper">
+                <a href="{{ block.settings.cta_link }}" class="button is-light w-inline-block">
+                  <div>{{ block.settings.cta_button }}</div>
+                </a>
+              </div>
+            </div>
+        {%- endcase -%}
+      {%- endfor -%}
+
     </div>
   </div>
-</div>
+</div></div>{% schema %}
+{
+  "name": "Home CTA",
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "Heading Block",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "t:sections.cta.blocks.heading.settings.heading.label"
+        }, {
+          "type": "text",
+          "id": "tagline",
+          "label": "t:sections.cta.blocks.heading.settings.tagline.label"
+        }
+      ]
+    }, {
+      "type": "text",
+      "name": "CTA Heading",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "t:sections.cta.blocks.text.settings.text.label"
+        }
+      ]
+    }, {
+      "type": "button",
+      "name": "CTA Button",
+      "settings": [
+        {
+          "type": "text",
+          "id": "cta_button",
+          "label": "t:sections.cta.blocks.button.settings.text.label"
+        }, {
+          "type": "url",
+          "id": "cta_link",
+          "label": "t:sections.cta.blocks.button.settings.url.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Home CTA",
+      "blocks": [
+        {
+          "type": "heading"
+        }, {
+          "type": "text"
+        }, {
+          "type": "button"
+        }
+      ]
+    }
+  ]
+}{% endschema %}

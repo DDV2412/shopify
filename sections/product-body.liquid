@@ -1,31 +1,3 @@
-{% assign page_id = "66ef7810b414aeb7d3b94602" %}
-
-
-<section class="section_component">
-    <div class="container">
-        <div data-w-id="b8d99177-7a75-1733-ef97-6fd2592f23e3" class="breadcrumb-module-wrapper">
-            <a href="{{shop.url}}" class="breadcrumb-item w-inline-block">
-                <p>Home</p>
-            </a>
-            <div class="icon_tiny w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
-                    viewbox="0 0 16 16" transform="rotate(-90)">
-                    <path stroke="#ADB4AF" stroke-linecap="round" stroke-linejoin="round" d="m13 5.5-5 5-5-5">
-                    </path>
-                </svg></div>
-            <a href="{{product.collections[0].url}}" class="breadcrumb-item w-inline-block">
-                <p>{{product.collections[0].title}}</p>
-            </a>
-            <div class="icon_tiny w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
-                    viewbox="0 0 16 16" transform="rotate(-90)">
-                    <path stroke="#ADB4AF" stroke-linecap="round" stroke-linejoin="round" d="m13 5.5-5 5-5-5">
-                    </path>
-                </svg></div>
-            <a href="{{product.url}}" class="breadcrumb-item w-inline-block">
-                <p>{{product.title}}</p>
-            </a>
-        </div>
-    </div>
-</section>
 <section class="section_component">
     <div class="container">
         <div class="landing-content-wrapper">
@@ -274,3 +246,11 @@
     </div>
     </div>
 </section>
+
+{% schema %}
+  {
+    "name": "Product Body",
+    "blocks": [],
+    "presets": []
+  }
+{% endschema %}

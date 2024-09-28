@@ -1,14 +1,23 @@
 {
-  "settings_schema": {
+  "sections": {
     "home-hero": {
-      "name": "Home hero",
+      "name": "Home Hero",
       "blocks": {
+        "background": {
+          "type": "select",
+          "settings": {
+            "background": {
+              "default": "/images/home-hero.jpg",
+              "label": "Background Image"
+            }
+          }
+        },
         "heading": {
           "type": "heading",
           "settings": {
             "heading": {
-              "label": "Heading",
-              "default": "Image banner"
+              "default": "Dubai's affordable housing segment heating up",
+              "label": "Hero Heading"
             }
           }
         },
@@ -16,8 +25,8 @@
           "type": "text",
           "settings": {
             "text": {
-              "label": "Description",
-              "default": "Give customers details about the banner image(s) or content on the template."
+              "default": "With the Dubai population increasing, so is the demand for affordable housing. Read the full article now for the best hotspots.",
+              "label": "Hero Text"
             }
           }
         },
@@ -25,41 +34,37 @@
           "type": "button",
           "settings": {
             "text": {
-              "label": "Button text",
-              "default": "Button text"
+              "default": "Read the full article",
+              "label": "Button Text"
             },
             "url": {
-              "label": "Button URL",
-              "default": "/shop"
+              "default": "/blogs/news",
+              "label": "Button URL"
             }
           }
         }
       },
-      "present": {
-        "name": "Home hero"
+      "presets": {
+        "name": "Home Hero"
       }
     },
-    "review": {
-      "name": "Features Review",
+    "review-highlight": {
+      "name": "Review Highlight",
       "blocks": {
         "heading": {
           "type": "heading",
           "settings": {
             "highlight": {
-              "label": "Heading",
-              "default": "Customer Reviews"
+              "default": "I had a great experience with haus & haus, special thanks to Farzonai who helped me find the perfect place and made my relocation to Dubai easy and without stress.",
+              "label": "Highlight"
             },
             "communities_heading": {
-              "settings": {
-                "label": "Shop now",
-                "default": "Shop now"
-              }
+              "default": "Dubai Communities",
+              "label": "Communities Heading"
             },
             "consultant_heading": {
-              "settings": {
-                "label": "Shop now",
-                "default": "Shop now"
-              }
+              "default": "Find your consultant",
+              "label": "Consultant Heading"
             }
           }
         },
@@ -67,12 +72,12 @@
           "type": "text",
           "settings": {
             "communities_description": {
-              "label": "Description",
-              "default": "Give customers details about the banner image(s) or content on the template."
+              "default": "Covering 100+ communities, we can help you find one that ticks your boxes.",
+              "label": "Communities Description"
             },
             "consultant_description": {
-              "label": "Description",
-              "default": "Give customers details about the banner image(s) or content on the template."
+              "default": "Search our team of 2500 property experts to get professional guidance.",
+              "label": "Consultant Description"
             }
           }
         },
@@ -80,29 +85,73 @@
           "type": "button",
           "settings": {
             "text": {
-              "label": "Button text",
-              "default": "Button text"
+              "default": "Explore Dubai",
+              "label": "Button Text"
             },
             "url": {
-              "label": "Button URL",
-              "default": "/shop"
+              "default": "/collections/all",
+              "label": "Button URL"
             }
           }
         }
       },
-      "present": {
-        "name": "Features Review"
+      "presets": {
+        "name": "Review Highlight"
       }
     },
-    "blog": {
-      "name": "Blog",
+    "features": {
+      "name": "Features",
       "blocks": {
         "heading": {
           "type": "heading",
           "settings": {
             "heading": {
-              "label": "Heading",
-              "default": "Blog"
+              "default": "Search properties by feature",
+              "label": "Heading"
+            }
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_for_sale_url": {
+              "default": "/collections/all",
+              "label": "Property for Sale Collection"
+            },
+
+            "button_for_rent_url": {
+              "default": "/collections/all",
+              "label": "Property for Rent Collection"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Features"
+      }
+    },
+    "cta-home": {
+      "name": "CTA Home",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": {
+              "default": "Get an instant property valuation",
+              "label": "Heading"
+            },
+            "tagline": {
+              "default": "New",
+              "label": "Tagline"
+            }
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": {
+              "default": "Search our extensive range of properties to find your dream home in Dubai.",
+              "label": "Text"
             }
           }
         },
@@ -110,18 +159,57 @@
           "type": "button",
           "settings": {
             "text": {
-              "label": "Button text",
-              "default": "Button text"
+              "default": "Search properties",
+              "label": "Button Text"
             },
             "url": {
-              "label": "Button URL",
-              "default": "/shop"
+              "default": "/collections/all",
+              "label": "Button URL"
             }
           }
         }
       },
-      "present": {
-        "name": "Blog"
+      "presets": {
+        "name": "CTA Home"
+      }
+    },
+    "news": {
+      "name": "News",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": {
+              "default": "Latest news",
+              "label": "Heading"
+            }
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": {
+              "default": "Stay up to date with the latest news and insights from the Dubai property market.",
+              "label": "Text"
+            }
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "text": {
+              "default": "Read more",
+              "label": "Button Text"
+            },
+            "url": {
+              "default": "/blogs/news",
+              "label": "Button URL"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "News"
       }
     },
     "faq": {
@@ -131,8 +219,8 @@
           "type": "heading",
           "settings": {
             "heading": {
-              "label": "Heading",
-              "default": "Blog"
+              "default": "Frequently asked questions",
+              "label": "Heading"
             }
           }
         },
@@ -140,18 +228,44 @@
           "type": "text",
           "settings": {
             "question": {
-              "label": "Question",
-              "default": "What is the return policy?"
+              "default": "What is the process of buying a property in Dubai?",
+              "label": "Question"
             },
             "answer": {
-              "label": "Answer",
-              "default": "Provide details about the return policy here."
+              "default": "The process of buying a property in Dubai is relatively straightforward. Once you have found a property you wish to purchase, you will need to pay a reservation fee to secure the property. This is usually 5-10% of the purchase price. You will then need to appoint a conveyancer to handle the legal aspects of the purchase. Once the legal checks have been completed, you will need to pay the remaining balance of the purchase price, as well as any associated fees. Once the purchase has been completed, the property will be transferred into your name and you will be the legal owner.",
+              "label": "Answer"
             }
           }
         }
       },
-      "present": {
+      "presets": {
         "name": "FAQ"
+      }
+    },
+    "header-title": {
+      "name": "Header Block Text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": {
+              "default": "We're here to help",
+              "label": "Heading Title"
+            }
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": {
+              "default": "Stay up to date with the latest news and insights from the Dubai property market.",
+              "label": "Sub Heading"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Header Block Text"
       }
     }
   }

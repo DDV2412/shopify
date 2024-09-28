@@ -45,16 +45,16 @@
         {%- for block in section.blocks -%}
         {%- case block.type -%}
         {%- when 'heading' -%}
-         <h3>{{block.settings.communities_heading}}</h3>
+         <h3>{{ block.settings.communities_heading }}</h3>
         {%- when 'text' -%}
-        <div>{{block.settings.communities_description}}</div>
+        <div>{{ block.settings.communities_description }}</div>
         {%- endcase-%}
 
         {%- case block.type -%}
         {%- when 'button' -%}
           <div class="button-wrapper padding-top-large align-left">
-          <a href="{{block.settings.button_title}}" class="button w-inline-block">
-            <div>{{block.settings.button_title}}</div>
+          <a href="{{ block.settings.button_title }}" class="button w-inline-block">
+            <div>{{ block.settings.button_title }}</div>
           </a>
         </div>
         {%- endcase -%}
@@ -115,7 +115,7 @@
 
 {% schema %}
 {
-  "name": "Features Review",
+  "name": "Review Highlight",
   "blocks": [
     {
       "type": "heading",
@@ -125,20 +125,17 @@
         {
           "type": "text",
           "id": "highlight",
-          "default": "t:sections.features_review.blocks.heading.settings.highlight.default",
-          "label": "t:sections.features_review.blocks.heading.settings.highlight.label"
+          "label": "t:sections.review-highlight.blocks.heading.settings.highlight.label"
         },
         {
           "type": "text",
           "id": "communities_heading",
-          "default": "t:sections.features_review.blocks.communities_heading.settings.communities_heading.default",
-          "label": "t:sections.features_review.blocks.communities_heading.settings.communities_heading.label"
+          "label": "t:sections.review-highlight.blocks.heading.settings.communities_heading.label"
         },
         {
           "type": "text",
           "id": "consultant_heading",
-          "default": "t:sections.features_review.blocks.consultant_heading.settings.consultant_heading.default",
-          "label": "t:sections.features_review.blocks.consultant_heading.settings.consultant_heading.label"
+          "label": "t:sections.review-highlight.blocks.heading.settings.consultant_heading.label"
         }
       ]
     },
@@ -150,14 +147,12 @@
         {
           "type": "text",
           "id": "communities_description",
-          "default": "t:sections.features_review.blocks.communities_description.settings.communities_description.default",
-          "label": "t:sections.features_review.blocks.communities_description.settings.communities_description.label"
+          "label": "t:sections.review-highlight.blocks.text.settings.communities_description.label"
         },
         {
           "type": "text",
           "id": "consultant_description",
-          "default": "t:sections.features_review.blocks.consultant_description.settings.consultant_description.default",
-          "label": "t:sections.features_review.blocks.consultant_description.settings.consultant_description.label"
+          "label": "t:sections.review-highlight.blocks.text.settings.consultant_description.label"
         }
       ]
     },
@@ -169,14 +164,14 @@
         {
           "type": "text",
           "id": "button_title",
-          "default": "t:sections.features_review.blocks.communities_button.settings.text.default",
-          "label": "t:sections.features_review.blocks.communities_button.settings.text.label"
+          "label": "t:sections.review-highlight.blocks.button.settings.text.label",
+          "default": "t:sections.review-highlight.blocks.button.settings.text.default"
         },
         {
           "type": "url",
           "id": "button_link",
-          "default": "t:sections.features_review.blocks.communities_button.settings.url.default",
-          "label": "t:sections.features_review.blocks.communities_button.settings.url.label"
+          "label": "t:sections.review-highlight.blocks.button.settings.url.label",
+          "default": "t:sections.review-highlight.blocks.button.settings.url.default"
         }
       ]
     }
@@ -184,7 +179,7 @@
   ],
   "presets": [
     {
-      "name": "Features Review",
+      "name": "Review Highlight",
       "blocks": [
         {
           "type": "heading"

@@ -1,0 +1,84 @@
+{% paginate blogs.news.articles by 12 %}
+<section class="section_component">
+  <div class="container">
+    <div class="section_title-wrapper">
+      <div class="blog-grid">
+        {% for article in blogs.news.articles %}
+        {% if forloop.index <=4 %} <a id="w-node-a07ff5be-ff10-9d67-7e0b-0ab3038fffa4-5902b714" href="{{article.url}}"
+          class="article-card w-inline-block">
+          <div data-w-id="a07ff5be-ff10-9d67-7e0b-0ab3038fffa5" class="article_thumbnail"><img
+              src="{{article.image | img_url : 'original'}}" loading="lazy" width="318" height="160"
+              alt="{{article.title}}"
+              style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+              class="article-image"></div>
+          <div class="article_detail">
+            <div>{{article.title}}</div>
+          </div>
+
+          <div class="article-date">{{
+            article.published_at | date: '%b %d, %Y' }}</div>
+          </a>
+          {% endif %}
+          {% endfor %}
+
+      </div>
+      <div data-w-id="60108434-58a2-52b7-dbb0-31834aeef7cf" style="opacity:0" class="load-more-wrap">
+        {% if paginate.previous %}
+        <a href="{{ paginate.previous.url }}" class="button is-secondary is-results-btn is-left w-inline-block">
+          <div class="icon_small w-embed">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" fill="none" viewbox="0 0 17 16">
+              <path stroke="#ADB4AF" stroke-linecap="round" stroke-linejoin="round" d="M11 13 6 8l5-5"></path>
+            </svg>
+          </div>
+          <p class="pagination_title">Back</p>
+        </a>
+        {% endif %}
+
+        <div class="pages-count">
+          <p class="paragraph">Page</p>
+          <div class="select-wrapper no-border">
+            <div data-hover="false" data-delay="0" class="buy_select-wrapper w-dropdown">
+              <div class="control-select w-dropdown-toggle">
+                <div>{{ paginate.current_page }}</div>
+                <div class="icon_small w-embed">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6-6"></path>
+                  </svg>
+                </div>
+              </div>
+              <nav class="property-list w-dropdown-list">
+                {% for i in (1..paginate.pages) %}
+                <a href="{{ paginate | default_pagination: i }}" class="page-count w-dropdown-link">{{ i
+                  }}</a>
+                {% endfor %}
+              </nav>
+            </div>
+          </div>
+          <p class="paragraph">of {{ paginate.pages }}</p>
+        </div>
+
+        {% if paginate.next %}
+        <a href="{{ paginate.next.url }}" class="button is-secondary is-results-btn is-right w-inline-block">
+          <p class="pagination_title">Next</p>
+          <div class="icon_small w-embed">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" fill="none" viewbox="0 0 17 16">
+              <path stroke="#ADB4AF" stroke-linecap="round" stroke-linejoin="round" d="m6 3 5 5-5 5"></path>
+            </svg>
+          </div>
+        </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endpaginate %}
+
+{% schema %}
+{
+  "name": "Blog List",
+  "presets": []
+}
+{% endschema %}

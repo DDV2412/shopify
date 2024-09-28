@@ -1,72 +1,125 @@
 {
   "sections": {
-    "home_hero": {
+    "home-hero": {
       "type": "home-hero",
       "blocks": {
+        "background": {
+          "type": "select",
+          "settings": {
+            "image": "/images/home-hero.jpg"
+          }
+        },
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner"
+            "heading": "Dubai's affordable housing segment heating up"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "Provide details about the banner image(s) or content here."
+            "text": "With the Dubai population increasing, so is the demand for affordable housing. Read the full article now for the best hotspots."
           }
         },
         "button": {
           "type": "button",
           "settings": {
-            "text": "Shop now",
-            "url": "/shop"
+            "text": "Read the full article",
+            "url": "/blogs/news"
           }
         }
       },
-      "block_order": ["heading", "text", "button"]
+      "block_order": ["background", "heading", "text", "button"]
     },
-    "features_review": {
-      "type": "review",
+    "review-highlight": {
+      "type": "review-highlight",
       "blocks": {
         "heading": {
           "type": "heading",
           "settings": {
-            "highlight": "Customer Reviews",
-            "communities_heading": "Shop now",
-            "consultant_heading": "Shop now"
+            "highlight": "I had a great experience with haus & haus, special thanks to Farzonai who helped me find the perfect place and made my relocation to Dubai easy and without stress.",
+            "communities_heading": "Dubai Communities",
+            "consultant_heading": "Find your consultant"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "communities_description": "Provide details about the banner image(s) or content here.",
-            "consultant_description": "Provide details about the banner image(s) or content here."
+            "communities_description": "Covering 100+ communities, we can help you find one that ticks your boxes.",
+            "consultant_description": "Search our team of 2500 property experts to get professional guidance."
           }
         },
         "button": {
           "type": "button",
           "settings": {
-            "text": "Shop now",
-            "url": "/shop"
+            "text": "Explore Dubai",
+            "url": "/collections/all"
           }
         }
       },
       "block_order": ["heading", "text", "button"]
     },
-    "blog": {
-      "type": "blog",
+    "features": {
+      "type": "features",
       "blocks": {
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Blog"
+            "heading": "Search properties by feature"
           }
         },
         "button": {
           "type": "button",
           "settings": {
-            "text": "Shop now",
-            "url": "/shop"
+            "button_for_sale_text": "For sale",
+            "button_for_sale_url": "/collections/all",
+            "button_for_rent_text": "For rent",
+            "button_for_rent_url": "/collections/all"
+          }
+        }
+      },
+      "block_order": ["heading", "button"]
+    },
+    "cta-home": {
+      "type": "cta-home",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Get an instant property valuation",
+            "tagline": "New"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "Thinking of selling your home? Knowing its current price is a good place to start. Get an accurate, independent valuation and a detailed report here."
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "text": "Get Started",
+            "url": "/collections/all"
+          }
+        }
+      },
+      "block_order": ["heading", "text", "button"]
+    },
+    "news": {
+      "type": "news",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "News & Insights"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "text": "Go To All News",
+            "url": "/blogs/news"
           }
         }
       },
@@ -84,13 +137,13 @@
         "text": {
           "type": "text",
           "settings": {
-            "question": "What is the return policy?",
-            "answer": "Provide details about the return policy here."
+            "question": "What real estate services do haus & haus offer?",
+            "answer": "<p>Our services include Residential Sales and Leasing, Holiday Rentals, Off Plan properties and Investments, Property Management, and Commercial Sales and Commercial Leasing. We also support clients through our home maintenance company Breathe, and our project management group Bauhaus is on hand for property renovations, design, upgrades, and more. If there's something we don't cover, our extensive network of partners can take care of it – including conveyancing support, mortgage solutions, currency services, professional furnishing, and more.  </p>"
           }
         }
       },
       "block_order": ["heading", "text"]
     }
   },
-  "order": ["home_hero", "features_review", "blog", "faq"]
+  "order": ["home-hero", "review-highlight", "features", "cta-home", "news", "faq"]
 }

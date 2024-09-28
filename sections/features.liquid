@@ -1,6 +1,6 @@
 {% assign all_tags = "" %}
 
-{% assign max_tags = 8 %}
+{% assign max_tags = 6 %}
 {% assign tag_count = 0 %}
 
 {% for product in collections.all.products %}
@@ -20,17 +20,22 @@
       style="opacity:0"
       class="section_title-wrapper">
       <div class="features-wrapper">
-        <h2>Search properties by feature<br></h2>
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'heading' -%}
+              <h2>{{ block.settings.heading }}</h2>
+          {%- endcase -%}
+        {%- endfor -%}
         <div class="button-wrapper gap-large">
           <a
             data-w-id="c70e3164-7149-9545-7b3c-24eecd07dddc"
             href="#"
-            class="featured-button is-sale w-button">For  
+            class="featured-button is-sale w-button">For                  
             Salet</a>
           <a
             data-w-id="0aa040e7-4578-d890-7559-1c602c123682"
             href="#"
-            class="featured-button is-rent w-button">For  
+            class="featured-button is-rent w-button">For                  
             Rent</a>
         </div>
       </div>
@@ -66,3 +71,51 @@
     </div>
   </div>
 </section>
+
+{% schema %}
+  {
+    "name": "Features",
+    "blocks": [
+      {
+        "type": "heading",
+        "name": "Heading Block",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "t:sections.features.blocks.heading.settings.heading.label"
+          }
+        ]
+      }, {
+        "type": "button",
+        "name": "Button Block",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "url",
+            "id": "button_for_sale_url",
+            "label": "t:sections.features.blocks.button.settings.button_for_sale_url.label"
+          }, {
+            "type": "url",
+            "id": "button_for_rent_url",
+            "label": "t:sections.features.blocks.button.settings.button_for_rent_url.label"
+          }
+        ]
+      }
+
+    ],
+    "presets": [
+      {
+        "name": "Features",
+        "blocks": [
+          {
+            "type": "heading"
+          }, {
+            "type": "button"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

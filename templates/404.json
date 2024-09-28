@@ -1,0 +1,29 @@
+{
+  "sections": {
+    "not_found": {
+      "type": "404",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "404"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Oops! The page you're looking for can't be found.</p>"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "text": "Back To Home"
+          }
+        }
+      },
+      "block_order": ["heading", "text", "button"]
+    }
+  },
+  "order": ["not_found"]
+}

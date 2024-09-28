@@ -1,0 +1,57 @@
+<section class="section_component">
+  <div class="container">
+    <div class="landing-content-wrapper">
+      <div
+        data-w-id="7bc9fdea-201a-4548-cce7-ab796688bc7d"
+        style="opacity:0"
+        class="content-section padding-0">
+        <h1>Blog</h1>
+        <p class="description">Discover the leading names in Dubai’s real estate market and what makes them stand out.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Header Title",
+    "blocks": [
+      {
+        "type": "heading",
+        "name": "Title Heading",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "t:sections.header-title.blocks.heading.settings.heading.label"
+          }
+        ]
+      }, {
+        "type": "text",
+        "name": "Sub Heading",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "t:sections.header-title.blocks.text.settings.text.label"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Header Title",
+        "blocks": [
+          {
+            "type": "heading"
+          }, {
+            "type": "text"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

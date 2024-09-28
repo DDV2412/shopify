@@ -1,115 +1,134 @@
-<section class="section_hero">
-  <div class="background-hero">
-    <div class="overlay-background"></div>
-  </div>
-  <div class="container">
-    <div class="hero-wrapper">
-      <div data-w-id="cd70fec6-cb71-dd90-8474-3ea641b7eda6" style="opacity:0" class="hero_content">
-        {%- for block in section.blocks -%}
-        {%- case block.type -%}
-        {%- when 'heading' -%}
-        <h1>{{ block.settings.heading }}</h1>
-        {%- when 'text' -%}
-        <div>{{ block.settings.text }}</div>
-        {%- when 'button' -%}
-           <div class="button-wrapper padding-top-medium">
-          <a href="{{block.settings.button_link}}" class="button w-inline-block">
-            <div>{{block.settings.button_cta}}</div>
-          </a> 
-        </div>
-        {%- endcase -%}
-        {%- endfor -%}
+{%- if section.blocks[0].settings.background_image != blank -%}
+  <style>
+    .background-hero {
+        background-image: url({{ section.blocks[0].settings.background_image | img_url: 'master' }}) !important;
+    }
+  </style>
+{%- endif -%}
+    
+    <section class="section_hero">
+      <div class="background-hero">
+        <div class="overlay-background"></div>
       </div>
-    </div>
-    <div class="search-box">
-      <div data-w-id="8b6865d9-c0b5-6d09-871d-e16f70b69cd0" style="opacity:0" class="search-box-wrapper w-form">
-        <form action="/search" role="search" id="search-box" name="email-form" data-name="Email Form" method="get"
-          class="search_content" data-wf-page-id="66e6ed97469869045902b714"
-          data-wf-element-id="8b6865d9-c0b5-6d09-871d-e16f70b69cd1">
-
-          <div class="property-form">
-            <div class="search-wrapper">
-              <div class="icon_small w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                  viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-search">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
-                  <path d="M21 21l-6 -6"></path>
-                </svg></div><input class="search-field w-input" maxlength="256" name="q" data-name="q"
-                placeholder="City, building or community" type="text" id="Search">
+      <div class="container">
+        <div class="hero-wrapper">
+          <div data-w-id="cd70fec6-cb71-dd90-8474-3ea641b7eda6" style="opacity:0" class="hero_content">
+            {%- for block in section.blocks -%}
+            {%- case block.type -%}
+            {%- when 'heading' -%}
+            <h1>{{ block.settings.heading }}</h1>
+            {%- when 'text' -%}
+            <div>{{ block.settings.text }}</div>
+            {%- when 'button' -%}
+               <div class="button-wrapper padding-top-medium">
+              <a href="{{ block.settings.button_link }}" class="button w-inline-block">
+                <div>{{ block.settings.button_cta }}</div>
+              </a> 
             </div>
-          </div><input type="submit" data-wait="Please wait..." class="button w-button" value="Search">
-        </form>
+            {%- endcase -%}
+            {%- endfor -%}
+          </div>
+        </div>
+        <div class="search-box">
+          <div data-w-id="8b6865d9-c0b5-6d09-871d-e16f70b69cd0" style="opacity:0" class="search-box-wrapper w-form">
+            <form action="/search" role="search" id="search-box" name="email-form" data-name="Email Form" method="get"
+              class="search_content" data-wf-page-id="66e6ed97469869045902b714"
+              data-wf-element-id="8b6865d9-c0b5-6d09-871d-e16f70b69cd1">
+    
+              <div class="property-form">
+                <div class="search-wrapper">
+                  <div class="icon_small w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                      viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-search">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
+                      <path d="M21 21l-6 -6"></path>
+                    </svg></div><input class="search-field w-input" maxlength="256" name="q" data-name="q"
+                    placeholder="City, building or community" type="text" id="Search">
+                </div>
+              </div><input type="submit" data-wait="Please wait..." class="button w-button" value="Search">
+            </form>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
-
-{% schema %}
-  {
-  "name": "Home Hero",
-  "blocks": [
-    {
-      "type": "heading",
-      "name": "Heading Block",
-      "limit": 1,
-      "settings": [
-          {
-            "type": "text",
-            "id": "heading",
-            "default": "t:sections.home_hero.blocks.heading.settings.heading.default",
-            "label": "t:sections.home_hero.blocks.heading.settings.heading.label"
-          }
-        ]
-    },
-    {
-      "type": "text",
-      "name": "Text Block",
-      "limit": 1,
-      "settings": [
-          {
-            "type": "text",
-            "id": "text",
-            "default": "t:sections.home_hero.blocks.text.settings.text.default",
-            "label": "t:sections.home_hero.blocks.text.settings.text.label"
-          }
-        ]
-      },
+    </section>
+    
+    {% schema %}
       {
-      "type": "button",
-      "name": "Button CTA",
-      "limit": 1,
-      "settings": [
-          {
-            "type": "text",
-            "id": "button_cta",
-            "default": "t:sections.home_hero.blocks.button.settings.text.default",
-            "label": "t:sections.home_hero.blocks.button.settings.text.label"
+      "name": "Home Hero",
+      "blocks": [
+        {
+          "type": "select",
+          "name": "Background Image",
+          "limit": 1,
+          "settings": [
+            {
+              "type": "image_picker",
+              "id": "background_image",
+              "label": "t:sections.home-hero.blocks.background.settings.background.label"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "name": "Heading Block",
+          "limit": 1,
+          "settings": [
+              {
+                "type": "text",
+                "id": "heading",
+                "label": "t:sections.home-hero.blocks.heading.settings.heading.label"
+              }
+            ]
+        },
+        {
+          "type": "text",
+          "name": "Text Block",
+          "limit": 1,
+          "settings": [
+              {
+                "type": "text",
+                "id": "text",
+                "label": "t:sections.home-hero.blocks.text.settings.text.label"
+              }
+            ]
           },
-           {
-            "type": "url",
-            "id": "button_link",
-            "default": "t:sections.home_hero.blocks.button.settings.url.default",
-            "label": "t:sections.home_hero.blocks.button.settings.url.label"
+          {
+          "type": "button",
+          "name": "Button CTA",
+          "limit": 1,
+          "settings": [
+              {
+                "type": "text",
+                "id": "button_cta",
+                "label": "t:sections.home-hero.blocks.button.settings.text.label",
+                "default": "t:sections.home-hero.blocks.button.settings.text.default"
+              },
+               {
+                "type": "url",
+                "id": "button_link",
+                "label": "t:sections.home-hero.blocks.button.settings.url.label",
+                "default": "t:sections.home-hero.blocks.button.settings.url.default"
+              }
+            ]
           }
+        ],
+        "presets": [
+        {
+        "name": "Home Hero",
+        "blocks": [
+        {"type": "select"},
+        {
+        "type": "heading"
+        },
+        {
+        "type": "text"
+        },
+        {
+        "type": "button"
+        }
+        ]
+        }
         ]
       }
-    ],
-    "presets": [
-    {
-    "name": "Home Hero",
-    "blocks": [
-    {
-    "type": "heading"
-    },
-    {
-    "type": "text"
-    },
-    {
-    "type": "button"
-    }
-    ]
-    }
-    ]
-  }
-{% endschema %}
+    {% endschema %}

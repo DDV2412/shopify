@@ -1,0 +1,25 @@
+{
+  "sections": {
+    "breadcrumb": {
+      "type": "breadcrumb"
+    },
+    "header-title": {
+      "type": "header-title",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Contact Us"
+          }
+        },
+        "text": {
+          "type": "richtext",
+          "settings": {
+            "text": "<p>Looking for expert advice or further support? <br></p>"
+          }
+        }
+      }
+    }
+  },
+  "order": ["breadcrumb", "header-title"]
+}

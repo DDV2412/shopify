@@ -39,16 +39,6 @@
     ]
   },
   {
-    "name": "Hero Background",
-    "settings": [
-      {
-        "type": "image_picker",
-        "id": "hero_background",
-        "label": "Hero Background"
-      }
-    ]
-  },
-  {
     "name": "Logo",
     "settings": [
       {
@@ -79,6 +69,51 @@
     ]
   },
   {
+    "name": "Social Media",
+    "settings": [
+      {
+        "type": "text",
+        "id": "facebook_link",
+        "label": "Facebook Link"
+      },
+      {
+        "type": "text",
+        "id": "instagram_link",
+        "label": "Instagram Link"
+      },
+      {
+        "type": "text",
+        "id": "linkedin_link",
+        "label": "LinkedIn Link"
+      },
+      {
+        "type": "text",
+        "id": "youtube_link",
+        "label": "Youtube Link"
+      },
+      {
+        "type": "text",
+        "id": "podcast_link",
+        "label": "Podcast Link"
+      }
+    ]
+  },
+  {
+    "name": "Legal",
+    "settings": [
+      {
+        "type": "url",
+        "id": "privacy_policy",
+        "label": "Privacy Policy"
+      },
+      {
+        "type": "url",
+        "id": "terms_of_service",
+        "label": "Terms of Service"
+      }
+    ]
+  },
+  {
     "name": "Home Page ID",
     "settings": [
       {
@@ -86,6 +121,12 @@
         "id": "home_page_id",
         "label": "Page ID",
         "default": "66e6ed97469869045902b714"
+      },
+      {
+        "type": "text",
+        "id": "default_page_id",
+        "label": "Page ID",
+        "default": "66eaa6ae2a24a29c732b4aee"
       }
     ]
   }
