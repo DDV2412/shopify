@@ -1,8 +1,8 @@
 :root {
-  --primary: #1d0c4b;
+  --primary: #082F49;
   --text-primary: #565e59;
   --white: white;
-  --secondary: #6622f4;
+  --secondary: #0EA5E9;
   --border-color: #e0e3e2;
   --grey: #f6f6f1;
   --horizontal-line: #f3f3f3;
@@ -1035,6 +1035,7 @@ p {
   border-radius: .3125rem;
   margin-bottom: 1.5rem;
   overflow: hidden;
+  height: 12rem;
 }
 
 .article_detail {
