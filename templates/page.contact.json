@@ -1,7 +1,18 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "breadcrumb": {
-      "type": "breadcrumb"
+      "type": "breadcrumb",
+      "settings": {
+      }
     },
     "header-title": {
       "type": "header-title",
@@ -19,7 +30,12 @@
           }
         }
       },
-      "block_order": ["heading", "text"]
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+      }
     },
     "cta-card": {
       "type": "cta-card",
@@ -41,13 +57,21 @@
         "button": {
           "type": "button",
           "settings": {
-            "text": "Explore Dubai",
-            "url": "/collections/all"
           }
         }
       },
-      "block_order": ["heading", "text", "button"]
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+      }
     }
   },
-  "order": ["breadcrumb", "header-title", "cta-card"]
+  "order": [
+    "breadcrumb",
+    "header-title",
+    "cta-card"
+  ]
 }
