@@ -1,15 +1,21 @@
-<section class="section_component">
+<section class="section_component background-color-grey">
   <div class="container">
     <div class="section_title-wrapper">
       <div
-        data-w-id="a7ebce3f-5379-9f6e-f761-487f3c6319d1"
+        data-w-id="5173ed16-5e00-38cc-2a95-391775a32686"
         style="opacity:0"
         class="news-title">
-        <h2>You might also be interested in...</h2>
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'heading' %}
+              <h2>{{ block.settings.heading }}</h2>
+          {% endcase %}
+        {% endfor %}
+
 
       </div>
       <div
-        data-w-id="a7ebce3f-5379-9f6e-f761-487f3c6319d9"
+        data-w-id="d32fc49e-95c7-35af-56f3-162b3ad4cc8e"
         style="opacity:0"
         class="article-wrapper">
         <div
@@ -26,10 +32,9 @@
           data-infinite="true">
           <div class="w-slider-mask">
             {% for interested in blogs.news.articles %}
-              {% if unless interested._id == article._id %}
+              {% if interested._id != article._id %}
                 {% if forloop.index <= 4 %}
                   <div class="article-slide w-slide">
-
                     <a
                       id="w-node-a07ff5be-ff10-9d67-7e0b-0ab3038fffa4-5902b714"
                       href="{{interested.url}}"
@@ -74,22 +79,21 @@ interested.published_at | date: '%b %d, %Y' }}</div>
           {
             "type": "text",
             "id": "heading",
-            "label": "Heading"
-          }
-        ]
-      }, {
-        "type": "text",
-        "name": "Text Block",
-        "limit": 1,
-        "settings": [
-          {
-            "type": "text",
-            "id": "text",
-            "label": "t:sections.home-hero.blocks.text.settings.text.label"
+            "label": "t:sections.latest-blog.blocks.heading.settings.heading.label",
+            "default": "t:sections.latest-blog.blocks.heading.settings.heading.default"
           }
         ]
       }
     ],
-    "presets": []
+    "presets": [
+      {
+        "name": "Latest Blog",
+        "blocks": [
+          {
+            "type": "heading"
+          }
+        ]
+      }
+    ]
   }
 {% endschema %}

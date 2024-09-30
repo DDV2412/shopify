@@ -8,134 +8,113 @@
     "theme_documentation_url": "https://shopify.dev"
   },
   {
-    "name": "Color Palette",
+    "name": "t:settings_schema.color_palette.name",
     "settings": [
-      {
-        "type": "header",
-        "content": "Color Palette"
-      },
       {
         "type": "color",
         "id": "color_secondary",
-        "label": "Secondary Color",
+        "label": "t:settings_schema.color_palette.settings.color.label",
         "default": "#0ea5e9"
       }
     ]
   },
   {
-    "name": "Favicon",
+    "name": "t:settings_schema.favicon.name",
     "settings": [
       {
         "type": "image_picker",
         "id": "favicon",
-        "label": "Favicon"
+        "label": "t:settings_schema.favicon.settings.favicon.label"
       }
     ]
   },
   {
-    "name": "Custom Head",
+    "name": "t:settings_schema.custom_head.name",
     "settings": [
       {
         "type": "textarea",
         "id": "custom_head",
-        "label": "Custom Head"
+        "label": "t:settings_schema.custom_head.settings.custom_head.label"
       }
     ]
   },
   {
-    "name": "Logo",
+    "name": "t:settings_schema.logo.name",
     "settings": [
       {
         "type": "image_picker",
         "id": "website_logo",
-        "label": "Logo"
+        "label": "t:settings_schema.logo.settings.website_logo.label"
       }
     ]
   },
   {
-    "name": "Contact Information",
+    "name": "t:settings_schema.contact_information.name",
     "settings": [
       {
         "type": "text",
         "id": "phone_number",
-        "label": "Phone Number"
+        "label": "t:settings_schema.contact_information.settings.phone_number.label"
       },
       {
         "type": "text",
         "id": "email",
-        "label": "Email"
+        "label": "t:settings_schema.contact_information.settings.email.label"
       },
       {
         "type": "text",
         "id": "whatsapp_link",
-        "label": "Whatsapp Link"
+        "label": "t:settings_schema.contact_information.settings.whatsapp_link.label"
       }
     ]
   },
   {
-    "name": "Social Media",
+    "name": "t:settings_schema.social-media.name",
     "settings": [
       {
         "type": "text",
         "id": "facebook_link",
-        "label": "Facebook Link"
+        "label": "t:settings_schema.social-media.settings.facebook.label"
       },
       {
         "type": "text",
         "id": "instagram_link",
-        "label": "Instagram Link"
+        "label": "t:settings_schema.social-media.settings.instagram.label"
       },
       {
         "type": "text",
         "id": "linkedin_link",
-        "label": "LinkedIn Link"
+        "label": "t:settings_schema.social-media.settings.linkedin.label"
       },
       {
         "type": "text",
         "id": "youtube_link",
-        "label": "Youtube Link"
+        "label": "Yt:settings_schema.social-media.settings.youtube.label"
       },
       {
         "type": "text",
         "id": "podcast_link",
-        "label": "Podcast Link"
+        "label": "t:settings_schema.social-media.settings.podcast.label"
       }
     ]
   },
   {
-    "name": "Legal",
+    "name": "t:settings_schema.legal.name",
     "settings": [
       {
         "type": "url",
         "id": "privacy_policy",
-        "label": "Privacy Policy"
+        "label": "t:settings_schema.legal.settings.terms.label"
       },
       {
         "type": "url",
         "id": "terms_of_service",
-        "label": "Terms of Service"
+        "label": "t:settings_schema.legal.settings.privacy.label"
       },
       {
         "type": "url",
         "id": "cookie_policy",
-        "label": "Cookie Policy"
-      }
-    ]
-  },
-  {
-    "name": "Home Page ID",
-    "settings": [
-      {
-        "type": "text",
-        "id": "home_page_id",
-        "label": "Page ID",
-        "default": "66e6ed97469869045902b714"
-      },
-      {
-        "type": "text",
-        "id": "default_page_id",
-        "label": "Page ID",
-        "default": "66eaa6ae2a24a29c732b4aee"
+        "label": "t:settings_schema.legal.settings.cookie.label"
       }
     ]
   }

@@ -1,13 +1,96 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin language editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
+  "settings_schema": {
+    "color_palette": {
+      "name": "Color Palette",
+      "settings": {
+        "color": {
+          "default": "#0ea5e9",
+          "label": "Secondary Color"
+        }
+      }
+    },
+    "favicon": {
+      "name": "Favicon",
+      "settings": {
+        "favicon": {
+          "label": "Favicon"
+        }
+      }
+    },
+    "custom_head": {
+      "name": "Custom Head",
+      "settings": {
+        "custom_head": {
+          "label": "Custom Head"
+        }
+      }
+    },
+    "logo": {
+      "name": "Logo",
+      "settings": {
+        "website_logo": {
+          "label": "Logo"
+        }
+      }
+    },
+    "contact_information": {
+      "name": "Contact Information",
+      "settings": {
+        "phone_number": {
+          "label": "Phone Number"
+        },
+        "email": {
+          "label": "Email"
+        },
+        "whatsapp_link": {
+          "label": "Whatsapp Link"
+        }
+      }
+    },
+    "social-media": {
+      "name": "Social Media",
+      "settings": {
+        "facebook": {
+          "label": "Facebook"
+        },
+        "instagram": {
+          "label": "Instagram"
+        },
+        "linkedin": {
+          "label": "LinkedIn"
+        },
+        "youtube": {
+          "label": "YouTube"
+        },
+        "podcast": {
+          "label": "Podcast"
+        }
+      }
+    },
+    "legal": {
+      "name": "Legal",
+      "settings": {
+        "terms": {
+          "label": "Terms & Conditions"
+        },
+        "privacy": {
+          "label": "Privacy Policy"
+        },
+        "cookie": {
+          "label": "Cookie Policy"
+        }
+      }
+    }
+  },
   "sections": {
     "home-hero": {
       "name": "Home Hero",
@@ -322,6 +405,122 @@
       },
       "presets": {
         "name": "CTA Card"
+      }
+    },
+    "404": {
+      "name": "404",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": {
+              "default": "404",
+              "label": "Heading"
+            }
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": {
+              "default": "<p>Oops! The page you're looking for can't be found.</p>",
+              "label": "Text"
+            }
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "text": {
+              "default": "Back To Home",
+              "label": "Button Text"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "404"
+      }
+    },
+    "latest-blog": {
+      "name": "Latest Blog",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": {
+              "default": "You might also be interested in...",
+              "label": "Heading"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Latest Blog"
+      }
+    },
+    "hero": {
+      "name": "Hero",
+      "blocks": {
+        "image": {
+          "type": "image",
+          "settings": {
+            "image": {
+              "default": "shopify://shop_images/1727271049655_Screenshot_2024-09-25_at_5.28.13PM.png",
+              "label": "Hero Image"
+            },
+            "alt": {
+              "default": "Dubai's affordable housing segment heating up",
+              "label": "Hero Image Alt"
+            }
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": {
+              "default": "Dubai's affordable housing segment heating up",
+              "label": "Heading"
+            }
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": {
+              "default": "<p>With the Dubai population increasing, so is the demand for affordable housing. Read the full article now for the best hotspots.</p>",
+              "label": "Text"
+            },
+            "review_rate": {
+              "default": "5",
+              "label": "Review Rate"
+            },
+            "review_text": {
+              "default": "I had a great experience with JCON Properties, special thanks to Farzonai who helped me find the perfect place and made my relocation to Dubai easy and without stress.",
+              "label": "Review Text"
+            }
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_title": {
+              "default": "Browse Off Plan Projects",
+              "label": "Button Title"
+            },
+            "button_link": {
+              "default": "",
+              "label": "Button Link"
+            },
+            "button_style": {
+              "default": "primary",
+              "label": "Button Style"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Hero"
       }
     }
   }

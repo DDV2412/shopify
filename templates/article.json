@@ -3,9 +3,21 @@
     "breadcrumb": {
       "type": "breadcrumb"
     },
-    "blog_body": {
+    "blog-body": {
       "type": "blog-body"
+    },
+    "latest-blog": {
+      "type": "latest-blog",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "You might also be interested in..."
+          }
+        }
+      },
+      "block_order": ["heading"]
     }
   },
-  "order": ["breadcrumb", "blog_body"]
+  "order": ["breadcrumb", "blog-body", "latest-blog"]
 }

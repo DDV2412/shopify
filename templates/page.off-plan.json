@@ -1,0 +1,40 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "blocks": {
+        "image": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1727271049655_Screenshot_2024-09-25_at_5.28.13PM.png",
+            "image_alt": "Dubai's affordable housing segment heating up"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Dubai's affordable housing segment heating up"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>With the Dubai population increasing, so is the demand for affordable housing. Read the full article now for the best hotspots.</p>",
+            "review_rate": 5,
+            "review_text": "I had a great experience with JCON Properties, special thanks to Farzonai who helped me find the perfect place and made my relocation to Dubai easy and without stress."
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_title": "Read the full article",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": ["image", "heading", "text", "button"]
+    }
+  },
+  "order": ["hero"]
+}

@@ -43,6 +43,16 @@
          <a href="{{ article.url }}" class="breadcrumb-item w-inline-block">
           <p>{{ article.title }}</p>
         </a>
+      {% elsif template contains 'blog' %}
+         <div class="icon_tiny w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+          viewbox="0 0 16 16" transform="rotate(-90)">
+          <path stroke="#ADB4AF" stroke-linecap="round" stroke-linejoin="round" d="m13 5.5-5 5-5-5">
+          </path>
+        </svg>
+        </div>
+        <a href="{{ blog.url }}" class="breadcrumb-item w-inline-block">
+          <p>{{ blog.title }}</p>
+        </a>
       {% endif %}
 
     </div>

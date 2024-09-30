@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin language editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "home-hero": {
@@ -69,6 +69,16 @@
     "header-title": {
       "heading": "We're here to help",
       "text": "Looking for expert advice or further support?"
+    },
+    "hero": {
+      "image": "/images/home-hero.jpg",
+      "heading": "Dubai's affordable housing segment heating up",
+      "text": "With the Dubai population increasing, so is the demand for affordable housing. Read the full article now for the best hotspots.",
+      "button": {
+        "button_title": "Read the full article",
+        "button_link": "/blogs/news",
+        "button_style": "primary"
+      }
     }
   }
 }

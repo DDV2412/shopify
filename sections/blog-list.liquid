@@ -2,9 +2,10 @@
 <section class="section_component">
   <div class="container">
     <div class="section_title-wrapper">
-      <div class="blog-grid">
+      <div data-w-id="d32fc49e-95c7-35af-56f3-162b3ad4cc8e" class="blog-grid">
         {% for article in blogs.news.articles %}
-        {% if forloop.index <=4 %} <a id="w-node-a07ff5be-ff10-9d67-7e0b-0ab3038fffa4-5902b714" href="{{article.url}}"
+        {% if forloop.index <=4 %} 
+          <a id="w-node-a07ff5be-ff10-9d67-7e0b-0ab3038fffa4-5902b714" href="{{article.url}}"
           class="article-card w-inline-block">
           <div data-w-id="a07ff5be-ff10-9d67-7e0b-0ab3038fffa5" class="article_thumbnail"><img
               src="{{article.image | img_url : 'original'}}" loading="lazy" width="318" height="160"
@@ -22,7 +23,7 @@
           {% endfor %}
 
       </div>
-      <div data-w-id="60108434-58a2-52b7-dbb0-31834aeef7cf" style="opacity:0" class="load-more-wrap">
+      <div data-w-id="d32fc49e-95c7-35af-56f3-162b3ad4cca7" style="opacity:0" class="load-more-wrap">
         {% if paginate.previous %}
         <a href="{{ paginate.previous.url }}" class="button is-secondary is-results-btn is-left w-inline-block">
           <div class="icon_small w-embed">
