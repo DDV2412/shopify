@@ -33,7 +33,7 @@
           {% for product in collections.all.products %}
             <img
               src="{{product.images[0] | img_url : 'original'}}"
-              alt="{{product.featured_image}}"
+              alt="{{product.title}}"
               width="220"
               height="110"
               loading="lazy"
@@ -48,7 +48,7 @@
           {% for product in collections.all.products %}
             <img
               src="{{product.images[0] | img_url : 'original'}}"
-              alt="{{product.featured_image}}"
+              alt="{{product.title}}"
               width="220"
               height="110"
               loading="lazy"
@@ -63,7 +63,7 @@
           {% for product in collections.all.products %}
             <img
               src="{{product.images[0] | img_url : 'original'}}"
-              alt="{{product.featured_image}}"
+              alt="{{product.title}}"
               width="220"
               height="110"
               loading="lazy"

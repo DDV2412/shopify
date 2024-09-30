@@ -1,12 +1,14 @@
 <section class="section_component is-hero">
-  {%- for block in section.blocks -%}
-    <div class="container">
-      <div class="landing-content-wrapper">
-        <div
-          data-w-id="bc17c2cb-6525-3fb7-007c-e2d8a05c12b5"
-          style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
-          class="content-section padding-0">
-          <div class="offplan-hero">
+
+  <div class="container">
+    <div class="landing-content-wrapper">
+      <div
+        data-w-id="bc17c2cb-6525-3fb7-007c-e2d8a05c12b5"
+        style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
+        class="content-section padding-0">
+
+        <div class="offplan-hero">
+          {%- for block in section.blocks -%}
             {%- case block.type -%}
               {%- when "image" -%}
                 <div id="w-node-bc17c2cb-6525-3fb7-007c-e2d8a05c12b7-732b4aee" class="hero_content">
@@ -19,25 +21,41 @@
                     class="hero-image">
                 </div>
             {%- endcase -%}
-            <div id="w-node-bc17c2cb-6525-3fb7-007c-e2d8a05c12b9-732b4aee" class="hero_content is-offplan">
+          {%- endfor -%}
+          <div id="w-node-bc17c2cb-6525-3fb7-007c-e2d8a05c12b9-732b4aee" class="hero_content is-offplan">
+            {%- for block in section.blocks -%}
               {%- case block.type -%}
                 {%- when "heading" -%}
                   <h1>{{ block.settings.heading }}</h1>
+
                 {%- when "text" -%}
-                  <div>{{ block.settings.text }}</div>
-                {%- when "button" -%}
-                  <div class="button-wrapper align-left">
+                  <div class="description">
+                    {{ block.settings.text }}
+                  </div>
+              {%- endcase -%}
+            {%- endfor -%}
+
+
+            <div class="button-wrapper align-left">
+              {%- for block in section.blocks -%}
+                {%- case block.type -%}
+                  {%- when "button" -%}
                     {%- case block.settings.button_style -%}
                       {%- when "primary" -%}
                         <a href="{{ block.settings.button_link }}" class="button">
-                          {{ block.settings.button_cta }}
+                          {{ block.settings.button_title }}
                         </a>
                       {%- when "secondary" -%}
-                        <a href="{{ block.settings.button_link }}" class="button is-{{ block.settings.button_style }}">
-                          {{ block.settings.button_cta }}
+                        <a href="{{ block.settings.button_link }}" class="button is-{{ block.settings.button_style }} rounded">
+                          {{ block.settings.button_title }}
                         </a>
                     {%- endcase -%}
-                  </div>
+                {%- endcase -%}
+              {%- endfor -%}
+            </div>
+            {%- for block in section.blocks -%}
+              {%- case block.type -%}
+                {%- when "text" -%}
                   <div class="review-wrapper is-offplan">
                     <div class="review_content align-left">
                       <svg
@@ -73,18 +91,21 @@
                     </div>
                     <div class="review_content">
                       <div>
-                        <strong>{{ block.settings.review_rate }}/5</strong>
-                        <span>{{ block.settings.review_text }}</span>
+
+                        <span>
+                          <b>{{ block.settings.review_rate }}/5</b>
+                          {{ block.settings.review_text }}</span>
                       </div>
                     </div>
                   </div>
               {%- endcase -%}
-            </div>
+            {%- endfor -%}
           </div>
         </div>
+
       </div>
     </div>
-  {%- endfor -%}
+  </div>
 </section>
 {% schema %}
   {
@@ -98,11 +119,11 @@
           {
             "type": "image_picker",
             "id": "image",
-            "label": "t:sections.hero.blocks.image.settings.image.label"
+            "label": "t:sections.other-hero.blocks.image.settings.image.label"
           }, {
             "type": "text",
             "id": "alt",
-            "label": "t:sections.hero.blocks.image.settings.alt.label"
+            "label": "t:sections.other-hero.blocks.image.settings.alt.label"
           }
         ]
       }, {
@@ -113,8 +134,8 @@
           {
             "type": "text",
             "id": "heading",
-            "label": "t:sections.hero.blocks.heading.settings.heading.label",
-            "default": "t:sections.hero.blocks.heading.settings.heading.default"
+            "label": "t:sections.other-hero.blocks.heading.settings.heading.label",
+            "default": "t:sections.other-hero.blocks.heading.settings.heading.default"
           }
         ]
       }, {
@@ -125,18 +146,18 @@
           {
             "type": "richtext",
             "id": "text",
-            "label": "t:sections.hero.blocks.text.settings.text.label",
-            "default": "t:sections.hero.blocks.text.settings.text.default"
+            "label": "t:sections.other-hero.blocks.text.settings.text.label",
+            "default": "t:sections.other-hero.blocks.text.settings.text.default"
           }, {
             "type": "text",
             "id": "review_rate",
-            "label": "t:sections.hero.blocks.text.settings.text.label",
-            "default": "4.5"
+            "label": "t:sections.other-hero.blocks.text.settings.review_rate.label",
+            "default": "t:sections.other-hero.blocks.text.settings.review_rate.default"
           }, {
             "type": "text",
             "id": "review_text",
-            "label": "t:sections.hero.blocks.text.settings.text.label",
-            "default": "t:sections.hero.blocks.text.settings.text.default"
+            "label": "t:sections.other-hero.blocks.text.settings.review_text.label",
+            "default": "t:sections.other-hero.blocks.text.settings.review_text.default"
           }
         ]
       }, {
@@ -147,24 +168,24 @@
           {
             "type": "text",
             "id": "button_title",
-            "label": "t:sections.hero.blocks.button.settings.text.label",
-            "default": "t:sections.hero.blocks.button.settings.text.default"
+            "label": "t:sections.other-hero.blocks.button.settings.button_title.label",
+            "default": "t:sections.other-hero.blocks.button.settings.button_title.default"
           }, {
             "type": "url",
             "id": "button_link",
-            "label": "t:sections.hero.blocks.button.settings.url.label",
-            "default": "t:sections.hero.blocks.button.settings.url.default"
+            "label": "t:sections.other-hero.blocks.button.settings.button_link.label",
+            "default": "t:sections.other-hero.blocks.button.settings.button_link.default"
           }, {
             "type": "select",
             "id": "button_style",
-            "label": "Button Style",
+            "label": "t:sections.other-hero.blocks.button.settings.button_style.label",
             "options": [
               {
                 "value": "primary",
-                "label": "Primary"
+                "label": "t:sections.other-hero.blocks.button.settings.button_style.options.primary.label"
               }, {
                 "value": "secondary",
-                "label": "Secondary"
+                "label": "t:sections.other-hero.blocks.button.settings.button_style.options.secondary.label"
               }
             ]
           }

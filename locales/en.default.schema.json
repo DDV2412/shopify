@@ -459,8 +459,8 @@
         "name": "Latest Blog"
       }
     },
-    "hero": {
-      "name": "Hero",
+    "other-hero": {
+      "name": "Other Hero",
       "blocks": {
         "image": {
           "type": "image",
@@ -470,7 +470,7 @@
               "label": "Hero Image"
             },
             "alt": {
-              "default": "Dubai's affordable housing segment heating up",
+              "default": "Dubai off plan properties",
               "label": "Hero Image Alt"
             }
           }
@@ -479,7 +479,7 @@
           "type": "heading",
           "settings": {
             "heading": {
-              "default": "Dubai's affordable housing segment heating up",
+              "default": "Dubai off plan properties",
               "label": "Heading"
             }
           }
@@ -488,15 +488,15 @@
           "type": "text",
           "settings": {
             "text": {
-              "default": "<p>With the Dubai population increasing, so is the demand for affordable housing. Read the full article now for the best hotspots.</p>",
+              "default": "<p>Dubai offers an unmatched array of off plan projects – from beachfront apartments and family villas to branded mansions by world famous designers. There’s an exciting array of options offering an excellent potential ROI and capital appreciation. <br/> <br/> Whether you’ve invested before or are just looking for extra information, our team of experts are here to help you find the ideal property to match your budget and investment goals.</p>",
               "label": "Text"
             },
             "review_rate": {
-              "default": "5",
+              "default": "4.8",
               "label": "Review Rate"
             },
             "review_text": {
-              "default": "I had a great experience with JCON Properties, special thanks to Farzonai who helped me find the perfect place and made my relocation to Dubai easy and without stress.",
+              "default": "from 1,369 reviews",
               "label": "Review Text"
             }
           }
@@ -514,13 +514,300 @@
             },
             "button_style": {
               "default": "primary",
-              "label": "Button Style"
+              "label": "Button Style",
+              "options": {
+                "primary": {
+                  "label": "Primary"
+                },
+                "secondary": {
+                  "label": "Secondary"
+                }
+              }
             }
           }
         }
       },
       "presets": {
-        "name": "Hero"
+        "name": "Other Hero"
+      }
+    },
+    "card-column-left": {
+      "name": "Card Column Left",
+      "blocks": {
+        "image": {
+          "type": "image",
+          "settings": {
+            "image": {
+              "default": "shopify://shop_images/1727271049655_Screenshot_2024-09-25_at_5.28.13PM.png",
+              "label": "Hero Image"
+            },
+            "alt": {
+              "default": "Why Dubai?",
+              "label": "Hero Image Alt"
+            }
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": {
+              "default": "Why Dubai?",
+              "label": "Heading"
+            }
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": {
+              "default": "<p><p>A leading global hub, Dubai continues to attract investors all over the world thanks to its visionary plans, booming population, w<span>orld class education and healthcare</span>, safe environment, and thriving economy.&nbsp;</p><p>Investors can also benefit from:</p><p>Golden Visas<br>Competitive rental yields<br>Tax-free income<br>Attractive business environment</p></p>",
+              "label": "Text"
+            }
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_title": {
+              "default": "Download Investment Guide",
+              "label": "Button Title"
+            },
+            "button_link": {
+              "default": "",
+              "label": "Button Link"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Card Column Left"
+      }
+    },
+    "top-area": {
+      "name": "Top Area",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": {
+              "default": "Top Investment Areas",
+              "label": "Heading"
+            }
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": {
+              "default": "<p>Explore some of the most sought after destinations for property buyers.</p>",
+              "label": "Text"
+            }
+          }
+        },
+        "collection": {
+          "type": "collection",
+          "settings": {
+            "collection": {
+              "default": "jebel-ali-dubai",
+              "label": "Collection"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Top Area"
+      }
+    },
+    "developers": {
+      "name": "Developers",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": {
+              "default": "Off Plan Developers",
+              "label": "Heading"
+            }
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": {
+              "default": "<p>Learn more about Dubai’s world famous developers and what makes them unique.</p>",
+              "label": "Text"
+            }
+          }
+        },
+        "collection": {
+          "type": "collection",
+          "settings": {
+            "collection": {
+              "default": "damac",
+              "label": "Collection"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Developers"
+      }
+    },
+    "card-column-right": {
+      "name": "Card Column Right",
+      "blocks": {
+        "image": {
+          "type": "image",
+          "settings": {
+            "image": {
+              "default": "shopify://shop_images/1727271049655_Screenshot_2024-09-25_at_5.28.13PM.png",
+              "label": "Hero Image"
+            },
+            "alt": {
+              "default": "What happens in a consultation?",
+              "label": "Hero Image Alt"
+            }
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": {
+              "default": "What happens in a consultation?",
+              "label": "Heading"
+            }
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": {
+              "default": "<p>During your free consultation with one of our experts, you will discuss your investment goals and ideal timeline. They will ask about your needs, answer any questions, and update you on the current market conditions. After that, your agent will come back to you with suggestions, an investment strategy, and tailored advice. </p>",
+              "label": "Text"
+            }
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_title": {
+              "default": "Book a Consultation",
+              "label": "Button Title"
+            },
+            "button_link": {
+              "default": "",
+              "label": "Button Link"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Card Column Right"
+      }
+    },
+    "join-form": {
+      "name": "Join Form",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": {
+              "default": "Join our priority list",
+              "label": "Heading"
+            }
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": {
+              "default": "<p>Register to receive market reports and our monthly investment newsletter with handpicked projects, podcasts, and market insights.</p>",
+              "label": "Text"
+            },
+            "email": {
+              "label": "Contact Email",
+              "default": "sales@jconproperties.ae"
+            },
+            "phone": {
+              "label": "Contact Phone",
+              "default": "+971 4 580 8000"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Join Form"
+      }
+    },
+    "team": {
+      "name": "Team Members",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": {
+              "default": "Off Plan Consultants",
+              "label": "Heading"
+            }
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": {
+              "default": "<p>With proficiency in 20 languages and decades of combined experience, our team of experts will help you unlock opportunities and reach your investment goals.</p>",
+              "label": "Text"
+            }
+          }
+        },
+        "collection": {
+          "type": "collection",
+          "settings": {
+            "name": {
+              "default": "Viktorija Povilaityte",
+              "label": "Member Name"
+            },
+            "position": {
+              "default": "Off Plan & Investment Consultant",
+              "label": "Member Position"
+            },
+            "profile": {
+              "label": "Profile Image"
+            },
+            "url": {
+              "label": "Member URL"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Team Members"
+      }
+    },
+    "podcast": {
+      "name": "Podcast",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": {
+              "default": "Hear it from the experts",
+              "label": "Heading"
+            }
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": {
+              "default": "<p>Tune into our podcast to get market updates, industry insights, and expert advice for every step of the journey.</p>",
+              "label": "Text"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Podcast"
       }
     }
   }

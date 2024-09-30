@@ -1,0 +1,110 @@
+<section class="section_component">
+  <div class="container">
+    <div class="property-card-wrapper-main">
+      <div
+        data-w-id="bc17c2cb-6525-3fb7-007c-e2d8a05c12ea"
+        style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
+        class="res-offplan-container">
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when "heading" -%}
+              <h2>{{ block.settings.heading }}</h2>
+
+            {%- when "text" -%}
+              <div class="description">
+                {{ block.settings.description }}
+              </div>
+          {%- endcase -%}
+        {%- endfor -%}
+        <div data-w-id="d32fc49e-95c7-35af-56f3-162b3ad4cc8e" class="top-area-grid">
+          {%- for block in section.blocks -%}
+            {%- case block.type -%}
+              {%- when "collection" -%}
+                <a
+                  id="w-node-bc17c2cb-6525-3fb7-007c-e2d8a05c12f4-732b4aee"
+                  href="{{collections[block.settings.collection_area].url}}"
+                  class="article-card w-inline-block">
+                  <div data-w-id="a07ff5be-ff10-9d67-7e0b-0ab3038fffa5" class="featured_image-wrapper"><img
+                      src="{{ collections[block.settings.collection_area].featured_image | img_url : 'original' }}"
+                      loading="lazy"
+                      width="318"
+                      height="160"
+                      alt="{{ collections[block.settings.collection_area].title }}"
+                      style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+                      class="featured_image">
+                  </div>
+                  <div class="article_detail">
+                    <div>{{ collections[block.settings.collection_area].title }}</div>
+                  </div>
+
+                  <div class="article-date">{{ collections[block.settings.collection_area].all_products_count }} Properties</div>
+                </a>
+            {%- endcase -%}
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Top Area",
+    "blocks": [
+      {
+        "type": "heading",
+        "name": "Heading",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "t:sections.top-area.blocks.heading.settings.heading.label",
+            "default": "t:sections.top-area.blocks.heading.settings.heading.default"
+          }
+        ]
+      }, {
+        "type": "text",
+        "name": "Description",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "description",
+            "label": "t:sections.top-area.blocks.text.settings.text.label",
+            "default": "t:sections.top-area.blocks.text.settings.text.default"
+          }
+        ]
+      }, {
+        "type": "collection",
+        "name": "Collection Areas",
+        "limit": 6,
+        "settings": [
+          {
+            "type": "text",
+            "id": "collection_area",
+            "label": "t:sections.top-area.blocks.collection.settings.collection.label",
+            "default": "t:sections.top-area.blocks.collection.settings.collection.default"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Top Area",
+        "blocks": [
+          {
+            "type": "heading"
+
+          }, {
+            "type": "text"
+
+          }, {
+            "type": "collection"
+
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

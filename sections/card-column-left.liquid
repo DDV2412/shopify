@@ -1,0 +1,129 @@
+<section class="section_component">
+  <div class="container">
+    <div class="landing-content-wrapper">
+      <div
+        data-w-id="bc17c2cb-6525-3fb7-007c-e2d8a05c12d5"
+        style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
+        class="content-section padding-0">
+        <div class="offplan-hero">
+          <div id="w-node-bc17c2cb-6525-3fb7-007c-e2d8a05c12d7-732b4aee" class="hero_content is-offplan">
+            {%- for block in section.blocks -%}
+              {%- case block.type -%}
+                {%- when "heading" -%}
+                  <h1>{{ block.settings.heading }}</h1>
+
+                {%- when "text" -%}
+                  <p class="description">{{ block.settings.text }}</p>
+
+                {%- when "button" -%}
+                  <div class="button-wrapper align-left">
+                    <a href="{{ block.settings.button_link }}" class="button is-secondary rounded w-inline-block">
+                      <div>{{ block.settings.button_title }}</div>
+                    </a>
+                  </div>
+              {%- endcase -%}
+            {%- endfor -%}
+          </div>
+          <div id="w-node-bc17c2cb-6525-3fb7-007c-e2d8a05c12e5-732b4aee" class="hero_content">
+            {%- for block in section.blocks -%}
+              {%- case block.type -%}
+                {%- when "image" -%}
+                  <div id="w-node-bc17c2cb-6525-3fb7-007c-e2d8a05c12b7-732b4aee" class="hero_content">
+                    <img
+                      src="{{block.settings.image | img_url : 'original'}}"
+                      loading="lazy"
+                      alt="{{block.settings.image.alt}}"
+                      width="700"
+                      height="500"
+                      class="hero-image">
+                  </div>
+              {%- endcase -%}
+            {%- endfor -%}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Card Column Left",
+    "blocks": [
+      {
+        "type": "image",
+        "name": "Hero Image",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "t:sections.card-column-left.blocks.image.settings.image.label"
+          }, {
+            "type": "text",
+            "id": "alt",
+            "label": "t:sections.card-column-left.blocks.image.settings.alt.label"
+          }
+        ]
+      }, {
+        "type": "heading",
+        "name": "Heading Block",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "t:sections.card-column-left.blocks.heading.settings.heading.label",
+            "default": "t:sections.card-column-left.blocks.heading.settings.heading.default"
+          }
+        ]
+      }, {
+        "type": "text",
+        "name": "Text Block",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "t:sections.card-column-left.blocks.text.settings.text.label",
+            "default": "t:sections.card-column-left.blocks.text.settings.text.default"
+          }
+        ]
+      }, {
+        "type": "button",
+        "name": "Hero Button",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "button_title",
+            "label": "t:sections.card-column-left.blocks.button.settings.button_title.label",
+            "default": "t:sections.card-column-left.blocks.button.settings.button_title.default"
+          }, {
+            "type": "url",
+            "id": "button_link",
+            "label": "t:sections.card-column-left.blocks.button.settings.button_link.label",
+            "default": "t:sections.card-column-left.blocks.button.settings.button_link.default"
+          }
+        ]
+      }
+
+    ],
+    "presets": [
+      {
+        "name": "Card Column Left",
+        "blocks": [
+          {
+            "type": "image"
+          }, {
+            "type": "heading"
+          }, {
+            "type": "text"
+          }, {
+            "type": "button"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "home-hero": {
@@ -38,14 +38,8 @@
           }
         }
       },
-      "block_order": [
-        "background",
-        "heading",
-        "text",
-        "button"
-      ],
-      "settings": {
-      }
+      "block_order": ["background", "heading", "text", "button"],
+      "settings": {}
     },
     "review-highlight": {
       "type": "review-highlight",
@@ -73,13 +67,8 @@
           }
         }
       },
-      "block_order": [
-        "heading",
-        "text",
-        "button"
-      ],
-      "settings": {
-      }
+      "block_order": ["heading", "text", "button"],
+      "settings": {}
     },
     "features": {
       "type": "features",
@@ -98,12 +87,8 @@
           }
         }
       },
-      "block_order": [
-        "heading",
-        "button"
-      ],
-      "settings": {
-      }
+      "block_order": ["heading", "button"],
+      "settings": {}
     },
     "cta-home": {
       "type": "cta-home",
@@ -129,13 +114,8 @@
           }
         }
       },
-      "block_order": [
-        "heading",
-        "text",
-        "button"
-      ],
-      "settings": {
-      }
+      "block_order": ["heading", "text", "button"],
+      "settings": {}
     },
     "news": {
       "type": "news",
@@ -154,12 +134,8 @@
           }
         }
       },
-      "block_order": [
-        "heading",
-        "button"
-      ],
-      "settings": {
-      }
+      "block_order": ["heading", "button"],
+      "settings": {}
     },
     "faq": {
       "type": "faq",
@@ -230,16 +206,8 @@
         "text_XPeTcK",
         "text_gE9eCA"
       ],
-      "settings": {
-      }
+      "settings": {}
     }
   },
-  "order": [
-    "home-hero",
-    "review-highlight",
-    "features",
-    "cta-home",
-    "news",
-    "faq"
-  ]
+  "order": ["home-hero", "review-highlight", "features", "cta-home", "news", "faq"]
 }
