@@ -176,11 +176,59 @@
             "question": "What real estate services do JCON Properties offer?",
             "answer": "<p>Our services include Residential Sales and Leasing, Holiday Rentals, Off Plan properties and Investments, Property Management, and Commercial Sales and Commercial Leasing. We also support clients through our home maintenance company Breathe, and our project management group Bauhaus is on hand for property renovations, design, upgrades, and more. If there's something we don't cover, our extensive network of partners can take care of it – including conveyancing support, mortgage solutions, currency services, professional furnishing, and more.  </p>"
           }
+        },
+        "text_LYEa3m": {
+          "type": "text",
+          "settings": {
+            "question": "Which Dubai communities do JCON Properties cover?",
+            "answer": ""
+          }
+        },
+        "text_78XdAW": {
+          "type": "text",
+          "settings": {
+            "question": "Is JCON Properties Group a leading real estate agency?",
+            "answer": ""
+          }
+        },
+        "text_j6bXx8": {
+          "type": "text",
+          "settings": {
+            "question": "Can JCON Properties help me with real estate investments?",
+            "answer": ""
+          }
+        },
+        "text_MrrJ6d": {
+          "type": "text",
+          "settings": {
+            "question": "Can JCON Properties manage my property?",
+            "answer": ""
+          }
+        },
+        "text_XPeTcK": {
+          "type": "text",
+          "settings": {
+            "question": "Do JCON Properties provide insights into Dubai's real estate market?",
+            "answer": ""
+          }
+        },
+        "text_gE9eCA": {
+          "type": "text",
+          "settings": {
+            "question": "Do JCON Properties Property Consultants provide a free consultation?",
+            "answer": ""
+          }
         }
       },
       "block_order": [
         "heading",
-        "text"
+        "text",
+        "text_LYEa3m",
+        "text_78XdAW",
+        "text_j6bXx8",
+        "text_MrrJ6d",
+        "text_XPeTcK",
+        "text_gE9eCA"
       ],
       "settings": {
       }
