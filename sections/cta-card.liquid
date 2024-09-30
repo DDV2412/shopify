@@ -1,0 +1,157 @@
+<section class="section_component">
+    <div class="container">
+        <div class="section_title-wrapper">
+            <div class="featured-wrapper">
+                <div id="w-node-aaa75982-f462-1264-2798-c2a8bfcd4987-732b4aee"
+                    data-w-id="aaa75982-f462-1264-2798-c2a8bfcd4987"
+                    style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
+                    class="featured-card item-2">
+                    {%- for block in section.blocks -%}
+                    {%- case block.type -%}
+                    {%- when 'heading' -%}
+                    <h3>{{ block.settings.communities_heading }}</h3>
+                    {%- when 'text' -%}
+                    <div>{{ block.settings.communities_description }}</div>
+                    {%- endcase-%}
+
+                    {%- case block.type -%}
+                    {%- when 'button' -%}
+                    <div class="button-wrapper padding-top-large align-left">
+                    <a href="{{ block.settings.button_title }}" class="button w-inline-block">
+                        <div>{{ block.settings.button_title }}</div>
+                    </a>
+                    </div>
+                    {%- endcase -%}
+                    {%- endfor -%}
+                
+                </div>
+                <div id="w-node-aaa75982-f462-1264-2798-c2a8bfcd4992-732b4aee"
+                    data-w-id="aaa75982-f462-1264-2798-c2a8bfcd4992"
+                    style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
+                    class="featured-card item-2">
+                    {%- for block in section.blocks -%}
+                    {%- case block.type -%}
+                    {%- when 'heading' -%}
+
+                    <h3>{{block.settings.consultant_heading}}</h3>
+                    {%- when 'text' -%}
+                    <div>{{block.settings.consultant_description}}</div>
+                    {%-endcase-%}
+                    {%- endfor -%}
+                    <div class="button-wrapper padding-top-large align-left">
+                        <div class="w-form">
+                            <form  action="/search" role="search" id="email-form-2" name="email-form-2" data-name="Email Form 2" method="get"
+                                class="find_content" data-wf-page-id="66eaa6ae2a24a29c732b4aee"
+                                data-wf-element-id="aaa75982-f462-1264-2798-c2a8bfcd499c" aria-label="Email Form 2">
+                                <div class="property-search">
+                                    <div class="search-wrapper">
+                                        <div class="icon_tiny w-embed"><svg xmlns="http://www.w3.org/2000/svg"
+                                                width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                class="icon icon-tabler icons-tabler-outline icon-tabler-search">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
+                                                <path d="M21 21l-6 -6"></path>
+                                            </svg></div><input class="search-field w-input" maxlength="256"
+                                            name="q" data-name="Find Your Consultant 2"
+                                            placeholder="Name or department" type="text" id="Find-your-consultant-2">
+                                    </div>
+                                </div>
+                                <div class="button is-icon">
+                                    <div class="icon_small w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            class="icon icon-tabler icons-tabler-outline icon-tabler-search">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                            <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
+                                            <path d="M21 21l-6 -6"></path>
+                                        </svg></div><input type="submit" data-wait="Please wait..."
+                                        class="button-submit-icon w-button" value="">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+  "name": "CTA Card",
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "Heading Block",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "communities_heading",
+          "label": "t:sections.review-highlight.blocks.heading.settings.communities_heading.label"
+        },
+        {
+          "type": "text",
+          "id": "consultant_heading",
+          "label": "t:sections.review-highlight.blocks.heading.settings.consultant_heading.label"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Communities Description",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "communities_description",
+          "label": "t:sections.review-highlight.blocks.text.settings.communities_description.label"
+        },
+        {
+          "type": "text",
+          "id": "consultant_description",
+          "label": "t:sections.review-highlight.blocks.text.settings.consultant_description.label"
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "Communities Button",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_title",
+          "label": "t:sections.review-highlight.blocks.button.settings.text.label",
+          "default": "t:sections.review-highlight.blocks.button.settings.text.default"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "t:sections.review-highlight.blocks.button.settings.url.label",
+          "default": "t:sections.review-highlight.blocks.button.settings.url.default"
+        }
+      ]
+    }
+    
+  ],
+  "presets": [
+    {
+      "name": "CTA Card",
+      "blocks": [
+        {
+          "type": "heading"
+        },
+        {
+          "type": "text"
+        },
+        {
+          "type": "button"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

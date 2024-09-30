@@ -55,7 +55,7 @@
           "type": "heading",
           "settings": {
             "highlight": {
-              "default": "I had a great experience with haus & haus, special thanks to Farzonai who helped me find the perfect place and made my relocation to Dubai easy and without stress.",
+              "default": "I had a great experience with JCON Properties, special thanks to Farzonai who helped me find the perfect place and made my relocation to Dubai easy and without stress.",
               "label": "Highlight"
             },
             "communities_heading": {
@@ -159,7 +159,7 @@
           "type": "button",
           "settings": {
             "text": {
-              "default": "Search properties",
+              "default": "Get Started",
               "label": "Button Text"
             },
             "url": {
@@ -266,6 +266,53 @@
       },
       "presets": {
         "name": "Header Block Text"
+      }
+    },
+    "cta-card": {
+      "name": "CTA Card",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "communities_heading": {
+              "default": "Dubai Communities",
+              "label": "Communities Heading"
+            },
+            "consultant_heading": {
+              "default": "Find your consultant",
+              "label": "Consultant Heading"
+            }
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "communities_description": {
+              "default": "Covering 100+ communities, we can help you find one that ticks your boxes.",
+              "label": "Communities Description"
+            },
+            "consultant_description": {
+              "default": "Search our team of 2500 property experts to get professional guidance.",
+              "label": "Consultant Description"
+            }
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "text": {
+              "default": "Explore Dubai",
+              "label": "Button Text"
+            },
+            "url": {
+              "default": "/collections/all",
+              "label": "Button URL"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "CTA Card"
       }
     }
   }

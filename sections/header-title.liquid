@@ -5,9 +5,13 @@
         data-w-id="7bc9fdea-201a-4548-cce7-ab796688bc7d"
         style="opacity:0"
         class="content-section padding-0">
-        <h1>Blog</h1>
-        <p class="description">Discover the leading names in Dubai’s real estate market and what makes them stand out.
-        </p>
+        {% for block in section.blocks %}
+          {% if block.type == 'heading' %}
+            <h1>{{ block.settings.heading }}</h1>
+          {% elsif block.type == 'text' %}
+            <div class="description">{{ block.settings.text }}</div>
+          {% endif %}
+        {% endfor %}
       </div>
     </div>
   </div>

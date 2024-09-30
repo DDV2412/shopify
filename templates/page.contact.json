@@ -13,13 +13,41 @@
           }
         },
         "text": {
-          "type": "richtext",
+          "type": "text",
           "settings": {
             "text": "<p>Looking for expert advice or further support? <br></p>"
           }
         }
-      }
+      },
+      "block_order": ["heading", "text"]
+    },
+    "cta-card": {
+      "type": "cta-card",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "communities_heading": "Dubai Communities",
+            "consultant_heading": "Find your consultant"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "communities_description": "Covering 100+ communities, we can help you find one that ticks your boxes.",
+            "consultant_description": "Search our team of 2500 property experts to get professional guidance."
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "text": "Explore Dubai",
+            "url": "/collections/all"
+          }
+        }
+      },
+      "block_order": ["heading", "text", "button"]
     }
   },
-  "order": ["breadcrumb", "header-title"]
+  "order": ["breadcrumb", "header-title", "cta-card"]
 }

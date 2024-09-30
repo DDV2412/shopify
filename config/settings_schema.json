@@ -18,7 +18,7 @@
         "type": "color",
         "id": "color_secondary",
         "label": "Secondary Color",
-        "default": "#6622f4"
+        "default": "#0ea5e9"
       }
     ]
   },
@@ -29,6 +29,16 @@
         "type": "image_picker",
         "id": "favicon",
         "label": "Favicon"
+      }
+    ]
+  },
+  {
+    "name": "Custom Head",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "custom_head",
+        "label": "Custom Head"
       }
     ]
   },
@@ -104,6 +114,11 @@
         "type": "url",
         "id": "terms_of_service",
         "label": "Terms of Service"
+      },
+      {
+        "type": "url",
+        "id": "cookie_policy",
+        "label": "Cookie Policy"
       }
     ]
   },

@@ -3,8 +3,7 @@
   "presets": {
     "Default": {
       "settings": {
-        "color_primary": "#1d0c4b",
-        "color_secondary": "#6622f4"
+        "color_secondary": "#0ea5e9"
       }
     }
   }
