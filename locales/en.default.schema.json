@@ -54,10 +54,6 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "highlight": {
-              "default": "I had a great experience with JCON Properties, special thanks to Farzonai who helped me find the perfect place and made my relocation to Dubai easy and without stress.",
-              "label": "Highlight"
-            },
             "communities_heading": {
               "default": "Dubai Communities",
               "label": "Communities Heading"
@@ -71,6 +67,10 @@
         "text": {
           "type": "text",
           "settings": {
+            "highlight": {
+              "default": "<p>I had a great experience with JCON Properties, special thanks to Farzonai who helped me find the perfect place and made my relocation to Dubai easy and without stress.</p>",
+              "label": "Highlight"
+            },
             "communities_description": {
               "default": "Covering 100+ communities, we can help you find one that ticks your boxes.",
               "label": "Communities Description"

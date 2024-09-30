@@ -11,11 +11,11 @@
     },
     "review-highlight": {
       "heading": {
-        "highlight": "I had a great experience with JCON Properties, special thanks to Farzonai who helped me find the perfect place and made my relocation to Dubai easy and without stress.",
         "communities_heading": "Dubai Communities",
         "consultant_heading": "Find your consultant"
       },
       "text": {
+        "highlight": "<p>I had a great experience with JCON Properties, special thanks to Farzonai who helped me find the perfect place and made my relocation to Dubai easy and without stress.</p>",
         "communities_description": "Covering 100+ communities, we can help you find one that ticks your boxes.",
         "consultant_description": "Search our team of {{ products.size }} property experts to get professional guidance."
       },
