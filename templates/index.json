@@ -6,7 +6,7 @@
         "background": {
           "type": "select",
           "settings": {
-            "image": "/images/home-hero.jpg"
+            "background_image": "shopify://shop_images/1726504234500_Screenshot_2024-09-16_at_8.21.35PM.png"
           }
         },
         "heading": {
@@ -24,8 +24,8 @@
         "button": {
           "type": "button",
           "settings": {
-            "text": "Read the full article",
-            "url": "/blogs/news"
+            "button_cta": "Read the full article",
+            "button_link": ""
           }
         }
       },
@@ -52,8 +52,8 @@
         "button": {
           "type": "button",
           "settings": {
-            "text": "Explore Dubai",
-            "url": "/collections/all"
+            "button_title": "Explore Dubai",
+            "button_link": ""
           }
         }
       },
@@ -71,9 +71,7 @@
         "button": {
           "type": "button",
           "settings": {
-            "button_for_sale_text": "For sale",
             "button_for_sale_url": "/collections/all",
-            "button_for_rent_text": "For rent",
             "button_for_rent_url": "/collections/all"
           }
         }
@@ -99,8 +97,8 @@
         "button": {
           "type": "button",
           "settings": {
-            "text": "Get Started",
-            "url": "/collections/all"
+            "cta_button": "Search properties",
+            "cta_link": ""
           }
         }
       },
@@ -118,8 +116,8 @@
         "button": {
           "type": "button",
           "settings": {
-            "text": "Go To All News",
-            "url": "/blogs/news"
+            "button_title": "Read more",
+            "button_link": ""
           }
         }
       },
@@ -131,7 +129,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "FAQ"
+            "heading": "Why choose JCON Properties"
           }
         },
         "text": {
