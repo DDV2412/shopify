@@ -1,11 +1,8 @@
 {
   "sections": {
-    "breadcrumb": {
-      "type": "breadcrumb"
-    },
-    "search": {
-      "type": "search"
+    "main-search": {
+      "type": "main-search"
     }
   },
-  "order": ["breadcrumb", "search"]
+  "order": ["main-search"]
 }

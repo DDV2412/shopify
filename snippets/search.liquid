@@ -1,0 +1,310 @@
+{%- liquid
+assign sort_by = results.sort_by | default: results.default_sort_by
+if results.url
+assign results_url = results.url
+else
+assign terms = results.terms | escape
+assign results_url = '?q=' | append: terms | append: '&options%5Bprefix%5D=last&sort_by=' | append: sort_by
+endif
+-%}
+
+<section class="section_component sticky-top">
+    <div class="filter-search-wrapper">
+        <div class="container">
+            <div class="filter-search-features">
+                <div data-w-id="e2af74cb-a8cf-fb62-51e6-6b6486e09478"
+                    style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
+                    class="search-form bottom-0 w-form">
+                        <form id="search-box" name="email-form" data-name="Email Form" method="get"
+                        class="search_content is-filtered" data-wf-page-id="66eaa6ae2a24a29c732b4aee"
+                        data-wf-element-id="e2af74cb-a8cf-fb62-51e6-6b6486e09479" aria-label="Email Form">
+                        <div class="search-wrapper background-white is-filter">
+                            <div class="icon_small w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="icon icon-tabler icons-tabler-outline icon-tabler-search">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
+                                    <path d="M21 21l-6 -6"></path>
+                                </svg></div>
+                                <input class="search-field w-input" maxlength="256" name="q"
+                                value="{{ results.terms | escape }}" data-name="Search"
+                                placeholder="City, building or community" type="text" id="Search">
+                        </div>
+                        {%- for filter in results.filters -%}
+                            {% case filter.type %}
+                                {%  when  'list' %}
+                                    <div class="select-wrapper no-border">
+                                        {%- liquid
+                                            assign sorted_values = filter.values
+                                            if filter.operator == 'OR'
+                                                assign active_filter_values = filter.values | where: 'active', true
+                                                assign inactive_filter_values = filter.values | where: 'active', false
+                                                assign sorted_values = active_filter_values | concat: inactive_filter_values
+                                            endif
+                                        -%}
+                                        <div data-hover="true" data-delay="0" id="property-dropdown-content" class="property_select-wrapper is-filter w-dropdown" style="">
+                                            <div id="property-dropdown-select" class="property-select is-select w-dropdown-toggle" aria-controls="property-dropdown-nav" aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0">
+                                                <div id="{{ filter.param_name }}">
+                                                    {{ filter.label | escape }}
+                                                </div>
+                                                <div class="icon_small w-embed">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M6 9l6 6l6 -6"></path>
+                                                </svg>
+                                                </div>
+                                            </div>
+                                            <nav id="property-dropdown-nav" class="property-list w-dropdown-list" aria-labelledby="property-dropdown-select">
+                                                    <div class="property-wrapper">
+                                                        {%- for value in sorted_values -%}
+                                                            {% liquid
+                                                                assign input_id = 'Filter-' | append: filter.param_name | escape | append: '-' | append: forloop.index
+                                                            %}
+                                                            <label class="propert-radio w-radio">
+                                                                <div class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input {% if value.active %} w--redirected-checked {% endif %}"></div>
+                                                                <input type="radio" name="{{ value.param_name }}" id="{{ input_id }}" data-name="{{ value.param_name }}" style="opacity:0;position:absolute;z-index:-1" value="{{ value.value }}" checked="{{ value.active }}">
+                                                                <span class="type-label {% if value.active %} is-active {% endif %} w-form-label" for="{{ input_id }}"> {{ value.label | escape }}</span>
+                                                            </label>
+                                                        {%- endfor -%}
+                                                    </div>
+                                                    
+                                            </nav>
+                                        </div>
+                                    </div>
+                                {%  when  'price_range' %}
+                                    <div class="select-wrapper no-border">
+                                        <div data-hover="true" data-delay="0" id="property-dropdown-content" class="property_select-wrapper is-filter w-dropdown" style="">
+                                            <div id="property-dropdown-select" class="property-select is-select w-dropdown-toggle" aria-controls="property-dropdown-nav" aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0">
+                                                <div id="{{ filter.min_value.param_name }}">
+                                                    Min Price
+                                                </div>
+                                                <div class="icon_small w-embed">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M6 9l6 6l6 -6"></path>
+                                                </svg>
+                                                </div>
+                                            </div>
+                                            <nav id="property-dropdown-nav" class="property-list w-dropdown-list" aria-labelledby="property-dropdown-select">
+                                                    <div class="property-wrapper">
+                                                        {% assign min_price_values = "300000,600000,900000,1000000,3000000,5000000,7000000,9000000,10000000,20000000,30000000,40000000,50000000" | split: "," %}
+                                                        {%- for i in min_price_values -%}
+                                                            {% liquid
+                                                                assign input_id = 'Filter-' | append: filter.min_value.param_name | escape | append: '-' | append: forloop.index
+                                                            %}
+                                                            <label class="propert-radio w-radio">
+                                                                <div class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input {% if value.active %} w--redirected-checked {% endif %}"></div>
+                                                                <input type="radio" name="{{ filter.min_value.param_name }}" id="{{ filter.min_value.param_name }}-{{ i }}" data-name="{{ value.param_name }}" style="opacity:0;position:absolute;z-index:-1" value="{{ i }}" checked="{{ value.active }}">
+                                                                <span class="type-label {% if value.active %} is-active {% endif %}  w-form-label" for="{{ filter.min_value.param_name }}-{{ i }}"> {{ shop.currency }} {{ i | plus: 0 | divided_by: 1 | times: 1 }} </span>
+                                                            </label>
+                                                        {%- endfor -%}
+                                                    </div>
+                                                    
+                                            </nav>
+                                        </div>
+                                    </div>
+                                    <div class="select-wrapper no-border">
+                                        <div data-hover="true" data-delay="0" id="property-dropdown-content" class="property_select-wrapper is-filter w-dropdown" style="">
+                                            <div id="property-dropdown-select" class="property-select is-select w-dropdown-toggle" aria-controls="property-dropdown-nav" aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0">
+                                                <div id="{{ filter.max_value.param_name }}">
+                                                    Max Price
+                                                </div>
+                                                <div class="icon_small w-embed">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M6 9l6 6l6 -6"></path>
+                                                </svg>
+                                                </div>
+                                            </div>
+                                            <nav id="property-dropdown-nav" class="property-list w-dropdown-list" aria-labelledby="property-dropdown-select">
+                                                    <div class="property-wrapper">
+                                                        {% assign max_price_values = "300000,600000,900000,1000000,3000000,5000000,7000000,9000000,10000000,20000000,30000000,40000000,50000000" | split: "," %}
+                                                        {%- for i in max_price_values -%}
+                                                            {% liquid
+                                                                assign input_id = 'Filter-' | append: filter.max_value.param_name | escape | append: '-' | append: forloop.index
+                                                            %}
+                                                            <label class="propert-radio w-radio">
+                                                                <div class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input {% if value.active %} w--redirected-checked {% endif %}"></div>
+                                                                <input type="radio" name="{{ filter.max_value.param_name }}" id="{{ filter.max_value.param_name }}-{{ i }}" data-name="{{ value.param_name }}" style="opacity:0;position:absolute;z-index:-1" value="{{ i }}" checked="{{ value.active }}">
+                                                                <span class="type-label {% if value.active %} is-active {% endif %}  w-form-label" for="{{ filter.max_value.param_name }}-{{ i }}"> {{ i | money }} </span>
+                                                            </label>
+                                                        {%- endfor -%}
+                                                    </div>
+                                                    
+                                            </nav>
+                                        </div>
+                                    </div>
+                                
+                            {% endcase %}
+                        {%- endfor -%}
+                        <a href="{{ results_url }}" class="button is-clear" id="clear-filter">
+                            Clear
+                        </a>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section_component">
+    <div class="container">
+        <div data-w-id="e2af74cb-a8cf-fb62-51e6-6b6486e09514"
+            style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
+            class="search-results-wrapper">
+            <div id="w-node-e2af74cb-a8cf-fb62-51e6-6b6486e09515-732b4aee" class="heading-left">
+                <h1 class="search-results-heading">{{ results.title }}</h1>
+                <p class="search-results-count">
+                    <span>
+                        {%- if results.results_count -%}
+                        {{
+                        'templates.search.results_with_count'
+                        | t: terms: results.terms, count: results.results_count
+                        }}
+                        {%- elsif results.products_count == results.all_products_count -%}
+                        {{ 'products.facets.product_count_simple' | t: count: results.products_count }}
+                        {%- else -%}
+                        {{
+                        'products.facets.product_count'
+                        | t: product_count: results.products_count, count: results.all_products_count
+                        }}
+                        {%- endif -%}
+                    </span>
+                </p>
+            </div>
+            <div id="w-node-e2af74cb-a8cf-fb62-51e6-6b6486e0951a-732b4aee" class="heading-right">
+                <div class="button is-secondary hide-tablet sort_by">
+                    <div class="icon_small w-embed">
+
+                        <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g id="Edit / Sort_Ascending">
+                                <path id="Vector" d="M4 17H10M4 12H13M18 11V19M18 19L21 16M18 19L15 16M4 7H16"
+                                    stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div data-hover="true" data-delay="0" id="property-dropdown-content" class="property_select-wrapper is-filter w-dropdown" style="">
+                        <div id="property-dropdown-select" class="property-select w-dropdown-toggle" aria-controls="property-dropdown-nav" aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0">
+                            <div >
+                                {%- for option in results.sort_options -%}
+                                    {%- if option.value == sort_by -%}
+                                        {{ option.name | escape }}
+                                    {%- endif -%}
+                                {%- endfor -%}
+                            </div>
+                            <div class="icon_small w-embed">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M6 9l6 6l6 -6"></path>
+                            </svg>
+                            </div>
+                        </div>
+                        <nav id="property-dropdown-nav" class="property-list w-dropdown-list" aria-labelledby="property-dropdown-select">
+                                <div class="property-wrapper">
+                                    {%- for option in results.sort_options -%}
+                                        <div  id="{{ option.value }}" data-value="{{ option.value }}" class="button is-sort w-inline-block" tabindex="0"><div>{{ option.name |  escape }}</div></div>
+                                    {%- endfor -%}
+                                </div>
+                                
+                        </nav>
+                    </div>
+                </div><a id="w-node-d5f8bd6a-f572-bdc3-94c4-83f195ee83ea-732b4aee"
+                    data-w-id="d5f8bd6a-f572-bdc3-94c4-83f195ee83ea" href="#"
+                    class="button is-secondary hide-desktop w-inline-block">
+                    <div class="icon_small w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-adjustments">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M4 10a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
+                            <path d="M6 4v4"></path>
+                            <path d="M6 12v8"></path>
+                            <path d="M10 16a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
+                            <path d="M12 4v10"></path>
+                            <path d="M12 18v2"></path>
+                            <path d="M16 7a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
+                            <path d="M18 4v1"></path>
+                            <path d="M18 9v11"></path>
+                        </svg></div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+        const searchForm = document.getElementById('search-box');
+        const searchField = document.getElementById('Search');
+
+        searchForm.addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+            const queryValue = searchField.value.trim(); 
+
+            if (queryValue) {
+                const currentUrl = new URL('/search', window.location.origin);
+                
+                currentUrl.searchParams.set('q', queryValue);
+
+                window.location.href = currentUrl.toString();
+            }
+        });
+
+        document.querySelectorAll('.is-sort').forEach(function(button) {
+            button.addEventListener('click', function() {
+                const sortValue = this.getAttribute('data-value'); 
+                const currentUrl = new URL(window.location.href);
+
+                currentUrl.searchParams.set('sort_by', sortValue); 
+
+                window.location.href = currentUrl.toString();
+            });
+        });
+
+        const radioButtons = document.querySelectorAll('.property-wrapper input[type="radio"]');
+
+        radioButtons.forEach(radio => {
+            radio.addEventListener('change', function() {
+            if (this.checked) {
+                const queryParam = this.name;  
+                const queryValue = this.value; 
+
+                const currentUrl = new URL(window.location.href);
+
+                currentUrl.searchParams.set(queryParam, queryValue);
+
+                window.location.href = currentUrl.toString();
+            }
+            });
+        });
+
+        function checkIfFilterIsActive() {
+            const urlParams = new URLSearchParams(window.location.search);
+            let filterActive = false;
+
+            urlParams.forEach((value, key) => {
+            if (key !== 'sort_by') {
+                filterActive = true; 
+            }
+            });
+
+            if (filterActive) {
+                document.getElementById('clear-filter').style.display = 'flex';
+            }
+        }
+        
+        function checkAndAssignValue() {
+            const currentUrl = new URL(window.location.href);
+
+            currentUrl.searchParams.forEach((value, key) => {
+                if (key !== 'sort_by') {
+                    const targetDiv = document.getElementById(key);
+                    
+                    if (targetDiv) {
+                        targetDiv.innerText = value;
+                    }
+                }
+            });
+        }
+        
+        checkAndAssignValue();
+        checkIfFilterIsActive();
+    })
+</script>

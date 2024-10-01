@@ -635,10 +635,44 @@ p {
   overflow: hidden;
 }
 
+.button.is-sort {
+  border-color: var(--white);
+  background-color: var(--white);
+  color: var(--primary);
+  border-radius: 0;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: .5rem 1rem;
+  font-size: .875rem;
+  font-weight: 400;
+}
+
+.button.is-sort.w--current {
+  border-color: var(--primary);
+  background-color: var(--primary);
+  color: var(--white);
+}
+
 .button.is-icon.is-footer:hover {
   border-color: var(--white);
   background-color: var(--white);
   color: var(--primary);
+}
+
+.button.is-icon.is-submit {
+  flex: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
+
+.button.is-clear {
+  padding: 0.5rem 2rem;
+  height: auto;
+  display: none;
 }
 
 .button.is-secondary {
@@ -691,6 +725,21 @@ p {
   padding-left: 0;
   padding-right: 0;
   font-size: 1.125rem;
+}
+
+.button.is-secondary.is-full {
+  width: 100%;
+}
+
+.button.is-secondary.hide-tablet.sort_by {
+  grid-column-gap: .25rem;
+  grid-row-gap: .25rem;
+  padding-left: .75rem;
+  padding-right: .25rem;
+}
+
+.button.is-secondary.hide-desktop {
+  display: none;
 }
 
 .button.is-light:hover {
@@ -848,6 +897,13 @@ p {
   width: auto;
 }
 
+.property-select.is-select {
+  border-color: var(--border-color);
+  background-color: var(--white);
+  color: var(--text-grey);
+  border-radius: .5rem;
+}
+
 .checkbox-field {
   border-radius: .5rem;
   justify-content: center;
@@ -928,6 +984,7 @@ p {
 .search-wrapper.background-white.is-filter {
   justify-content: flex-start;
   align-items: center;
+  max-width: none;
 }
 
 .search-wrapper.background-white.is-form {
@@ -2385,7 +2442,7 @@ p {
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
+  line-clamp: 3;
 }
 
 .develop-summary p {
@@ -3109,7 +3166,15 @@ p {
     height: 4.5rem;
   }
 
+  .section_component.sticky-top {
+    display: none;
+  }
+
   .hide-desktop {
+    display: flex !important;
+  }
+
+  .button.is-secondary.hide-desktop {
     display: flex !important;
   }
 
@@ -3166,6 +3231,10 @@ p {
   .whatsapp-icon {
     width: 1.5rem;
     height: 1.5rem;
+  }
+
+  .button.is-secondary.hide-tablet {
+    display: none;
   }
 
   .search-wrapper.background-white.is-filter {
@@ -3776,16 +3845,6 @@ p {
     height: auto;
   }
 
-  .buy_select-wrapper,
-  .buy-select,
-  .min_price_select-wrapper,
-  .min-price-select,
-  .max_price_select-wrapper,
-  .max-price-select,
-  .beds-select {
-    width: 100%;
-  }
-
   .button-filter.is-icon.is-footer {
     border-color: var(--secondary);
   }
@@ -3832,6 +3891,8 @@ p {
     align-items: flex-start;
   }
 
+
+
   .search-result-images {
     grid-template-columns: 1fr;
   }
@@ -3845,8 +3906,8 @@ p {
     flex-flow: wrap;
   }
 
-  .person-contact {
-    justify-content: center;
+  .person-contact a {
+    flex: auto;
   }
 
   .pages-count {
