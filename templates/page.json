@@ -2,7 +2,10 @@
   "sections": {
     "breadcrumb": {
       "type": "breadcrumb"
+    },
+    "page-body": {
+      "type": "page-body"
     }
   },
-  "order": ["breadcrumb"]
+  "order": ["breadcrumb", "page-body"]
 }

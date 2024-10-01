@@ -243,7 +243,7 @@
           "settings": {
             "text": {
               "default": "Search our extensive range of properties to find your dream home in Dubai.",
-              "label": "Text"
+              "label": "Description"
             }
           }
         },
@@ -282,7 +282,7 @@
           "settings": {
             "text": {
               "default": "Stay up to date with the latest news and insights from the Dubai property market.",
-              "label": "Text"
+              "label": "Description"
             }
           }
         },
@@ -424,7 +424,7 @@
           "settings": {
             "text": {
               "default": "<p>Oops! The page you're looking for can't be found.</p>",
-              "label": "Text"
+              "label": "Description"
             }
           }
         },
@@ -489,7 +489,7 @@
           "settings": {
             "text": {
               "default": "<p>Dubai offers an unmatched array of off plan projects – from beachfront apartments and family villas to branded mansions by world famous designers. There’s an exciting array of options offering an excellent potential ROI and capital appreciation. <br/> <br/> Whether you’ve invested before or are just looking for extra information, our team of experts are here to help you find the ideal property to match your budget and investment goals.</p>",
-              "label": "Text"
+              "label": "Description"
             },
             "review_rate": {
               "default": "4.8",
@@ -561,7 +561,7 @@
           "settings": {
             "text": {
               "default": "<p><p>A leading global hub, Dubai continues to attract investors all over the world thanks to its visionary plans, booming population, w<span>orld class education and healthcare</span>, safe environment, and thriving economy.&nbsp;</p><p>Investors can also benefit from:</p><p>Golden Visas<br>Competitive rental yields<br>Tax-free income<br>Attractive business environment</p></p>",
-              "label": "Text"
+              "label": "Description"
             }
           }
         },
@@ -600,7 +600,7 @@
           "settings": {
             "text": {
               "default": "<p>Explore some of the most sought after destinations for property buyers.</p>",
-              "label": "Text"
+              "label": "Description"
             }
           }
         },
@@ -616,6 +616,41 @@
       },
       "presets": {
         "name": "Top Area"
+      }
+    },
+    "developers-slider": {
+      "name": "Developers Slider",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": {
+              "default": "Off Plan Developers",
+              "label": "Heading"
+            }
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": {
+              "default": "<p>Learn more about Dubai’s world famous developers and what makes them unique.</p>",
+              "label": "Description"
+            }
+          }
+        },
+        "collection": {
+          "type": "collection",
+          "settings": {
+            "collection": {
+              "default": "damac",
+              "label": "Collection"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Developers Slider"
       }
     },
     "developers": {
@@ -635,7 +670,7 @@
           "settings": {
             "text": {
               "default": "<p>Learn more about Dubai’s world famous developers and what makes them unique.</p>",
-              "label": "Text"
+              "label": "Description"
             }
           }
         },
@@ -683,7 +718,7 @@
           "settings": {
             "text": {
               "default": "<p>During your free consultation with one of our experts, you will discuss your investment goals and ideal timeline. They will ask about your needs, answer any questions, and update you on the current market conditions. After that, your agent will come back to you with suggestions, an investment strategy, and tailored advice. </p>",
-              "label": "Text"
+              "label": "Description"
             }
           }
         },
@@ -722,7 +757,7 @@
           "settings": {
             "text": {
               "default": "<p>Register to receive market reports and our monthly investment newsletter with handpicked projects, podcasts, and market insights.</p>",
-              "label": "Text"
+              "label": "Description"
             },
             "email": {
               "label": "Contact Email",
@@ -756,7 +791,7 @@
           "settings": {
             "text": {
               "default": "<p>With proficiency in 20 languages and decades of combined experience, our team of experts will help you unlock opportunities and reach your investment goals.</p>",
-              "label": "Text"
+              "label": "Description"
             }
           }
         },
@@ -801,13 +836,151 @@
           "settings": {
             "text": {
               "default": "<p>Tune into our podcast to get market updates, industry insights, and expert advice for every step of the journey.</p>",
-              "label": "Text"
+              "label": "Description"
             }
           }
         }
       },
       "presets": {
         "name": "Podcast"
+      }
+    },
+    "off-plan-slider": {
+      "name": "Off Plan Slider",
+      "settings": {
+        "class": {
+          "label": "Add Padding Bottom"
+        }
+      },
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": {
+              "label": "Heading"
+            }
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": {
+              "label": "Description",
+              "default": "<p>Check out the latest projects causing a buzz in the market.</p>"
+            }
+          }
+        },
+        "collection": {
+          "type": "collection",
+          "settings": {
+            "collection": {
+              "label": "Collection"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Off Plan Slider"
+      }
+    },
+    "off-plan": {
+      "name": "Off Plan",
+      "settings": {
+        "class": {
+          "label": "Add Padding Bottom"
+        }
+      },
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": {
+              "label": "Heading"
+            }
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": {
+              "label": "Description",
+              "default": "<p>Here’s what our property experts are loving right now.</p>"
+            }
+          }
+        },
+        "collection": {
+          "type": "collection",
+          "settings": {
+            "collection": {
+              "label": "Collection"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Off Plan"
+      }
+    },
+    "featured-developers": {
+      "name": "Featured Developers",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": {
+              "default": "Off Plan Developers",
+              "label": "Heading"
+            }
+          }
+        },
+        "collection": {
+          "type": "collection",
+          "settings": {
+            "collection": {
+              "label": "Collection"
+            },
+            "image": {
+              "label": "Features Image"
+            },
+            "text": {
+              "label": "Summary Text"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Featured Developers"
+      }
+    },
+    "cta-develop": {
+      "name": "CTA Develop",
+      "blocks": {
+        "text": {
+          "type": "text",
+          "settings": {
+            "investment_text": {
+              "label": "Investment Text"
+            },
+            "market_report_text": {
+              "label": "Market Report Text"
+            },
+            "investment_button": {
+              "label": "Investment Button"
+            },
+            "market_report_button": {
+              "label": "Market Report Button"
+            },
+            "investment_url": {
+              "label": "Investment URL"
+            },
+            "market_report_url": {
+              "label": "Market Report URL"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "CTA Develop"
       }
     }
   }

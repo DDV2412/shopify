@@ -1,0 +1,120 @@
+{
+  "sections": {
+    "header-title": {
+      "type": "header-title",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Start your off plan property search"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>From waterfront projects and luxury towers to family communities, Dubai offers an exciting array of off plan properties. Let's find yours.</p>"
+          }
+        }
+      },
+      "block_order": ["heading", "text"],
+      "settings": {}
+    },
+    "off-plan": {
+      "type": "off-plan",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our top picks"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Here’s what our property experts are loving right now.</p>"
+          }
+        },
+        "collection": {
+          "type": "collection",
+          "settings": {
+            "collection": "damac"
+          }
+        }
+      },
+      "block_order": ["heading", "text", "collection"]
+    },
+    "off-plan-slider": {
+      "type": "off-plan-slider",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Most recent launches"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Check out the latest projects causing a buzz in the market.</p>"
+          }
+        },
+        "collection": {
+          "type": "collection",
+          "settings": {
+            "collection": "damac"
+          }
+        }
+      },
+      "block_order": ["heading", "text", "collection"]
+    },
+    "developers-slider": {
+      "type": "developers-slider",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Off Plan Developers"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Learn more about Dubai’s world famous developers and what makes them unique.</p>"
+          }
+        },
+        "collection": {
+          "type": "collection",
+          "settings": {
+            "collection": "damac"
+          }
+        }
+      },
+      "block_order": ["heading", "text", "collection"]
+    },
+    "top-area": {
+      "type": "top-area",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Top Investment Areas"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Explore some of the most sought after destinations for property buyers.</p>"
+          }
+        },
+        "collection": {
+          "type": "collection",
+          "settings": {
+            "collection": "jebel-ali-dubai"
+          }
+        }
+      },
+      "block_order": ["heading", "text", "collection"]
+    }
+  },
+  "order": ["header-title", "off-plan", "off-plan-slider", "developers-slider", "top-area"]
+}

@@ -1,0 +1,213 @@
+<section class="section_component {%- if section.settings.padding_bottom -%}  padding-bottom {%- endif -%}">
+  <div class="container">
+    <div class="property-card-wrapper-main">
+      <div data-w-id="bc17c2cb-6525-3fb7-007c-e2d8a05c12ea"
+        style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
+        class="res-offplan-container">
+        {%- for block in section.blocks -%}
+        {%- case block.type -%}
+        {%- when "heading" -%}
+        <h2>{{ block.settings.heading }}</h2>
+
+        {%- when "text" -%}
+        <div class="description">
+          {{ block.settings.description }}
+        </div>
+        {%- endcase -%}
+        {%- endfor -%}
+        <div class="slick-slider-wrapper">
+          <div data-delay="4000" data-animation="slide" class="slick-slider w-slider" data-autoplay="false"
+            data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0"
+            data-nav-spacing="3" data-duration="500" data-infinite="true" role="region" aria-label="carousel">
+            <div class="w-slider-mask" id="w-slider-mask-7">
+              {%- for block in section.blocks -%}
+          {%- case block.type -%}
+          {%- when "collection" -%}
+          {%- for product in collections[block.settings.collection_offplan].products -%}
+            <div class="property-slider w-slide" aria-label="1 of 1" role="group"
+                style="transition: all; transform: translateX(0px); opacity: 1;">
+                   <div class="offplan-slider-item">
+              <div class="image-section">
+                <img
+                  src="{{ product.images[0] |  img_url: 'original' }}"
+                  loading="lazy" width="328" height="216" alt="{{ product.title }}" class="image-section">
+              </div>
+              <div class="content-btn-section">
+                <div class="content-section">
+                  <h3 class="developer">{{ product.title }}</h3>
+                  <div class="location">
+                    <div class="icon_tiny w-embed">
+
+                      <svg width="800px" height="800px" viewBox="-4 0 32 32" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+
+                        <title>location</title>
+                        <desc>Created with Sketch Beta.</desc>
+                        <defs>
+
+                        </defs>
+                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+                          sketch:type="MSPage">
+                          <g id="Icon-Set" sketch:type="MSLayerGroup" transform="translate(-104.000000, -411.000000)"
+                            fill="CurrentColor">
+                            <path
+                              d="M116,426 C114.343,426 113,424.657 113,423 C113,421.343 114.343,420 116,420 C117.657,420 119,421.343 119,423 C119,424.657 117.657,426 116,426 L116,426 Z M116,418 C113.239,418 111,420.238 111,423 C111,425.762 113.239,428 116,428 C118.761,428 121,425.762 121,423 C121,420.238 118.761,418 116,418 L116,418 Z M116,440 C114.337,440.009 106,427.181 106,423 C106,417.478 110.477,413 116,413 C121.523,413 126,417.478 126,423 C126,427.125 117.637,440.009 116,440 L116,440 Z M116,411 C109.373,411 104,416.373 104,423 C104,428.018 114.005,443.011 116,443 C117.964,443.011 128,427.95 128,423 C128,416.373 122.627,411 116,411 L116,411 Z"
+                              id="location" sketch:type="MSShapeGroup">
+
+                            </path>
+                          </g>
+                        </g>
+                      </svg>
+                    </div>
+                    <p class="location-name">{{ product.variants[0].option3 }}</p>
+                  </div>
+                  <div class="infos-sec">
+                    <p class="paragraph">Price from: <span class="text-span">{{ shop.currency }} {{ product.price |
+                              money_without_currency }}</span></p>
+                    <p class="paragraph">Developer: <span class="text-span">DAMAC</span></p>
+                  </div>
+                </div>
+                <div class="offplan_ctas">
+                  <a href="tel:{{ settings.phone_number }}" class="button is-contact w-inline-block">
+                    <div class="icon_small w-embed"><svg fill="currentColor" width="800px" height="800px"
+                        viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M11.748 5.773S11.418 5 10.914 5c-.496 0-.754.229-.926.387S6.938 7.91 6.938 7.91s-.837.731-.773 2.106c.054 1.375.323 3.332 1.719 6.058 1.386 2.72 4.855 6.876 7.047 8.337 0 0 2.031 1.558 3.921 2.191.549.173 1.647.398 1.903.398.26 0 .719 0 1.246-.385.536-.389 3.543-2.807 3.543-2.807s.736-.665-.119-1.438c-.859-.773-3.467-2.492-4.025-2.944-.559-.459-1.355-.257-1.699.054-.343.313-.956.828-1.031.893-.112.086-.419.365-.763.226-.438-.173-2.234-1.148-3.899-3.426-1.655-2.276-1.837-3.02-2.084-3.824a.56.56 0 0 1 .225-.657c.248-.172 1.161-.933 1.161-.933s.591-.583.344-1.27-1.906-4.716-1.906-4.716z">
+                        </path>
+                      </svg></div>
+                    <div>Call</div>
+                  </a>
+                  <a href="{{ settings.whatsapp_link  }}" class="button is-contact w-inline-block">
+                    <div class="icon_small w-embed"><svg width="800px" height="800px" viewBox="0 0 20 20" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+                        <title>whatsapp [#128]</title>
+                        <desc>Created with Sketch.</desc>
+                        <defs>
+
+                        </defs>
+                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                          <g id="Dribbble-Light-Preview" transform="translate(-300.000000, -7599.000000)"
+                            fill="currentColor">
+                            <g id="icons" transform="translate(56.000000, 160.000000)">
+                              <path
+                                d="M259.821,7453.12124 C259.58,7453.80344 258.622,7454.36761 257.858,7454.53266 C257.335,7454.64369 256.653,7454.73172 254.355,7453.77943 C251.774,7452.71011 248.19,7448.90097 248.19,7446.36621 C248.19,7445.07582 248.934,7443.57337 250.235,7443.57337 C250.861,7443.57337 250.999,7443.58538 251.205,7444.07952 C251.446,7444.6617 252.034,7446.09613 252.104,7446.24317 C252.393,7446.84635 251.81,7447.19946 251.387,7447.72462 C251.252,7447.88266 251.099,7448.05372 251.27,7448.3478 C251.44,7448.63589 252.028,7449.59418 252.892,7450.36341 C254.008,7451.35771 254.913,7451.6748 255.237,7451.80984 C255.478,7451.90987 255.766,7451.88687 255.942,7451.69881 C256.165,7451.45774 256.442,7451.05762 256.724,7450.6635 C256.923,7450.38141 257.176,7450.3464 257.441,7450.44643 C257.62,7450.50845 259.895,7451.56477 259.991,7451.73382 C260.062,7451.85686 260.062,7452.43903 259.821,7453.12124 M254.002,7439 L253.997,7439 L253.997,7439 C248.484,7439 244,7443.48535 244,7449 C244,7451.18666 244.705,7453.21526 245.904,7454.86076 L244.658,7458.57687 L248.501,7457.3485 C250.082,7458.39482 251.969,7459 254.002,7459 C259.515,7459 264,7454.51465 264,7449 C264,7443.48535 259.515,7439 254.002,7439"
+                                id="whatsapp-[#128]">
+
+                              </path>
+                            </g>
+                          </g>
+                        </g>
+                      </svg></div>
+                    <div>Whatsapp</div>
+                  </a>
+                  </div>
+              </div>
+            </div>
+              </div>
+            
+          {%- endfor -%}
+          {%- endcase -%}
+          {%- endfor -%}
+              
+              <div aria-live="off" aria-atomic="true" class="w-slider-aria-label" data-wf-ignore=""></div>
+            </div>
+            <div class="left-arrow w-slider-arrow-left" role="button" tabindex="0" aria-controls="w-slider-mask-7"
+              aria-label="previous slide">
+              <div class="arrow-wrapper">
+                <div class="icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
+                    viewBox="0 0 20 20">
+                    <path stroke="#083819" stroke-linecap="round" stroke-linejoin="round"
+                      d="M13.125 16.25 6.875 10l6.25-6.25"></path>
+                  </svg></div>
+              </div>
+            </div>
+            <div class="right-arrow w-slider-arrow-right" role="button" tabindex="0" aria-controls="w-slider-mask-7"
+              aria-label="next slide">
+              <div class="arrow-wrapper">
+                <div class="icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
+                    viewBox="0 0 20 20">
+                    <path stroke="#083819" stroke-linecap="round" stroke-linejoin="round"
+                      d="m6.875 3.75 6.25 6.25-6.25 6.25"></path>
+                  </svg></div>
+              </div>
+            </div>
+            <div class="slide-nav w-slider-nav w-round w-num">
+              <div class="w-slider-dot w-active" data-wf-ignore="" aria-label="Show slide 1 of 1" aria-pressed="true"
+                role="button" tabindex="0" style="margin-left: 3px; margin-right: 3px;">1</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Off Plan Slider",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "padding_bottom",
+      "label": "t:sections.off-plan-slider.settings.class.label"
+    }
+  ],
+  "blocks": [
+    {
+    "type": "heading",
+    "name": "Heading",
+    "limit": 1,
+      "settings": [
+        {
+        "type": "text",
+        "id": "heading",
+        "label": "t:sections.off-plan-slider.blocks.heading.settings.heading.label",
+        "default": "t:sections.off-plan-slider.blocks.heading.settings.heading.default"
+        }
+      ]
+    }, {
+    "type": "text",
+    "name": "Description",
+    "limit": 1,
+    "settings": [
+        {
+        "type": "text",
+        "id": "description",
+        "label": "t:sections.off-plan-slider.blocks.text.settings.text.label",
+        "default": "t:sections.off-plan-slider.blocks.text.settings.text.default"
+        }
+      ]
+    }, {
+    "type": "collection",
+    "name": "Collection Plan",
+    "limit": 1,
+    "settings": [
+        {
+        "type": "text",
+        "id": "collection_offplan",
+        "label": "t:sections.off-plan-slider.blocks.collection.settings.collection.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Off Plan Slider",
+      "blocks": [
+        {
+        "type": "heading"
+
+        }, {
+        "type": "text"
+
+        }, {
+        "type": "collection"
+
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -3,7 +3,7 @@
 <html
   lang="en"
   data-wf-site="66e6ed97469869045902b70e"
-  data-wf-page="{% if template == 'index' %}{{ "66e6ed97469869045902b714" }}{% else %}{{ "66eaa6ae2a24a29c732b4aee" }}{% endif %}">
+  data-wf-page="66eaa6ae2a24a29c732b4aee">
   <head>
     <meta charset="utf-8">
     <title>
@@ -21,19 +21,6 @@
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
     <meta name="generator" content="Shopify 2.0" />
-    <meta name="title" content="{{ page_title }}">
-    <meta name="description" content="{{ shop.description }}">
-
-    {% if page_title contains shop.name %}
-      <meta property="og:title" content="{{ page_title }}">
-    {% else %}
-      <meta property="og:title" content="{{ page_title }} - {{ shop.name }}">
-    {% endif %}
-
-    {% if page_description %}
-      <meta name="description" content="{{ page_description | escape }}">
-    {% endif %}
-
     <link
       href="{{ 'normalize.css' | asset_url }}"
       rel="stylesheet"
@@ -87,11 +74,7 @@
 </head>
 <body>
   <div class="page_wrapper">
-    {% if template == 'index' %}
-      {% render 'header' %}
-    {% else %}
-      {% render 'secondary-header' %}
-    {% endif %}
+    {% render 'header' %}
     <main class="main_wrapper">
       {{ content_for_layout }}
     </main>

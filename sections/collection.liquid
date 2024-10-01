@@ -1,648 +1,117 @@
-{% assign page_id = "66ea5ed1c7dd6ce3c258cdc7" %}
-
-
 {% assign products = collection.products %}
 
-
-{% assign all_tags = "" %}
-{% for product in collections.all.products %}
-{% for tag in product.tags %}
-{% unless all_tags contains tag %}
-{% assign all_tags = all_tags | append: tag | append: "," %}
-{% endunless %}
-{% endfor %}
-{% endfor %}
-
-{% assign tags_array = all_tags | split: "," %}
-
-{% assign product_types = products | map: 'type' | uniq %}
-
-<section class="section_component sticky-top">
-    <div class="filter-search-wrapper">
-        <div class="container">
-            <div class="filter-search-features">
-                <div data-w-id="da1f4836-e90d-fd7b-4dd3-fd605015895e" style="opacity:0"
-                    class="search-form bottom-0 w-form">
-                    <div id="search-box" name="email-form" data-name="Email Form" class="search_content is-filtered"
-                        data-wf-page-id="66ea5ed1c7dd6ce3c258cdc7"
-                        data-wf-element-id="da1f4836-e90d-fd7b-4dd3-fd605015895f">
-
-                        <div class="search-wrapper background-white is-filter">
-                            <div class="icon_small w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                    height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round"
-                                    class="icon icon-tabler icons-tabler-outline icon-tabler-search">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                    <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
-                                    <path d="M21 21l-6 -6"></path>
-                                </svg></div><input class="search-field w-input" maxlength="256" name="q"
-                                value="{{search.terms | escape}}" data-name="Search 2"
-                                placeholder="City, building or community" type="text" id="search-query">
-
-
-                        </div>
-                        <div class="select-wrapper no-border hide-tablet">
-                            <div data-hover="true" data-delay="0"
-                                class="property_select-wrapper dropdown-filter background-white w-dropdown">
-                                <div class="property-select w-dropdown-toggle">
-                                    <div class="property-selected" id="property-label">Property Type</div>
-                                    <div class="icon_small w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                            height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor"
-                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                            class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
-                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                            <path d="M6 9l6 6l6 -6"></path>
-                                        </svg></div>
-                                </div>
-                                <nav class="property-list w-dropdown-list">
-                                    <div class="property-wrapper">
-                                        {% for type in product_types %}
-                                        <label class="propert-radio w-radio">
-                                            <div
-                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div>
-                                            <input type="radio" name="filter.p.product_type" id="property-type-2"
-                                                data-name="{{type}}" style="opacity:0;position:absolute;z-index:-1"
-                                                value="{{type}}"><span class="type-label w-form-label"
-                                                for="property-type-2">{{type}}</span>
-                                        </label>
-                                        {% endfor %}
-                                    </div>
-                                </nav>
-                            </div>
-                        </div>
-                        <div class="select-wrapper no-border hide-tablet">
-                            <div data-hover="true" data-delay="0"
-                                class="min_price_select-wrapper dropdown-filter background-white w-dropdown">
-                                <div class="min-price-select property-select w-dropdown-toggle">
-                                    <div class="property-selected" id="min-label">Min Price</div>
-                                    <div class="icon_small w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                            height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor"
-                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                            class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
-                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                            <path d="M6 9l6 6l6 -6"></path>
-                                        </svg></div>
-                                </div>
-                                <nav class="property-list w-dropdown-list">
-                                    <div class="property-wrapper">
-                                        <label class="propert-radio w-radio">
-                                            <div
-                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="filter.v.price.gte" id="min-price"
-                                                data-name="Min Price" style="opacity:0;position:absolute;z-index:-1"
-                                                value="300000"><span class="type-label w-form-label" for="min-price">AED
-                                                300,000</span>
-                                        </label>
-                                        <label class="propert-radio w-radio">
-                                            <div
-                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="filter.v.price.gte" id="min-price"
-                                                data-name="Min Price" style="opacity:0;position:absolute;z-index:-1"
-                                                value="500000"><span class="type-label w-form-label" for="min-price">AED
-                                                500,000</span>
-                                        </label>
-                                        <label class="propert-radio w-radio">
-                                            <div
-                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="filter.v.price.gte" id="min-price"
-                                                data-name="Min Price" style="opacity:0;position:absolute;z-index:-1"
-                                                value="AED 700000"><span class="type-label w-form-label"
-                                                for="min-price">AED 700,000</span>
-                                        </label>
-                                        <label class="propert-radio w-radio">
-                                            <div
-                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="filter.v.price.gte" id="min-price"
-                                                data-name="Min Price" style="opacity:0;position:absolute;z-index:-1"
-                                                value="1000000"><span class="type-label w-form-label"
-                                                for="min-price">AED 1,000,000</span>
-                                        </label>
-                                        <label class="propert-radio w-radio">
-                                            <div
-                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="filter.v.price.gte" id="min-price"
-                                                data-name="Min Price" style="opacity:0;position:absolute;z-index:-1"
-                                                value="2000000"><span class="type-label w-form-label"
-                                                for="min-price">AED 2,000,000</span>
-                                        </label>
-                                        <label class="propert-radio w-radio">
-                                            <div
-                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="filter.v.price.gte" id="min-price"
-                                                data-name="Min Price" style="opacity:0;position:absolute;z-index:-1"
-                                                value="AED 3000000"><span class="type-label w-form-label"
-                                                for="min-price">AED 3,000,000</span>
-                                        </label>
-                                        <label class="propert-radio w-radio">
-                                            <div
-                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="filter.v.price.gte" id="min-price"
-                                                data-name="Min Price" style="opacity:0;position:absolute;z-index:-1"
-                                                value="5,000,000"><span class="type-label w-form-label"
-                                                for="min-price">AED 5,000,000</span>
-                                        </label>
-                                        <label class="propert-radio w-radio">
-                                            <div
-                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="min-price" id="min-price"
-                                                data-name="Min Price" style="opacity:0;position:absolute;z-index:-1"
-                                                value="8000000"><span class="type-label w-form-label"
-                                                for="min-price">AED 8,000,000</span>
-                                        </label>
-                                        <label class="propert-radio w-radio">
-                                            <div
-                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="filter.v.price.gte" id="min-price"
-                                                data-name="Min Price" style="opacity:0;position:absolute;z-index:-1"
-                                                value="10000000"><span class="type-label w-form-label"
-                                                for="min-price">AED 10,000,000</span>
-                                        </label>
-                                        <label class="propert-radio w-radio">
-                                            <div
-                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="filter.v.price.gte" id="min-price"
-                                                data-name="Min Price" style="opacity:0;position:absolute;z-index:-1"
-                                                value="20000000"><span class="type-label w-form-label"
-                                                for="min-price">AED 20,000,000</span>
-                                        </label>
-                                        <label class="propert-radio w-radio">
-                                            <div
-                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="filter.v.price.gte" id="min-price"
-                                                data-name="Min Price" style="opacity:0;position:absolute;z-index:-1"
-                                                value="50000000"><span class="type-label w-form-label"
-                                                for="min-price">AED 50,000,000+</span>
-                                        </label>
-
-                                    </div>
-                                </nav>
-                            </div>
-                        </div>
-                        <div class="select-wrapper no-border hide-tablet">
-                            <div data-hover="true" data-delay="0"
-                                class="max_price_select-wrapper dropdown-filter background-white w-dropdown">
-                                <div class="max-price-select property-select w-dropdown-toggle">
-                                    <div class="property-selected" id="max-label">Max Price</div>
-                                    <div class="icon_small w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                            height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor"
-                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                            class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
-                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                            <path d="M6 9l6 6l6 -6"></path>
-                                        </svg></div>
-                                </div>
-                                <nav class="property-list w-dropdown-list">
-                                    <div class="property-wrapper">
-                                        <label class="propert-radio w-radio">
-                                            <div
-                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="filter.v.price.lte" id="max-price"
-                                                data-name="Max Price" style="opacity:0;position:absolute;z-index:-1"
-                                                value="300000"><span class="type-label w-form-label" for="max-price">AED
-                                                300,000</span>
-                                        </label>
-                                        <label class="propert-radio w-radio">
-                                            <div
-                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="filter.v.price.lte" id="max-price"
-                                                data-name="Max Price" style="opacity:0;position:absolute;z-index:-1"
-                                                value="500000"><span class="type-label w-form-label" for="max-price">AED
-                                                500,000</span>
-                                        </label>
-                                        <label class="propert-radio w-radio">
-                                            <div
-                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="filter.v.price.lte" id="max-price"
-                                                data-name="Max Price" style="opacity:0;position:absolute;z-index:-1"
-                                                value="700000"><span class="type-label w-form-label" for="max-price">AED
-                                                700,000</span>
-                                        </label>
-                                        <label class="propert-radio w-radio">
-                                            <div
-                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="filter.v.price.lte" id="max-price"
-                                                data-name="Max Price" style="opacity:0;position:absolute;z-index:-1"
-                                                value="1000000"><span class="type-label w-form-label"
-                                                for="max-price">AED 1,000,000</span>
-                                        </label>
-                                        <label class="propert-radio w-radio">
-                                            <div
-                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="filter.v.price.lte" id="max-price"
-                                                data-name="Max Price" style="opacity:0;position:absolute;z-index:-1"
-                                                value="AED 2000000"><span class="type-label w-form-label"
-                                                for="max-price">AED 2,000,000</span>
-                                        </label>
-                                        <label class="propert-radio w-radio">
-                                            <div
-                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="filter.v.price.lte" id="max-price"
-                                                data-name="Max Price" style="opacity:0;position:absolute;z-index:-1"
-                                                value="3,000,000"><span class="type-label w-form-label"
-                                                for="max-price">AED 3,000,000</span>
-                                        </label>
-                                        <label class="propert-radio w-radio">
-                                            <div
-                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="filter.v.price.lte" id="max-price"
-                                                data-name="Max Price" style="opacity:0;position:absolute;z-index:-1"
-                                                value="5000000"><span class="type-label w-form-label"
-                                                for="max-price">AED 5,000,000</span>
-                                        </label>
-                                        <label class="propert-radio w-radio">
-                                            <div
-                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="filter.v.price.lte" id="max-price"
-                                                data-name="Max Price" style="opacity:0;position:absolute;z-index:-1"
-                                                value="8000000"><span class="type-label w-form-label"
-                                                for="max-price">AED 8,000,000</span>
-                                        </label>
-                                        <label class="propert-radio w-radio">
-                                            <div
-                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="filter.v.price.lte" id="max-price"
-                                                data-name="Max Price" style="opacity:0;position:absolute;z-index:-1"
-                                                value="10000000"><span class="type-label w-form-label"
-                                                for="max-price">AED 10,000,000</span>
-                                        </label>
-                                        <label class="propert-radio w-radio">
-                                            <div
-                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="filter.v.price.lte" id="max-price"
-                                                data-name="Max Price" style="opacity:0;position:absolute;z-index:-1"
-                                                value="20000000"><span class="type-label w-form-label"
-                                                for="max-price">AED 20,000,000</span>
-                                        </label>
-                                        <label class="propert-radio w-radio">
-                                            <div
-                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div><input type="radio" name="filter.v.price.lte" id="max-price"
-                                                data-name="Max Price" style="opacity:0;position:absolute;z-index:-1"
-                                                value="50000000"><span class="type-label w-form-label"
-                                                for="max-price">AED 50,000,000+</span>
-                                        </label>
-
-                                    </div>
-                                </nav>
-                            </div>
-                        </div>
-                        <div class="select-wrapper no-border hide-tablet">
-                            <div data-hover="true" data-delay="0"
-                                class="property_select-wrapper dropdown-filter background-white w-dropdown">
-                                <div class="property-select w-dropdown-toggle">
-                                    <div class="property-selected" id="bath-label">Bath</div>
-                                    <div class="icon_small w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                            height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor"
-                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                            class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
-                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                            <path d="M6 9l6 6l6 -6"></path>
-                                        </svg></div>
-                                </div>
-                                <nav class="property-list w-dropdown-list">
-                                    <div class="property-wrapper">
-                                        <label class="propert-radio w-radio">
-                                            <div
-                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div>
-                                            <input type="radio" name="filter.v.option.bathroom" id="property-type-2"
-                                                data-name="1" style="opacity:0;position:absolute;z-index:-1"
-                                                value="1"><span class="type-label w-form-label"
-                                                for="property-type-2">1</span>
-                                        </label>
-                                        <label class="propert-radio w-radio">
-                                            <div
-                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div>
-                                            <input type="radio" name="filter.v.option.bathroom" id="property-type-2"
-                                                data-name="1" style="opacity:0;position:absolute;z-index:-1"
-                                                value="2"><span class="type-label w-form-label"
-                                                for="property-type-2">2</span>
-                                        </label>
-                                        <label class="propert-radio w-radio">
-                                            <div
-                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div>
-                                            <input type="radio" name="filter.v.option.bathroom" id="property-type-2"
-                                                data-name="1" style="opacity:0;position:absolute;z-index:-1"
-                                                value="3"><span class="type-label w-form-label"
-                                                for="property-type-2">3</span>
-                                        </label>
-                                        <label class="propert-radio w-radio">
-                                            <div
-                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div>
-                                            <input type="radio" name="filter.v.option.bathroom" id="property-type-2"
-                                                data-name="1" style="opacity:0;position:absolute;z-index:-1"
-                                                value="4"><span class="type-label w-form-label"
-                                                for="property-type-2">4</span>
-                                        </label>
-                                        <label class="propert-radio w-radio">
-                                            <div
-                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div>
-                                            <input type="radio" name="filter.v.option.bathroom" id="property-type-2"
-                                                data-name="1" style="opacity:0;position:absolute;z-index:-1"
-                                                value="5"><span class="type-label w-form-label"
-                                                for="property-type-2">5</span>
-                                        </label>
-                                    </div>
-                                </nav>
-                            </div>
-                        </div>
-                        <div class="select-wrapper no-border hide-tablet">
-                            <div data-hover="true" data-delay="0"
-                                class="property_select-wrapper dropdown-filter background-white w-dropdown">
-                                <div class="property-select w-dropdown-toggle">
-                                    <div class="property-selected" id="bet-label">Bet</div>
-                                    <div class="icon_small w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                            height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor"
-                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                            class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
-                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                            <path d="M6 9l6 6l6 -6"></path>
-                                        </svg></div>
-                                </div>
-                                <nav class="property-list w-dropdown-list">
-                                    <div class="property-wrapper">
-                                        <label class="propert-radio w-radio">
-                                            <div
-                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div>
-                                            <input type="radio" name="filter.v.option.betroom" id="property-type-2"
-                                                data-name="1" style="opacity:0;position:absolute;z-index:-1"
-                                                value="1"><span class="type-label w-form-label"
-                                                for="property-type-2">1</span>
-                                        </label>
-                                        <label class="propert-radio w-radio">
-                                            <div
-                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div>
-                                            <input type="radio" name="filter.v.option.betroom" id="property-type-2"
-                                                data-name="1" style="opacity:0;position:absolute;z-index:-1"
-                                                value="2"><span class="type-label w-form-label"
-                                                for="property-type-2">2</span>
-                                        </label>
-                                        <label class="propert-radio w-radio">
-                                            <div
-                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div>
-                                            <input type="radio" name="filter.v.option.betroom" id="property-type-2"
-                                                data-name="1" style="opacity:0;position:absolute;z-index:-1"
-                                                value="3"><span class="type-label w-form-label"
-                                                for="property-type-2">3</span>
-                                        </label>
-                                        <label class="propert-radio w-radio">
-                                            <div
-                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div>
-                                            <input type="radio" name="filter.v.option.betroom" id="property-type-2"
-                                                data-name="1" style="opacity:0;position:absolute;z-index:-1"
-                                                value="4"><span class="type-label w-form-label"
-                                                for="property-type-2">4</span>
-                                        </label>
-                                        <label class="propert-radio w-radio">
-                                            <div
-                                                class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                            </div>
-                                            <input type="radio" name="filter.v.option.betroom" id="property-type-2"
-                                                data-name="1" style="opacity:0;position:absolute;z-index:-1"
-                                                value="5"><span class="type-label w-form-label"
-                                                for="property-type-2">5</span>
-                                        </label>
-                                    </div>
-                                </nav>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<div class="container">
-    <div class="slick-slider">
-        <div data-delay="4000" data-animation="slide" class="slick-slider w-slider" data-autoplay="false"
-            data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0"
-            data-nav-spacing="3" data-duration="500" data-infinite="true">
-            <div class="w-slider-mask">
-                {% for tag in tags_array %}
-                <div class="property-slider is-features w-slide">
-                    <a data-w-id="f5220ca5-8dba-fdb2-a33c-465204c5374c"
-                        style="background-color:rgb(255,255,255);color:rgb(29,12,75)"
-                        href="{{collection.url}}/{{ tag | handle }}" class="button is-secondary w-inline-block">
-
-                        <div>{{ tag }}</div>
-                    </a>
-                </div>
-                {% endfor %}
-
-            </div>
-            <div class="left-arrow w-slider-arrow-left">
-                <div class="arrow-wrapper">
-                    <div class="icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
-                            viewbox="0 0 20 20">
-                            <path stroke="#083819" stroke-linecap="round" stroke-linejoin="round"
-                                d="M13.125 16.25 6.875 10l6.25-6.25"></path>
-                        </svg></div>
-                </div>
-            </div>
-            <div class="right-arrow w-slider-arrow-right">
-                <div class="arrow-wrapper">
-                    <div class="icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
-                            viewbox="0 0 20 20">
-                            <path stroke="#083819" stroke-linecap="round" stroke-linejoin="round"
-                                d="m6.875 3.75 6.25 6.25-6.25 6.25"></path>
-                        </svg></div>
-                </div>
-            </div>
-            <div class="slide-nav w-slider-nav w-round w-num"></div>
-        </div>
-    </div>
-</div>
 <section class="section_component">
     <div class="container">
-        <div data-w-id="a89511ed-a22c-1a36-7890-1bcc708e042c" style="opacity:0" class="search-results-wrapper">
-            <div id="w-node-f32977aa-7d08-0af9-ddb1-d62e4f915c59-c258cdc7" class="heading-left">
+        <div data-w-id="e2af74cb-a8cf-fb62-51e6-6b6486e09514"
+            style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
+            class="search-results-wrapper">
+            <div id="w-node-e2af74cb-a8cf-fb62-51e6-6b6486e09515-732b4aee" class="heading-left">
                 <h1 class="search-results-heading">Properties for sale in Dubai</h1>
-                <p class="search-results-count" id="property-count"></p>
+                <p class="search-results-count">770 results</p>
             </div>
-            <div id="w-node-f59c1c80-b0ec-cde7-64dd-6f34fcd094d9-c258cdc7" class="heading-right">
-                <div class="button is-secondary">
-                    <div class="icon_small w-embed">
-                        <svg width="24px" height="24px" viewbox="0 0 24 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <g id="Edit / Sort_Ascending">
-                                <path id="Vector" d="M4 17H10M4 12H13M18 11V19M18 19L21 16M18 19L15 16M4 7H16"
-                                    stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                </path>
-                            </g>
-                        </svg>
-                    </div>
-                    <div data-hover="true" data-delay="0" id="property-dropdown-content"
-                        class="property_select-wrapper dropdown-filter w-dropdown">
-                        <div id="property-dropdown-select" class="property-select w-dropdown-toggle">
-                            <div id="property-selected" class="property-selected">Most Recent</div>
-                            <div class="icon_small w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                    height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round"
-                                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                    <path d="M6 9l6 6l6 -6"></path>
-                                </svg></div>
-                        </div>
-                        <nav class="property-list w-dropdown-list">
-                            <div id="sort-list" class="property-wrapper">
-                                <label class="propert-radio sort-data w-radio">
-                                    <div
-                                        class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                    </div><input type="radio" name="property-type" data-name="property-type"
-                                        id="Most-Recent" style="opacity:0;position:absolute;z-index:-1"
-                                        value="created-descending"><span class="type-label w-form-label"
-                                        for="Most Recent">Most
-                                        Recent</span>
-                                </label>
-                                <label class="propert-radio sort-data w-radio">
-                                    <div
-                                        class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                    </div><input type="radio" name="property-type" data-name="property-type"
-                                        style="opacity:0;position:absolute;z-index:-1" value="price-descending"><span
-                                        class="type-label w-form-label" for="Highest Price">Highest Price</span>
-                                </label>
-                                <label class="propert-radio sort-data w-radio">
-                                    <div
-                                        class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input">
-                                    </div><input type="radio" name="property-type" data-name="property-type"
-                                        style="opacity:0;position:absolute;z-index:-1" value="price-ascending"><span
-                                        class="type-label w-form-label" for="Lowest Price">Lowest Price</span>
-                                </label>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-                <a data-w-id="da1f4836-e90d-fd7b-4dd3-fd60501589ff"
-                    style="background-color:rgb(255,255,255);color:rgb(29,12,75)" href="#"
-                    class="button-filter is-secondary filter_title w-inline-block hide-desktop">
-                    <div class="filter_title">More Filters</div>
-                    <div style="color:rgb(29,12,75)" class="icon_tiny is-color w-embed">
-                        <svg width="24px" height="24px" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                            <title>filter-horizontal-solid</title>
-                            <g id="Layer_2" data-name="Layer 2">
-                                <g id="invisible_box" data-name="invisible box">
-                                    <rect width="48" height="48" fill="none"></rect>
-                                </g>
-                                <g id="icons_Q2" data-name="icons Q2">
-                                    <path
-                                        d="M41.8,8H21.7A6.2,6.2,0,0,0,16,4a6,6,0,0,0-5.6,4H6.2A2.1,2.1,0,0,0,4,10a2.1,2.1,0,0,0,2.2,2h4.2A6,6,0,0,0,16,16a6.2,6.2,0,0,0,5.7-4H41.8A2.1,2.1,0,0,0,44,10,2.1,2.1,0,0,0,41.8,8Z">
-                                    </path>
-                                    <path
-                                        d="M41.8,22H37.7A6.2,6.2,0,0,0,32,18a6,6,0,0,0-5.6,4H6.2a2,2,0,1,0,0,4H26.4A6,6,0,0,0,32,30a6.2,6.2,0,0,0,5.7-4h4.1a2,2,0,1,0,0-4Z">
-                                    </path>
-                                    <path
-                                        d="M41.8,36H24.7A6.2,6.2,0,0,0,19,32a6,6,0,0,0-5.6,4H6.2a2,2,0,1,0,0,4h7.2A6,6,0,0,0,19,44a6.2,6.2,0,0,0,5.7-4H41.8a2,2,0,1,0,0-4Z">
-                                    </path>
-                                </g>
-                            </g>
-                        </svg>
-                    </div>
-                </a>
+            <div id="w-node-e2af74cb-a8cf-fb62-51e6-6b6486e0951a-732b4aee" class="heading-right">
+                
             </div>
         </div>
-
         <div class="property-card-wrapper-main">
-
             {% for product in products %}
-            <div data-w-id="7b98f7e7-e9bc-eab0-cdb4-7c2718763063" style="opacity:0" class="property-card-wrapper">
+                <div data-w-id="e2af74cb-a8cf-fb62-51e6-6b6486e09526"
+                style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
+                class="property-card-wrapper">
                 <div class="img-wrapper">
                     <div class="search-result-images">
                         <div class="search-result-single-image">
-                            <a href="{{product.url}}" class="property-image w-inline-block w-lightbox"
-                                aria-label="open lightbox" aria-haspopup="dialog">
+                            <a href="{{product.url}}"
+                                class="property-image w-inline-block w-lightbox" aria-label="open lightbox"
+                                aria-haspopup="dialog">
                                 <img src="{{ product.images[0] | img_url: 'original' }}" loading="lazy"
                                     alt="{{product.title}}" loading="lazy" alt="{{product.title}}"
-                                    class="property-image" width="544" height="356" />
+                                    class="property-image-full" width="544" height="356" />
                                 <script type="application/json" class="w-json">{
-                                  "items": [
+                                "items": [
                                     {
-                                      "url": "{{ product.images[0] | img_url: 'original' }}",
-                                      "type": "image"
+                                    "url": "{{ product.images[0] | img_url: 'original' }}",
+                                    "width": 176,
+                                    "type": "image"
                                     }
-                                  ],
-                                  "group": "collection"
+                                ],
+                                "group": "collection-{{ product.id }}"
                                 }</script>
                             </a>
                         </div>
-                        <div id="w-node-f00db9f5-186c-b423-d383-58a3266a8399-c258cdc7"
+                        <div id="w-node-e2af74cb-a8cf-fb62-51e6-6b6486e0952c-732b4aee"
                             class="search-result-grid-images">
-                            <div id="w-node-e6a83049-b0dc-c808-2c08-4fca82fb07ec-c258cdc7"
-                                class="search-result-grid-image-single">
-                                <a href="#" class="property-image w-inline-block w-lightbox" aria-label="open lightbox"
-                                    aria-haspopup="dialog">
-                                    <img src="{{ product.images[1] | img_url: 'original' }}" loading="lazy"
-                                        alt="{{product.title}}" class="property-image" width="544" height="356" />
-                                    <script type="application/json" class="w-json">{
-                                                                      "items": [
-                                                                        {
-                                                                          "url": "{{ product.images[1] | img_url: 'original' }}",
-                                                                          "type": "image"
-                                                                        }
-                                                                      ],
-                                                                      "group": "collection"
-                                                                    }</script>
-                                </a>
-                            </div>
-                            <div id="w-node-_8e36418d-6667-b8cf-b608-932484bf717d-c258cdc7"
-                                class="search-result-grid-image-single">
-                                <a href="#" class="property-image w-inline-block w-lightbox" aria-label="open lightbox"
-                                    aria-haspopup="dialog">
-                                    <img src="{{ product.images[2] | img_url: 'original' }}" loading="lazy"
-                                        alt="{{product.title}}" class="property-image" width="544" height="356" />
-                                    <script type="application/json" class="w-json">{
-                                                                      "items": [
-                                                                        {
-                                                                          "url": "{{ product.images[2] | img_url: 'original' }}",
-                                                                          "type": "image"
-                                                                        }
-                                                                      ],
-                                                                      "group": "collection"
-                                                                    }</script>
-                                </a>
-                            </div>
-                            <div id="w-node-_255e00db-fb62-4667-ab45-ca25903b9f35-c258cdc7"
-                                class="search-result-grid-image-single">
-                                <a href="#" class="property-image w-inline-block w-lightbox" aria-label="open lightbox"
-                                    aria-haspopup="dialog">
-                                    <img src="{{ product.images[3] | img_url: 'original' }}" loading="lazy"
-                                        alt="{{product.title}}" class="property-image" width="544" height="356" />
-                                    <script type="application/json" class="w-json">{
-                                                                      "items": [
-                                                                        {
-                                                                          "url": "{{ product.images[3] | img_url: 'original' }}",
-                                                                          "type": "image"
-                                                                        }
-                                                                      ],
-                                                                      "group": "collection"
-                                                                    }</script>
-                                </a>
-                            </div>
+                            <div id="w-node-e2af74cb-a8cf-fb62-51e6-6b6486e0952d-732b4aee"
+                                class="search-result-grid-image-single"><a href="#"
+                                    class="property-image-small w-inline-block w-lightbox" aria-label="open lightbox"
+                                    aria-haspopup="dialog"><img src="{{ product.images[1] | img_url: 'original' }}" loading="lazy"
+                                    alt="{{product.title}}" loading="lazy" alt="{{product.title}}"
+                                    class="property-image-full" width="544" height="356" />
+                                <script type="application/json" class="w-json">{
+                                "items": [
+                                    {
+                                    "url": "{{ product.images[1] | img_url: 'original' }}",
+                                    "width": 176,
+                                    "type": "image"
+                                    }
+                                ],
+                                "group": "collection-{{ product.id }}"
+                                }</script>
+                                   
+                                </a></div>
+                            <div id="w-node-e2af74cb-a8cf-fb62-51e6-6b6486e09530-732b4aee"
+                                class="search-result-grid-image-single"><a href="#"
+                                    class="property-image-small w-inline-block w-lightbox" aria-label="open lightbox"
+                                    aria-haspopup="dialog"><img src="{{ product.images[2] | img_url: 'original' }}" loading="lazy"
+                                    alt="{{product.title}}" loading="lazy" alt="{{product.title}}"
+                                    class="property-image-full" width="544" height="356" />
+                                <script type="application/json" class="w-json">{
+                                "items": [
+                                    {
+                                    "url": "{{ product.images[2] | img_url: 'original' }}",
+                                    "width": 176,
+                                    "type": "image"
+                                    }
+                                ],
+                                "group": "collection-{{ product.id }}"
+                                }</script>
+                                   
+                                </a></div>
+                            <div id="w-node-e2af74cb-a8cf-fb62-51e6-6b6486e09533-732b4aee"
+                                class="search-result-grid-image-single"><a href="#"
+                                    class="property-image-small w-inline-block w-lightbox" aria-label="open lightbox"
+                                    aria-haspopup="dialog"><img src="{{ product.images[3] | img_url: 'original' }}" loading="lazy"
+                                    alt="{{product.title}}" loading="lazy" alt="{{product.title}}"
+                                    class="property-image-full" width="544" height="356" />
+                                <script type="application/json" class="w-json">{
+                                "items": [
+                                    {
+                                    "url": "{{ product.images[3] | img_url: 'original' }}",
+                                    "width": 176,
+                                    "type": "image"
+                                    }
+                                ],
+                                "group": "collection-{{ product.id }}"
+                                }</script>
+                              
+                                </a></div>
                         </div>
                     </div>
                 </div>
-                <div id="w-node-_007edf24-3ea1-9691-a434-a220bed36ad7-c258cdc7"
+                <div id="w-node-e2af74cb-a8cf-fb62-51e6-6b6486e09536-732b4aee"
                     class="property-card-text-wrapper-properties">
                     <div class="property-card-text-top">
-                        <p class="price" id="property-price">{{ shop.currency }} {{ product.price |
-                            money_without_currency }}</p>
+                        <p class="price">AED 3,250,000</p>
                         <div class="title">
                             <div class="icon_tiny w-embed">
-                                <svg width="24px" height="24px" viewbox="-4 0 32 32" version="1.1"
+                                <svg width="800px" height="800px" viewBox="-4 0 32 32" version="1.1"
                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                     xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+
                                     <title>location</title>
                                     <desc>Created with Sketch Beta.</desc>
                                     <defs>
+
                                     </defs>
                                     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
                                         sketch:type="MSPage">
@@ -650,58 +119,57 @@
                                             transform="translate(-104.000000, -411.000000)" fill="CurrentColor">
                                             <path
                                                 d="M116,426 C114.343,426 113,424.657 113,423 C113,421.343 114.343,420 116,420 C117.657,420 119,421.343 119,423 C119,424.657 117.657,426 116,426 L116,426 Z M116,418 C113.239,418 111,420.238 111,423 C111,425.762 113.239,428 116,428 C118.761,428 121,425.762 121,423 C121,420.238 118.761,418 116,418 L116,418 Z M116,440 C114.337,440.009 106,427.181 106,423 C106,417.478 110.477,413 116,413 C121.523,413 126,417.478 126,423 C126,427.125 117.637,440.009 116,440 L116,440 Z M116,411 C109.373,411 104,416.373 104,423 C104,428.018 114.005,443.011 116,443 C117.964,443.011 128,427.95 128,423 C128,416.373 122.627,411 116,411 L116,411 Z"
-                                                id="location" sketch:type="MSShapeGroup"></path>
+                                                id="location" sketch:type="MSShapeGroup">
+
+                                            </path>
                                         </g>
                                     </g>
                                 </svg>
                             </div>
-                            <p class="title-text">{{product.variants[0].option3}}</p>
+                            <p class="title-text">{{ product.variants[0].option3 }}</p>
                         </div>
                         <p class="intro-text-property">
                             <a href="{{product.url}}" id="property-title">{{product.title}}</a>
                         </p>
                         <div class="icon-items">
-                            <p class="bulding_type-prop" id="property-type">{{product.type}}</p>
+                            <p class="bulding_type-prop">{{ product.type }}</p>
                             <div class="vetical-line-property"></div>
                             <div class="icon-bk-bedroom">
-                                <div class="icon_tiny w-embed"><svg fill="#000000" height="24px" width="24px"
+                                <div class="icon_tiny w-embed"><svg fill="#000000" height="800px" width="800px"
                                         version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 512 512"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512"
                                         xml:space="preserve">
                                         <g>
                                             <g>
-                                                <path
-                                                    d="M469.343,53.383H42.657C19.136,53.383,0,72.513,0,96.025v163.863v68.257v60.596v55.421
-                                                        c0,7.982,6.472,14.455,14.455,14.455h69.76c7.984,0,14.455-6.473,14.455-14.455v-40.966h314.659v40.966
-                                                        c0,7.982,6.472,14.455,14.455,14.455h69.76c7.984,0,14.455-6.473,14.455-14.455v-55.421v-60.596v-68.257V96.025
-                                                        C512,72.513,492.864,53.383,469.343,53.383z M69.76,429.707H28.91v-26.511h40.85V429.707z M84.215,374.286H28.91v-31.686h288.524
-                                                        c7.984,0,14.455-6.473,14.455-14.455s-6.472-14.455-14.455-14.455H28.91v-53.802c0-13.08,10.64-23.721,23.721-23.721h28.982
-                                                        h145.953h56.866h145.953h28.982c13.08,0,23.721,10.64,23.721,23.721v53.802h-64.716c-7.984,0-14.455,6.473-14.455,14.455
-                                                        s6.472,14.455,14.455,14.455h64.716v31.686h-55.305H84.215z M96.069,207.259v-24.342c0-16.524,13.442-29.965,29.965-29.965h57.112
-                                                        c16.524-0.001,29.965,13.442,29.965,29.965v24.342H96.069z M298.888,207.259v-24.342c0-16.524,13.442-29.965,29.965-29.965h57.112
-                                                        c16.524-0.001,29.965,13.442,29.965,29.965v24.342H298.888z M483.09,429.707h-40.85v-26.511h40.85V429.707z M483.09,212.912
-                                                        c-7.132-3.617-15.192-5.655-23.721-5.655h-14.527v-24.342c0-32.465-26.411-58.876-58.876-58.876h-57.112
-                                                        c-32.463,0-58.876,26.411-58.876,58.876v24.342h-27.956v-24.342c0-32.465-26.411-58.876-58.876-58.876h-57.112
-                                                        c-32.463,0-58.876,26.411-58.876,58.876v24.342H52.631c-8.529,0-16.589,2.038-23.721,5.655V96.025
-                                                        c0-7.572,6.167-13.732,13.747-13.732h426.686c7.58,0,13.747,6.161,13.747,13.732V212.912z">
-                                                </path>
+                                                <path d="M469.343,53.383H42.657C19.136,53.383,0,72.513,0,96.025v163.863v68.257v60.596v55.421
+			c0,7.982,6.472,14.455,14.455,14.455h69.76c7.984,0,14.455-6.473,14.455-14.455v-40.966h314.659v40.966
+			c0,7.982,6.472,14.455,14.455,14.455h69.76c7.984,0,14.455-6.473,14.455-14.455v-55.421v-60.596v-68.257V96.025
+			C512,72.513,492.864,53.383,469.343,53.383z M69.76,429.707H28.91v-26.511h40.85V429.707z M84.215,374.286H28.91v-31.686h288.524
+			c7.984,0,14.455-6.473,14.455-14.455s-6.472-14.455-14.455-14.455H28.91v-53.802c0-13.08,10.64-23.721,23.721-23.721h28.982
+			h145.953h56.866h145.953h28.982c13.08,0,23.721,10.64,23.721,23.721v53.802h-64.716c-7.984,0-14.455,6.473-14.455,14.455
+			s6.472,14.455,14.455,14.455h64.716v31.686h-55.305H84.215z M96.069,207.259v-24.342c0-16.524,13.442-29.965,29.965-29.965h57.112
+			c16.524-0.001,29.965,13.442,29.965,29.965v24.342H96.069z M298.888,207.259v-24.342c0-16.524,13.442-29.965,29.965-29.965h57.112
+			c16.524-0.001,29.965,13.442,29.965,29.965v24.342H298.888z M483.09,429.707h-40.85v-26.511h40.85V429.707z M483.09,212.912
+			c-7.132-3.617-15.192-5.655-23.721-5.655h-14.527v-24.342c0-32.465-26.411-58.876-58.876-58.876h-57.112
+			c-32.463,0-58.876,26.411-58.876,58.876v24.342h-27.956v-24.342c0-32.465-26.411-58.876-58.876-58.876h-57.112
+			c-32.463,0-58.876,26.411-58.876,58.876v24.342H52.631c-8.529,0-16.589,2.038-23.721,5.655V96.025
+			c0-7.572,6.167-13.732,13.747-13.732h426.686c7.58,0,13.747,6.161,13.747,13.732V212.912z"></path>
                                             </g>
                                         </g>
                                         <g>
                                             <g>
-                                                <path
-                                                    d="M371.034,313.69h-7.589c-7.984,0-14.455,6.473-14.455,14.455s6.472,14.455,14.455,14.455h7.589
-                                                        c7.984,0,14.455-6.473,14.455-14.455S379.017,313.69,371.034,313.69z">
-                                                </path>
+                                                <path d="M371.034,313.69h-7.589c-7.984,0-14.455,6.473-14.455,14.455s6.472,14.455,14.455,14.455h7.589
+			c7.984,0,14.455-6.473,14.455-14.455S379.017,313.69,371.034,313.69z"></path>
                                             </g>
                                         </g>
                                     </svg></div>
-                                <p class="icon-text" id="property-bedroom">{{product.variants[0].option1 | plus: 0}}</p>
+                                <p class="icon-text">{{product.variants[0].option1 | plus: 0}}</p>
                             </div>
                             <div class="vetical-line-property"></div>
                             <div class="icon-bk-bathroom">
                                 <div class="icon_tiny w-embed">
-                                    <svg width="24px" height="24px" viewbox="0 0 24 24" fill="none"
+                                    <!--?xml version="1.0" ?--><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                                    <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M3 12H4M20 12V12C20.5523 12 21 11.5523 21 11V7C21 6 20.4 4 18 4C15.6 4 15 6 15 7M20 12V14C20 15.1383 19.4169 17.2484 17.2551 17.8414M20 12H4M4 12V14C4 15.1383 4.58309 17.2484 6.74487 17.8414M6 20L6.74487 17.8414M6.74487 17.8414C7.11524 17.943 7.53195 18 8 18C11.2 18 14.6667 18 16 18C16.4681 18 16.8848 17.9429 17.2551 17.8414M18 20L17.2551 17.8414M15 7H13M15 7H17"
@@ -709,19 +177,20 @@
                                             stroke-width="2"></path>
                                     </svg>
                                 </div>
-
-                                <p class="icon-text" id="property-bathroom">{{ product.variants[0].option2 | plus: 0}}
+                                <p class="icon-text">{{ product.variants[0].option2 | plus: 0}}
                                 </p>
                             </div>
                             <div class="vetical-line-property"></div>
                             <div class="icon-bk-bathroom">
-                                <div class="icon_tiny w-embed"><svg width="24px" height="24px" viewbox="0 0 32 32"
+                                <div class="icon_tiny w-embed"><svg width="800px" height="800px" viewBox="0 0 32 32"
                                         version="1.1" xmlns="http://www.w3.org/2000/svg"
                                         xmlns:xlink="http://www.w3.org/1999/xlink"
                                         xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+
                                         <title>zoom</title>
                                         <desc>Created with Sketch Beta.</desc>
                                         <defs>
+
                                         </defs>
                                         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
                                             sketch:type="MSPage">
@@ -729,13 +198,14 @@
                                                 transform="translate(-152.000000, -983.000000)" fill="#000000">
                                                 <path
                                                     d="M176.972,989 L172,989 C171.448,989 171,989.448 171,990 C171,990.553 171.448,991 172,991 L174.628,991 L169.83,995.799 L171.244,997.213 L176.022,992.435 L176,995 C176,995.553 176.448,996 177,996 C177.552,996 178,995.553 178,995 L178,990 C178,989.704 177.877,989.465 177.684,989.301 C177.502,989.115 177.251,989 176.972,989 L176.972,989 Z M182,1011 C182,1012.1 181.104,1013 180,1013 L156,1013 C154.896,1013 154,1012.1 154,1011 L154,987 C154,985.896 154.896,985 156,985 L180,985 C181.104,985 182,985.896 182,987 L182,1011 L182,1011 Z M180,983 L156,983 C153.791,983 152,984.791 152,987 L152,1011 C152,1013.21 153.791,1015 156,1015 L180,1015 C182.209,1015 184,1013.21 184,1011 L184,987 C184,984.791 182.209,983 180,983 L180,983 Z M164.756,1000.79 L159.978,1005.57 L160,1003 C160,1002.45 159.552,1002 159,1002 C158.448,1002 158,1002.45 158,1003 L158,1008 C158,1008.3 158.123,1008.54 158.316,1008.7 C158.497,1008.88 158.749,1009 159.028,1009 L164,1009 C164.552,1009 165,1008.55 165,1008 C165,1007.45 164.552,1007 164,1007 L161.372,1007 L166.17,1002.2 L164.756,1000.79 L164.756,1000.79 Z M177,1002 C176.448,1002 176,1002.45 176,1003 L176.022,1005.57 L171.244,1000.79 L169.83,1002.2 L174.628,1007 L172,1007 C171.448,1007 171,1007.45 171,1008 C171,1008.55 171.448,1009 172,1009 L176.972,1009 C177.251,1009 177.503,1008.88 177.684,1008.7 C177.877,1008.54 178,1008.3 178,1008 L178,1003 C178,1002.45 177.552,1002 177,1002 L177,1002 Z M164,991 C164.552,991 165,990.553 165,990 C165,989.448 164.552,989 164,989 L159.028,989 C158.749,989 158.498,989.115 158.316,989.301 C158.123,989.465 158,989.704 158,990 L158,995 C158,995.553 158.448,996 159,996 C159.552,996 160,995.553 160,995 L159.978,992.435 L164.756,997.213 L166.17,995.799 L161.372,991 L164,991 L164,991 Z"
-                                                    id="zoom" sketch:type="MSShapeGroup"></path>
+                                                    id="zoom" sketch:type="MSShapeGroup">
+
+                                                </path>
                                             </g>
                                         </g>
                                     </svg></div>
                                 <p class="icon-text">Lot Area: {{product.variants[1].option3}}</p>
                             </div>
-
                         </div>
                     </div>
                     <div class="propery-agent">
@@ -749,24 +219,23 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="person-contact">
-                            <a href="tel:+971585583349" target="_blank" class="button is-contact w-inline-block">
-                                <div class="icon_small w-embed"><svg fill="currentColor" width="24px" height="24px"
-                                        viewbox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                        <div class="person-contact"><a href="tel:{{ settings.phone_number }}" class="button is-contact w-inline-block">
+                                <div class="icon_small w-embed"><svg fill="currentColor" width="800px" height="800px"
+                                        viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M11.748 5.773S11.418 5 10.914 5c-.496 0-.754.229-.926.387S6.938 7.91 6.938 7.91s-.837.731-.773 2.106c.054 1.375.323 3.332 1.719 6.058 1.386 2.72 4.855 6.876 7.047 8.337 0 0 2.031 1.558 3.921 2.191.549.173 1.647.398 1.903.398.26 0 .719 0 1.246-.385.536-.389 3.543-2.807 3.543-2.807s.736-.665-.119-1.438c-.859-.773-3.467-2.492-4.025-2.944-.559-.459-1.355-.257-1.699.054-.343.313-.956.828-1.031.893-.112.086-.419.365-.763.226-.438-.173-2.234-1.148-3.899-3.426-1.655-2.276-1.837-3.02-2.084-3.824a.56.56 0 0 1 .225-.657c.248-.172 1.161-.933 1.161-.933s.591-.583.344-1.27-1.906-4.716-1.906-4.716z">
                                         </path>
                                     </svg></div>
                                 <div>Call</div>
-                            </a>
-                            <a href="https://wa.me/+971585583349" target="_blank"
-                                class="button is-contact w-inline-block">
-                                <div class="icon_small w-embed"><svg width="24px" height="24px" viewbox="0 0 20 20"
+                            </a><a href="{{ settings.whatsapp_link }}" class="button is-contact w-inline-block">
+                                <div class="icon_small w-embed"><svg width="800px" height="800px" viewBox="0 0 20 20"
                                         version="1.1" xmlns="http://www.w3.org/2000/svg"
                                         xmlns:xlink="http://www.w3.org/1999/xlink">
+
                                         <title>whatsapp [#128]</title>
                                         <desc>Created with Sketch.</desc>
                                         <defs>
+
                                         </defs>
                                         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                             <g id="Dribbble-Light-Preview"
@@ -774,790 +243,70 @@
                                                 <g id="icons" transform="translate(56.000000, 160.000000)">
                                                     <path
                                                         d="M259.821,7453.12124 C259.58,7453.80344 258.622,7454.36761 257.858,7454.53266 C257.335,7454.64369 256.653,7454.73172 254.355,7453.77943 C251.774,7452.71011 248.19,7448.90097 248.19,7446.36621 C248.19,7445.07582 248.934,7443.57337 250.235,7443.57337 C250.861,7443.57337 250.999,7443.58538 251.205,7444.07952 C251.446,7444.6617 252.034,7446.09613 252.104,7446.24317 C252.393,7446.84635 251.81,7447.19946 251.387,7447.72462 C251.252,7447.88266 251.099,7448.05372 251.27,7448.3478 C251.44,7448.63589 252.028,7449.59418 252.892,7450.36341 C254.008,7451.35771 254.913,7451.6748 255.237,7451.80984 C255.478,7451.90987 255.766,7451.88687 255.942,7451.69881 C256.165,7451.45774 256.442,7451.05762 256.724,7450.6635 C256.923,7450.38141 257.176,7450.3464 257.441,7450.44643 C257.62,7450.50845 259.895,7451.56477 259.991,7451.73382 C260.062,7451.85686 260.062,7452.43903 259.821,7453.12124 M254.002,7439 L253.997,7439 L253.997,7439 C248.484,7439 244,7443.48535 244,7449 C244,7451.18666 244.705,7453.21526 245.904,7454.86076 L244.658,7458.57687 L248.501,7457.3485 C250.082,7458.39482 251.969,7459 254.002,7459 C259.515,7459 264,7454.51465 264,7449 C264,7443.48535 259.515,7439 254.002,7439"
-                                                        id="whatsapp-[#128]"></path>
+                                                        id="whatsapp-[#128]">
+
+                                                    </path>
                                                 </g>
                                             </g>
                                         </g>
                                     </svg></div>
                                 <div>Whatsapp</div>
-                            </a>
-
-                        </div>
+                            </a></div>
                     </div>
                 </div>
             </div>
-
-            {% if forloop.index == 5 %}
-            {% section 'cta' %}
-            {% endif %}
-            {% unless product.available %}
-            <div data-w-id="7b98f7e7-e9bc-eab0-cdb4-7c2718763063" style="opacity:0" class="property-card-wrapper">
-                <div class="img-wrapper">
-                    <div class="search-result-images">
-                        <div class="search-result-single-image">
-                            <a href="#" class="property-image w-inline-block w-lightbox" aria-label="open lightbox"
-                                aria-haspopup="dialog">
-                                <img src="{{ product.images[0] | img_url: 'original' }}" loading="lazy"
-                                    alt="{{product.title}}" loading="lazy" alt="{{product.title}}"
-                                    class="property-image" width="544" height="356" />
-                                <script type="application/json" class="w-json">{
-                                                              "items": [
-                                                                {
-                                                                  "url": "{{ product.images[0] | img_url: 'original' }}",
-                                                                  "type": "image"
-                                                                }
-                                                              ],
-                                                              "group": "collection"
-                                                            }</script>
-                            </a>
-                            <div class="blur-cardimage">
-                                <div class="offmarket-image-content">
-                                    <p class="text-align-center">40% of our properties are sold before they go on
-                                        Property Finder, Bayut and Dubizzle. Get in touch now.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="w-node-f00db9f5-186c-b423-d383-58a3266a8399-c258cdc7"
-                            class="search-result-grid-images">
-                            <div id="w-node-e6a83049-b0dc-c808-2c08-4fca82fb07ec-c258cdc7"
-                                class="search-result-grid-image-single">
-                                <a href="#" class="property-image w-inline-block w-lightbox" aria-label="open lightbox"
-                                    aria-haspopup="dialog">
-                                    <img src="{{ product.images[1] | img_url: 'original' }}" loading="lazy"
-                                        alt="{{product.title}}" class="property-image" width="544" height="356" />
-                                    <script type="application/json" class="w-json">{
-                                                                                                      "items": [
-                                                                                                        {
-                                                                                                          "url": "{{ product.images[1] | img_url: 'original' }}",
-                                                                                                          "type": "image"
-                                                                                                        }
-                                                                                                      ],
-                                                                                                      "group": "collection"
-                                                                                                    }</script>
-                                </a>
-                                <div class="blur-cardimage"></div>
-                            </div>
-                            <div id="w-node-_8e36418d-6667-b8cf-b608-932484bf717d-c258cdc7"
-                                class="search-result-grid-image-single">
-                                <a href="#" class="property-image w-inline-block w-lightbox" aria-label="open lightbox"
-                                    aria-haspopup="dialog">
-                                    <img src="{{ product.images[2] | img_url: 'original' }}" loading="lazy"
-                                        alt="{{product.title}}" class="property-image" width="544" height="356" />
-                                    <script type="application/json" class="w-json">{
-                                                                                                      "items": [
-                                                                                                        {
-                                                                                                          "url": "{{ product.images[2] | img_url: 'original' }}",
-                                                                                                          "type": "image"
-                                                                                                        }
-                                                                                                      ],
-                                                                                                      "group": "collection"
-                                                                                                    }</script>
-                                </a>
-                                <div class="blur-cardimage"></div>
-                            </div>
-                            <div id="w-node-_255e00db-fb62-4667-ab45-ca25903b9f35-c258cdc7"
-                                class="search-result-grid-image-single">
-                                <a href="#" class="property-image w-inline-block w-lightbox" aria-label="open lightbox"
-                                    aria-haspopup="dialog">
-                                    <img src="{{ product.images[3] | img_url: 'original' }}" loading="lazy"
-                                        alt="{{product.title}}" class="property-image" width="544" height="356" />
-                                    <script type="application/json" class="w-json">{
-                                                                                                      "items": [
-                                                                                                        {
-                                                                                                          "url": "{{ product.images[3] | img_url: 'original' }}",
-                                                                                                          "type": "image"
-                                                                                                        }
-                                                                                                      ],
-                                                                                                      "group": "collection"
-                                                                                                    }</script>
-                                </a>
-                                <div class="blur-cardimage"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="w-node-_007edf24-3ea1-9691-a434-a220bed36ad7-c258cdc7"
-                    class="property-card-text-wrapper-properties">
-                    <div class="property-card-text-top">
-                        <p class="price">{{ shop.currency }} {{ product.price | money_without_currency }}</p>
-                        <div class="title">
-                            <div class="icon_tiny w-embed">
-                                <svg width="24px" height="24px" viewbox="-4 0 32 32" version="1.1"
-                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                    xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-                                    <title>location</title>
-                                    <desc>Created with Sketch Beta.</desc>
-                                    <defs>
-                                    </defs>
-                                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
-                                        sketch:type="MSPage">
-                                        <g id="Icon-Set" sketch:type="MSLayerGroup"
-                                            transform="translate(-104.000000, -411.000000)" fill="CurrentColor">
-                                            <path
-                                                d="M116,426 C114.343,426 113,424.657 113,423 C113,421.343 114.343,420 116,420 C117.657,420 119,421.343 119,423 C119,424.657 117.657,426 116,426 L116,426 Z M116,418 C113.239,418 111,420.238 111,423 C111,425.762 113.239,428 116,428 C118.761,428 121,425.762 121,423 C121,420.238 118.761,418 116,418 L116,418 Z M116,440 C114.337,440.009 106,427.181 106,423 C106,417.478 110.477,413 116,413 C121.523,413 126,417.478 126,423 C126,427.125 117.637,440.009 116,440 L116,440 Z M116,411 C109.373,411 104,416.373 104,423 C104,428.018 114.005,443.011 116,443 C117.964,443.011 128,427.95 128,423 C128,416.373 122.627,411 116,411 L116,411 Z"
-                                                id="location" sketch:type="MSShapeGroup"></path>
-                                        </g>
-                                    </g>
-                                </svg>
-                            </div>
-                            <p class="title-text">{{product.variants[2].option2}}</p>
-                        </div>
-                        <p class="intro-text-property">{{product.title}}</p>
-                        <div class="icon-items">
-                            <p class="bulding_type-prop">{{product.type}}</p>
-                            <div class="vetical-line-property"></div>
-                            <div class="icon-bk-bedroom">
-                                <div class="icon_tiny w-embed"><svg fill="#000000" height="24px" width="24px"
-                                        version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 512 512"
-                                        xml:space="preserve">
-                                        <g>
-                                            <g>
-                                                <path
-                                                    d="M469.343,53.383H42.657C19.136,53.383,0,72.513,0,96.025v163.863v68.257v60.596v55.421
-                                                                    c0,7.982,6.472,14.455,14.455,14.455h69.76c7.984,0,14.455-6.473,14.455-14.455v-40.966h314.659v40.966
-                                                                    c0,7.982,6.472,14.455,14.455,14.455h69.76c7.984,0,14.455-6.473,14.455-14.455v-55.421v-60.596v-68.257V96.025
-                                                                    C512,72.513,492.864,53.383,469.343,53.383z M69.76,429.707H28.91v-26.511h40.85V429.707z M84.215,374.286H28.91v-31.686h288.524
-                                                                    c7.984,0,14.455-6.473,14.455-14.455s-6.472-14.455-14.455-14.455H28.91v-53.802c0-13.08,10.64-23.721,23.721-23.721h28.982
-                                                                    h145.953h56.866h145.953h28.982c13.08,0,23.721,10.64,23.721,23.721v53.802h-64.716c-7.984,0-14.455,6.473-14.455,14.455
-                                                                    s6.472,14.455,14.455,14.455h64.716v31.686h-55.305H84.215z M96.069,207.259v-24.342c0-16.524,13.442-29.965,29.965-29.965h57.112
-                                                                    c16.524-0.001,29.965,13.442,29.965,29.965v24.342H96.069z M298.888,207.259v-24.342c0-16.524,13.442-29.965,29.965-29.965h57.112
-                                                                    c16.524-0.001,29.965,13.442,29.965,29.965v24.342H298.888z M483.09,429.707h-40.85v-26.511h40.85V429.707z M483.09,212.912
-                                                                    c-7.132-3.617-15.192-5.655-23.721-5.655h-14.527v-24.342c0-32.465-26.411-58.876-58.876-58.876h-57.112
-                                                                    c-32.463,0-58.876,26.411-58.876,58.876v24.342h-27.956v-24.342c0-32.465-26.411-58.876-58.876-58.876h-57.112
-                                                                    c-32.463,0-58.876,26.411-58.876,58.876v24.342H52.631c-8.529,0-16.589,2.038-23.721,5.655V96.025
-                                                                    c0-7.572,6.167-13.732,13.747-13.732h426.686c7.58,0,13.747,6.161,13.747,13.732V212.912z">
-                                                </path>
-                                            </g>
-                                        </g>
-                                        <g>
-                                            <g>
-                                                <path
-                                                    d="M371.034,313.69h-7.589c-7.984,0-14.455,6.473-14.455,14.455s6.472,14.455,14.455,14.455h7.589
-                                                                    c7.984,0,14.455-6.473,14.455-14.455S379.017,313.69,371.034,313.69z">
-                                                </path>
-                                            </g>
-                                        </g>
-                                    </svg></div>
-                                <p class="icon-text">{{product.variants[1].option2}}</p>
-                            </div>
-                            <div class="vetical-line-property"></div>
-                            <div class="icon-bk-bathroom">
-                                <div class="icon_tiny w-embed">
-                                    <svg width="24px" height="24px" viewbox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M3 12H4M20 12V12C20.5523 12 21 11.5523 21 11V7C21 6 20.4 4 18 4C15.6 4 15 6 15 7M20 12V14C20 15.1383 19.4169 17.2484 17.2551 17.8414M20 12H4M4 12V14C4 15.1383 4.58309 17.2484 6.74487 17.8414M6 20L6.74487 17.8414M6.74487 17.8414C7.11524 17.943 7.53195 18 8 18C11.2 18 14.6667 18 16 18C16.4681 18 16.8848 17.9429 17.2551 17.8414M18 20L17.2551 17.8414M15 7H13M15 7H17"
-                                            stroke="#000000" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="2"></path>
-                                    </svg>
-                                </div>
-                                <p class="icon-text">{{product.variants[0].option2}}</p>
-                            </div>
-                            <div class="vetical-line-property"></div>
-                            <div class="icon-bk-bathroom">
-                                <div class="icon_tiny w-embed"><svg width="24px" height="24px" viewbox="0 0 32 32"
-                                        version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                                        xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-                                        <title>zoom</title>
-                                        <desc>Created with Sketch Beta.</desc>
-                                        <defs>
-                                        </defs>
-                                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
-                                            sketch:type="MSPage">
-                                            <g id="Icon-Set" sketch:type="MSLayerGroup"
-                                                transform="translate(-152.000000, -983.000000)" fill="#000000">
-                                                <path
-                                                    d="M176.972,989 L172,989 C171.448,989 171,989.448 171,990 C171,990.553 171.448,991 172,991 L174.628,991 L169.83,995.799 L171.244,997.213 L176.022,992.435 L176,995 C176,995.553 176.448,996 177,996 C177.552,996 178,995.553 178,995 L178,990 C178,989.704 177.877,989.465 177.684,989.301 C177.502,989.115 177.251,989 176.972,989 L176.972,989 Z M182,1011 C182,1012.1 181.104,1013 180,1013 L156,1013 C154.896,1013 154,1012.1 154,1011 L154,987 C154,985.896 154.896,985 156,985 L180,985 C181.104,985 182,985.896 182,987 L182,1011 L182,1011 Z M180,983 L156,983 C153.791,983 152,984.791 152,987 L152,1011 C152,1013.21 153.791,1015 156,1015 L180,1015 C182.209,1015 184,1013.21 184,1011 L184,987 C184,984.791 182.209,983 180,983 L180,983 Z M164.756,1000.79 L159.978,1005.57 L160,1003 C160,1002.45 159.552,1002 159,1002 C158.448,1002 158,1002.45 158,1003 L158,1008 C158,1008.3 158.123,1008.54 158.316,1008.7 C158.497,1008.88 158.749,1009 159.028,1009 L164,1009 C164.552,1009 165,1008.55 165,1008 C165,1007.45 164.552,1007 164,1007 L161.372,1007 L166.17,1002.2 L164.756,1000.79 L164.756,1000.79 Z M177,1002 C176.448,1002 176,1002.45 176,1003 L176.022,1005.57 L171.244,1000.79 L169.83,1002.2 L174.628,1007 L172,1007 C171.448,1007 171,1007.45 171,1008 C171,1008.55 171.448,1009 172,1009 L176.972,1009 C177.251,1009 177.503,1008.88 177.684,1008.7 C177.877,1008.54 178,1008.3 178,1008 L178,1003 C178,1002.45 177.552,1002 177,1002 L177,1002 Z M164,991 C164.552,991 165,990.553 165,990 C165,989.448 164.552,989 164,989 L159.028,989 C158.749,989 158.498,989.115 158.316,989.301 C158.123,989.465 158,989.704 158,990 L158,995 C158,995.553 158.448,996 159,996 C159.552,996 160,995.553 160,995 L159.978,992.435 L164.756,997.213 L166.17,995.799 L161.372,991 L164,991 L164,991 Z"
-                                                    id="zoom" sketch:type="MSShapeGroup"></path>
-                                            </g>
-                                        </g>
-                                    </svg></div>
-                                <p class="icon-text">Lot Area: {{product.variants[3].option2}}</p>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="propery-agent">
-                        <div class="contact-items">
-                            <div class="person-img-data">
-                                <div class="person-img"><img src="{{'jcon.jpeg' | asset_url}}" loading="lazy" width="48"
-                                        height="48" alt="{{product.vendor}}" class="person-img"></div>
-                                <div class="person-data">
-                                    <p class="name">{{product.vendor}}</p>
-                                    <p class="job-title">Real State In Dubai</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="person-contact">
-                            <a href="tel:+971585583349" class="button is-contact w-inline-block">
-                                <div class="icon_small w-embed"><svg fill="currentColor" width="24px" height="24px"
-                                        viewbox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M11.748 5.773S11.418 5 10.914 5c-.496 0-.754.229-.926.387S6.938 7.91 6.938 7.91s-.837.731-.773 2.106c.054 1.375.323 3.332 1.719 6.058 1.386 2.72 4.855 6.876 7.047 8.337 0 0 2.031 1.558 3.921 2.191.549.173 1.647.398 1.903.398.26 0 .719 0 1.246-.385.536-.389 3.543-2.807 3.543-2.807s.736-.665-.119-1.438c-.859-.773-3.467-2.492-4.025-2.944-.559-.459-1.355-.257-1.699.054-.343.313-.956.828-1.031.893-.112.086-.419.365-.763.226-.438-.173-2.234-1.148-3.899-3.426-1.655-2.276-1.837-3.02-2.084-3.824a.56.56 0 0 1 .225-.657c.248-.172 1.161-.933 1.161-.933s.591-.583.344-1.27-1.906-4.716-1.906-4.716z">
-                                        </path>
-                                    </svg></div>
-                                <div>Call</div>
-                            </a>
-                            <a href="https://wa.me/+971585583349" class="button is-contact w-inline-block">
-                                <div class="icon_small w-embed"><svg width="24px" height="24px" viewbox="0 0 20 20"
-                                        version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink">
-                                        <title>whatsapp [#128]</title>
-                                        <desc>Created with Sketch.</desc>
-                                        <defs>
-                                        </defs>
-                                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                            <g id="Dribbble-Light-Preview"
-                                                transform="translate(-300.000000, -7599.000000)" fill="currentColor">
-                                                <g id="icons" transform="translate(56.000000, 160.000000)">
-                                                    <path
-                                                        d="M259.821,7453.12124 C259.58,7453.80344 258.622,7454.36761 257.858,7454.53266 C257.335,7454.64369 256.653,7454.73172 254.355,7453.77943 C251.774,7452.71011 248.19,7448.90097 248.19,7446.36621 C248.19,7445.07582 248.934,7443.57337 250.235,7443.57337 C250.861,7443.57337 250.999,7443.58538 251.205,7444.07952 C251.446,7444.6617 252.034,7446.09613 252.104,7446.24317 C252.393,7446.84635 251.81,7447.19946 251.387,7447.72462 C251.252,7447.88266 251.099,7448.05372 251.27,7448.3478 C251.44,7448.63589 252.028,7449.59418 252.892,7450.36341 C254.008,7451.35771 254.913,7451.6748 255.237,7451.80984 C255.478,7451.90987 255.766,7451.88687 255.942,7451.69881 C256.165,7451.45774 256.442,7451.05762 256.724,7450.6635 C256.923,7450.38141 257.176,7450.3464 257.441,7450.44643 C257.62,7450.50845 259.895,7451.56477 259.991,7451.73382 C260.062,7451.85686 260.062,7452.43903 259.821,7453.12124 M254.002,7439 L253.997,7439 L253.997,7439 C248.484,7439 244,7443.48535 244,7449 C244,7451.18666 244.705,7453.21526 245.904,7454.86076 L244.658,7458.57687 L248.501,7457.3485 C250.082,7458.39482 251.969,7459 254.002,7459 C259.515,7459 264,7454.51465 264,7449 C264,7443.48535 259.515,7439 254.002,7439"
-                                                        id="whatsapp-[#128]"></path>
-                                                </g>
-                                            </g>
-                                        </g>
-                                    </svg></div>
-                                <div>Whatsapp</div>
-                            </a>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            {% endunless %}
             {% endfor %}
-
         </div>
-
-        <div data-w-id="adf5edab-5bb2-f371-2e8f-e18a899536b5" style="opacity:0" class="load-more-wrap">
-            <a href="#" id="prevPage" class="button is-secondary is-results-btn is-left w-inline-block">
-                <div class="icon_small w-embed">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" fill="none" viewbox="0 0 17 16">
+        <div data-w-id="e2af74cb-a8cf-fb62-51e6-6b6486e095eb" style="opacity: 0;" class="load-more-wrap"><a href="#"
+                class="button is-secondary is-results-btn is-left w-inline-block">
+                <div class="icon_small w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16"
+                        fill="none" viewBox="0 0 17 16">
                         <path stroke="#ADB4AF" stroke-linecap="round" stroke-linejoin="round" d="M11 13 6 8l5-5"></path>
-                    </svg>
-                </div>
+                    </svg></div>
                 <p class="pagination_title">Back</p>
             </a>
             <div class="pages-count">
                 <p class="paragraph">Page</p>
                 <div class="select-wrapper no-border">
                     <div data-hover="false" data-delay="0" class="buy_select-wrapper w-dropdown">
-                        <div class="control-select w-dropdown-toggle" id="currentPageDisplay">
+                        <div class="control-select w-dropdown-toggle" id="w-dropdown-toggle-14"
+                            aria-controls="w-dropdown-list-14" aria-haspopup="menu" aria-expanded="false" role="button"
+                            tabindex="0">
                             <div>1</div>
                             <div class="icon_small w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                    height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                     stroke-linecap="round" stroke-linejoin="round"
                                     class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                     <path d="M6 9l6 6l6 -6"></path>
                                 </svg></div>
                         </div>
-                        <nav class="property-list w-dropdown-list" id="pagesDropdown">
-                        </nav>
+                        <nav class="property-list w-dropdown-list" id="w-dropdown-list-14"
+                            aria-labelledby="w-dropdown-toggle-14"><a href="#" class="page-count w-dropdown-link"
+                                tabindex="0">1</a><a href="#" class="page-count w-dropdown-link" tabindex="0">2</a><a
+                                href="#" class="page-count w-dropdown-link" tabindex="0">3</a><a href="#"
+                                class="page-count w-dropdown-link" tabindex="0">4</a></nav>
                     </div>
                 </div>
-                <p class="paragraph">of <span id="totalPages">1</span></p>
-            </div>
-            <a href="#" id="nextPage" class="button is-secondary is-results-btn is-right w-inline-block">
+                <p class="paragraph">of 97</p>
+            </div><a href="#" class="button is-secondary is-results-btn is-right w-inline-block">
                 <p class="pagination_title">Next</p>
-                <div class="icon_small w-embed">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" fill="none" viewbox="0 0 17 16">
+                <div class="icon_small w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16"
+                        fill="none" viewBox="0 0 17 16">
                         <path stroke="#ADB4AF" stroke-linecap="round" stroke-linejoin="round" d="m6 3 5 5-5 5"></path>
-                    </svg>
-                </div>
+                    </svg></div>
             </a>
         </div>
-
     </div>
 </section>
-<section data-w-id="15316579-8e67-27ac-7a5c-7be7bf3cd337" class="section_component is-dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <p> Filters</p><a data-w-id="84c5c7ff-982d-81cd-e8ef-a658028c5156" href="#"
-                    class="btn-close w-inline-block">
-                    <div class="w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" fill="none"
-                            viewBox="0 0 16 17">
-                            <path stroke="#434343" stroke-linecap="round" stroke-linejoin="round"
-                                d="m12.5 4-9 9M12.5 13l-9-9"></path>
-                        </svg></div>
-                </a>
-            </div>
-            <div class="modal-body">
-                <div class="modal-form w-form">
-                    <form role="search" id="mobile-filter" name="email-form-4" data-name="Email Form 4" method="get"
-                        class="form" data-wf-page-id="66ea5ed1c7dd6ce3c258cdc7"
-                        data-wf-element-id="163f6524-6e97-0d61-5277-717b038f7a2d" aria-label="Email Form 4">
-                        <div class="search-wrapper background-white is-filter">
-                            <div class="icon_small w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round"
-                                    class="icon icon-tabler icons-tabler-outline icon-tabler-search">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                    <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
-                                    <path d="M21 21l-6 -6"></path>
-                                </svg></div><input class="search-field w-input" maxlength="256" name="q"
-                                data-name="Search 2" placeholder="City, building or community" type="text"
-                                id="search-input-mobile" value="{{search.terms | escape}}">
-                        </div>
-                        <h4 class="top-large">Property Type</h4>
-                        <div class="modal-filter-item">
-                            {% for type in product_types %}
-                            <label id="w-node-_27104503-d968-1013-59f5-c148c81c47d4-c258cdc7"
-                                class="list-inline-item-checkbox w-radio">
-                                <div
-                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
-                                </div><input type="radio" data-name="{{type}}" id="{{type}}"
-                                    name="filter.p.product_type" style="opacity:0;position:absolute;z-index:-1"
-                                    value="{{type}}"><span class="type-label w-form-label" for="radio">{{type}}</span>
-                            </label>
-                            {% endfor %}
-
-                        </div>
-                        <h4 class="top-large">Min Price</h4>
-                        <div class="modal-filter-item">
-                            <label id="w-node-_27104503-d968-1013-59f5-c148c81c47d4-c258cdc7"
-                                class="list-inline-item-checkbox w-radio">
-                                <div
-                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
-                                </div><input type="radio" data-name="price_range" id="price_range"
-                                    name="filter.v.price.gte" style="opacity:0;position:absolute;z-index:-1"
-                                    value="300000"><span class="type-label w-form-label" for="min_price">300,000</span>
-                            </label>
-                            <label id="w-node-_27104503-d968-1013-59f5-c148c81c47d4-c258cdc7"
-                                class="list-inline-item-checkbox w-radio">
-                                <div
-                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
-                                </div><input type="radio" data-name="price_range" id="price_range"
-                                    name="filter.v.price.gte" style="opacity:0;position:absolute;z-index:-1"
-                                    value="500000"><span class="type-label w-form-label" for="min_price">500,000</span>
-                            </label>
-                            <label id="w-node-_27104503-d968-1013-59f5-c148c81c47d4-c258cdc7"
-                                class="list-inline-item-checkbox w-radio">
-                                <div
-                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
-                                </div><input type="radio" data-name="price_range" id="price_range"
-                                    name="filter.v.price.gte" style="opacity:0;position:absolute;z-index:-1"
-                                    value="1000000"><span class="type-label w-form-label"
-                                    for="min_price">1,000,000</span>
-                            </label>
-                            <label id="w-node-_27104503-d968-1013-59f5-c148c81c47d4-c258cdc7"
-                                class="list-inline-item-checkbox w-radio">
-                                <div
-                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
-                                </div><input type="radio" data-name="price_range" id="price_range"
-                                    name="filter.v.price.gte" style="opacity:0;position:absolute;z-index:-1"
-                                    value="5000000"><span class="type-label w-form-label"
-                                    for="min_price">5,000,000</span>
-                            </label>
-                            <label id="w-node-_27104503-d968-1013-59f5-c148c81c47d4-c258cdc7"
-                                class="list-inline-item-checkbox w-radio">
-                                <div
-                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
-                                </div><input type="radio" data-name="price_range" id="price_range"
-                                    name="filter.v.price.gte" style="opacity:0;position:absolute;z-index:-1"
-                                    value="10000000"><span class="type-label w-form-label"
-                                    for="min_price">10,000,000</span>
-                            </label>
-                            <label id="w-node-_27104503-d968-1013-59f5-c148c81c47d4-c258cdc7"
-                                class="list-inline-item-checkbox w-radio">
-                                <div
-                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
-                                </div><input type="radio" data-name="price_range" id="price_range"
-                                    name="filter.v.price.gte" style="opacity:0;position:absolute;z-index:-1"
-                                    value="50000000"><span class="type-label w-form-label"
-                                    for="min_price">50,000,000</span>
-                            </label>
-
-
-                        </div>
-                        <h4 class="top-large">Max Price</h4>
-                        <div class="modal-filter-item">
-                            <label id="w-node-_27104503-d968-1013-59f5-c148c81c47d4-c258cdc7"
-                                class="list-inline-item-checkbox w-radio">
-                                <div
-                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
-                                </div><input type="radio" data-name="price_range" id="price_range"
-                                    name="filter.v.price.lte" style="opacity:0;position:absolute;z-index:-1"
-                                    value="300000"><span class="type-label w-form-label" for="min_price">300,000</span>
-                            </label>
-                            <label id="w-node-_27104503-d968-1013-59f5-c148c81c47d4-c258cdc7"
-                                class="list-inline-item-checkbox w-radio">
-                                <div
-                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
-                                </div><input type="radio" data-name="price_range" id="price_range"
-                                    name="filter.v.price.lte" style="opacity:0;position:absolute;z-index:-1"
-                                    value="500000"><span class="type-label w-form-label" for="min_price">500,000</span>
-                            </label>
-                            <label id="w-node-_27104503-d968-1013-59f5-c148c81c47d4-c258cdc7"
-                                class="list-inline-item-checkbox w-radio">
-                                <div
-                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
-                                </div><input type="radio" data-name="price_range" id="price_range"
-                                    name="filter.v.price.lte" style="opacity:0;position:absolute;z-index:-1"
-                                    value="1000000"><span class="type-label w-form-label"
-                                    for="min_price">1,000,000</span>
-                            </label>
-                            <label id="w-node-_27104503-d968-1013-59f5-c148c81c47d4-c258cdc7"
-                                class="list-inline-item-checkbox w-radio">
-                                <div
-                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
-                                </div><input type="radio" data-name="price_range" id="price_range"
-                                    name="filter.v.price.lte" style="opacity:0;position:absolute;z-index:-1"
-                                    value="5000000"><span class="type-label w-form-label"
-                                    for="min_price">5,000,000</span>
-                            </label>
-                            <label id="w-node-_27104503-d968-1013-59f5-c148c81c47d4-c258cdc7"
-                                class="list-inline-item-checkbox w-radio">
-                                <div
-                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
-                                </div><input type="radio" data-name="price_range" id="price_range"
-                                    name="filter.v.price.lte" style="opacity:0;position:absolute;z-index:-1"
-                                    value="10000000"><span class="type-label w-form-label"
-                                    for="min_price">10,000,000</span>
-                            </label>
-                            <label id="w-node-_27104503-d968-1013-59f5-c148c81c47d4-c258cdc7"
-                                class="list-inline-item-checkbox w-radio">
-                                <div
-                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
-                                </div><input type="radio" data-name="price_range" id="price_range"
-                                    name="filter.v.price.lte" style="opacity:0;position:absolute;z-index:-1"
-                                    value="50000000"><span class="type-label w-form-label"
-                                    for="min_price">50,000,000</span>
-                            </label>
-
-
-                        </div>
-                        <h4 class="top-large">Room</h4>
-                        <div class="modal-filter-item">
-                            <label id="w-node-_27104503-d968-1013-59f5-c148c81c47d4-c258cdc7"
-                                class="list-inline-item-checkbox w-radio">
-                                <div
-                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
-                                </div><input type="radio" data-name="1-Betroom" id="1-Betroom"
-                                    name="filter.v.option.betroom" style="opacity:0;position:absolute;z-index:-1"
-                                    value="1"><span class="type-label w-form-label" for="radio">1 Betroom</span>
-                            </label>
-                            <label id="w-node-_27104503-d968-1013-59f5-c148c81c47d4-c258cdc7"
-                                class="list-inline-item-checkbox w-radio">
-                                <div
-                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
-                                </div><input type="radio" data-name="1-Bathroom" id="1-Bathroom"
-                                    name="filter.v.option.bathroom" style="opacity:0;position:absolute;z-index:-1"
-                                    value="1"><span class="type-label w-form-label" for="radio">1 Bathroom</span>
-                            </label>
-                            <label id="w-node-_27104503-d968-1013-59f5-c148c81c47d4-c258cdc7"
-                                class="list-inline-item-checkbox w-radio">
-                                <div
-                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
-                                </div><input type="radio" data-name="2-Betroom" id="2-Betroom"
-                                    name="filter.v.option.betroom" style="opacity:0;position:absolute;z-index:-1"
-                                    value="2"><span class="type-label w-form-label" for="radio">2 Betroom</span>
-                            </label>
-                            <label id="w-node-_27104503-d968-1013-59f5-c148c81c47d4-c258cdc7"
-                                class="list-inline-item-checkbox w-radio">
-                                <div
-                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
-                                </div><input type="radio" data-name="2-Bathroom" id="2-Bathroom"
-                                    name="filter.v.option.bathroom" style="opacity:0;position:absolute;z-index:-1"
-                                    value="2"><span class="type-label w-form-label" for="radio">2 Bathroom</span>
-                            </label>
-                            <label id="w-node-_27104503-d968-1013-59f5-c148c81c47d4-c258cdc7"
-                                class="list-inline-item-checkbox w-radio">
-                                <div
-                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
-                                </div><input type="radio" data-name="3-Betroom" id="3-Betroom"
-                                    name="filter.v.option.betroom" style="opacity:0;position:absolute;z-index:-1"
-                                    value="3"><span class="type-label w-form-label" for="radio">3 Betroom</span>
-                            </label>
-                            <label id="w-node-_27104503-d968-1013-59f5-c148c81c47d4-c258cdc7"
-                                class="list-inline-item-checkbox w-radio">
-                                <div
-                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
-                                </div><input type="radio" data-name="3-Bathroom" id="3-Bathroom"
-                                    name="filter.v.option.bathroom" style="opacity:0;position:absolute;z-index:-1"
-                                    value="3"><span class="type-label w-form-label" for="radio">3 Bathroom</span>
-                            </label>
-                            <label id="w-node-_27104503-d968-1013-59f5-c148c81c47d4-c258cdc7"
-                                class="list-inline-item-checkbox w-radio">
-                                <div
-                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
-                                </div><input type="radio" data-name="4-Betroom" id="4-Betroom"
-                                    name="filter.v.option.betroom" style="opacity:0;position:absolute;z-index:-1"
-                                    value="4"><span class="type-label w-form-label" for="radio">4
-                                    Betroom</span>
-                            </label>
-                            <label id="w-node-_27104503-d968-1013-59f5-c148c81c47d4-c258cdc7"
-                                class="list-inline-item-checkbox w-radio">
-                                <div
-                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
-                                </div><input type="radio" data-name="4-Bathroom" id="4-Bathroom"
-                                    name="filter.v.option.bathroom" style="opacity:0;position:absolute;z-index:-1"
-                                    value="4"><span class="type-label w-form-label" for="radio">4
-                                    Bathroom</span>
-                            </label>
-                            <label id="w-node-_27104503-d968-1013-59f5-c148c81c47d4-c258cdc7"
-                                class="list-inline-item-checkbox w-radio">
-                                <div
-                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
-                                </div><input type="radio" data-name="5-Betroom" id="5-Betroom"
-                                    name="filter.v.option.betroom" style="opacity:0;position:absolute;z-index:-1"
-                                    value="5"><span class="type-label w-form-label" for="radio">5
-                                    Betroom</span>
-                            </label>
-                            <label id="w-node-_27104503-d968-1013-59f5-c148c81c47d4-c258cdc7"
-                                class="list-inline-item-checkbox w-radio">
-                                <div
-                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom list-inline-item w-radio-input">
-                                </div><input type="radio" data-name="5-Bathroom" id="5-Bathroom"
-                                    name="filter.v.option.bathroom" style="opacity:0;position:absolute;z-index:-1"
-                                    value="5"><span class="type-label w-form-label" for="radio">5
-                                    Bathroom</span>
-                            </label>
-                        </div>
-                        <input type="submit" data-wait="Please wait..." class="button top-large w-button"
-                            value="Filter">
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="dialog-overlay"></div>
-</section>
-
-
-
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        let searchValue = '';
-        let typeValue = '';
-        let minPrice = '';
-        let maxPrice = '';
-        let bedrooms = '';
-        let bathrooms = '';
-
-        const itemsPerPage = 20;
-        let currentPage = 1;
-        let totalPages = 1;
-
-        const searchInput = document.getElementById('search-query');
-
-        function applyFilters(searchValue, typeValue, minPrice, maxPrice, bedrooms, bathrooms) {
-            let propertyCount = 0;
-
-            const properties = document.querySelectorAll('.property-card-wrapper');
-            properties.forEach(property => {
-                const price = parseFloat(property.querySelector('#property-price').textContent.replace(/[^0-9.-]+/g, ""));
-                const type = property.querySelector('#property-type').textContent.toLowerCase();
-                const propertyBedrooms = parseInt(property.querySelector('#property-bedroom').textContent);
-                const propertyBathrooms = parseInt(property.querySelector('#property-bathroom').textContent);
-                const titleText = property.querySelector('#property-title').textContent.toLowerCase();
-
-                const isSearchValueValid = searchValue !== '' ? titleText.includes(searchValue.toLowerCase()) : true;
-                const isTypeValueValid = typeValue !== '' ? type === typeValue.toLowerCase() : true;
-                const isMinPriceValid = minPrice !== '' ? price >= minPrice : true;
-                const isMaxPriceValid = maxPrice !== '' ? price <= maxPrice : true;
-                const isBedroomsValid = bedrooms !== '' ? propertyBedrooms >= bedrooms : true;
-                const isBathroomsValid = bathrooms !== '' ? propertyBathrooms >= bathrooms : true;
-
-                if (
-                    isSearchValueValid &&
-                    isTypeValueValid &&
-                    isMinPriceValid &&
-                    isMaxPriceValid &&
-                    isBedroomsValid &&
-                    isBathroomsValid
-                ) {
-                    property.classList.remove('product-hidden');
-                    propertyCount++;
-                } else {
-                    property.classList.add('product-hidden');
-                }
-            });
-
-            const propertyCountElement = document.getElementById('property-count');
-            propertyCountElement.innerHTML = propertyCount + ' Properties';
-
-            paginateProperties();
-
-        }
-
-        function paginateProperties() {
-            const properties = document.querySelectorAll('.property-card-wrapper:not(.product-hidden)');
-            const totalProperties = properties.length;
-            totalPages = Math.ceil(totalProperties / itemsPerPage);
-
-            properties.forEach((property, index) => {
-                if (index >= (currentPage - 1) * itemsPerPage && index < currentPage * itemsPerPage) {
-                    property.style.display = 'grid';
-                } else {
-                    property.style.display = 'none';
-                }
-            });
-
-            updatePaginationDisplay();
-        }
-
-        function updatePaginationDisplay() {
-            const pagesDropdown = document.getElementById('pagesDropdown');
-            const currentPageDisplay = document.getElementById('currentPageDisplay');
-            const totalPagesElement = document.getElementById('totalPages');
-
-            currentPageDisplay.textContent = currentPage;
-
-            totalPagesElement.textContent = totalPages;
-
-            pagesDropdown.innerHTML = '';
-            for (let i = 1; i <= totalPages; i++) {
-                const pageLink = document.createElement('a');
-                pageLink.href = "#";
-                pageLink.classList.add('page-count', 'w-dropdown-link');
-                pageLink.textContent = i;
-                pageLink.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    goToPage(i);
-                });
-                pagesDropdown.appendChild(pageLink);
-            }
-        }
-
-        function goToPage(page) {
-            if (page >= 1 && page <= totalPages) {
-                currentPage = page;
-                paginateProperties();
-            }
-        }
-
-        document.getElementById('nextPage').addEventListener('click', (e) => {
-            e.preventDefault();
-            if (currentPage < totalPages) {
-                currentPage++;
-                paginateProperties();
-            }
-        });
-
-        document.getElementById('prevPage').addEventListener('click', (e) => {
-            e.preventDefault();
-            if (currentPage > 1) {
-                currentPage--;
-                paginateProperties();
-            }
-        });
-
-        applyFilters(searchValue, typeValue, minPrice, maxPrice, bedrooms, bathrooms);
-
-        searchInput.addEventListener('input', (e) => {
-            searchValue = e.target.value;
-            applyFilters(searchValue, typeValue, minPrice, maxPrice, bedrooms, bathrooms);
-        });
-
-        document.getElementById('mobile-filter').addEventListener('submit', function (event) {
-            event.preventDefault();
-
-            const searchValue = document.getElementById('search-input-mobile').value;
-            const productType = document.querySelector('input[name="filter.p.product_type"]:checked')?.value;
-            const minPrice = document.querySelector('input[name="filter.v.price.gte"]:checked')?.value;
-            const maxPrice = document.querySelector('input[name="filter.v.price.lte"]:checked')?.value;
-            const bedrooms = document.querySelector('input[name="filter.v.option.betroom"]:checked')?.value;
-            const bathrooms = document.querySelector('input[name="filter.v.option.bathroom"]:checked')?.value;
-
-            applyFilters(searchValue, productType, minPrice, maxPrice, bedrooms, bathrooms);
-
-        });
-
-        const mostRecentRadio = document.getElementById("Most-Recent");
-        const propertySelected = document.getElementById("property-selected");
-        mostRecentRadio.checked = true;
-        mostRecentRadio.previousElementSibling.classList.add('w--redirected-checked');
-        mostRecentRadio.nextElementSibling.classList.add('is-active');
-
-        const propertyListing = document.querySelectorAll(".dropdown-filter");
-
-        const query = new URLSearchParams(window.location.search);
-        const sortData = query.get('sort_by');
-
-        const sortDataRadio = document.querySelectorAll('.sort-data');
-
-        if (sortData) {
-            sortDataRadio.forEach((radio) => {
-                const radioInput = radio.querySelector('input[type="radio"]');
-                const typeLabel = radio.querySelector('.type-label');
-                if (radioInput.value === sortData) {
-                    radioInput.checked = true;
-                    radioInput.previousElementSibling.classList.add('w--redirected-checked');
-                    radioInput.nextElementSibling.classList.add('is-active');
-                    propertySelected.textContent = typeLabel.innerHTML;
-                } else {
-                    radioInput.checked = false;
-                    radioInput.previousElementSibling.classList.remove('w--redirected-checked');
-                    radioInput.nextElementSibling.classList.remove('is-active');
-                }
-            });
-        }
-        propertyListing.forEach((item) => {
-            item.addEventListener('click', () => {
-                const propertySelected = item.querySelectorAll(".propert-radio");
-                const propertySelectedName = item.querySelector(".property-selected");
-                const dropdownList = item.querySelector('.property-list');
-                const dropdownToggle = item.querySelector('.property-select');
-                const dropdownContent = item;
-
-                propertySelected.forEach((radio) => {
-                    radio.addEventListener('change', () => {
-                        const radioInput = radio.querySelector('input[type="radio"]');
-                        const typeLabel = radio.querySelector('.type-label');
-                        if (radioInput) {
-                            propertySelected.forEach((listing) => {
-                                const siblingRadio = listing.querySelector('input[type="radio"]');
-                                if (siblingRadio) {
-                                    siblingRadio.previousElementSibling.classList.remove('w--redirected-checked');
-                                    siblingRadio.nextElementSibling.classList.remove('is-active');
-                                }
-                            });
-
-                            propertySelectedName.textContent = typeLabel.innerHTML;
-                            radioInput.previousElementSibling.classList.add('w--redirected-checked');
-                            radioInput.nextElementSibling.classList.add('is-active');
-
-                            if (radio.className.includes('sort-data')) {
-                                const sortData = radioInput.value;
-                                query.set('sort_by', sortData);
-                                window.location.search = query.toString();
-                            } else {
-                                if (radioInput.name === 'filter.v.price.gte') {
-                                    minPrice = radioInput.value;
-                                } else if (radioInput.name === 'filter.v.price.lte') {
-                                    maxPrice = radioInput.value;
-                                } else if (radioInput.name === 'filter.v.option.betroom') {
-                                    bedrooms = radioInput.value;
-                                } else if (radioInput.name === 'filter.v.option.bathroom') {
-                                    bathrooms = radioInput.value;
-                                } else if (radioInput.name === 'filter.p.product_type') {
-                                    typeValue = radioInput.value;
-                                }
-
-                                applyFilters(searchValue, typeValue, minPrice, maxPrice, bedrooms, bathrooms);
-                            }
-
-                            dropdownList.classList.remove('w--open');
-                            dropdownToggle.classList.remove('w--open');
-                            dropdownToggle.setAttribute('aria-expanded', 'false');
-                            dropdownContent.style = "";
-                        }
-                    });
-                });
-            });
-        });
-
-    });
-</script>
 
 {% schema %}
 {
   "name": "Collection",
-  "presets": []
+  "presets": [
+    {
+      "name": "Collection"
+    }
+  ]
 }
 {% endschema %}

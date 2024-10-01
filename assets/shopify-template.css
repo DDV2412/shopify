@@ -17,6 +17,10 @@
   height: 12px;
 }
 
+.hidden {
+  display: none !important;
+}
+
 .w-form-formradioinput--inputType-custom.w--redirected-focus {
   box-shadow: 0 0 3px 1px #3898ec;
 }
@@ -961,6 +965,10 @@ p {
   top: 0;
 }
 
+.section_component.is-breadcrumb {
+  padding-top: 6rem;
+}
+
 .section_component.is-dialog {
   z-index: 99999;
   justify-content: center;
@@ -977,8 +985,17 @@ p {
   padding-bottom: 5rem;
 }
 
+.section_component.is-hero.background-white {
+  background-color: var(--white);
+  padding-bottom: 2.5rem;
+}
+
 .section_component.background-grey {
   background-color: var(--horizontal-line);
+  padding-bottom: 4rem;
+}
+
+.section_component.padding-bottom {
   padding-bottom: 4rem;
 }
 
@@ -1249,6 +1266,7 @@ p {
 .cta-content {
   color: var(--white);
   line-height: 120%;
+  align-self: center;
 }
 
 .cta-image {
@@ -2163,6 +2181,19 @@ p {
   border-radius: 0.25rem;
 }
 
+.property-image-small {
+  object-fit: cover;
+  width: 100%;
+  height: 7rem;
+}
+
+.property-image-full {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.25rem;
+}
+
 .propery-other-image {
   width: 100%;
   height: 100%;
@@ -2342,6 +2373,21 @@ p {
   line-height: 140%;
 }
 
+.develop-summary {
+  color: var(--text-primary);
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+  line-height: 140%;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.develop-summary p {
+  line-height: 140%;
+}
+
 .text-link {
   text-decoration: underline;
 }
@@ -2362,8 +2408,8 @@ p {
   border-radius: 100%;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 2rem;
+  height: 2rem;
   display: flex;
   position: relative;
 }
@@ -2371,16 +2417,12 @@ p {
 .left-arrow {
   justify-content: flex-start;
   align-items: center;
-  padding-top: 130px;
-  padding-bottom: 130px;
   display: flex;
 }
 
 .right-arrow {
   justify-content: flex-end;
   align-items: center;
-  padding-top: 130px;
-  padding-bottom: 130px;
   display: flex;
 }
 
@@ -2401,7 +2443,7 @@ p {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   width: 100%;
-  max-height: 216px;
+  height: 100%;
   position: relative;
 }
 
@@ -2755,6 +2797,7 @@ p {
   object-fit: cover;
   border-radius: 8px 0 0 8px;
   width: 100%;
+  height: 100%;
 }
 
 .cta-link {
@@ -3236,6 +3279,10 @@ p {
   .footer-wrapper {
     padding-top: 4rem;
     padding-bottom: 4rem;
+  }
+
+  .section_component.is-breadcrumb {
+    padding-top: 4.5rem;
   }
 
   .footer-content {

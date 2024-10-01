@@ -1,141 +1,84 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
-    "home-hero": {
-      "type": "home-hero",
+    "header-title": {
+      "type": "header-title",
       "blocks": {
-        "background": {
-          "type": "select",
-          "settings": {
-            "background_image": "shopify://shop_images/1727271049655_Screenshot_2024-09-25_at_5.28.13PM.png"
-          }
-        },
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Dubai's affordable housing segment heating up"
+            "heading": "Off Plan Developers in Dubai"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "With the Dubai population increasing, so is the demand for affordable housing. Read the full article now for the best hotspots."
-          }
-        },
-        "button": {
-          "type": "button",
-          "settings": {
-            "button_cta": "Read the full article",
-            "button_link": ""
+            "text": "<p>Discover the leading names in Dubai’s real estate market and what makes them stand out.</p>"
           }
         }
       },
-      "block_order": ["background", "heading", "text", "button"],
+      "block_order": ["heading", "text"],
       "settings": {}
     },
-    "review-highlight": {
-      "type": "review-highlight",
+    "featured-developers": {
+      "type": "featured-developers",
       "blocks": {
         "heading": {
           "type": "heading",
           "settings": {
-            "communities_heading": "Dubai Communities",
-            "consultant_heading": "Find your consultant"
+            "heading": "Featured Developers"
+          }
+        },
+        "collection": {
+          "type": "collection",
+          "settings": {
+            "collection": "off-plan-developers",
+            "text": "<p>Known as the UAE’s leading real estate developer, Emaar boasts a strong background and a growing portfolio across the region.</p>",
+            "image": "shopify://media/emaar.jpg"
+          }
+        }
+      },
+      "block_order": ["heading", "collection"]
+    },
+    "developers": {
+      "type": "developers",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Dubai Developers"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "highlight": "<h2>'I had a great experience with JCON Properties, special thanks to Farzonai who helped me find the perfect place and made my relocation to Dubai easy and without stress.</h2>",
-            "communities_description": "Covering 100+ communities, we can help you find one that ticks your boxes.'",
-            "consultant_description": "Search our team of 2500 property experts to get professional guidance."
+            "text": "<p>With so many industry leading names, it can be overwhelming to choose one. Here are some top developers handpicked by our property experts.</p>"
           }
         },
-        "button": {
-          "type": "button",
+        "collection": {
+          "type": "collection",
           "settings": {
-            "button_title": "Explore Dubai",
-            "button_link": ""
+            "collection": "damac"
           }
         }
       },
-      "block_order": ["heading", "text", "button"],
-      "settings": {}
+      "block_order": ["heading", "text", "collection"]
     },
-    "features": {
-      "type": "features",
+    "cta-develop": {
+      "type": "cta-develop",
       "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Search properties by feature"
-          }
-        },
-        "button": {
-          "type": "button",
-          "settings": {
-            "button_for_sale_url": "/collections/all",
-            "button_for_rent_url": "/collections/all"
-          }
-        }
-      },
-      "block_order": ["heading", "button"],
-      "settings": {}
-    },
-    "cta-home": {
-      "type": "cta-home",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Get an instant property valuation",
-            "tagline": "New"
-          }
-        },
         "text": {
           "type": "text",
           "settings": {
-            "text": "Thinking of selling your home? Knowing its current price is a good place to start. Get an accurate, independent valuation and a detailed report here."
-          }
-        },
-        "button": {
-          "type": "button",
-          "settings": {
-            "cta_button": "Search properties",
-            "cta_link": ""
+            "investment_text": "<p>Our guide to help you make informed decisions on what property to buy in Dubai.</p>",
+            "market_report_text": "<p>Explore the quarterly Dubai Off Plan report to find out all the latest trends and analysis.</p>",
+            "investment_button": "Investment Guide",
+            "market_report_button": "Market Report",
+            "investment_url": "/pages/investment-guide",
+            "market_report_url": "/pages/market-report"
           }
         }
       },
-      "block_order": ["heading", "text", "button"],
-      "settings": {}
-    },
-    "news": {
-      "type": "news",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "News & Insights"
-          }
-        },
-        "button": {
-          "type": "button",
-          "settings": {
-            "button_title": "Read more",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": ["heading", "button"],
-      "settings": {}
+      "block_order": ["text"]
     },
     "faq": {
       "type": "faq",
@@ -209,5 +152,5 @@
       "settings": {}
     }
   },
-  "order": ["home-hero", "review-highlight", "features", "cta-home", "news", "faq"]
+  "order": ["header-title", "featured-developers", "developers", "cta-develop", "faq"]
 }
