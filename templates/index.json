@@ -126,7 +126,7 @@
         "button": {
           "type": "button",
           "settings": {
-            "cta_button": "Search properties",
+            "cta_button": "Get Started",
             "cta_link": "shopify://collections/properties-for-sale"
           }
         }
