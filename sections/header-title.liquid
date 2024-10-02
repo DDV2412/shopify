@@ -1,4 +1,4 @@
-<section class="section_component {%- if section.settings.is_hero -%}  is-hero {%- endif -%} background-white">
+<section class="{%- if section.settings.is_hero != 'blank' -%} section_component is-hero background-white {%-  else -%} section_component background-white {%- endif -%}">
   <div class="container">
     <div class="landing-content-wrapper">
       <div

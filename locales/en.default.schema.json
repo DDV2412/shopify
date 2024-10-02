@@ -374,8 +374,7 @@
       "name": "Header Block Text",
       "settings": {
         "is_hero": {
-          "label": "Add More Padding",
-          "default": "true"
+          "label": "Remove More Padding"
         }
       },
       "blocks": {
