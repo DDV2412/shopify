@@ -5,8 +5,7 @@
   <div class="container">
     <div class="section_title-wrapper">
       <div data-w-id="d32fc49e-95c7-35af-56f3-162b3ad4cc8e" class="blog-grid">
-        {{ blog_param }}
-        {% for article in blogs[blog_param].articles %}
+        {% for article in blogs.podcast.articles %}
           <a id="w-node-a07ff5be-ff10-9d67-7e0b-0ab3038fffa4-5902b714" href="{{article.url}}"
             class="article-card w-inline-block">
             <div data-w-id="a07ff5be-ff10-9d67-7e0b-0ab3038fffa5" class="article_thumbnail-wrapper"><img
