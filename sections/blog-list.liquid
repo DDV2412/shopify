@@ -1,17 +1,5 @@
 {%  assign blog_param =  blog.handle %}
 
-<section class="section_component">
-  <div class="container">
-    <div class="landing-content-wrapper">
-      <div
-        data-w-id="7bc9fdea-201a-4548-cce7-ab796688bc7d"
-        style="opacity:0"
-        class="content-section padding-0">
-         <h1>{{ blog.title }}</h1>
-      </div>
-    </div>
-  </div>
-</section>
 {% paginate blogs[blog_param].articles by 12 %}
 <section class="section_component">
   <div class="container">
