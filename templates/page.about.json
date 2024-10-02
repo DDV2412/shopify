@@ -104,7 +104,7 @@
           "type": "button",
           "settings": {
             "button_title": "Apply Today",
-            "button_link": ""
+            "button_link": "shopify://pages/careers"
           }
         }
       },
