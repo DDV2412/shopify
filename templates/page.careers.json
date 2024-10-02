@@ -57,6 +57,29 @@
         "add_form_search": false
       }
     },
+    "section_title_NMTtQp": {
+      "type": "section-title",
+      "blocks": {
+        "heading_qD4Ebw": {
+          "type": "heading",
+          "settings": {
+            "heading": "Boost your career"
+          }
+        },
+        "text_8UTpq9": {
+          "type": "text",
+          "settings": {
+            "text": "<p>As an award winning real estate agency, our clients are at the core of what we do – and we focus on building a strong and capable team of experts to keep offering the best possible service. We're always on the hunt for high achievers and top performers with a strong work ethic and a passion for customer service.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_qD4Ebw",
+        "text_8UTpq9"
+      ],
+      "settings": {
+      }
+    },
     "card_column_right_J6XdJm": {
       "type": "card-column-right",
       "blocks": {
@@ -169,18 +192,6 @@
       "settings": {
       }
     },
-    "breadcrumb": {
-      "type": "breadcrumb",
-      "disabled": true,
-      "settings": {
-      }
-    },
-    "page-body": {
-      "type": "page-body",
-      "disabled": true,
-      "settings": {
-      }
-    },
     "card_column_right_6z9xcL": {
       "type": "card-column-right",
       "blocks": {
@@ -220,15 +231,28 @@
         "add_background_grey": false,
         "button_visibility": false
       }
+    },
+    "breadcrumb": {
+      "type": "breadcrumb",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "page-body": {
+      "type": "page-body",
+      "disabled": true,
+      "settings": {
+      }
     }
   },
   "order": [
     "home_hero_PgeY7X",
+    "section_title_NMTtQp",
     "card_column_right_J6XdJm",
     "card_column_left_LMa6ax",
     "cta_home_c9YcxP",
+    "card_column_right_6z9xcL",
     "breadcrumb",
-    "page-body",
-    "card_column_right_6z9xcL"
+    "page-body"
   ]
 }
