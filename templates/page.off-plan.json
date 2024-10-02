@@ -66,6 +66,7 @@
         "image": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/dubai_frame_and_burj_khalifa_skyline_in_the_background_fc85125ac0.webp",
             "alt": ""
           }
         },
