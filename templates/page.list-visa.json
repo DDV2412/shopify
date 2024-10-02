@@ -14,14 +14,90 @@
       "settings": {
       }
     },
+    "header_title_8XHmRF": {
+      "type": "header-title",
+      "blocks": {
+        "heading_XqUr7p": {
+          "type": "heading",
+          "settings": {
+            "heading": "Visa"
+          }
+        },
+        "text_Y6Ymhw": {
+          "type": "text",
+          "settings": {
+            "text": "<p>On this page, you will find information about various types of visas available for entering and residing in the country. Each visa comes with different requirements and benefits tailored to your travel purposes. Choose the visa that best fits your needs.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_XqUr7p",
+        "text_Y6Ymhw"
+      ],
+      "settings": {
+        "is_hero": true
+      }
+    },
     "page-body": {
       "type": "page-body",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "grid_collection_9LHXQC": {
+      "type": "grid-collection",
+      "blocks": {
+        "collection_exqx4i": {
+          "type": "collection",
+          "settings": {
+            "collection_image": "shopify://shop_images/Ilustrasi-Golden-Visa.jpg",
+            "collection_heading": "Investor Visa",
+            "team_position": "",
+            "collection_link": "shopify://pages/investor-visa"
+          }
+        },
+        "collection_ypEeLC": {
+          "type": "collection",
+          "settings": {
+            "collection_image": "shopify://shop_images/Ilustrasi-Golden-Visa.jpg",
+            "collection_heading": "Tourist Visa",
+            "team_position": "",
+            "collection_link": "shopify://pages/tourist-visa"
+          }
+        },
+        "collection_eX76bN": {
+          "type": "collection",
+          "settings": {
+            "collection_image": "shopify://shop_images/Ilustrasi-Golden-Visa.jpg",
+            "collection_heading": "Residential Visa",
+            "team_position": "",
+            "collection_link": "shopify://pages/residential-visa"
+          }
+        },
+        "collection_Tzn6cQ": {
+          "type": "collection",
+          "settings": {
+            "collection_image": "shopify://shop_images/Ilustrasi-Golden-Visa.jpg",
+            "collection_heading": "Golden Visa",
+            "team_position": "",
+            "collection_link": "shopify://pages/golden-visa"
+          }
+        }
+      },
+      "block_order": [
+        "collection_exqx4i",
+        "collection_ypEeLC",
+        "collection_eX76bN",
+        "collection_Tzn6cQ"
+      ],
       "settings": {
       }
     }
   },
   "order": [
     "breadcrumb",
-    "page-body"
+    "header_title_8XHmRF",
+    "page-body",
+    "grid_collection_9LHXQC"
   ]
 }
