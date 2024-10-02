@@ -14,30 +14,6 @@
       "settings": {
       }
     },
-    "header_title_bqa8MB": {
-      "type": "header-title",
-      "blocks": {
-        "heading_X3DFwe": {
-          "type": "heading",
-          "settings": {
-            "heading": "JCON Properties Market Reports"
-          }
-        },
-        "text_BYNXjL": {
-          "type": "text",
-          "settings": {
-            "text": "<p>With Dubai's property sector on the rise, it can be hard to stay on top of the latest trends and news. Thats why the JCON Properties team releases a set of Quarterly Market Reports for Sales, Leasing and Off Plan with information, insights and key factors that are shaping the current market. </p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_X3DFwe",
-        "text_BYNXjL"
-      ],
-      "settings": {
-        "is_hero": true
-      }
-    },
     "blog_list": {
       "type": "blog-list",
       "settings": {
@@ -111,7 +87,6 @@
   },
   "order": [
     "breadcrumb",
-    "header_title_bqa8MB",
     "blog_list",
     "cta_ykc7nK",
     "cta_card_pyUHx3"
