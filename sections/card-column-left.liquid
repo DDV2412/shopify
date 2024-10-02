@@ -10,10 +10,10 @@
             {%- for block in section.blocks -%}
               {%- case block.type -%}
                 {%- when "heading" -%}
-                  <h1>{{ block.settings.heading }}</h1>
+                  <h2>{{ block.settings.heading }}</h2>
 
                 {%- when "text" -%}
-                  <p class="description">{{ block.settings.text }}</p>
+                  <div class="description">{{ block.settings.text }}</div>
 
                 {%- when "button" -%}
                   {%- if section.settings.button_visibility -%}
