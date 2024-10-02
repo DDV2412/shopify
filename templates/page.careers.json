@@ -20,19 +20,19 @@
         "heading_cVe9x3": {
           "type": "heading",
           "settings": {
-            "heading": ""
+            "heading": "Careers at JCON Properties"
           }
         },
         "text_NUxLPp": {
           "type": "text",
           "settings": {
-            "text": ""
+            "text": "Looking to take your career to the next level? At haus & haus, we continue to grow our different departments offering unique opportunities constantly. We are seeking hardworking, ambitious, honest, dedicated and enthusiastic people to join us."
           }
         },
         "button_ETRBhV": {
           "type": "button",
           "settings": {
-            "button_cta": "Read the full article",
+            "button_cta": "View vacancies",
             "button_link": "",
             "button_style": "primary"
           }
@@ -40,7 +40,7 @@
         "button_VkhWge": {
           "type": "button",
           "settings": {
-            "button_cta": "Read the full article",
+            "button_cta": "Send us your CV",
             "button_link": "",
             "button_style": "secondary"
           }
