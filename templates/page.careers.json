@@ -260,19 +260,19 @@
         "heading_hWdpbQ": {
           "type": "heading",
           "settings": {
-            "heading": "Top in-haus training"
+            "heading": "Top JCON Properties training"
           }
         },
         "text_PtzD4b": {
           "type": "text",
           "settings": {
-            "text": "<p><p>A leading global hub, Dubai continues to attract investors all over the world thanks to its visionary plans, booming population, w<span>orld class education and healthcare</span>, safe environment, and thriving economy.&nbsp;</p><p>Investors can also benefit from:</p><p>Golden Visas<br>Competitive rental yields<br>Tax-free income<br>Attractive business environment</p></p>"
+            "text": "<p>We believe in empowering our team, and we have leading tools to do it – including our in-haus real estate training platform, dedicated trainers, and ongoing leadership support.</p><p>At JCON Properties, we all share the same goals – from Directors to Team Managers. This collaborative mindset, combined with our shared workspaces, helps us strengthen our team spirit and lift each other.</p>"
           }
         },
         "button_a9QMcz": {
           "type": "button",
           "settings": {
-            "button_title": "Download Investment Guide",
+            "button_title": "View vacancies",
             "button_link": ""
           }
         }
@@ -285,7 +285,161 @@
       ],
       "settings": {
         "add_background_grey": false,
+        "button_visibility": true
+      }
+    },
+    "card_column_right_mpNH3d": {
+      "type": "card-column-right",
+      "blocks": {
+        "image_tckbYg": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Learning_from_the_best_career_page_efbf19f654.webp",
+            "alt": ""
+          }
+        },
+        "heading_MGwpwD": {
+          "type": "heading",
+          "settings": {
+            "heading": "What happens in a consultation?"
+          }
+        },
+        "text_adUDYM": {
+          "type": "text",
+          "settings": {
+            "text": "<p>During your free consultation with one of our experts, you will discuss your investment goals and ideal timeline. They will ask about your needs, answer any questions, and update you on the current market conditions. After that, your agent will come back to you with suggestions, an investment strategy, and tailored advice. </p>"
+          }
+        },
+        "button_nh3DTX": {
+          "type": "button",
+          "settings": {
+            "button_title": "Book a Consultation",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_tckbYg",
+        "heading_MGwpwD",
+        "text_adUDYM",
+        "button_nh3DTX"
+      ],
+      "settings": {
+        "add_background_grey": false,
         "button_visibility": false
+      }
+    },
+    "card_column_left_w9r8Qf": {
+      "type": "card-column-left",
+      "blocks": {
+        "image_YqXdyc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/haus_and_haus_run_9001b9b898.webp",
+            "alt": "Growing together"
+          }
+        },
+        "heading_rqBDkR": {
+          "type": "heading",
+          "settings": {
+            "heading": "Growing together"
+          }
+        },
+        "text_qcF9hn": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Personal development is a big part of our culture. From a JCON Properties Run Club and weekly fitness classes to social incentives and inspirational events, we're passionate about our wellbeing and love to connect outside the office.</p>"
+          }
+        },
+        "button_pjjNFU": {
+          "type": "button",
+          "settings": {
+            "button_title": "Download Investment Guide",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_YqXdyc",
+        "heading_rqBDkR",
+        "text_qcF9hn",
+        "button_pjjNFU"
+      ],
+      "settings": {
+        "add_background_grey": false,
+        "button_visibility": false
+      }
+    },
+    "faq_GLdLYK": {
+      "type": "faq",
+      "blocks": {
+        "heading_C8QQ9N": {
+          "type": "heading",
+          "settings": {
+            "heading": "Why choose JCON Properties"
+          }
+        },
+        "text_GLtpAq": {
+          "type": "text",
+          "settings": {
+            "question": "What real estate services do JCON Properties offer?",
+            "answer": "<p>Our services include Residential Sales and Leasing, Holiday Rentals, Off Plan properties and Investments, Property Management, and Commercial Sales and Commercial Leasing. We also support clients through our home maintenance company Breathe, and our project management group Bauhaus is on hand for property renovations, design, upgrades, and more. If there's something we don't cover, our extensive network of partners can take care of it – including conveyancing support, mortgage solutions, currency services, professional furnishing, and more.</p>"
+          }
+        },
+        "text_HjfkRh": {
+          "type": "text",
+          "settings": {
+            "question": "Which Dubai communities do JCON Properties cover?",
+            "answer": "<p>We cover 100+ communities, including waterfront destinations like Dubai Marina and Emaar Beachfront, serene communities such as Arabian Ranches, Jumeirah Golf Estates, and Dubai Hills Estate, and key tourist locations like Downtown Dubai, Palm Jumeirah, and Jumeirah Beach Residence (JBR).</p>"
+          }
+        },
+        "text_UXiTar": {
+          "type": "text",
+          "settings": {
+            "question": "Is JCON Properties Group a leading real estate agency?",
+            "answer": "<p>We're proud to be a leading, award winning real estate agency with over 10 years of experience and a strong team of 220+ property experts. Our client focused approach has led us to where we are, because while others are fighting to get the deal, we have our eyes set on supporting each person and building long lasting relationships. </p>"
+          }
+        },
+        "text_exjwPb": {
+          "type": "text",
+          "settings": {
+            "question": "Can JCON Properties help me with real estate investments?",
+            "answer": "<p>Yes. Whether you're looking to invest in a ready property or are searching for an off plan investment, our property experts are on hand to help you find the best opportunities that suit your needs.</p><p>Maybe you're a seasoned investor, or perhaps you just want some extra info – whatever your case, we'll provide useful advice to steer you in the right direction.</p>"
+          }
+        },
+        "text_EtRkUz": {
+          "type": "text",
+          "settings": {
+            "question": "Can JCON Properties manage my property?",
+            "answer": "<p>Luckily, our Property Management department can take the weight off your shoulders. From leased apartments and villas to entire buildings, we'll take care of general maintenance, repairs, cleaning, and even look after your tenants.<a href=\"/pages/contact\" target=\"_blank\" title=\"Contact\">Get started here</a>.</p>"
+          }
+        },
+        "text_VwWP8X": {
+          "type": "text",
+          "settings": {
+            "question": "Do JCON Properties provide insights into Dubai's real estate market?",
+            "answer": "<p>Absolutely. We'll take every opportunity we can get to inform you of the latest insights, market news, and relevant data. No matter your goal, the best decision is always the one that's backed up by accurate information and professional advice – so leave it to us to keep you in the loop of the current market with guides, blog posts, market reports, and more. </p>"
+          }
+        },
+        "text_3yTdEP": {
+          "type": "text",
+          "settings": {
+            "question": "Do JCON Properties Property Consultants provide a free consultation?",
+            "answer": "<p>Yes – we're always happy to meet new people and talk about real estate (it's kind of our thing). We offer free consultations through different channels like phone calls, WhatsApp messages, video calls or in-person meetings. Depending on your specific goals we'll get you through to a dedicated specialist. Just <a href=\"/pages/contact\" target=\"_blank\" title=\"Contact\">get in touch</a> to book your preferred date and time. </p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_C8QQ9N",
+        "text_GLtpAq",
+        "text_HjfkRh",
+        "text_UXiTar",
+        "text_exjwPb",
+        "text_EtRkUz",
+        "text_VwWP8X",
+        "text_3yTdEP"
+      ],
+      "settings": {
       }
     }
   },
@@ -298,6 +452,9 @@
     "card_column_right_6z9xcL",
     "breadcrumb",
     "page-body",
-    "card_column_left_jLNEd9"
+    "card_column_left_jLNEd9",
+    "card_column_right_mpNH3d",
+    "card_column_left_w9r8Qf",
+    "faq_GLdLYK"
   ]
 }
