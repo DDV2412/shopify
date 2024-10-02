@@ -15,16 +15,18 @@
         "select_FweHGM": {
           "type": "select",
           "settings": {
+            "background_image": "shopify://shop_images/Working_at_hausandhaus_1_6b57a557e5_be83a09f-5ed8-4a00-86c6-8830967bc598.webp"
           }
         },
         "heading_iT4nU3": {
           "type": "heading",
           "settings": {
-            "heading": ""
+            "heading": "Our story"
           }
         },
         "text_VjRTrq": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": ""
           }
@@ -32,8 +34,8 @@
         "button_NxgYVP": {
           "type": "button",
           "settings": {
-            "button_cta": "Read the full article",
-            "button_link": "",
+            "button_cta": "Meet The Team",
+            "button_link": "shopify://pages/our-team",
             "button_style": "primary"
           }
         }
