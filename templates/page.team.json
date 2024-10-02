@@ -38,6 +38,55 @@
         "is_hero": true
       }
     },
+    "grid_collection_qPfA7m": {
+      "type": "grid-collection",
+      "blocks": {
+        "collection_84VwzF": {
+          "type": "collection",
+          "settings": {
+            "collection_image": "shopify://shop_images/Luke_Remington_hausandhaus_MD_2023_65dc4fb5d0.webp",
+            "collection_heading": "Luke Remington",
+            "team_position": "Managing Director",
+            "collection_link": ""
+          }
+        },
+        "collection_wwxUPT": {
+          "type": "collection",
+          "settings": {
+            "collection_image": "shopify://shop_images/James_Perry_haushaus_2023_Thumb_a569349b9f.webp",
+            "collection_heading": "James Perry",
+            "team_position": "Managing Director",
+            "collection_link": ""
+          }
+        },
+        "collection_YwM3Pq": {
+          "type": "collection",
+          "settings": {
+            "collection_image": "shopify://shop_images/Simon_Baker_hausandhaus_MD_2023_2ec22da5cb.webp",
+            "collection_heading": "Simon Baker",
+            "team_position": "Managing Director",
+            "collection_link": ""
+          }
+        },
+        "collection_gxQX6F": {
+          "type": "collection",
+          "settings": {
+            "collection_image": "shopify://shop_images/charlie_bannan_haushaus_2023_june_NEW_d2627302f8.webp",
+            "collection_heading": "Charlie Bannan",
+            "team_position": "Managing Director",
+            "collection_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_84VwzF",
+        "collection_wwxUPT",
+        "collection_YwM3Pq",
+        "collection_gxQX6F"
+      ],
+      "settings": {
+      }
+    },
     "page-body": {
       "type": "page-body",
       "disabled": true,
@@ -48,6 +97,7 @@
   "order": [
     "breadcrumb",
     "header_title_XwzhB3",
+    "grid_collection_qPfA7m",
     "page-body"
   ]
 }
