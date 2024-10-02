@@ -162,57 +162,26 @@
         "button_visibility": false
       }
     },
-    "cta_home_c9YcxP": {
-      "type": "cta-home",
-      "blocks": {
-        "heading_VR77Jp": {
-          "type": "heading",
-          "settings": {
-            "heading": "",
-            "tagline": ""
-          }
-        },
-        "text_DUNPTh": {
-          "type": "text",
-          "settings": {
-            "text": "Search our extensive range of properties to find your dream home in Dubai."
-          }
-        },
-        "button_mQmkP7": {
-          "type": "button",
-          "settings": {
-            "cta_button": "Get Started",
-            "cta_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "heading_VR77Jp",
-        "text_DUNPTh",
-        "button_mQmkP7"
-      ],
-      "settings": {
-      }
-    },
     "card_column_right_6z9xcL": {
       "type": "card-column-right",
       "blocks": {
         "image_JkchcY": {
           "type": "image",
           "settings": {
-            "alt": ""
+            "image": "shopify://shop_images/Cathal_O_Neill_being_named_agent_of_the_year_for_2023_b425eaaf59.webp",
+            "alt": "Home to leading industry names"
           }
         },
         "heading_6k4qCn": {
           "type": "heading",
           "settings": {
-            "heading": "What happens in a consultation?"
+            "heading": "Home to leading industry names"
           }
         },
         "text_a9Vzpf": {
           "type": "text",
           "settings": {
-            "text": "<p>During your free consultation with one of our experts, you will discuss your investment goals and ideal timeline. They will ask about your needs, answer any questions, and update you on the current market conditions. After that, your agent will come back to you with suggestions, an investment strategy, and tailored advice. </p>"
+            "text": "<p>We're proud to have some of Dubai's top agents at haus & haus, and you might recognise a few of them. Like Cathal O'Neill – our Associate Director for Jumeirah Park and JVT who has been awarded Bayut's Agent of the Year three times. Our Off Plan Associate Director Jana Zapletalova is a frequent speaker in our webinars, and you may have spotted her on the cover of Forbes Czech Republic.</p><p>The haus & haus podcast Dubai Real Estate Unplugged features even more leading names, like Paul Sharland and Steven Leckie with over 20 years of experience.  </p><p>And the list goes on. Who knows, maybe you'll be the next top expert in our haus...</p>"
           }
         },
         "button_gR4ynP": {
@@ -252,7 +221,6 @@
     "section_title_NMTtQp",
     "card_column_right_J6XdJm",
     "card_column_left_LMa6ax",
-    "cta_home_c9YcxP",
     "card_column_right_6z9xcL",
     "breadcrumb",
     "page-body"
