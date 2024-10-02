@@ -3185,6 +3185,10 @@ p {
   padding-bottom: 4rem;
 }
 
+.cta_component.padding-bottom-0 {
+  padding-bottom: 0;
+}
+
 .cta_component.padding-top-0 {
   padding-top: 0;
 }
