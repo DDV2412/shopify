@@ -1,4 +1,4 @@
-<section class="section_component">
+<section class="section_component {%- if section.settings.add_background_grey -%}section_component background-grey {%- else -%}section_component{%- endif -%}">
   <div class="container">
     <div class="landing-content-wrapper">
       <div
@@ -16,11 +16,13 @@
                   <p class="description">{{ block.settings.text }}</p>
 
                 {%- when "button" -%}
-                  <div class="button-wrapper align-left">
-                    <a href="{{ block.settings.button_link }}" class="button is-secondary rounded w-inline-block">
-                      <div>{{ block.settings.button_title }}</div>
-                    </a>
-                  </div>
+                  {%- if section.settings.button_visibility -%}
+                    <div class="button-wrapper align-left">
+                      <a href="{{ block.settings.button_link }}" class="button is-secondary rounded w-inline-block">
+                        <div>{{ block.settings.button_title }}</div>
+                      </a>
+                    </div>
+                  {%- endif -%}
               {%- endcase -%}
             {%- endfor -%}
           </div>
@@ -49,6 +51,17 @@
 {% schema %}
   {
     "name": "Card Column Left",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "add_background_grey",
+        "label": "t:sections.card-column-left.settings.add_background.label"
+      }, {
+        "type": "checkbox",
+        "id": "button_visibility",
+        "label": "t:sections.card-column-left.settings.button_visibility.label"
+      }
+    ],
     "blocks": [
       {
         "type": "image",

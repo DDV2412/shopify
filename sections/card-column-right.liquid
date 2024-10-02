@@ -1,4 +1,4 @@
-<section class="section_component">
+<section class="{%- if section.settings.add_background_grey -%}section_component background-grey {%- else -%}section_component  {%- endif -%}">
   <div class="container">
     <div class="landing-content-wrapper">
       <div
@@ -32,11 +32,13 @@
                   <p class="description">{{ block.settings.text }}</p>
 
                 {%- when "button" -%}
-                  <div class="button-wrapper align-left">
-                    <a href="{{ block.settings.button_link }}" class="button is-secondary rounded w-inline-block">
-                      <div>{{ block.settings.button_title }}</div>
-                    </a>
-                  </div>
+                  {%- if section.settings.button_visibility -%}
+                    <div class="button-wrapper align-left">
+                      <a href="{{ block.settings.button_link }}" class="button is-secondary rounded w-inline-block">
+                        <div>{{ block.settings.button_title }}</div>
+                      </a>
+                    </div>
+                  {%- endif -%}
               {%- endcase -%}
             {%- endfor -%}
           </div>
@@ -50,6 +52,17 @@
 {% schema %}
   {
     "name": "Card Column Right",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "add_background_grey",
+        "label": "t:sections.card-column-right.settings.add_background.label"
+      }, {
+        "type": "checkbox",
+        "id": "button_visibility",
+        "label": "t:sections.card-column-right.settings.button_visibility.label"
+      }
+    ],
     "blocks": [
       {
         "type": "image",
@@ -59,11 +72,11 @@
           {
             "type": "image_picker",
             "id": "image",
-            "label": "t:sections.card-column-left.blocks.image.settings.image.label"
+            "label": "t:sections.card-column-right.blocks.image.settings.image.label"
           }, {
             "type": "text",
             "id": "alt",
-            "label": "t:sections.card-column-left.blocks.image.settings.alt.label"
+            "label": "t:sections.card-column-right.blocks.image.settings.alt.label"
           }
         ]
       }, {
@@ -74,8 +87,8 @@
           {
             "type": "text",
             "id": "heading",
-            "label": "t:sections.card-column-left.blocks.heading.settings.heading.label",
-            "default": "t:sections.card-column-left.blocks.heading.settings.heading.default"
+            "label": "t:sections.card-column-right.blocks.heading.settings.heading.label",
+            "default": "t:sections.card-column-right.blocks.heading.settings.heading.default"
           }
         ]
       }, {
@@ -86,8 +99,8 @@
           {
             "type": "richtext",
             "id": "text",
-            "label": "t:sections.card-column-left.blocks.text.settings.text.label",
-            "default": "t:sections.card-column-left.blocks.text.settings.text.default"
+            "label": "t:sections.card-column-right.blocks.text.settings.text.label",
+            "default": "t:sections.card-column-right.blocks.text.settings.text.default"
           }
         ]
       }, {
@@ -98,13 +111,13 @@
           {
             "type": "text",
             "id": "button_title",
-            "label": "t:sections.card-column-left.blocks.button.settings.button_title.label",
-            "default": "t:sections.card-column-left.blocks.button.settings.button_title.default"
+            "label": "t:sections.card-column-right.blocks.button.settings.button_title.label",
+            "default": "t:sections.card-column-right.blocks.button.settings.button_title.default"
           }, {
             "type": "url",
             "id": "button_link",
-            "label": "t:sections.card-column-left.blocks.button.settings.button_link.label",
-            "default": "t:sections.card-column-left.blocks.button.settings.button_link.default"
+            "label": "t:sections.card-column-right.blocks.button.settings.button_link.label",
+            "default": "t:sections.card-column-right.blocks.button.settings.button_link.default"
           }
         ]
       }

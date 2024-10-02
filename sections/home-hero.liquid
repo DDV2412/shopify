@@ -19,17 +19,30 @@
             <h1>{{ block.settings.heading }}</h1>
             {%- when 'text' -%}
             <div>{{ block.settings.text }}</div>
-            {%- when 'button' -%}
-               <div class="button-wrapper padding-top-medium">
-              <a href="{{ block.settings.button_link }}" class="button w-inline-block">
-                <div>{{ block.settings.button_cta }}</div>
-              </a> 
-            </div>
             {%- endcase -%}
             {%- endfor -%}
+              <div class="button-wrapper padding-top-medium">
+                    {%- for block in section.blocks -%}
+                    {%- case block.type -%}
+                      {%- when "button" -%}
+                        {%- case block.settings.button_style -%}
+                        {%- when "primary" -%}
+                          <a href="{{ block.settings.button_link }}" class="button w-inline-block">
+                          <div>{{ block.settings.button_cta }}</div>
+                        </a> 
+                        {%- when "secondary" -%}
+                          <a href="{{ block.settings.button_link }}" class="button is-{{ block.settings.button_style }} rounded w-inline-block">
+                          <div>{{ block.settings.button_cta }}</div>
+                        </a> 
+                      {%- endcase -%}
+                    {%- endcase -%}
+                  {%- endfor -%}
+              </div>
           </div>
         </div>
-        <div class="search-box">
+        {%- if section.settings.add_form_search -%}
+
+          <div class="search-box">
           <div data-w-id="d9f7959d-a9b5-9387-cac8-6e7c88cfae21" style="opacity:0" class="search-box-wrapper w-form">
             <form action="/search" role="search" id="search-box" name="email-form" data-name="Email Form" method="get"
               class="search_content" data-wf-page-id="66e6ed97469869045902b714"
@@ -50,12 +63,21 @@
             </form>
           </div>
         </div>
+
+        {%- endif -%}
       </div>
     </section>
     
     {% schema %}
       {
       "name": "Home Hero",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "add_form_search",
+          "label": "t:sections.home-hero.settings.add_form.label"
+        }
+      ],
       "blocks": [
         {
           "type": "select",
@@ -96,7 +118,7 @@
           {
           "type": "button",
           "name": "Button CTA",
-          "limit": 1,
+          "limit": 2,
           "settings": [
               {
                 "type": "text",
@@ -109,6 +131,19 @@
                 "id": "button_link",
                 "label": "t:sections.home-hero.blocks.button.settings.url.label",
                 "default": "t:sections.home-hero.blocks.button.settings.url.default"
+              }, {
+                "type": "select",
+                "id": "button_style",
+                "label": "t:sections.home-hero.blocks.button.settings.button_style.label",
+                "options": [
+                  {
+                    "value": "primary",
+                    "label": "t:sections.home-hero.blocks.button.settings.button_style.options.primary.label"
+                  }, {
+                    "value": "secondary",
+                    "label": "t:sections.home-hero.blocks.button.settings.button_style.options.secondary.label"
+                  }
+                ]
               }
             ]
           }

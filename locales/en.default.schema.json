@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin language editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 /*
  * ------------------------------------------------------------
  * IMPORTANT: The contents of this file are auto-generated.
@@ -139,6 +139,11 @@
   "sections": {
     "home-hero": {
       "name": "Home Hero",
+      "settings": {
+        "add_form": {
+          "label": "Show Form Search"
+        }
+      },
       "blocks": {
         "background": {
           "type": "select",
@@ -177,6 +182,18 @@
             "url": {
               "default": "/blogs/news",
               "label": "Button URL"
+            },
+            "button_style": {
+              "default": "primary",
+              "label": "Button Style",
+              "options": {
+                "primary": {
+                  "label": "Primary"
+                },
+                "secondary": {
+                  "label": "Secondary"
+                }
+              }
             }
           }
         }
@@ -583,6 +600,14 @@
     },
     "card-column-left": {
       "name": "Card Column Left",
+      "settings": {
+        "add_background": {
+          "label": "Add Background Grey"
+        },
+        "button_visibility": {
+          "label": "Button Visibility"
+        }
+      },
       "blocks": {
         "image": {
           "type": "image",
@@ -740,6 +765,14 @@
     },
     "card-column-right": {
       "name": "Card Column Right",
+      "settings": {
+        "add_background": {
+          "label": "Add Background Grey"
+        },
+        "button_visibility": {
+          "label": "Button Visibility"
+        }
+      },
       "blocks": {
         "image": {
           "type": "image",
