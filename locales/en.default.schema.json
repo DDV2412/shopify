@@ -962,6 +962,28 @@
         "name": "Off Plan"
       }
     },
+    "card-collection": {
+      "name": "Card Collection",
+      "blocks": {
+        "collection": {
+          "type": "collection",
+          "settings": {
+            "image": {
+              "label": "Thumbnail Image"
+            },
+            "heading": {
+              "label": "Heading"
+            },
+            "url": {
+              "label": "URL"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Off Plan"
+      }
+    },
     "featured-developers": {
       "name": "Featured Developers",
       "blocks": {

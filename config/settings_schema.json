@@ -89,7 +89,7 @@
       {
         "type": "text",
         "id": "youtube_link",
-        "label": "Yt:settings_schema.social-media.settings.youtube.label"
+        "label": "t:settings_schema.social-media.settings.youtube.label"
       },
       {
         "type": "text",
