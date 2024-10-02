@@ -15,9 +15,11 @@
                     <div id="w-node-bc17c2cb-6525-3fb7-007c-e2d8a05c12d7-732b4aee" class="hero_content is-offplan">
                         <h1>{{ article.title }}</h1>
                         <div class="develop-summary">{{ article.content }}</div>
-                        <a href="{{ article.url }}" class="button is-secondary rounded w-inline-block">
+                         <div class="article-date">{{
+                    article.published_at | date: '%b %d, %Y' }}</div>
+                        <div><a href="{{ article.url }}" class="button is-secondary rounded w-inline-block">
                             <div>Continue Reading</div>
-                        </a>
+                        </a></div>
                     </div>
                     <div id="w-node-bc17c2cb-6525-3fb7-007c-e2d8a05c12e5-732b4aee" class="hero_content">
                         <div id="w-node-bc17c2cb-6525-3fb7-007c-e2d8a05c12b7-732b4aee" class="hero_content">
