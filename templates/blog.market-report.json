@@ -42,11 +42,45 @@
       "type": "blog-list",
       "settings": {
       }
+    },
+    "cta_card_pyUHx3": {
+      "type": "cta-card",
+      "blocks": {
+        "heading_wR3pen": {
+          "type": "heading",
+          "settings": {
+            "communities_heading": "Careers JCON Properties",
+            "consultant_heading": "Find a Consultant"
+          }
+        },
+        "text_dmzhCr": {
+          "type": "text",
+          "settings": {
+            "communities_description": "Discover exciting opportunities in our different departments.",
+            "consultant_description": "Search our team of 289 experts to get professional guidance."
+          }
+        },
+        "button_inihNK": {
+          "type": "button",
+          "settings": {
+            "button_title": "Apply Today",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_wR3pen",
+        "text_dmzhCr",
+        "button_inihNK"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
     "breadcrumb",
     "header_title_bqa8MB",
-    "blog_list"
+    "blog_list",
+    "cta_card_pyUHx3"
   ]
 }
