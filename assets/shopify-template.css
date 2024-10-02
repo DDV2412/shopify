@@ -686,7 +686,6 @@ p {
   padding-right: 1.25rem;
   font-weight: 400;
   transition-property: none;
-  background-color: var(--white);
 }
 
 .button.is-secondary:hover {
@@ -718,6 +717,10 @@ p {
 .button.is-secondary.rounded {
   background-color: #0000;
   border-radius: 3rem;
+}
+
+.button.is-secondary.rounded.is-home {
+  background-color: var(--white);
 }
 
 .button.is-secondary.is-contact-icon {
