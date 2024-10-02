@@ -85,7 +85,8 @@
         "image_G7TtJC": {
           "type": "image",
           "settings": {
-            "alt": ""
+            "image": "shopify://shop_images/hausandhaus_MD_2023_48fbee7966.webp",
+            "alt": "Unlock opportunities"
           }
         },
         "heading_7XqXmk": {
@@ -125,19 +126,20 @@
         "image_aM3PY7": {
           "type": "image",
           "settings": {
-            "alt": ""
+            "image": "shopify://shop_images/haus_our_story_Charity_cc1d5613f5.webp",
+            "alt": "Be part of something bigger than yourself"
           }
         },
         "heading_QAJhzD": {
           "type": "heading",
           "settings": {
-            "heading": "Why Dubai?"
+            "heading": "Be part of something bigger than yourself"
           }
         },
         "text_xN3hhg": {
           "type": "text",
           "settings": {
-            "text": "<p><p>A leading global hub, Dubai continues to attract investors all over the world thanks to its visionary plans, booming population, w<span>orld class education and healthcare</span>, safe environment, and thriving economy.&nbsp;</p><p>Investors can also benefit from:</p><p>Golden Visas<br>Competitive rental yields<br>Tax-free income<br>Attractive business environment</p></p>"
+            "text": "<p>True success isn’t just about doing well in business, it also involves making a positive impact in our local communities. We believe in giving back to a city that has granted us incredible opportunities. Whether it’s a charity or sponsorship, we’re committed to making a difference and saying thank you in any way we can.</p><p>The haus & haus team is also an important community – so we make sure to support each member with activities focused on health and well-being, from motivational sessions with industry leading mentors to weekly physical training and special events that inspire teamwork.</p>"
           }
         },
         "button_8Cydcj": {
