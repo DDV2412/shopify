@@ -1,0 +1,72 @@
+<section class="section_component">
+  <div class="container">
+    <div class="section_title-wrapper">
+      <div data-w-id="d32fc49e-95c7-35af-56f3-162b3ad4cc8e" class="blog-grid">
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when "collection" -%}
+              <a
+                id="w-node-a07ff5be-ff10-9d67-7e0b-0ab3038fffa4-5902b714"
+                href="{{ block.settings.collection_link }}"
+                class="article-card w-inline-block">
+                <div data-w-id="a07ff5be-ff10-9d67-7e0b-0ab3038fffa5" class="article_thumbnail-wrapper"><img
+                    src="{{ block.settings.collection_image | img_url : 'original'}}"
+                    loading="lazy"
+                    width="318"
+                    height="160"
+                    alt="{{ block.settings.collection_heading }}"
+                    style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+                    class="article-image"></div>
+                <div class="article_detail">
+                  <div>{{ block.settings.collection_heading }}</div>
+                </div>
+
+                <div class="article-date">{{ block.settings.team_position }}</div>
+              </a>
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Grid Collection",
+    "blocks": [
+      {
+        "type": "collection",
+        "name": "Collection Block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "collection_image",
+            "label": "t:sections.grid-collection.blocks.collection.settings.image.label"
+          }, {
+            "type": "text",
+            "id": "collection_heading",
+            "label": "t:sections.grid-collection.blocks.collection.settings.heading.label"
+          }, {
+            "type": "text",
+            "id": "team_position",
+            "label": "t:sections.grid-collection.blocks.collection.settings.text.label"
+          }, {
+            "type": "url",
+            "id": "collection_link",
+            "label": "t:sections.grid-collection.blocks.collection.settings.url.label"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Grid Collection",
+        "blocks": [
+          {
+            "type": "collection"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
