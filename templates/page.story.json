@@ -14,14 +14,64 @@
       "settings": {
       }
     },
-    "page-body": {
-      "type": "page-body",
+    "header-title": {
+      "type": "header-title",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Contact Us"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Looking for expert advice or further support? <br></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+      }
+    },
+    "cta-card": {
+      "type": "cta-card",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "communities_heading": "Dubai Communities",
+            "consultant_heading": "Find your consultant"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "communities_description": "Covering 100+ communities, we can help you find one that ticks your boxes.",
+            "consultant_description": "Search our team of 2500 property experts to get professional guidance."
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
       "settings": {
       }
     }
   },
   "order": [
     "breadcrumb",
-    "page-body"
+    "header-title",
+    "cta-card"
   ]
 }
