@@ -46,7 +46,7 @@
         "button"
       ],
       "settings": {
-        "add_form_search": false
+        "add_form_search": true
       }
     },
     "review-highlight": {
