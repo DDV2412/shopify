@@ -162,6 +162,38 @@
         "button_visibility": false
       }
     },
+    "cta_LhRKUM": {
+      "type": "cta",
+      "blocks": {
+        "heading_GeGHwM": {
+          "type": "heading",
+          "settings": {
+            "heading": "Don't miss a beat of Dubai's property sector"
+          }
+        },
+        "text_EDQeAY": {
+          "type": "text",
+          "settings": {
+            "text": "Sign up to our newsletter and receive monthly round-ups including market updates, news articles, and expert insights."
+          }
+        },
+        "button_mWpfWW": {
+          "type": "button",
+          "settings": {
+            "cta_button": "Subscribe Now",
+            "cta_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading_GeGHwM",
+        "text_EDQeAY",
+        "button_mWpfWW"
+      ],
+      "settings": {
+        "remove_padding_bottom": true
+      }
+    },
     "card_column_right_6z9xcL": {
       "type": "card-column-right",
       "blocks": {
@@ -214,6 +246,47 @@
       "disabled": true,
       "settings": {
       }
+    },
+    "card_column_left_jLNEd9": {
+      "type": "card-column-left",
+      "blocks": {
+        "image_mYTj6z": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/haus_career_page_Vijay_89f93cb006.webp",
+            "alt": "Top in-haus training"
+          }
+        },
+        "heading_hWdpbQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Top in-haus training"
+          }
+        },
+        "text_PtzD4b": {
+          "type": "text",
+          "settings": {
+            "text": "<p><p>A leading global hub, Dubai continues to attract investors all over the world thanks to its visionary plans, booming population, w<span>orld class education and healthcare</span>, safe environment, and thriving economy.&nbsp;</p><p>Investors can also benefit from:</p><p>Golden Visas<br>Competitive rental yields<br>Tax-free income<br>Attractive business environment</p></p>"
+          }
+        },
+        "button_a9QMcz": {
+          "type": "button",
+          "settings": {
+            "button_title": "Download Investment Guide",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_mYTj6z",
+        "heading_hWdpbQ",
+        "text_PtzD4b",
+        "button_a9QMcz"
+      ],
+      "settings": {
+        "add_background_grey": false,
+        "button_visibility": false
+      }
     }
   },
   "order": [
@@ -221,8 +294,10 @@
     "section_title_NMTtQp",
     "card_column_right_J6XdJm",
     "card_column_left_LMa6ax",
+    "cta_LhRKUM",
     "card_column_right_6z9xcL",
     "breadcrumb",
-    "page-body"
+    "page-body",
+    "card_column_left_jLNEd9"
   ]
 }
