@@ -23,55 +23,57 @@
           {% endfor %}
 
       </div>
-      <div data-w-id="d32fc49e-95c7-35af-56f3-162b3ad4cca7" style="opacity:0" class="load-more-wrap">
-        {% if paginate.previous %}
-        <a href="{{ paginate.previous.url }}" class="button is-secondary is-results-btn is-left w-inline-block">
-          <div class="icon_small w-embed">
-            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" fill="none" viewbox="0 0 17 16">
-              <path stroke="#ADB4AF" stroke-linecap="round" stroke-linejoin="round" d="M11 13 6 8l5-5"></path>
-            </svg>
-          </div>
-          <p class="pagination_title">Back</p>
-        </a>
-        {% endif %}
-
-        <div class="pages-count">
-          <p class="paragraph">Page</p>
-          <div class="select-wrapper no-border">
-            <div data-hover="false" data-delay="0" class="buy_select-wrapper w-dropdown">
-              <div class="control-select w-dropdown-toggle">
-                <div>{{ paginate.current_page }}</div>
-                <div class="icon_small w-embed">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <path d="M6 9l6 6l6-6"></path>
-                  </svg>
+      {% if paginate.page < 1 %}
+        <div data-w-id="e2af74cb-a8cf-fb62-51e6-6b6486e095eb" style="opacity: 0;" class="load-more-wrap"></div>
+                <a href="{{ paginate.previous.url }}"
+                    class="button is-secondary is-results-btn is-left w-inline-block">
+                    <div class="icon_small w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16"
+                            fill="none" viewBox="0 0 17 16">
+                            <path stroke="#ADB4AF" stroke-linecap="round" stroke-linejoin="round" d="M11 13 6 8l5-5"></path>
+                        </svg></div>
+                    <p class="pagination_title">Back</p>
+                </a>
+                <div class="pages-count">
+                    <p class="paragraph">Page</p>
+                    <div class="select-wrapper no-border">
+                        <div data-hover="false" data-delay="0" class="buy_select-wrapper w-dropdown">
+                            <div class="control-select w-dropdown-toggle" id="w-dropdown-toggle-14"
+                                aria-controls="w-dropdown-list-14" aria-haspopup="menu" aria-expanded="false" role="button"
+                                tabindex="0">
+                                <div>{{ paginate.page }}</div>
+                                <div class="icon_small w-embed">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                        <path d="M6 9l6 6l6 -6"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <nav class="property-list w-dropdown-list" id="w-dropdown-list-14"
+                                aria-labelledby="w-dropdown-toggle-14">
+                                {% for i in (1..paginate.pages) %}
+                                    <a href="{{ paginate.page_number[i].url }}" class="page-count w-dropdown-link {% if paginate.page == i %}active{% endif %}" tabindex="0">
+                                        {{ i }}
+                                    </a>
+                                {% endfor %}
+                                </nav>
+                        </div>
+                    </div>
+                    <p class="paragraph">of {{ paginate.pages }}</p>
                 </div>
-              </div>
-              <nav class="property-list w-dropdown-list">
-                {% for i in (1..paginate.pages) %}
-                <a href="{{ paginate | default_pagination: i }}" class="page-count w-dropdown-link">{{ i
-                  }}</a>
-                {% endfor %}
-              </nav>
+                <a href="{{ paginate.next.url }}" class="button is-secondary is-results-btn is-right w-inline-block">
+                    <p class="pagination_title">Next</p>
+                    <div class="icon_small w-embed">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16"
+                            fill="none" viewBox="0 0 17 16">
+                            <path stroke="#ADB4AF" stroke-linecap="round" stroke-linejoin="round" d="m6 3 5 5-5 5"></path>
+                        </svg>
+                    </div>
+                </a>
             </div>
-          </div>
-          <p class="paragraph">of {{ paginate.pages }}</p>
-        </div>
-
-        {% if paginate.next %}
-        <a href="{{ paginate.next.url }}" class="button is-secondary is-results-btn is-right w-inline-block">
-          <p class="pagination_title">Next</p>
-          <div class="icon_small w-embed">
-            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" fill="none" viewbox="0 0 17 16">
-              <path stroke="#ADB4AF" stroke-linecap="round" stroke-linejoin="round" d="m6 3 5 5-5 5"></path>
-            </svg>
-          </div>
-        </a>
-        {% endif %}
-      </div>
+      {% endif %}
     </div>
   </div>
 </section>
