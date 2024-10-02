@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "header-title": {
@@ -16,8 +25,13 @@
           }
         }
       },
-      "block_order": ["heading", "text"],
-      "settings": {}
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "is_hero": false
+      }
     },
     "off-plan": {
       "type": "off-plan",
@@ -31,17 +45,24 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Here’s what our property experts are loving right now.</p>"
+            "description": "<p>Here’s what our property experts are loving right now.</p>"
           }
         },
         "collection": {
           "type": "collection",
           "settings": {
-            "collection": "damac"
+            "collection_offplan": "off-plan-properties"
           }
         }
       },
-      "block_order": ["heading", "text", "collection"]
+      "block_order": [
+        "heading",
+        "text",
+        "collection"
+      ],
+      "settings": {
+        "padding_bottom": false
+      }
     },
     "off-plan-slider": {
       "type": "off-plan-slider",
@@ -55,17 +76,24 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Check out the latest projects causing a buzz in the market.</p>"
+            "description": "<p>Check out the latest projects causing a buzz in the market.</p>"
           }
         },
         "collection": {
           "type": "collection",
           "settings": {
-            "collection": "damac"
+            "collection_offplan": "off-plan-properties"
           }
         }
       },
-      "block_order": ["heading", "text", "collection"]
+      "block_order": [
+        "heading",
+        "text",
+        "collection"
+      ],
+      "settings": {
+        "padding_bottom": false
+      }
     },
     "developers-slider": {
       "type": "developers-slider",
@@ -79,17 +107,23 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Learn more about Dubai’s world famous developers and what makes them unique.</p>"
+            "description": "<p>Learn more about Dubai’s world famous developers and what makes them unique.</p>"
           }
         },
         "collection": {
           "type": "collection",
           "settings": {
-            "collection": "damac"
+            "dev_collection": "damac"
           }
         }
       },
-      "block_order": ["heading", "text", "collection"]
+      "block_order": [
+        "heading",
+        "text",
+        "collection"
+      ],
+      "settings": {
+      }
     },
     "top-area": {
       "type": "top-area",
@@ -103,18 +137,62 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Explore some of the most sought after destinations for property buyers.</p>"
+            "description": "<p>Explore some of the most sought after destinations for property buyers.</p>"
           }
         },
         "collection": {
           "type": "collection",
           "settings": {
-            "collection": "jebel-ali-dubai"
+            "collection_area": "dubai-creek-harbour"
           }
         }
       },
-      "block_order": ["heading", "text", "collection"]
+      "block_order": [
+        "heading",
+        "text",
+        "collection"
+      ],
+      "settings": {
+      }
+    },
+    "off_plan_LqBDbx": {
+      "type": "off-plan",
+      "blocks": {
+        "heading_MJA7UU": {
+          "type": "heading",
+          "settings": {
+            "heading": "missing translation: \"t:sections.off-plan.blocks.heading.settings.heading.default\""
+          }
+        },
+        "text_8qaDnd": {
+          "type": "text",
+          "settings": {
+            "description": "<p>Here’s what our property experts are loving right now.</p>"
+          }
+        },
+        "collection_Mw4jYy": {
+          "type": "collection",
+          "settings": {
+            "collection_offplan": "off-plan-properties"
+          }
+        }
+      },
+      "block_order": [
+        "heading_MJA7UU",
+        "text_8qaDnd",
+        "collection_Mw4jYy"
+      ],
+      "settings": {
+        "padding_bottom": true
+      }
     }
   },
-  "order": ["header-title", "off-plan", "off-plan-slider", "developers-slider", "top-area"]
+  "order": [
+    "header-title",
+    "off-plan",
+    "off-plan-slider",
+    "developers-slider",
+    "top-area",
+    "off_plan_LqBDbx"
+  ]
 }
