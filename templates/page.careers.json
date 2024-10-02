@@ -127,19 +127,20 @@
         "image_BEgR3c": {
           "type": "image",
           "settings": {
-            "alt": ""
+            "image": "shopify://shop_images/maxresdefault_1.jpg",
+            "alt": "JCON Properties"
           }
         },
         "heading_4wfb6t": {
           "type": "heading",
           "settings": {
-            "heading": "Why Dubai?"
+            "heading": "Places to thrive in"
           }
         },
         "text_yMPMzr": {
           "type": "text",
           "settings": {
-            "text": "<p><p>A leading global hub, Dubai continues to attract investors all over the world thanks to its visionary plans, booming population, w<span>orld class education and healthcare</span>, safe environment, and thriving economy.&nbsp;</p><p>Investors can also benefit from:</p><p>Golden Visas<br>Competitive rental yields<br>Tax-free income<br>Attractive business environment</p></p>"
+            "text": "<p>All JCON Properties offices have been carefully designed with collaboration and creativity in mind, featuring open layouts and plenty of space to feel inspired. </p><p>We're all about promoting teamwork between departments and avoiding that boring ‘boxed in’ vibe. With a mix of quiet rooms to focus in and vibrant spaces including a coffee shop, it's hard to be in a bad mood when you walk through the door.</p>"
           }
         },
         "button_gX9MiE": {
