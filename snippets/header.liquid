@@ -1,4 +1,4 @@
-<header class="header {% if template == 'index' or template == 'careers' %}{{ "is-home" }}{% elsif template =='collection' or template == 'off-plan-properties' or template == 'search' %} {{ "background-primary" }} {% else %}{{ "background-primary is-fixed" }}{% endif %}">
+<header class="header {% if template == 'index' or template == 'page.careers' %}{{ "is-home" }}{% elsif template =='collection' or template == 'off-plan-properties' or template == 'search' %} {{ "background-primary" }} {% else %}{{ "background-primary is-fixed" }}{% endif %}">
       <div data-w-id="1b1bca74-ba9f-0978-fa6c-42b2b360f21a" data-animation="over-right" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar_component w-nav">
         <div class="container-fluid">
           <a href="{{shop.url}}" class="navbar-brand w-nav-brand"><img src="{{ settings.website_logo |  img_url : 'original' }}" loading="lazy" width="150" height="32" alt="{{shop.name}}" class="logo-img"></a>
@@ -16,9 +16,7 @@
               </div>
             </div>
             <div class="navbar-menu">
-              {{ template.name }}
               {% assign main_menu = linklists.main-menu.links %}
-
               {% for link in main_menu %}
                 {%if link.links.size > 0%}
                   <div data-hover="true" data-delay="0" class="nav-dropdown w-dropdown">
