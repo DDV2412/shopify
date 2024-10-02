@@ -21,28 +21,28 @@
         "heading_cVe9x3": {
           "type": "heading",
           "settings": {
-            "heading": "Careers at JCON Properties"
+            "heading": "Why partner with JCON Properties?"
           }
         },
         "text_NUxLPp": {
           "type": "text",
           "settings": {
-            "text": "Looking to take your career to the next level? At haus & haus, we continue to grow our different departments offering unique opportunities constantly. We are seeking hardworking, ambitious, honest, dedicated and enthusiastic people to join us."
+            "text": "We are driven by the desire to unlock opportunities for our clients, today, tomorrow and in years to come."
           }
         },
         "button_ETRBhV": {
           "type": "button",
           "settings": {
-            "button_cta": "View vacancies",
-            "button_link": "",
+            "button_cta": "Start your journey now",
+            "button_link": "shopify://pages/contact",
             "button_style": "primary"
           }
         },
         "button_VkhWge": {
           "type": "button",
           "settings": {
-            "button_cta": "Send us your CV",
-            "button_link": "",
+            "button_cta": "Meet the team",
+            "button_link": "shopify://pages/our-team",
             "button_style": "secondary"
           }
         }
@@ -64,13 +64,13 @@
         "heading_qD4Ebw": {
           "type": "heading",
           "settings": {
-            "heading": "Boost your career"
+            "heading": "Over 10+ years of experience in Dubai real estate"
           }
         },
         "text_8UTpq9": {
           "type": "text",
           "settings": {
-            "text": "<p>As an award winning real estate agency, our clients are at the core of what we do – and we focus on building a strong and capable team of experts to keep offering the best possible service. We're always on the hunt for high achievers and top performers with a strong work ethic and a passion for customer service.</p>"
+            "text": "<p>As an award winning agency with over 10+ years of experience in Dubai real estate, we know that no journey is the same. That's where our core value \"We listen and learn\" comes in – we work together to understand each client's needs and commit to finding the best possible solution. Our team of 289 property experts speak over 30 languages, and they're always on hand to support, advise, and guide clients towards their goals.</p><p></p>"
           }
         }
       },
@@ -248,129 +248,6 @@
       "settings": {
       }
     },
-    "card_column_left_jLNEd9": {
-      "type": "card-column-left",
-      "blocks": {
-        "image_mYTj6z": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/haus_career_page_Vijay_89f93cb006.webp",
-            "alt": "Top in-haus training"
-          }
-        },
-        "heading_hWdpbQ": {
-          "type": "heading",
-          "settings": {
-            "heading": "Top JCON Properties training"
-          }
-        },
-        "text_PtzD4b": {
-          "type": "text",
-          "settings": {
-            "text": "<p>We believe in empowering our team, and we have leading tools to do it – including our in-haus real estate training platform, dedicated trainers, and ongoing leadership support.</p><p>At JCON Properties, we all share the same goals – from Directors to Team Managers. This collaborative mindset, combined with our shared workspaces, helps us strengthen our team spirit and lift each other.</p>"
-          }
-        },
-        "button_a9QMcz": {
-          "type": "button",
-          "settings": {
-            "button_title": "View vacancies",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_mYTj6z",
-        "heading_hWdpbQ",
-        "text_PtzD4b",
-        "button_a9QMcz"
-      ],
-      "settings": {
-        "add_background_grey": false,
-        "button_visibility": true
-      }
-    },
-    "card_column_right_mpNH3d": {
-      "type": "card-column-right",
-      "blocks": {
-        "image_tckbYg": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Learning_from_the_best_career_page_efbf19f654.webp",
-            "alt": ""
-          }
-        },
-        "heading_MGwpwD": {
-          "type": "heading",
-          "settings": {
-            "heading": "What happens in a consultation?"
-          }
-        },
-        "text_adUDYM": {
-          "type": "text",
-          "settings": {
-            "text": "<p>During your free consultation with one of our experts, you will discuss your investment goals and ideal timeline. They will ask about your needs, answer any questions, and update you on the current market conditions. After that, your agent will come back to you with suggestions, an investment strategy, and tailored advice. </p>"
-          }
-        },
-        "button_nh3DTX": {
-          "type": "button",
-          "settings": {
-            "button_title": "Book a Consultation",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_tckbYg",
-        "heading_MGwpwD",
-        "text_adUDYM",
-        "button_nh3DTX"
-      ],
-      "settings": {
-        "add_background_grey": false,
-        "button_visibility": false
-      }
-    },
-    "card_column_left_w9r8Qf": {
-      "type": "card-column-left",
-      "blocks": {
-        "image_YqXdyc": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/haus_and_haus_run_9001b9b898.webp",
-            "alt": "Growing together"
-          }
-        },
-        "heading_rqBDkR": {
-          "type": "heading",
-          "settings": {
-            "heading": "Growing together"
-          }
-        },
-        "text_qcF9hn": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Personal development is a big part of our culture. From a JCON Properties Run Club and weekly fitness classes to social incentives and inspirational events, we're passionate about our wellbeing and love to connect outside the office.</p>"
-          }
-        },
-        "button_pjjNFU": {
-          "type": "button",
-          "settings": {
-            "button_title": "Download Investment Guide",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_YqXdyc",
-        "heading_rqBDkR",
-        "text_qcF9hn",
-        "button_pjjNFU"
-      ],
-      "settings": {
-        "add_background_grey": false,
-        "button_visibility": false
-      }
-    },
     "faq_GLdLYK": {
       "type": "faq",
       "blocks": {
@@ -449,13 +326,10 @@
     "section_title_NMTtQp",
     "card_column_right_J6XdJm",
     "card_column_left_LMa6ax",
-    "cta_LhRKUM",
     "card_column_right_6z9xcL",
     "breadcrumb",
+    "cta_LhRKUM",
     "page-body",
-    "card_column_left_jLNEd9",
-    "card_column_right_mpNH3d",
-    "card_column_left_w9r8Qf",
     "faq_GLdLYK"
   ]
 }
