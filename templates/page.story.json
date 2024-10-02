@@ -129,5 +129,5 @@
       "settings": {}
     }
   },
-  "order": ["breadcrumb", "header-title", "cta-card"]
+  "order": ["breadcrumb", "header-title", "cta-card", "faq"]
 }
