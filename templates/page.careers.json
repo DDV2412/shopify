@@ -86,6 +86,7 @@
         "image_4LbrCm": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/Working_at_hausandhaus_1_6b57a557e5.webp",
             "alt": ""
           }
         },
@@ -98,13 +99,13 @@
         "text_4HwG6e": {
           "type": "text",
           "settings": {
-            "text": "<p>During your free consultation with one of our experts, you will discuss your investment goals and ideal timeline. They will ask about your needs, answer any questions, and update you on the current market conditions. After that, your agent will come back to you with suggestions, an investment strategy, and tailored advice. </p>"
+            "text": "<p>Regardless of your role or department, you'll have access to the expertise of our team from day one, as well as industry leading tools to help you thrive and grow. We also believe in rewarding hard work and effort – so expect competitive earning potential, thrilling incentives, and ongoing support from trainers and managers to help you reach your goals.</p>"
           }
         },
         "button_XKy4RU": {
           "type": "button",
           "settings": {
-            "button_title": "Book a Consultation",
+            "button_title": "Working at JCON Properties",
             "button_link": ""
           }
         }
