@@ -92,12 +92,46 @@
       "disabled": true,
       "settings": {
       }
+    },
+    "cta_card_ExEmWa": {
+      "type": "cta-card",
+      "blocks": {
+        "heading_RaFVPq": {
+          "type": "heading",
+          "settings": {
+            "communities_heading": "Careers",
+            "consultant_heading": "Find your consultant"
+          }
+        },
+        "text_3FNGhE": {
+          "type": "text",
+          "settings": {
+            "communities_description": "Discover exciting opportunities in our different departments.",
+            "consultant_description": "Search our team of 289 experts to get professional guidance."
+          }
+        },
+        "button_qRtpdy": {
+          "type": "button",
+          "settings": {
+            "button_title": "Apply Today",
+            "button_link": "shopify://pages/careers"
+          }
+        }
+      },
+      "block_order": [
+        "heading_RaFVPq",
+        "text_3FNGhE",
+        "button_qRtpdy"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
     "breadcrumb",
     "header_title_XwzhB3",
     "grid_collection_qPfA7m",
-    "page-body"
+    "page-body",
+    "cta_card_ExEmWa"
   ]
 }
