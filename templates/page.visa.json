@@ -18,10 +18,36 @@
       "type": "page-body",
       "settings": {
       }
+    },
+    "join_form_8Fia4w": {
+      "type": "join-form",
+      "blocks": {
+        "heading_qQgzp8": {
+          "type": "heading",
+          "settings": {
+            "heading": "Visa Application Form"
+          }
+        },
+        "text_HWGyqb": {
+          "type": "text",
+          "settings": {
+            "text": "Please fill out the form below to apply for the visa that best suits your purpose. Ensure all information provided is accurate and up to date.",
+            "email": "sales@jconproperties.ae",
+            "phone": "+971 4 580 8000"
+          }
+        }
+      },
+      "block_order": [
+        "heading_qQgzp8",
+        "text_HWGyqb"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
     "breadcrumb",
-    "page-body"
+    "page-body",
+    "join_form_8Fia4w"
   ]
 }
