@@ -1,11 +1,93 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "breadcrumb": {
-      "type": "breadcrumb"
+      "type": "breadcrumb",
+      "settings": {
+      }
     },
     "blog_list": {
-      "type": "blog-list"
+      "type": "blog-list",
+      "settings": {
+      }
+    },
+    "cta_CpKpDy": {
+      "type": "cta",
+      "blocks": {
+        "heading_QEjyqq": {
+          "type": "heading",
+          "settings": {
+            "heading": "Don't miss a beat of Dubai's property sector"
+          }
+        },
+        "text_pptJrM": {
+          "type": "text",
+          "settings": {
+            "text": "Sign up to our newsletter and receive monthly round-ups including market updates, news articles, and expert insights."
+          }
+        },
+        "button_QHK6pM": {
+          "type": "button",
+          "settings": {
+            "cta_button": "Subscribe Now",
+            "cta_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_QEjyqq",
+        "text_pptJrM",
+        "button_QHK6pM"
+      ],
+      "settings": {
+      }
+    },
+    "cta_card_LjcwUh": {
+      "type": "cta-card",
+      "blocks": {
+        "heading_ATN3fB": {
+          "type": "heading",
+          "settings": {
+            "communities_heading": "Careers JCON Properties",
+            "consultant_heading": "Find a Consultant"
+          }
+        },
+        "text_P3Exyy": {
+          "type": "text",
+          "settings": {
+            "communities_description": "Discover exciting opportunities in our different departments.",
+            "consultant_description": "Search our team of 289 experts to get professional guidance."
+          }
+        },
+        "button_GWVMJe": {
+          "type": "button",
+          "settings": {
+            "button_title": "Apply Today",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_ATN3fB",
+        "text_P3Exyy",
+        "button_GWVMJe"
+      ],
+      "settings": {
+      }
     }
   },
-  "order": ["breadcrumb", "blog_list"]
+  "order": [
+    "breadcrumb",
+    "blog_list",
+    "cta_CpKpDy",
+    "cta_card_LjcwUh"
+  ]
 }
