@@ -147,14 +147,42 @@
         "collection": {
           "type": "collection",
           "settings": {
+            "dev_collection": "emaar"
+          }
+        },
+        "collection_CaA6tc": {
+          "type": "collection",
+          "settings": {
             "dev_collection": "damac"
+          }
+        },
+        "collection_nVFdnD": {
+          "type": "collection",
+          "settings": {
+            "dev_collection": "ellington"
+          }
+        },
+        "collection_wEYE8d": {
+          "type": "collection",
+          "settings": {
+            "dev_collection": "sobha"
+          }
+        },
+        "collection_tXqEA8": {
+          "type": "collection",
+          "settings": {
+            "dev_collection": "binghatti"
           }
         }
       },
       "block_order": [
         "heading",
         "text",
-        "collection"
+        "collection",
+        "collection_CaA6tc",
+        "collection_nVFdnD",
+        "collection_wEYE8d",
+        "collection_tXqEA8"
       ],
       "settings": {
       }
@@ -165,6 +193,7 @@
         "image": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/haus_and_haus_off_plan_and_investment_consultants_2b785bf686.webp",
             "alt": ""
           }
         },
