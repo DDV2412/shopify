@@ -87,20 +87,20 @@
         "image_4LbrCm": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Working_at_hausandhaus_1_6b57a557e5.webp",
+            "image": "shopify://shop_images/Marketing_why_haus_2dc061f366.webp",
             "alt": ""
           }
         },
         "heading_qchndi": {
           "type": "heading",
           "settings": {
-            "heading": "What happens in a consultation?"
+            "heading": "In JCON Properties marketing experts"
           }
         },
         "text_4HwG6e": {
           "type": "text",
           "settings": {
-            "text": "<p>Regardless of your role or department, you'll have access to the expertise of our team from day one, as well as industry leading tools to help you thrive and grow. We also believe in rewarding hard work and effort – so expect competitive earning potential, thrilling incentives, and ongoing support from trainers and managers to help you reach your goals.</p>"
+            "text": "<p>Clients can benefit from our multi disciplinary team of 27 in-haus Marketing experts including project managers, graphic designers, copywriters, data analysts, and production specialists. They focus on providing valuable content including area guides, market reports, blog articles, and insightful data. </p><p></p>"
           }
         },
         "button_XKy4RU": {
@@ -128,20 +128,19 @@
         "image_BEgR3c": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/maxresdefault_1.jpg",
             "alt": "JCON Properties"
           }
         },
         "heading_4wfb6t": {
           "type": "heading",
           "settings": {
-            "heading": "Places to thrive in"
+            "heading": "Wide range of services"
           }
         },
         "text_yMPMzr": {
           "type": "text",
           "settings": {
-            "text": "<p>All JCON Properties offices have been carefully designed with collaboration and creativity in mind, featuring open layouts and plenty of space to feel inspired. </p><p>We're all about promoting teamwork between departments and avoiding that boring ‘boxed in’ vibe. With a mix of quiet rooms to focus in and vibrant spaces including a coffee shop, it's hard to be in a bad mood when you walk through the door.</p>"
+            "text": "<p>We focus on offering a wide range of services to cover your entire journey – such as a dedicated team of Property Managers, Home Maintenance services through our company Breathe, and support with property renovations, designs, and other upgrade or project management needs through our trusted partners. </p><p></p>"
           }
         },
         "button_gX9MiE": {
@@ -161,6 +160,53 @@
       "settings": {
         "add_background_grey": false,
         "button_visibility": false
+      }
+    },
+    "card_column_right_6z9xcL": {
+      "type": "card-column-right",
+      "blocks": {
+        "image_JkchcY": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/haus_why_haus_customer_aaa7d5843a.webp",
+            "alt": "Home to leading industry names"
+          }
+        },
+        "heading_6k4qCn": {
+          "type": "heading",
+          "settings": {
+            "heading": "You can count on us"
+          }
+        },
+        "text_a9Vzpf": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Customer service is at the heart of everything we do, just take a look at our client reviews on Google and Feefo. While we can't guarantee that every process will go smoothly, you can count on our Customer Service team to deal with any unexpected issues. If anything needs to be looked into or resolved, we can help you handle it. </p><p></p><p>The haus & haus podcast Dubai Real Estate Unplugged features even more leading names, like Paul Sharland and Steven Leckie with over 20 years of experience.  </p><p>And the list goes on. Who knows, maybe you'll be the next top expert in our haus...</p>"
+          }
+        },
+        "button_gR4ynP": {
+          "type": "button",
+          "settings": {
+            "button_title": "Book a Consultation",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_JkchcY",
+        "heading_6k4qCn",
+        "text_a9Vzpf",
+        "button_gR4ynP"
+      ],
+      "settings": {
+        "add_background_grey": false,
+        "button_visibility": false
+      }
+    },
+    "breadcrumb": {
+      "type": "breadcrumb",
+      "disabled": true,
+      "settings": {
       }
     },
     "cta_LhRKUM": {
@@ -193,53 +239,6 @@
       ],
       "settings": {
         "remove_padding_bottom": true
-      }
-    },
-    "card_column_right_6z9xcL": {
-      "type": "card-column-right",
-      "blocks": {
-        "image_JkchcY": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Cathal_O_Neill_being_named_agent_of_the_year_for_2023_b425eaaf59.webp",
-            "alt": "Home to leading industry names"
-          }
-        },
-        "heading_6k4qCn": {
-          "type": "heading",
-          "settings": {
-            "heading": "Home to leading industry names"
-          }
-        },
-        "text_a9Vzpf": {
-          "type": "text",
-          "settings": {
-            "text": "<p>We're proud to have some of Dubai's top agents at haus & haus, and you might recognise a few of them. Like Cathal O'Neill – our Associate Director for Jumeirah Park and JVT who has been awarded Bayut's Agent of the Year three times. Our Off Plan Associate Director Jana Zapletalova is a frequent speaker in our webinars, and you may have spotted her on the cover of Forbes Czech Republic.</p><p>The haus & haus podcast Dubai Real Estate Unplugged features even more leading names, like Paul Sharland and Steven Leckie with over 20 years of experience.  </p><p>And the list goes on. Who knows, maybe you'll be the next top expert in our haus...</p>"
-          }
-        },
-        "button_gR4ynP": {
-          "type": "button",
-          "settings": {
-            "button_title": "Book a Consultation",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_JkchcY",
-        "heading_6k4qCn",
-        "text_a9Vzpf",
-        "button_gR4ynP"
-      ],
-      "settings": {
-        "add_background_grey": false,
-        "button_visibility": false
-      }
-    },
-    "breadcrumb": {
-      "type": "breadcrumb",
-      "disabled": true,
-      "settings": {
       }
     },
     "page-body": {
