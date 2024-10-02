@@ -37,7 +37,7 @@
           "type": "button",
           "settings": {
             "button_title": "Browse Off Plan Projects",
-            "button_link": "shopify://collections",
+            "button_link": "shopify://collections/off-plan-properties",
             "button_style": "primary"
           }
         },
@@ -97,6 +97,8 @@
         "button"
       ],
       "settings": {
+        "add_background_grey": false,
+        "button_visibility": false
       }
     },
     "top-area": {
@@ -224,6 +226,8 @@
         "button"
       ],
       "settings": {
+        "add_background_grey": false,
+        "button_visibility": false
       }
     },
     "team": {
