@@ -89,6 +89,33 @@
           "label": "Cookie Policy"
         }
       }
+    },
+    "cta": {
+      "name": "CTA",
+      "settings": {
+        "heading": {
+          "label": "CTA Heading",
+          "default": "Dubai Real Estate Unplugged"
+        },
+        "text": {
+          "label": "CTA Subheading",
+          "default": "<p>Our bi-weekly podcast features expert guests and authentic discussions about Dubai's property market.</p>"
+        },
+        "tagline": {
+          "label": "CTA Tagline",
+          "default": "New"
+        },
+        "button": {
+          "text": {
+            "label": "Button Title",
+            "default": "Start Listening"
+          },
+          "url": {
+            "label": "Button URL",
+            "default": "/collections/all"
+          }
+        }
+      }
     }
   },
   "sections": {
@@ -981,6 +1008,49 @@
       },
       "presets": {
         "name": "CTA Develop"
+      }
+    },
+    "cta": {
+      "name": "CTA",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": {
+              "default": "Get an instant property valuation",
+              "label": "Heading"
+            },
+            "tagline": {
+              "default": "New",
+              "label": "Tagline"
+            }
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": {
+              "default": "Search our extensive range of properties to find your dream home in Dubai.",
+              "label": "Description"
+            }
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "text": {
+              "default": "Get Started",
+              "label": "Button Text"
+            },
+            "url": {
+              "default": "/collections/all",
+              "label": "Button URL"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "CTA Home"
       }
     }
   }

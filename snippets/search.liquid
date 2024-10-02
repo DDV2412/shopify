@@ -72,6 +72,15 @@ endif
                                     </div>
                                 {%  when  'price_range' %}
                                     <div class="select-wrapper no-border">
+                                        {% assign min_price_values = "300000,600000,900000,1000000,3000000,5000000,7000000,9000000,10000000,20000000,30000000,40000000,50000000" | split: "," %}
+                                        {%- liquid
+                                            assign sorted_values = min_price_values
+                                            if filter.operator == 'OR'
+                                                assign active_filter_values = min_price_values | where: 'active', true
+                                                assign inactive_filter_values = min_price_values | where: 'active', false
+                                                assign sorted_values = active_filter_values | concat: inactive_filter_values
+                                            endif
+                                        -%}
                                         <div data-hover="true" data-delay="0" id="property-dropdown-content" class="property_select-wrapper is-filter w-dropdown" style="">
                                             <div id="property-dropdown-select" class="property-select is-select w-dropdown-toggle" aria-controls="property-dropdown-nav" aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0">
                                                 <div id="{{ filter.min_value.param_name }}">
@@ -84,15 +93,14 @@ endif
                                             </div>
                                             <nav id="property-dropdown-nav" class="property-list w-dropdown-list" aria-labelledby="property-dropdown-select">
                                                     <div class="property-wrapper">
-                                                        {% assign min_price_values = "300000,600000,900000,1000000,3000000,5000000,7000000,9000000,10000000,20000000,30000000,40000000,50000000" | split: "," %}
-                                                        {%- for i in min_price_values -%}
+                                                        {%- for value in sorted_values -%}
                                                             {% liquid
                                                                 assign input_id = 'Filter-' | append: filter.min_value.param_name | escape | append: '-' | append: forloop.index
                                                             %}
                                                             <label class="propert-radio w-radio">
-                                                                <div class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input {% if value.active %} w--redirected-checked {% endif %}"></div>
-                                                                <input type="radio" name="{{ filter.min_value.param_name }}" id="{{ filter.min_value.param_name }}-{{ i }}" data-name="{{ value.param_name }}" style="opacity:0;position:absolute;z-index:-1" value="{{ i }}" checked="{{ value.active }}">
-                                                                <span class="type-label {% if value.active %} is-active {% endif %}  w-form-label" for="{{ filter.min_value.param_name }}-{{ i }}"> {{ shop.currency }} {{ i | plus: 0 | divided_by: 1 | times: 1 }} </span>
+                                                                <div class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input "></div>
+                                                                <input type="radio" name="{{ filter.min_value.param_name }}" id="{{ filter.min_value.param_name }}-{{ value }}" data-name="{{ value.param_name }}" style="opacity:0;position:absolute;z-index:-1" value="{{ value }}">
+                                                                <span class="type-label  w-form-label" for="{{ filter.min_value.param_name }}-{{ value }}"> {{ shop.currency }} {{ value | plus: 0 | divided_by: 1 | times: 1 }} </span>
                                                             </label>
                                                         {%- endfor -%}
                                                     </div>
@@ -101,6 +109,15 @@ endif
                                         </div>
                                     </div>
                                     <div class="select-wrapper no-border">
+                                        {% assign max_price_values = "300000,600000,900000,1000000,3000000,5000000,7000000,9000000,10000000,20000000,30000000,40000000,50000000" | split: "," %}
+                                        {%- liquid
+                                            assign sorted_values = max_price_values
+                                            if filter.operator == 'OR'
+                                                assign active_filter_values = max_price_values | where: 'active', true
+                                                assign inactive_filter_values = max_price_values | where: 'active', false
+                                                assign sorted_values = active_filter_values | concat: inactive_filter_values
+                                            endif
+                                        -%}
                                         <div data-hover="true" data-delay="0" id="property-dropdown-content" class="property_select-wrapper is-filter w-dropdown" style="">
                                             <div id="property-dropdown-select" class="property-select is-select w-dropdown-toggle" aria-controls="property-dropdown-nav" aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0">
                                                 <div id="{{ filter.max_value.param_name }}">
@@ -113,15 +130,14 @@ endif
                                             </div>
                                             <nav id="property-dropdown-nav" class="property-list w-dropdown-list" aria-labelledby="property-dropdown-select">
                                                     <div class="property-wrapper">
-                                                        {% assign max_price_values = "300000,600000,900000,1000000,3000000,5000000,7000000,9000000,10000000,20000000,30000000,40000000,50000000" | split: "," %}
-                                                        {%- for i in max_price_values -%}
+                                                        {%- for value in sorted_values -%}
                                                             {% liquid
                                                                 assign input_id = 'Filter-' | append: filter.max_value.param_name | escape | append: '-' | append: forloop.index
                                                             %}
                                                             <label class="propert-radio w-radio">
-                                                                <div class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input {% if value.active %} w--redirected-checked {% endif %}"></div>
-                                                                <input type="radio" name="{{ filter.max_value.param_name }}" id="{{ filter.max_value.param_name }}-{{ i }}" data-name="{{ value.param_name }}" style="opacity:0;position:absolute;z-index:-1" value="{{ i }}" checked="{{ value.active }}">
-                                                                <span class="type-label {% if value.active %} is-active {% endif %}  w-form-label" for="{{ filter.max_value.param_name }}-{{ i }}"> {{ i | money }} </span>
+                                                                <div class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input"></div>
+                                                                <input type="radio" name="{{ filter.max_value.param_name }}" id="{{ filter.max_value.param_name }}-{{ value }}" data-name="{{ value.param_name }}" style="opacity:0;position:absolute;z-index:-1" value="{{ value }}">
+                                                                <span class="type-label w-form-label" for="{{ filter.max_value.param_name }}-{{ value }}"> {{ shop.currency }} {{ value | plus: 0 | divided_by: 1 | times: 1 }} </span>
                                                             </label>
                                                         {%- endfor -%}
                                                     </div>
@@ -303,7 +319,33 @@ endif
                 }
             });
         }
-        
+
+        function getQueryParams() {
+            const urlParams = new URLSearchParams(window.location.search);
+            let params = {};
+            urlParams.forEach((value, key) => {
+                params[key] = value;
+            });
+            return params;
+        }
+
+        const queryParams = getQueryParams();
+
+        document.querySelectorAll('input[type="radio"]').forEach(input => {
+            const inputId = input.id;
+            const queryKey = queryParams[input.name]; 
+
+            if (inputId.endsWith(queryKey)) {
+                const span = input.nextElementSibling;
+                span.classList.add("is-active");
+
+                const div = input.previousElementSibling;
+                div.classList.add("w--redirected-checked");
+
+                input.checked = true;
+            }
+        });
+            
         checkAndAssignValue();
         checkIfFilterIsActive();
     })
