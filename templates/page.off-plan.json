@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "other-hero": {
@@ -6,8 +15,8 @@
         "image": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/1727271049655_Screenshot_2024-09-25_at_5.28.13PM.png",
-            "image_alt": "Dubai off plan properties"
+            "image": "shopify://shop_images/dubai_marina_and_jumeirah_beach_residence_skyline_23bb0e7550.webp",
+            "alt": "Dubai off plan properties"
           }
         },
         "heading": {
@@ -28,12 +37,28 @@
           "type": "button",
           "settings": {
             "button_title": "Browse Off Plan Projects",
-            "button_link": "",
+            "button_link": "shopify://collections",
             "button_style": "primary"
+          }
+        },
+        "button_QQyz4d": {
+          "type": "button",
+          "settings": {
+            "button_title": "Speak to a Consultant",
+            "button_link": "shopify://pages/contact",
+            "button_style": "secondary"
           }
         }
       },
-      "block_order": ["image", "heading", "text", "button"]
+      "block_order": [
+        "image",
+        "heading",
+        "text",
+        "button",
+        "button_QQyz4d"
+      ],
+      "settings": {
+      }
     },
     "card-column-left": {
       "type": "card-column-left",
@@ -41,8 +66,7 @@
         "image": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/1727271049655_Screenshot_2024-09-25_at_5.28.13PM.png",
-            "image_alt": "Dubai off plan properties"
+            "alt": ""
           }
         },
         "heading": {
@@ -65,7 +89,14 @@
           }
         }
       },
-      "block_order": ["image", "heading", "text", "button"]
+      "block_order": [
+        "image",
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+      }
     },
     "top-area": {
       "type": "top-area",
@@ -79,18 +110,23 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Explore some of the most sought after destinations for property buyers.</p>"
+            "description": "<p>Explore some of the most sought after destinations for property buyers.</p>"
           }
         },
         "collection": {
           "type": "collection",
           "settings": {
-            "collection": "jebel-ali-dubai",
-            "limit": 6
+            "collection_area": "jebel-ali-dubai"
           }
         }
       },
-      "block_order": ["heading", "text", "collection"]
+      "block_order": [
+        "heading",
+        "text",
+        "collection"
+      ],
+      "settings": {
+      }
     },
     "developers": {
       "type": "developers",
@@ -104,17 +140,23 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Learn more about Dubai’s world famous developers and what makes them unique.</p>"
+            "description": "<p>Learn more about Dubai’s world famous developers and what makes them unique.</p>"
           }
         },
         "collection": {
           "type": "collection",
           "settings": {
-            "collection": "damac"
+            "dev_collection": "damac"
           }
         }
       },
-      "block_order": ["heading", "text", "collection"]
+      "block_order": [
+        "heading",
+        "text",
+        "collection"
+      ],
+      "settings": {
+      }
     },
     "card-column-right": {
       "type": "card-column-right",
@@ -122,8 +164,7 @@
         "image": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/1727271049655_Screenshot_2024-09-25_at_5.28.13PM.png",
-            "image_alt": "What happens in a consultation?"
+            "alt": ""
           }
         },
         "heading": {
@@ -146,7 +187,14 @@
           }
         }
       },
-      "block_order": ["image", "heading", "text", "button"]
+      "block_order": [
+        "image",
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+      }
     },
     "team": {
       "type": "team",
@@ -160,7 +208,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>With proficiency in 20 languages and decades of combined experience, our team of experts will help you unlock opportunities and reach your investment goals.</p>"
+            "description": "<p>With proficiency in 20 languages and decades of combined experience, our team of experts will help you unlock opportunities and reach your investment goals.</p>"
           }
         },
         "collection": {
@@ -168,12 +216,17 @@
           "settings": {
             "name": "Viktorija Povilaityte",
             "position": "Off Plan & Investment Consultant",
-            "profile": "shopify://shop_images/1727271049655_Screenshot_2024-09-25_at_5.28.13PM.png",
-            "url": "/pages/contact"
+            "profile_detail": ""
           }
         }
       },
-      "block_order": ["heading", "text", "collection"]
+      "block_order": [
+        "heading",
+        "text",
+        "collection"
+      ],
+      "settings": {
+      }
     },
     "podcast": {
       "type": "podcast",
@@ -187,11 +240,16 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Tune into our podcast to get market updates, industry insights, and expert advice for every step of the journey.</p>"
+            "description": "<p>Tune into our podcast to get market updates, industry insights, and expert advice for every step of the journey.</p>"
           }
         }
       },
-      "block_order": ["heading", "text"]
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+      }
     },
     "join-form": {
       "type": "join-form",
@@ -211,7 +269,12 @@
           }
         }
       },
-      "block_order": ["heading", "text"]
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+      }
     },
     "faq": {
       "type": "faq",
@@ -282,7 +345,8 @@
         "text_XPeTcK",
         "text_gE9eCA"
       ],
-      "settings": {}
+      "settings": {
+      }
     }
   },
   "order": [
