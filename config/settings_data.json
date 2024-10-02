@@ -18,6 +18,7 @@
     "privacy_policy": "shopify://policies/privacy-policy",
     "terms_of_service": "shopify://policies/privacy-policy",
     "cookie_policy": "shopify://policies/privacy-policy",
+    "cta_button_link": "shopify://collections/properties-for-sale",
     "settings": {
       "color_primary": "#1d0c4b",
       "color_secondary": "#6622f4"
