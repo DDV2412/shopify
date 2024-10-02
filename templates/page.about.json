@@ -48,10 +48,35 @@
             "collection_heading": "Our Story",
             "collection_link": ""
           }
+        },
+        "collection_DaTPmQ": {
+          "type": "collection",
+          "settings": {
+            "collection_image": "shopify://shop_images/hausandhaus_about_us_5_ca6f9f2ef4.webp",
+            "collection_heading": "Why choose JCON Properties",
+            "collection_link": "shopify://pages/why-choose-jcon-properties"
+          }
+        },
+        "collection_9rVyQ4": {
+          "type": "collection",
+          "settings": {
+            "collection_heading": "",
+            "collection_link": ""
+          }
+        },
+        "collection_6jfBtB": {
+          "type": "collection",
+          "settings": {
+            "collection_heading": "",
+            "collection_link": ""
+          }
         }
       },
       "block_order": [
-        "collection_dCpQLY"
+        "collection_dCpQLY",
+        "collection_DaTPmQ",
+        "collection_9rVyQ4",
+        "collection_6jfBtB"
       ],
       "settings": {
       }
