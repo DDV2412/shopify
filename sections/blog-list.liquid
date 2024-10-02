@@ -16,6 +16,7 @@
                         <h1>{{ article.title }}</h1>
                          <div class="article-date">{{
                     article.published_at | date: '%b %d, %Y' }}</div>
+                      <div>{{ article.excerpt | strip_html | truncate : 160 }}</div>
                         <div class="button-wrapper align-left"><a href="{{ article.url }}" class="button is-secondary rounded w-inline-block">
                             <div>Continue Reading</div>
                         </a></div>
