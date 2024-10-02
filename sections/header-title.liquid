@@ -1,4 +1,4 @@
-<section class="section_component is-hero background-white">
+<section class="section_component {%- if section.settings.is_hero -%}  is-hero {%- endif -%} background-white">
   <div class="container">
     <div class="landing-content-wrapper">
       <div
@@ -20,6 +20,14 @@
 {% schema %}
   {
     "name": "Header Title",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "is_hero",
+        "label": "t:sections.header-title.settings.is_hero.label",
+        "default": true
+      }
+    ],
     "blocks": [
       {
         "type": "heading",
