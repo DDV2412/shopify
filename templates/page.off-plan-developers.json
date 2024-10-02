@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "header-title": {
@@ -16,8 +25,12 @@
           }
         }
       },
-      "block_order": ["heading", "text"],
-      "settings": {}
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+      }
     },
     "featured-developers": {
       "type": "featured-developers",
@@ -31,13 +44,36 @@
         "collection": {
           "type": "collection",
           "settings": {
-            "collection": "off-plan-developers",
-            "text": "<p>Known as the UAE’s leading real estate developer, Emaar boasts a strong background and a growing portfolio across the region.</p>",
-            "image": "shopify://media/emaar.jpg"
+            "dev_collection": "emaar",
+            "dev_image": "shopify://shop_images/19745_photo_1629723324.webp",
+            "dev_description": "<p>Known as the UAE’s leading real estate developer, Emaar boasts a strong background and a growing portfolio across the region.</p>"
+          }
+        },
+        "collection_UBrg7d": {
+          "type": "collection",
+          "settings": {
+            "dev_collection": "ellington",
+            "dev_image": "shopify://shop_images/54630_photo_1673505058.webp",
+            "dev_description": "<p>Since 2014, Ellington has been a leading UAE developer with impeccable projects centred around comfort and convenience. </p>"
+          }
+        },
+        "collection_yk8Nbc": {
+          "type": "collection",
+          "settings": {
+            "dev_collection": "sobha",
+            "dev_image": "shopify://shop_images/Sobha_One_hausandhaus_images_1_fada5a28c4.webp",
+            "dev_description": "<p>With a strong focus on quality and craftsmanship, Sobha Realty has become one of the leading names in UAE real estate.</p>"
           }
         }
       },
-      "block_order": ["heading", "collection"]
+      "block_order": [
+        "heading",
+        "collection",
+        "collection_UBrg7d",
+        "collection_yk8Nbc"
+      ],
+      "settings": {
+      }
     },
     "developers": {
       "type": "developers",
@@ -51,17 +87,51 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>With so many industry leading names, it can be overwhelming to choose one. Here are some top developers handpicked by our property experts.</p>"
+            "description": "<p>Learn more about Dubai’s world famous developers and what makes them unique.</p>"
           }
         },
         "collection": {
           "type": "collection",
           "settings": {
-            "collection": "damac"
+            "dev_collection": "emaar"
+          }
+        },
+        "collection_V7Uyba": {
+          "type": "collection",
+          "settings": {
+            "dev_collection": "damac"
+          }
+        },
+        "collection_9cRekW": {
+          "type": "collection",
+          "settings": {
+            "dev_collection": "ellington"
+          }
+        },
+        "collection_cLHanQ": {
+          "type": "collection",
+          "settings": {
+            "dev_collection": "sobha"
+          }
+        },
+        "collection_LdxDQx": {
+          "type": "collection",
+          "settings": {
+            "dev_collection": "binghatti"
           }
         }
       },
-      "block_order": ["heading", "text", "collection"]
+      "block_order": [
+        "heading",
+        "text",
+        "collection",
+        "collection_V7Uyba",
+        "collection_9cRekW",
+        "collection_cLHanQ",
+        "collection_LdxDQx"
+      ],
+      "settings": {
+      }
     },
     "cta-develop": {
       "type": "cta-develop",
@@ -78,7 +148,11 @@
           }
         }
       },
-      "block_order": ["text"]
+      "block_order": [
+        "text"
+      ],
+      "settings": {
+      }
     },
     "faq": {
       "type": "faq",
@@ -149,8 +223,15 @@
         "text_XPeTcK",
         "text_gE9eCA"
       ],
-      "settings": {}
+      "settings": {
+      }
     }
   },
-  "order": ["header-title", "featured-developers", "developers", "cta-develop", "faq"]
+  "order": [
+    "header-title",
+    "featured-developers",
+    "developers",
+    "cta-develop",
+    "faq"
+  ]
 }
