@@ -15,7 +15,6 @@
         "select_rYcBNm": {
           "type": "select",
           "settings": {
-            "background_image": "shopify://shop_images/hh_website_banner_images_2023_recruitment_7e50ebd970.webp"
           }
         },
         "heading_cVe9x3": {
@@ -128,6 +127,7 @@
         "image_BEgR3c": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/haus_3_images_support_448f26658a.webp",
             "alt": "JCON Properties"
           }
         },
