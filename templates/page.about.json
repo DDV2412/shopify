@@ -14,6 +14,29 @@
       "settings": {
       }
     },
+    "header_title_7CehT9": {
+      "type": "header-title",
+      "blocks": {
+        "heading_GRtYMA": {
+          "type": "heading",
+          "settings": {
+            "heading": "About JCON Properties"
+          }
+        },
+        "text_MV9dq7": {
+          "type": "text",
+          "settings": {
+            "text": "<p>As Dubai's most trusted and reputable Real Estate Group, we've been unlocking opportunities for our clients for over 10 years. </p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_GRtYMA",
+        "text_MV9dq7"
+      ],
+      "settings": {
+      }
+    },
     "page-body": {
       "type": "page-body",
       "settings": {
@@ -22,6 +45,7 @@
   },
   "order": [
     "breadcrumb",
+    "header_title_7CehT9",
     "page-body"
   ]
 }
