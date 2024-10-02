@@ -1094,7 +1094,7 @@ p {
   grid-row-gap: 2.5rem;
   justify-content: center;
   align-items: stretch;
-
+  margin-top: 2.5rem;
   display: flex;
 }
 
