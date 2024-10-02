@@ -14,11 +14,6 @@
       "settings": {
       }
     },
-    "blog_list": {
-      "type": "blog-list",
-      "settings": {
-      }
-    },
     "header_title_bqa8MB": {
       "type": "header-title",
       "blocks": {
@@ -40,13 +35,18 @@
         "text_BYNXjL"
       ],
       "settings": {
-        "is_hero": false
+        "is_hero": true
+      }
+    },
+    "blog_list": {
+      "type": "blog-list",
+      "settings": {
       }
     }
   },
   "order": [
     "breadcrumb",
-    "blog_list",
-    "header_title_bqa8MB"
+    "header_title_bqa8MB",
+    "blog_list"
   ]
 }
