@@ -562,6 +562,7 @@ p {
   text-align: left;
   flex-flow: column;
   display: flex;
+  justify-content: center;
 }
 
 .button-wrapper {
