@@ -1,66 +1,26 @@
 {%  assign blog_param =  blog.handle %}
 
 {% paginate blogs[blog_param].articles by 12 %}
-<section class="ssection_component is-hero  background-white">
-  <div class="container">
-    <div class="landing-content-wrapper">
-      <div
-        data-w-id="bc17c2cb-6525-3fb7-007c-e2d8a05c12d5"
-        style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
-        class="content-section padding-0">
-
-        {% for article in blogs[blog_param].articles %}
-            {% if forloop index == 1 %}
-                <div class="offplan-hero">
-                    <div id="w-node-bc17c2cb-6525-3fb7-007c-e2d8a05c12d7-732b4aee" class="hero_content is-offplan">
-                        <h1>{{ article.title }}</h1>
-                        <div class="develop-summary">{{ article.content }}</div>
-                        <a href="{{ article.url }}" class="button is-secondary rounded w-inline-block">
-                            <div>Continue Reading</div>
-                        </a>
-                    </div>
-                    <div id="w-node-bc17c2cb-6525-3fb7-007c-e2d8a05c12e5-732b4aee" class="hero_content">
-                        <div id="w-node-bc17c2cb-6525-3fb7-007c-e2d8a05c12b7-732b4aee" class="hero_content">
-                                <img
-                                src="{{ article.image | img_url : 'original'}}"
-                                loading="lazy"
-                                alt="{{ article.title }}"
-                                width="700"
-                                height="500"
-                                class="hero-image">
-                            </div>
-                    </div>
-                </div>
-            {% endif %}
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-</section>
-
-
 <section class="section_component">
   <div class="container">
     <div class="section_title-wrapper">
       <div data-w-id="d32fc49e-95c7-35af-56f3-162b3ad4cc8e" class="blog-grid">
         {% for article in blogs[blog_param].articles %}
-            {% if forloop index > 1 %}
-                <a id="w-node-a07ff5be-ff10-9d67-7e0b-0ab3038fffa4-5902b714" href="{{article.url}}"
-                    class="article-card w-inline-block">
-                    <div data-w-id="a07ff5be-ff10-9d67-7e0b-0ab3038fffa5" class="article_thumbnail-wrapper"><img
-                        src="{{article.image | img_url : 'original'}}" loading="lazy" width="318" height="160"
-                        alt="{{article.title}}"
-                        style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                        class="article-image"></div>
-                    <div class="article_detail">
-                    <div>{{article.title}}</div>
-                    </div>
+          <a id="w-node-a07ff5be-ff10-9d67-7e0b-0ab3038fffa4-5902b714" href="{{article.url}}"
+            class="article-card w-inline-block">
+            <div data-w-id="a07ff5be-ff10-9d67-7e0b-0ab3038fffa5" class="article_thumbnail-wrapper"><img
+                src="{{article.image | img_url : 'original'}}" loading="lazy" width="318" height="160"
+                alt="{{article.title}}"
+                style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+                class="article-image"></div>
+            <div class="article_detail">
+              <div>{{article.title}}</div>
+            </div>
 
-                    <div class="article-date">{{
-                    article.published_at | date: '%b %d, %Y' }}</div>
-                </a>
-            {% endif %}
-        {% endfor %}
+            <div class="article-date">{{
+              article.published_at | date: '%b %d, %Y' }}</div>
+          </a>
+          {% endfor %}
 
       </div>
       {% if paginate.page < 1 %}
@@ -121,7 +81,7 @@
 
 {% schema %}
 {
-  "name": "Blog List",
+  "name": "Market List",
   "presets": []
 }
 {% endschema %}
