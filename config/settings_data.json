@@ -15,6 +15,9 @@
     "phone_number": "+971585583349",
     "email": "sales@jconproperties.ae",
     "whatsapp_link": "https://wa.me/971585583349",
+    "privacy_policy": "shopify://policies/privacy-policy",
+    "terms_of_service": "shopify://policies/privacy-policy",
+    "cookie_policy": "shopify://policies/privacy-policy",
     "settings": {
       "color_primary": "#1d0c4b",
       "color_secondary": "#6622f4"
