@@ -686,6 +686,7 @@ p {
   padding-right: 1.25rem;
   font-weight: 400;
   transition-property: none;
+  background-color: var(--white);
 }
 
 .button.is-secondary:hover {
