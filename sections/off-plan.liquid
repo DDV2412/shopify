@@ -23,7 +23,7 @@
               {%- for product in collections[block.settings.collection_offplan].products -%}
             {% if forloop.index <= 4 %}
               <div class="offplan-slider-item">
-              <div class="image-section">
+              <div class="article_thumbnail-wrapper">
                 <img
                   src="{{ product.images[0] |  img_url: 'original' }}"
                   loading="lazy" width="328" height="216" alt="{{ product.title }}" class="image-section">
