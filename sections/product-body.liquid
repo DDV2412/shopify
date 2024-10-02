@@ -6,10 +6,10 @@
                     {% for image in product.images %}
                     {% if forloop.index == 1 %}
                     <div class="search-result-single-image">
-                        <a href="#" class="property-image-full w-inline-block w-lightbox" aria-label="open lightbox"
+                        <a href="#" class="image-lightbox w-inline-block w-lightbox" aria-label="open lightbox"
                             aria-haspopup="dialog">
                             <img src="{{ image | img_url: 'original' }}" loading="lazy" alt="{{product.title}}"
-                                loading="lazy" alt="{{product.title}}" class="property-image-full" width="544"
+                                loading="lazy" alt="{{product.title}}" class="property-image is-product " width="544"
                                 height="356" />
                             <script type="application/json" class="w-json">{
                                                                   "items": [
@@ -27,10 +27,10 @@
                     <div id="w-node-f00db9f5-186c-b423-d383-58a3266a8399-c258cdc7" class="search-result-grid-images">
                         {% for image in product.images %}
                         {% if forloop.index > 1 and forloop.index <= 4 %} <div class="search-result-single-image">
-                            <a href="#" class="property-image w-inline-block w-lightbox" aria-label="open lightbox"
+                            <a href="#" class="image-lightbox w-inline-block w-lightbox" aria-label="open lightbox"
                                 aria-haspopup="dialog">
                                 <img src="{{ image | img_url: 'original' }}" loading="lazy" alt="{{product.title}}"
-                                    loading="lazy" alt="{{product.title}}" class="property-image" width="544"
+                                    loading="lazy" alt="{{product.title}}" class="property-image is-small" width="544"
                                     height="356" />
                                 <script type="application/json" class="w-json">{
                                                                                           "items": [
@@ -49,10 +49,10 @@
                 <div id="w-node-f00db9f5-186c-b423-d383-58a3266a8399-c258cdc7" class="search-result-grid-images hidden">
                     {% for image in product.images %}
                     {% if forloop.index > 4 %} <div class="search-result-single-image">
-                        <a href="#" class="property-image w-inline-block w-lightbox" aria-label="open lightbox"
+                        <a href="#" class="image-lightbox w-inline-block w-lightbox" aria-label="open lightbox"
                             aria-haspopup="dialog">
                             <img src="{{ image | img_url: 'original' }}" loading="lazy" alt="{{product.title}}"
-                                loading="lazy" alt="{{product.title}}" class="property-image" width="544"
+                                loading="lazy" alt="{{product.title}}" class="property-image is-small" width="544"
                                 height="356" />
                             <script type="application/json" class="w-json">{
                                                                                                           "items": [

@@ -42,13 +42,18 @@
       <div class="features-list is-sale">
         {% for tag in tags_array %}
           {% if tag != "" and tag_count < max_tags %}
-            <a
-              data-w-id="d9f7959d-a9b5-9387-cac8-6e7c88cfae89"
-              style="background-color: rgb(255, 255, 255); color: rgb(29, 12, 75);"
-              href="/collections/real-estate-listings/{{ tag | handle }}"
-              class="button is-secondary w-inline-block">
-              <div>{{ tag }}</div>
-            </a>
+            {%- for block in section.blocks -%}
+              {%- case block.type -%}
+                {%- when 'button' -%}
+                  <a
+                    data-w-id="d9f7959d-a9b5-9387-cac8-6e7c88cfae89"
+                    style="background-color: rgb(255, 255, 255); color: rgb(29, 12, 75);"
+                    href="{{ block.settings.button_for_sale_url }}/{{ tag | handle }}"
+                    class="button is-secondary w-inline-block">
+                    <div>{{ tag }}</div>
+                  </a>
+              {%- endcase -%}
+            {%- endfor -%}
             {% assign tag_count = tag_count | plus: 1 %}
           {% endif %}
         {% endfor %}
@@ -57,13 +62,18 @@
       <div class="features-list is-rent">
         {% for tag in tags_array %}
           {% if tag != "" and tag_count < max_tags %}
-            <a
-              data-w-id="d9f7959d-a9b5-9387-cac8-6e7c88cfaeaa"
-              style="background-color: rgb(255, 255, 255); color: rgb(29, 12, 75);"
-              href="/collections/real-estate-listings/{{ tag | handle }}"
-              class="button is-secondary w-inline-block">
-              <div>{{ tag }}</div>
-            </a>
+            {%- for block in section.blocks -%}
+              {%- case block.type -%}
+                {%- when 'button' -%}
+                  <a
+                    data-w-id="d9f7959d-a9b5-9387-cac8-6e7c88cfae89"
+                    style="background-color: rgb(255, 255, 255); color: rgb(29, 12, 75);"
+                    href="{{ block.settings.button_for_rent_url }}/{{ tag | handle }}"
+                    class="button is-secondary w-inline-block">
+                    <div>{{ tag }}</div>
+                  </a>
+              {%- endcase -%}
+            {%- endfor -%}
             {% assign tag_count = tag_count | plus: 1 %}
           {% endif %}
         {% endfor %}

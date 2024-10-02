@@ -12,7 +12,6 @@
           {% endcase %}
         {% endfor %}
 
-
       </div>
       <div
         data-w-id="d32fc49e-95c7-35af-56f3-162b3ad4cc8e"
@@ -32,8 +31,8 @@
           data-infinite="true">
           <div class="w-slider-mask">
             {% for interested in blogs.news.articles %}
-              {% if interested._id != article._id %}
-                {% if forloop.index <= 4 %}
+              {% if forloop.index <= 4 %}
+                {% if interested.id != article.id %}
                   <div class="article-slide w-slide">
                     <a
                       id="w-node-a07ff5be-ff10-9d67-7e0b-0ab3038fffa4-5902b714"
@@ -54,7 +53,6 @@
                       <div class="article-date">{{
 interested.published_at | date: '%b %d, %Y' }}</div>
                     </a>
-
                   </div>
                 {% endif %}
               {% endif %}
