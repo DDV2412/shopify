@@ -1,9 +1,11 @@
-{% paginate blogs.news.articles by 12 %}
+{%  assign blog_param =  blog.title %}
+
+{% paginate blogs[blog_param].articles by 12 %}
 <section class="section_component">
   <div class="container">
     <div class="section_title-wrapper">
       <div data-w-id="d32fc49e-95c7-35af-56f3-162b3ad4cc8e" class="blog-grid">
-        {% for article in blogs.news.articles %}
+        {% for article in blogs[blog_param].articles %}
         {% if forloop.index <=4 %} 
           <a id="w-node-a07ff5be-ff10-9d67-7e0b-0ab3038fffa4-5902b714" href="{{article.url}}"
           class="article-card w-inline-block">
@@ -24,7 +26,7 @@
 
       </div>
       {% if paginate.page < 1 %}
-        <div data-w-id="e2af74cb-a8cf-fb62-51e6-6b6486e095eb" style="opacity: 0;" class="load-more-wrap"></div>
+        <div data-w-id="e2af74cb-a8cf-fb62-51e6-6b6486e095eb" style="opacity: 0;" class="load-more-wrap">
                 <a href="{{ paginate.previous.url }}"
                     class="button is-secondary is-results-btn is-left w-inline-block">
                     <div class="icon_small w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16"
