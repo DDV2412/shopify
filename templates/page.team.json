@@ -14,14 +14,40 @@
       "settings": {
       }
     },
+    "header_title_XwzhB3": {
+      "type": "header-title",
+      "blocks": {
+        "heading_pLHYam": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our Team"
+          }
+        },
+        "text_caTiYK": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Covering Dubai's key communities, our property experts offer a wide range of services including Residential & Commercial Sales and Leasing, Off Plan and Investments, Property Management, and more. Use the search feature to find a specific person or browse through a department.</p><p></p><p>Not sure what you need? No problem, you can reach out to our Customer Service team via <strong>+971 58 558 3349</strong> for support.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_pLHYam",
+        "text_caTiYK"
+      ],
+      "settings": {
+        "is_hero": true
+      }
+    },
     "page-body": {
       "type": "page-body",
+      "disabled": true,
       "settings": {
       }
     }
   },
   "order": [
     "breadcrumb",
+    "header_title_XwzhB3",
     "page-body"
   ]
 }
