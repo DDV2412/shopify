@@ -43,6 +43,38 @@
       "settings": {
       }
     },
+    "cta_ykc7nK": {
+      "type": "cta",
+      "blocks": {
+        "heading_LrwyTA": {
+          "type": "heading",
+          "settings": {
+            "heading": "Don't miss a beat of Dubai's property sector",
+            "tagline": ""
+          }
+        },
+        "text_mK8pb9": {
+          "type": "text",
+          "settings": {
+            "text": "Sign up to our newsletter and receive monthly round-ups including market updates, news articles, and expert insights."
+          }
+        },
+        "button_VRqJ3g": {
+          "type": "button",
+          "settings": {
+            "cta_button": "Subscribe Noew",
+            "cta_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_LrwyTA",
+        "text_mK8pb9",
+        "button_VRqJ3g"
+      ],
+      "settings": {
+      }
+    },
     "cta_card_pyUHx3": {
       "type": "cta-card",
       "blocks": {
@@ -81,6 +113,7 @@
     "breadcrumb",
     "header_title_bqa8MB",
     "blog_list",
+    "cta_ykc7nK",
     "cta_card_pyUHx3"
   ]
 }
