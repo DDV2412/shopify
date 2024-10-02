@@ -547,6 +547,13 @@ p {
   text-align: center;
 }
 
+.hero-text {
+  text-align: center;
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .hero_content.is-offplan {
   grid-column-gap: 1.5rem;
   grid-row-gap: 1.5rem;
@@ -3381,6 +3388,13 @@ p {
 
   .article-slide {
     width: 30.25%;
+  }
+
+  .hero-text {
+    text-align: center;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .slide-dot {
