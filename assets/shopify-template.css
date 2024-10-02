@@ -1101,6 +1101,11 @@ p {
 .section_text-wrapper {
   margin-top: 1.5rem;
   text-align: center;
+  max-width: 75%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
 .review-wrapper.is-offplan {
@@ -3273,6 +3278,10 @@ p {
     border-style: none;
     width: 2rem;
     height: 2rem;
+  }
+
+  .section_text-wrapper {
+    max-width: 100%;
   }
 
   .whatsapp-button:hover {

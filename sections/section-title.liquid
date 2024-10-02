@@ -10,7 +10,7 @@
             <h2>{{ block.settings.heading }}</h2>
           {% when 'text' %}
             <div class="section_text-wrapper">
-              <div class="description">{{ block.settings.text }}</div>
+              {{ block.settings.text }}
             </div>
         {% endcase %}
       {% endfor %}
