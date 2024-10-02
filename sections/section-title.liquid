@@ -1,33 +1,24 @@
 <section class="{%- if section.settings.is_hero -%} section_component background-white {%-  else -%} section_component is-hero  background-white {%- endif -%}">
   <div class="container">
-    <div class="landing-content-wrapper">
-      <div
-        data-w-id="7bc9fdea-201a-4548-cce7-ab796688bc7d"
-        style="opacity:0"
-        class="content-section padding-0">
-        {% for block in section.blocks %}
-          {% case block.type %}
-            {% when 'heading' %}
-              <h1>{{ block.settings.heading }}</h1>
-            {% when 'text' %}
-              <div class="description">{{ block.settings.text }}</div>
-          {% endcase %}
-        {% endfor %}
-      </div>
+    <div
+      data-w-id="d9f7959d-a9b5-9387-cac8-6e7c88cfae4d"
+      style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
+      class="reviews-wrapper">
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'heading' %}
+            <h2>{{ block.settings.heading }}</h2>
+          {% when 'text' %}
+            <div class="description">{{ block.settings.text }}</div>
+        {% endcase %}
+      {% endfor %}
     </div>
   </div>
 </section>
 
 {% schema %}
   {
-    "name": "Header Title",
-    "settings": [
-      {
-        "type": "checkbox",
-        "id": "is_hero",
-        "label": "t:sections.header-title.settings.is_hero.label"
-      }
-    ],
+    "name": "Section Title",
     "blocks": [
       {
         "type": "heading",
@@ -37,7 +28,7 @@
           {
             "type": "text",
             "id": "heading",
-            "label": "t:sections.header-title.blocks.heading.settings.heading.label"
+            "label": "t:sections.section-title.blocks.heading.settings.heading.label"
           }
         ]
       }, {
@@ -48,7 +39,7 @@
           {
             "type": "richtext",
             "id": "text",
-            "label": "t:sections.header-title.blocks.text.settings.text.label"
+            "label": "t:sections.section-title.blocks.text.settings.text.label"
           }
         ]
       }

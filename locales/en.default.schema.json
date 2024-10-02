@@ -427,6 +427,32 @@
         "name": "Header Block Text"
       }
     },
+    "section-title": {
+      "name": "Section Block Text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": {
+              "default": "We're here to help",
+              "label": "Heading Title"
+            }
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": {
+              "default": "Stay up to date with the latest news and insights from the Dubai property market.",
+              "label": "Sub Heading"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Header Block Text"
+      }
+    },
     "cta-card": {
       "name": "CTA Card",
       "blocks": {
