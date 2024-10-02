@@ -19,7 +19,8 @@
           {%- for block in section.blocks -%}
           {%- case block.type -%}
           {%- when "collection" -%}
-          {%- for product in collections[block.settings.collection_offplan].products -%}
+            <div data-w-id="d32fc49e-95c7-35af-56f3-162b3ad4cc8e" class="blog-grid">
+              {%- for product in collections[block.settings.collection_offplan].products -%}
             {% if forloop.index <= 4 %}
               <div class="offplan-slider-item">
               <div class="image-section">
@@ -102,6 +103,8 @@
             </div>
             {% endif %}
           {%- endfor -%}
+            </div>
+          
           {%- endcase -%}
           {%- endfor -%}
         </div>
