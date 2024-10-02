@@ -7,20 +7,12 @@
 * made to this file may be overwritten.
 * ------------------------------------------------------------
 */
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "breadcrumb": {
       "type": "breadcrumb",
-      "settings": {}
+      "settings": {
+      }
     },
     "header_title_bqa8MB": {
       "type": "header-title",
@@ -38,14 +30,18 @@
           }
         }
       },
-      "block_order": ["heading_X3DFwe", "text_BYNXjL"],
+      "block_order": [
+        "heading_X3DFwe",
+        "text_BYNXjL"
+      ],
       "settings": {
         "is_hero": true
       }
     },
     "blog_list": {
       "type": "blog-list",
-      "settings": {}
+      "settings": {
+      }
     },
     "cta_ykc7nK": {
       "type": "cta",
@@ -66,12 +62,18 @@
           "type": "button",
           "settings": {
             "cta_button": "Subscribe Noew",
-            "cta_link": ""
+            "cta_link": "shopify://pages/contact"
           }
         }
       },
-      "block_order": ["heading_LrwyTA", "text_mK8pb9", "button_VRqJ3g"],
-      "settings": {}
+      "block_order": [
+        "heading_LrwyTA",
+        "text_mK8pb9",
+        "button_VRqJ3g"
+      ],
+      "settings": {
+        "remove_padding_bottom": false
+      }
     },
     "cta_card_pyUHx3": {
       "type": "cta-card",
@@ -94,13 +96,24 @@
           "type": "button",
           "settings": {
             "button_title": "Apply Today",
-            "button_link": ""
+            "button_link": "shopify://pages/contact"
           }
         }
       },
-      "block_order": ["heading_wR3pen", "text_dmzhCr", "button_inihNK"],
-      "settings": {}
+      "block_order": [
+        "heading_wR3pen",
+        "text_dmzhCr",
+        "button_inihNK"
+      ],
+      "settings": {
+      }
     }
   },
-  "order": ["breadcrumb", "header_title_bqa8MB", "blog_list", "cta_ykc7nK", "cta_card_pyUHx3"]
+  "order": [
+    "breadcrumb",
+    "header_title_bqa8MB",
+    "blog_list",
+    "cta_ykc7nK",
+    "cta_card_pyUHx3"
+  ]
 }
