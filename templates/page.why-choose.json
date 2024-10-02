@@ -9,19 +9,453 @@
 */
 {
   "sections": {
+    "home_hero_PgeY7X": {
+      "type": "home-hero",
+      "blocks": {
+        "select_rYcBNm": {
+          "type": "select",
+          "settings": {
+            "background_image": "shopify://shop_images/hh_website_banner_images_2023_recruitment_7e50ebd970.webp"
+          }
+        },
+        "heading_cVe9x3": {
+          "type": "heading",
+          "settings": {
+            "heading": "Careers at JCON Properties"
+          }
+        },
+        "text_NUxLPp": {
+          "type": "text",
+          "settings": {
+            "text": "Looking to take your career to the next level? At haus & haus, we continue to grow our different departments offering unique opportunities constantly. We are seeking hardworking, ambitious, honest, dedicated and enthusiastic people to join us."
+          }
+        },
+        "button_ETRBhV": {
+          "type": "button",
+          "settings": {
+            "button_cta": "View vacancies",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        },
+        "button_VkhWge": {
+          "type": "button",
+          "settings": {
+            "button_cta": "Send us your CV",
+            "button_link": "",
+            "button_style": "secondary"
+          }
+        }
+      },
+      "block_order": [
+        "select_rYcBNm",
+        "heading_cVe9x3",
+        "text_NUxLPp",
+        "button_ETRBhV",
+        "button_VkhWge"
+      ],
+      "settings": {
+        "add_form_search": false
+      }
+    },
+    "section_title_NMTtQp": {
+      "type": "section-title",
+      "blocks": {
+        "heading_qD4Ebw": {
+          "type": "heading",
+          "settings": {
+            "heading": "Boost your career"
+          }
+        },
+        "text_8UTpq9": {
+          "type": "text",
+          "settings": {
+            "text": "<p>As an award winning real estate agency, our clients are at the core of what we do – and we focus on building a strong and capable team of experts to keep offering the best possible service. We're always on the hunt for high achievers and top performers with a strong work ethic and a passion for customer service.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_qD4Ebw",
+        "text_8UTpq9"
+      ],
+      "settings": {
+      }
+    },
+    "card_column_right_J6XdJm": {
+      "type": "card-column-right",
+      "blocks": {
+        "image_4LbrCm": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Working_at_hausandhaus_1_6b57a557e5.webp",
+            "alt": ""
+          }
+        },
+        "heading_qchndi": {
+          "type": "heading",
+          "settings": {
+            "heading": "What happens in a consultation?"
+          }
+        },
+        "text_4HwG6e": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Regardless of your role or department, you'll have access to the expertise of our team from day one, as well as industry leading tools to help you thrive and grow. We also believe in rewarding hard work and effort – so expect competitive earning potential, thrilling incentives, and ongoing support from trainers and managers to help you reach your goals.</p>"
+          }
+        },
+        "button_XKy4RU": {
+          "type": "button",
+          "settings": {
+            "button_title": "Working at JCON Properties",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_4LbrCm",
+        "heading_qchndi",
+        "text_4HwG6e",
+        "button_XKy4RU"
+      ],
+      "settings": {
+        "add_background_grey": false,
+        "button_visibility": false
+      }
+    },
+    "card_column_left_LMa6ax": {
+      "type": "card-column-left",
+      "blocks": {
+        "image_BEgR3c": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/maxresdefault_1.jpg",
+            "alt": "JCON Properties"
+          }
+        },
+        "heading_4wfb6t": {
+          "type": "heading",
+          "settings": {
+            "heading": "Places to thrive in"
+          }
+        },
+        "text_yMPMzr": {
+          "type": "text",
+          "settings": {
+            "text": "<p>All JCON Properties offices have been carefully designed with collaboration and creativity in mind, featuring open layouts and plenty of space to feel inspired. </p><p>We're all about promoting teamwork between departments and avoiding that boring ‘boxed in’ vibe. With a mix of quiet rooms to focus in and vibrant spaces including a coffee shop, it's hard to be in a bad mood when you walk through the door.</p>"
+          }
+        },
+        "button_gX9MiE": {
+          "type": "button",
+          "settings": {
+            "button_title": "Download Investment Guide",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_BEgR3c",
+        "heading_4wfb6t",
+        "text_yMPMzr",
+        "button_gX9MiE"
+      ],
+      "settings": {
+        "add_background_grey": false,
+        "button_visibility": false
+      }
+    },
+    "cta_LhRKUM": {
+      "type": "cta",
+      "blocks": {
+        "heading_GeGHwM": {
+          "type": "heading",
+          "settings": {
+            "heading": "Don't miss a beat of Dubai's property sector"
+          }
+        },
+        "text_EDQeAY": {
+          "type": "text",
+          "settings": {
+            "text": "Sign up to our newsletter and receive monthly round-ups including market updates, news articles, and expert insights."
+          }
+        },
+        "button_mWpfWW": {
+          "type": "button",
+          "settings": {
+            "cta_button": "Subscribe Now",
+            "cta_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading_GeGHwM",
+        "text_EDQeAY",
+        "button_mWpfWW"
+      ],
+      "settings": {
+        "remove_padding_bottom": true
+      }
+    },
+    "card_column_right_6z9xcL": {
+      "type": "card-column-right",
+      "blocks": {
+        "image_JkchcY": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Cathal_O_Neill_being_named_agent_of_the_year_for_2023_b425eaaf59.webp",
+            "alt": "Home to leading industry names"
+          }
+        },
+        "heading_6k4qCn": {
+          "type": "heading",
+          "settings": {
+            "heading": "Home to leading industry names"
+          }
+        },
+        "text_a9Vzpf": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We're proud to have some of Dubai's top agents at haus & haus, and you might recognise a few of them. Like Cathal O'Neill – our Associate Director for Jumeirah Park and JVT who has been awarded Bayut's Agent of the Year three times. Our Off Plan Associate Director Jana Zapletalova is a frequent speaker in our webinars, and you may have spotted her on the cover of Forbes Czech Republic.</p><p>The haus & haus podcast Dubai Real Estate Unplugged features even more leading names, like Paul Sharland and Steven Leckie with over 20 years of experience.  </p><p>And the list goes on. Who knows, maybe you'll be the next top expert in our haus...</p>"
+          }
+        },
+        "button_gR4ynP": {
+          "type": "button",
+          "settings": {
+            "button_title": "Book a Consultation",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_JkchcY",
+        "heading_6k4qCn",
+        "text_a9Vzpf",
+        "button_gR4ynP"
+      ],
+      "settings": {
+        "add_background_grey": false,
+        "button_visibility": false
+      }
+    },
     "breadcrumb": {
       "type": "breadcrumb",
+      "disabled": true,
       "settings": {
       }
     },
     "page-body": {
       "type": "page-body",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "card_column_left_jLNEd9": {
+      "type": "card-column-left",
+      "blocks": {
+        "image_mYTj6z": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/haus_career_page_Vijay_89f93cb006.webp",
+            "alt": "Top in-haus training"
+          }
+        },
+        "heading_hWdpbQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Top JCON Properties training"
+          }
+        },
+        "text_PtzD4b": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We believe in empowering our team, and we have leading tools to do it – including our in-haus real estate training platform, dedicated trainers, and ongoing leadership support.</p><p>At JCON Properties, we all share the same goals – from Directors to Team Managers. This collaborative mindset, combined with our shared workspaces, helps us strengthen our team spirit and lift each other.</p>"
+          }
+        },
+        "button_a9QMcz": {
+          "type": "button",
+          "settings": {
+            "button_title": "View vacancies",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_mYTj6z",
+        "heading_hWdpbQ",
+        "text_PtzD4b",
+        "button_a9QMcz"
+      ],
+      "settings": {
+        "add_background_grey": false,
+        "button_visibility": true
+      }
+    },
+    "card_column_right_mpNH3d": {
+      "type": "card-column-right",
+      "blocks": {
+        "image_tckbYg": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Learning_from_the_best_career_page_efbf19f654.webp",
+            "alt": ""
+          }
+        },
+        "heading_MGwpwD": {
+          "type": "heading",
+          "settings": {
+            "heading": "What happens in a consultation?"
+          }
+        },
+        "text_adUDYM": {
+          "type": "text",
+          "settings": {
+            "text": "<p>During your free consultation with one of our experts, you will discuss your investment goals and ideal timeline. They will ask about your needs, answer any questions, and update you on the current market conditions. After that, your agent will come back to you with suggestions, an investment strategy, and tailored advice. </p>"
+          }
+        },
+        "button_nh3DTX": {
+          "type": "button",
+          "settings": {
+            "button_title": "Book a Consultation",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_tckbYg",
+        "heading_MGwpwD",
+        "text_adUDYM",
+        "button_nh3DTX"
+      ],
+      "settings": {
+        "add_background_grey": false,
+        "button_visibility": false
+      }
+    },
+    "card_column_left_w9r8Qf": {
+      "type": "card-column-left",
+      "blocks": {
+        "image_YqXdyc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/haus_and_haus_run_9001b9b898.webp",
+            "alt": "Growing together"
+          }
+        },
+        "heading_rqBDkR": {
+          "type": "heading",
+          "settings": {
+            "heading": "Growing together"
+          }
+        },
+        "text_qcF9hn": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Personal development is a big part of our culture. From a JCON Properties Run Club and weekly fitness classes to social incentives and inspirational events, we're passionate about our wellbeing and love to connect outside the office.</p>"
+          }
+        },
+        "button_pjjNFU": {
+          "type": "button",
+          "settings": {
+            "button_title": "Download Investment Guide",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_YqXdyc",
+        "heading_rqBDkR",
+        "text_qcF9hn",
+        "button_pjjNFU"
+      ],
+      "settings": {
+        "add_background_grey": false,
+        "button_visibility": false
+      }
+    },
+    "faq_GLdLYK": {
+      "type": "faq",
+      "blocks": {
+        "heading_C8QQ9N": {
+          "type": "heading",
+          "settings": {
+            "heading": "Why choose JCON Properties"
+          }
+        },
+        "text_GLtpAq": {
+          "type": "text",
+          "settings": {
+            "question": "What real estate services do JCON Properties offer?",
+            "answer": "<p>Our services include Residential Sales and Leasing, Holiday Rentals, Off Plan properties and Investments, Property Management, and Commercial Sales and Commercial Leasing. We also support clients through our home maintenance company Breathe, and our project management group Bauhaus is on hand for property renovations, design, upgrades, and more. If there's something we don't cover, our extensive network of partners can take care of it – including conveyancing support, mortgage solutions, currency services, professional furnishing, and more.</p>"
+          }
+        },
+        "text_HjfkRh": {
+          "type": "text",
+          "settings": {
+            "question": "Which Dubai communities do JCON Properties cover?",
+            "answer": "<p>We cover 100+ communities, including waterfront destinations like Dubai Marina and Emaar Beachfront, serene communities such as Arabian Ranches, Jumeirah Golf Estates, and Dubai Hills Estate, and key tourist locations like Downtown Dubai, Palm Jumeirah, and Jumeirah Beach Residence (JBR).</p>"
+          }
+        },
+        "text_UXiTar": {
+          "type": "text",
+          "settings": {
+            "question": "Is JCON Properties Group a leading real estate agency?",
+            "answer": "<p>We're proud to be a leading, award winning real estate agency with over 10 years of experience and a strong team of 220+ property experts. Our client focused approach has led us to where we are, because while others are fighting to get the deal, we have our eyes set on supporting each person and building long lasting relationships. </p>"
+          }
+        },
+        "text_exjwPb": {
+          "type": "text",
+          "settings": {
+            "question": "Can JCON Properties help me with real estate investments?",
+            "answer": "<p>Yes. Whether you're looking to invest in a ready property or are searching for an off plan investment, our property experts are on hand to help you find the best opportunities that suit your needs.</p><p>Maybe you're a seasoned investor, or perhaps you just want some extra info – whatever your case, we'll provide useful advice to steer you in the right direction.</p>"
+          }
+        },
+        "text_EtRkUz": {
+          "type": "text",
+          "settings": {
+            "question": "Can JCON Properties manage my property?",
+            "answer": "<p>Luckily, our Property Management department can take the weight off your shoulders. From leased apartments and villas to entire buildings, we'll take care of general maintenance, repairs, cleaning, and even look after your tenants.<a href=\"/pages/contact\" target=\"_blank\" title=\"Contact\">Get started here</a>.</p>"
+          }
+        },
+        "text_VwWP8X": {
+          "type": "text",
+          "settings": {
+            "question": "Do JCON Properties provide insights into Dubai's real estate market?",
+            "answer": "<p>Absolutely. We'll take every opportunity we can get to inform you of the latest insights, market news, and relevant data. No matter your goal, the best decision is always the one that's backed up by accurate information and professional advice – so leave it to us to keep you in the loop of the current market with guides, blog posts, market reports, and more. </p>"
+          }
+        },
+        "text_3yTdEP": {
+          "type": "text",
+          "settings": {
+            "question": "Do JCON Properties Property Consultants provide a free consultation?",
+            "answer": "<p>Yes – we're always happy to meet new people and talk about real estate (it's kind of our thing). We offer free consultations through different channels like phone calls, WhatsApp messages, video calls or in-person meetings. Depending on your specific goals we'll get you through to a dedicated specialist. Just <a href=\"/pages/contact\" target=\"_blank\" title=\"Contact\">get in touch</a> to book your preferred date and time. </p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_C8QQ9N",
+        "text_GLtpAq",
+        "text_HjfkRh",
+        "text_UXiTar",
+        "text_exjwPb",
+        "text_EtRkUz",
+        "text_VwWP8X",
+        "text_3yTdEP"
+      ],
       "settings": {
       }
     }
   },
   "order": [
+    "home_hero_PgeY7X",
+    "section_title_NMTtQp",
+    "card_column_right_J6XdJm",
+    "card_column_left_LMa6ax",
+    "cta_LhRKUM",
+    "card_column_right_6z9xcL",
     "breadcrumb",
-    "page-body"
+    "page-body",
+    "card_column_left_jLNEd9",
+    "card_column_right_mpNH3d",
+    "card_column_left_w9r8Qf",
+    "faq_GLdLYK"
   ]
 }
