@@ -7,39 +7,155 @@
 * made to this file may be overwritten.
 * ------------------------------------------------------------
 */
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
-    "breadcrumb": {
-      "type": "breadcrumb",
-      "settings": {}
-    },
-    "header-title": {
-      "type": "header-title",
+    "home_hero_GD8Ykx": {
+      "type": "home-hero",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "select_FweHGM": {
+          "type": "select",
           "settings": {
-            "heading": "Contact Us"
           }
         },
-        "text": {
+        "heading_iT4nU3": {
+          "type": "heading",
+          "settings": {
+            "heading": ""
+          }
+        },
+        "text_VjRTrq": {
           "type": "text",
           "settings": {
-            "text": "<p>Looking for expert advice or further support? <br></p>"
+            "text": ""
+          }
+        },
+        "button_NxgYVP": {
+          "type": "button",
+          "settings": {
+            "button_cta": "Read the full article",
+            "button_link": "",
+            "button_style": "primary"
           }
         }
       },
-      "block_order": ["heading", "text"],
-      "settings": {}
+      "block_order": [
+        "select_FweHGM",
+        "heading_iT4nU3",
+        "text_VjRTrq",
+        "button_NxgYVP"
+      ],
+      "settings": {
+        "add_form_search": false
+      }
+    },
+    "breadcrumb": {
+      "type": "breadcrumb",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "section_title_4LWeeg": {
+      "type": "section-title",
+      "blocks": {
+        "heading_cTJkcz": {
+          "type": "heading",
+          "settings": {
+            "heading": ""
+          }
+        },
+        "text_MxqH4F": {
+          "type": "text",
+          "settings": {
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_cTJkcz",
+        "text_MxqH4F"
+      ],
+      "settings": {
+      }
+    },
+    "card_column_right_wdmd9B": {
+      "type": "card-column-right",
+      "blocks": {
+        "image_G7TtJC": {
+          "type": "image",
+          "settings": {
+            "alt": ""
+          }
+        },
+        "heading_7XqXmk": {
+          "type": "heading",
+          "settings": {
+            "heading": "What happens in a consultation?"
+          }
+        },
+        "text_zTjWKf": {
+          "type": "text",
+          "settings": {
+            "text": "<p>During your free consultation with one of our experts, you will discuss your investment goals and ideal timeline. They will ask about your needs, answer any questions, and update you on the current market conditions. After that, your agent will come back to you with suggestions, an investment strategy, and tailored advice. </p>"
+          }
+        },
+        "button_idNzP4": {
+          "type": "button",
+          "settings": {
+            "button_title": "Book a Consultation",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_G7TtJC",
+        "heading_7XqXmk",
+        "text_zTjWKf",
+        "button_idNzP4"
+      ],
+      "settings": {
+        "add_background_grey": true,
+        "button_visibility": false
+      }
+    },
+    "card_column_left_7bHWET": {
+      "type": "card-column-left",
+      "blocks": {
+        "image_aM3PY7": {
+          "type": "image",
+          "settings": {
+            "alt": ""
+          }
+        },
+        "heading_QAJhzD": {
+          "type": "heading",
+          "settings": {
+            "heading": "Why Dubai?"
+          }
+        },
+        "text_xN3hhg": {
+          "type": "text",
+          "settings": {
+            "text": "<p><p>A leading global hub, Dubai continues to attract investors all over the world thanks to its visionary plans, booming population, w<span>orld class education and healthcare</span>, safe environment, and thriving economy.&nbsp;</p><p>Investors can also benefit from:</p><p>Golden Visas<br>Competitive rental yields<br>Tax-free income<br>Attractive business environment</p></p>"
+          }
+        },
+        "button_8Cydcj": {
+          "type": "button",
+          "settings": {
+            "button_title": "Download Investment Guide",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_aM3PY7",
+        "heading_QAJhzD",
+        "text_xN3hhg",
+        "button_8Cydcj"
+      ],
+      "settings": {
+        "add_background_grey": false,
+        "button_visibility": false
+      }
     },
     "cta-card": {
       "type": "cta-card",
@@ -60,11 +176,19 @@
         },
         "button": {
           "type": "button",
-          "settings": {}
+          "settings": {
+            "button_title": "Explore Dubai",
+            "button_link": ""
+          }
         }
       },
-      "block_order": ["heading", "text", "button"],
-      "settings": {}
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+      }
     },
     "faq": {
       "type": "faq",
@@ -135,8 +259,17 @@
         "text_XPeTcK",
         "text_gE9eCA"
       ],
-      "settings": {}
+      "settings": {
+      }
     }
   },
-  "order": ["breadcrumb", "header-title", "cta-card", "faq"]
+  "order": [
+    "home_hero_GD8Ykx",
+    "breadcrumb",
+    "section_title_4LWeeg",
+    "card_column_right_wdmd9B",
+    "card_column_left_7bHWET",
+    "cta-card",
+    "faq"
+  ]
 }
