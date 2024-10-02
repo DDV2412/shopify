@@ -127,7 +127,7 @@
           "type": "button",
           "settings": {
             "cta_button": "Search properties",
-            "cta_link": ""
+            "cta_link": "shopify://collections/properties-for-sale"
           }
         }
       },
