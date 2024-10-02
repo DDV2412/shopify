@@ -95,8 +95,8 @@
         "button": {
           "type": "button",
           "settings": {
-            "button_for_sale_url": "/collections/all",
-            "button_for_rent_url": "/collections/all"
+            "button_for_sale_url": "shopify://collections/properties-for-sale",
+            "button_for_rent_url": "shopify://collections/properties-for-rent"
           }
         }
       },
