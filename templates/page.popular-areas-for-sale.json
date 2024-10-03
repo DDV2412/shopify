@@ -92,11 +92,18 @@
             "email": "sales@jconproperties.ae",
             "phone": "+971 4 580 8000"
           }
+        },
+        "html_bAUkQt": {
+          "type": "html",
+          "settings": {
+            "form_embed": "<script src=\"https://cdn.commoninja.com/sdk/latest/commonninja.js\" defer></script>\n<div class=\"commonninja_component pid-e04430e5-894e-4e39-96e0-7aeb993871dc\"></div>"
+          }
         }
       },
       "block_order": [
         "heading_YtGL6Q",
-        "text_bt7GNC"
+        "text_bt7GNC",
+        "html_bAUkQt"
       ],
       "settings": {
       }
