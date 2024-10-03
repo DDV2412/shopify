@@ -101,8 +101,27 @@
       "settings": {
       }
     },
-    "faq": {
+    "faq_ABWmXQ": {
       "type": "faq",
+      "blocks": {
+        "heading_LxGebp": {
+          "type": "heading",
+          "settings": {
+            "heading": "Why choose JCON Properties"
+          }
+        },
+        "text_7FihW6": {
+          "type": "text",
+          "settings": {
+            "question": "What real estate services do JCON Properties offer?",
+            "answer": "<p>Our services include Residential Sales and Leasing, Holiday Rentals, Off Plan properties and Investments, Property Management, and Commercial Sales and Commercial Leasing. We also support clients through our home maintenance company Breathe, and our project management group Bauhaus is on hand for property renovations, design, upgrades, and more. If there's something we don't cover, our extensive network of partners can take care of it – including conveyancing support, mortgage solutions, currency services, professional furnishing, and more.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_LxGebp",
+        "text_7FihW6"
+      ],
       "settings": {
       }
     }
@@ -112,6 +131,6 @@
     "top_area_HYHDc9",
     "cta_afVGhj",
     "join_form_Gq6wAW",
-    "faq"
+    "faq_ABWmXQ"
   ]
 }
