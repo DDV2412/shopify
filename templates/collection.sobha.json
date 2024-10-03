@@ -11,11 +11,76 @@
   "sections": {
     "collection": {
       "type": "collection",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "home_hero_gRncqQ": {
+      "type": "home-hero",
+      "blocks": {
+        "select_dwAMRm": {
+          "type": "select",
+          "settings": {
+          }
+        },
+        "heading_7hghhE": {
+          "type": "heading",
+          "settings": {
+            "heading": "Sobha Realty"
+          }
+        },
+        "text_cCzfBB": {
+          "type": "text",
+          "settings": {
+            "text": "With a strong focus on quality and craftsmanship, Sobha Realty has become one of the leading names in UAE real estate."
+          }
+        },
+        "button_PU3YiY": {
+          "type": "button",
+          "settings": {
+            "button_cta": "Register Your Interest",
+            "button_link": "shopify://pages/contact",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "select_dwAMRm",
+        "heading_7hghhE",
+        "text_cCzfBB",
+        "button_PU3YiY"
+      ],
+      "settings": {
+        "add_form_search": false
+      }
+    },
+    "section_title_T4eYaU": {
+      "type": "section-title",
+      "blocks": {
+        "heading_cRk4Ft": {
+          "type": "heading",
+          "settings": {
+            "heading": "About Sobha Realty"
+          }
+        },
+        "text_cNCjBH": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Sobha Realty is a reputable developer with a vast portfolio across the UAE, Oman, Bahrain, Brunei, and India. With a vision to redefine luxury living, they pride themselves on providing innovative spaces with sustainability at the core.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_cRk4Ft",
+        "text_cNCjBH"
+      ],
       "settings": {
       }
     }
   },
   "order": [
-    "collection"
+    "collection",
+    "home_hero_gRncqQ",
+    "section_title_T4eYaU"
   ]
 }
