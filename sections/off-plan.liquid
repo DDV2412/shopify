@@ -21,9 +21,22 @@
           {%- case block.type -%}
           {%- when "collection" -%}
             <div data-w-id="d32fc49e-95c7-35af-56f3-162b3ad4cc8e" class="blog-grid">
-              {% assign products =  collections[block.settings.collection_offplan].products |  sort_by: section.settings.sort_by %}
+              {% assign products =  collections[block.settings.collection_offplan].products %}
+
+              {% if section.settings.sort_by %}
+                {% case section.settings.sort_by %}
+                {% when 'best-selling' %}
+                {% assign products = products | sort: 'best-selling' %}
+                {% when 'price-ascending' %}
+                {% assign products = products | sort: 'price' %}
+                {% when 'price-descending' %}
+                {% assign products = products | sort: 'price' | reverse %}
+                {% when 'created-descending' %}
+                {% assign products = products | sort: 'created_at' | reverse %}
+                {% endcase %}
+              {% endif %}
+
               {%- for product in products -%}
-  
               {% if forloop.index <= 4 %}
                 <div class="offplan-slider-item">
               <div class="article_thumbnail-wrapper">
