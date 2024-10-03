@@ -14,6 +14,38 @@
       "settings": {
       }
     },
+    "cta_afVGhj": {
+      "type": "cta",
+      "blocks": {
+        "heading_i4wii3": {
+          "type": "heading",
+          "settings": {
+            "heading": "Get an instant property valuation"
+          }
+        },
+        "text_XHyDF9": {
+          "type": "text",
+          "settings": {
+            "text": "Thinking of selling your home? Knowing its current price is a good place to start. Get an accurate, independent valuation and a detailed report here."
+          }
+        },
+        "button_EP6PGC": {
+          "type": "button",
+          "settings": {
+            "cta_button": "Get Started",
+            "cta_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading_i4wii3",
+        "text_XHyDF9",
+        "button_EP6PGC"
+      ],
+      "settings": {
+        "remove_padding_bottom": false
+      }
+    },
     "top_area_HYHDc9": {
       "type": "top-area",
       "blocks": {
@@ -69,38 +101,6 @@
       "settings": {
       }
     },
-    "cta_afVGhj": {
-      "type": "cta",
-      "blocks": {
-        "heading_i4wii3": {
-          "type": "heading",
-          "settings": {
-            "heading": "Get an instant property valuation"
-          }
-        },
-        "text_XHyDF9": {
-          "type": "text",
-          "settings": {
-            "text": "Thinking of selling your home? Knowing its current price is a good place to start. Get an accurate, independent valuation and a detailed report here."
-          }
-        },
-        "button_EP6PGC": {
-          "type": "button",
-          "settings": {
-            "cta_button": "Get Started",
-            "cta_link": "shopify://pages/contact"
-          }
-        }
-      },
-      "block_order": [
-        "heading_i4wii3",
-        "text_XHyDF9",
-        "button_EP6PGC"
-      ],
-      "settings": {
-        "remove_padding_bottom": false
-      }
-    },
     "faq": {
       "type": "faq",
       "settings": {
@@ -110,8 +110,8 @@
   "order": [
     "breadcrumb",
     "top_area_HYHDc9",
-    "join_form_Gq6wAW",
     "cta_afVGhj",
+    "join_form_Gq6wAW",
     "faq"
   ]
 }
