@@ -21,7 +21,7 @@
           {%- case block.type -%}
           {%- when "collection" -%}
             <div data-w-id="d32fc49e-95c7-35af-56f3-162b3ad4cc8e" class="blog-grid">
-              {% assign products =  block.settings.collection_offplan %}
+              {% assign products =  block.settings.product_list %}
 
               {%- for product in products -%}
               {% if forloop.index <= 4 %}
