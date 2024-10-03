@@ -21,6 +21,7 @@
         "select_dwAMRm": {
           "type": "select",
           "settings": {
+            "background_image": "shopify://shop_images/Sobha_one_hausandhaus_13_e5dc1c6c0f.webp"
           }
         },
         "heading_7hghhE": {
@@ -83,6 +84,7 @@
         "image_ckDVMd": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/Sobha_Seahaven_hausandhaus_7_a896b93619.webp",
             "alt": ""
           }
         },
@@ -156,19 +158,20 @@
         "image_w7LRhG": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/Sobha_One_hausandhaus_images_1_fada5a28c4_322e587e-63f7-4b2d-bff9-13767ec402a3.webp",
             "alt": ""
           }
         },
         "heading_cMpbKW": {
           "type": "heading",
           "settings": {
-            "heading": "Why Dubai?"
+            "heading": "Top industry recognitions"
           }
         },
         "text_FpbAaN": {
           "type": "text",
           "settings": {
-            "text": "<p><p>A leading global hub, Dubai continues to attract investors all over the world thanks to its visionary plans, booming population, w<span>orld class education and healthcare</span>, safe environment, and thriving economy.&nbsp;</p><p>Investors can also benefit from:</p><p>Golden Visas<br>Competitive rental yields<br>Tax-free income<br>Attractive business environment</p></p>"
+            "text": "<p>Sobha Realty in Dubai has been recognised by leading names for its commitment to excellence in real estate. Some of their awards include the Lifetime Achievement Award by the NDTV Profit and 9th place in the Top 50 GCC Developers Ranking by the Construction Week. </p>"
           }
         },
         "button_MtKH8H": {
