@@ -51,7 +51,12 @@
         "collection": {
           "type": "collection",
           "settings": {
-            "collection_offplan": "off-plan-properties"
+            "product_list": [
+              "beachfront-marina-vista-t2",
+              "brand-new-fully-furnished-canal-view",
+              "burj-crown-downtown",
+              "business-bay-the-edge-tower-a"
+            ]
           }
         }
       },
@@ -61,8 +66,7 @@
         "collection"
       ],
       "settings": {
-        "padding_bottom": false,
-        "sort_by": "best-selling"
+        "padding_bottom": false
       }
     },
     "off-plan-slider": {
@@ -83,7 +87,14 @@
         "collection": {
           "type": "collection",
           "settings": {
-            "collection_offplan": "off-plan-properties"
+            "product_list": [
+              "creek-harbour-the-grand",
+              "damac-lagoons-monte-carlo-best-community",
+              "downtown-forte-2",
+              "elie-sabb-tower-2-emaar-beachfront",
+              "furnished-huge-layout-damac-maison-de-ville-tenora",
+              "furnished-pool-view-damac-maison-de-villa-tenora"
+            ]
           }
         }
       },
@@ -93,8 +104,7 @@
         "collection"
       ],
       "settings": {
-        "padding_bottom": false,
-        "sort_by": "created-descending"
+        "padding_bottom": false
       }
     },
     "developers-slider": {
@@ -175,7 +185,12 @@
         "collection_Mw4jYy": {
           "type": "collection",
           "settings": {
-            "collection_offplan": "off-plan-properties"
+            "product_list": [
+              "beachfront-marina-vista-t2",
+              "brand-new-fully-furnished-canal-view",
+              "business-bay-the-edge-tower-a",
+              "creek-harbour-harbour-gate-t2"
+            ]
           }
         }
       },
@@ -185,8 +200,7 @@
         "collection_Mw4jYy"
       ],
       "settings": {
-        "padding_bottom": true,
-        "sort_by": "price-descending"
+        "padding_bottom": true
       }
     }
   },
