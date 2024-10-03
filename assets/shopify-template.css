@@ -3198,6 +3198,9 @@ p {
   margin-bottom: 0;
 }
 
+.cn-form{
+  max-width: none !important;
+}
 .cta_image-wrapper {
   grid-column-gap: .5rem;
   grid-row-gap: .5rem;
