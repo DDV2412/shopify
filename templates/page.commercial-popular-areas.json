@@ -14,14 +14,46 @@
       "settings": {
       }
     },
+    "top_area_HYHDc9": {
+      "type": "top-area",
+      "blocks": {
+        "heading_MxFVFK": {
+          "type": "heading",
+          "settings": {
+            "heading": "Commercial Popular Areas"
+          }
+        },
+        "text_Qtx7fP": {
+          "type": "text",
+          "settings": {
+            "description": "Discover the best commercial areas to grow your business."
+          }
+        },
+        "collection_AtVPMH": {
+          "type": "collection",
+          "settings": {
+            "collection_area": "dubai-creek-harbour"
+          }
+        }
+      },
+      "block_order": [
+        "heading_MxFVFK",
+        "text_Qtx7fP",
+        "collection_AtVPMH"
+      ],
+      "settings": {
+      }
+    },
     "page-body": {
       "type": "page-body",
+      "disabled": true,
       "settings": {
       }
     }
   },
   "order": [
     "breadcrumb",
+    "top_area_HYHDc9",
     "page-body"
   ]
 }
