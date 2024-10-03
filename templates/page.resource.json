@@ -41,7 +41,7 @@
         "text_zaqjQ4"
       ],
       "settings": {
-        "is_hero": false
+        "is_hero": true
       }
     },
     "grid_collection_TAgtXi": {
@@ -55,10 +55,30 @@
             "team_position": "",
             "collection_link": "shopify://blogs/news"
           }
+        },
+        "collection_zaw6WC": {
+          "type": "collection",
+          "settings": {
+            "collection_image": "shopify://shop_images/haushaus_resource2_138ed21dd2.webp",
+            "collection_heading": "Market Reports",
+            "team_position": "",
+            "collection_link": "shopify://blogs/market-reports"
+          }
+        },
+        "collection_LAAUjt": {
+          "type": "collection",
+          "settings": {
+            "collection_image": "shopify://shop_images/photo-1478737270239-2f02b77fc618.jpg",
+            "collection_heading": "Podcast",
+            "team_position": "",
+            "collection_link": "shopify://blogs/podcast"
+          }
         }
       },
       "block_order": [
-        "collection_rfcrKq"
+        "collection_rfcrKq",
+        "collection_zaw6WC",
+        "collection_LAAUjt"
       ],
       "settings": {
       }
