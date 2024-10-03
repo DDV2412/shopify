@@ -23,10 +23,7 @@
               {%- for block in section.blocks -%}
           {%- case block.type -%}
           {%- when "collection" -%}
-          {% assign products =  collections[block.settings.collection_offplan].products %}
-              {% if section.settings.sort_by %}
-                {% assign products = products | sort: section.settings.sort_by %}
-              {% endif %}
+          {% assign products =  collections[block.settings.collection_offplan].products |  sort_by: section.settings.sort_by %}
           {%- for product in  products -%}
             <div class="property-slider w-slide" aria-label="1 of 1" role="group"
                 style="transition: all; transform: translateX(0px); opacity: 1;">
@@ -162,6 +159,7 @@
       "type": "select",
       "id": "sort_by",
       "label": "t:sections.off-plan.settings.sort_by.label",
+      "default": "best-selling",
       "options": [
         {
           "value": "best-selling",
