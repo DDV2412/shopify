@@ -50,7 +50,7 @@
         "heading_YtGL6Q": {
           "type": "heading",
           "settings": {
-            "heading": ""
+            "heading": "Join our priority list"
           }
         },
         "text_bt7GNC": {
@@ -75,20 +75,20 @@
         "heading_i4wii3": {
           "type": "heading",
           "settings": {
-            "heading": "Join our priority list"
+            "heading": "Get an instant property valuation"
           }
         },
         "text_XHyDF9": {
           "type": "text",
           "settings": {
-            "text": ""
+            "text": "Thinking of selling your home? Knowing its current price is a good place to start. Get an accurate, independent valuation and a detailed report here."
           }
         },
         "button_EP6PGC": {
           "type": "button",
           "settings": {
-            "cta_button": "",
-            "cta_link": ""
+            "cta_button": "Get Started",
+            "cta_link": "shopify://pages/contact"
           }
         }
       },
