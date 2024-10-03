@@ -940,7 +940,15 @@
               "default": "+971 4 580 8000"
             }
           }
-        }
+        },
+        "form": {
+          "type": "html",
+          "settings": {
+            "form": {
+              "label": "Form Embed"
+            }
+          }
+        },
       },
       "presets": {
         "name": "Join Form"
