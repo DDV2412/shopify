@@ -82,12 +82,46 @@
       ],
       "settings": {
       }
+    },
+    "cta_card_Lt99nc": {
+      "type": "cta-card",
+      "blocks": {
+        "heading_qy6kV7": {
+          "type": "heading",
+          "settings": {
+            "communities_heading": "Careers JCON Properties",
+            "consultant_heading": "Find a consultant"
+          }
+        },
+        "text_edVy96": {
+          "type": "text",
+          "settings": {
+            "communities_description": "Discover exciting opportunities in our different departments.",
+            "consultant_description": "Search our team of 280+ property experts for professional guidance."
+          }
+        },
+        "button_qy43Ag": {
+          "type": "button",
+          "settings": {
+            "button_title": "Apply today",
+            "button_link": "shopify://pages/careers"
+          }
+        }
+      },
+      "block_order": [
+        "heading_qy6kV7",
+        "text_edVy96",
+        "button_qy43Ag"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
     "breadcrumb",
     "page-body",
     "header_title_HcpNcz",
-    "grid_collection_TAgtXi"
+    "grid_collection_TAgtXi",
+    "cta_card_Lt99nc"
   ]
 }
