@@ -88,15 +88,22 @@
         "text_bt7GNC": {
           "type": "text",
           "settings": {
-            "text": "<p>Register to receive market reports and our monthly investment newsletter with handpicked projects, podcasts, and market insights.</p>",
+            "text": "Register to receive market reports and our monthly investment newsletter with handpicked projects, podcasts, and market insights.",
             "email": "sales@jconproperties.ae",
             "phone": "+971 4 580 8000"
+          }
+        },
+        "html_7qqUh6": {
+          "type": "html",
+          "settings": {
+            "form_embed": "<script src=\"https://cdn.commoninja.com/sdk/latest/commonninja.js\" defer></script>\n<div class=\"commonninja_component pid-e04430e5-894e-4e39-96e0-7aeb993871dc\"></div>"
           }
         }
       },
       "block_order": [
         "heading_YtGL6Q",
-        "text_bt7GNC"
+        "text_bt7GNC",
+        "html_7qqUh6"
       ],
       "settings": {
       }
