@@ -1,19 +1,18 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "collection": {
       "type": "collection",
       "disabled": true,
-      "settings": {
-      }
+      "settings": {}
     },
     "home_hero_gRncqQ": {
       "type": "home-hero",
@@ -45,12 +44,7 @@
           }
         }
       },
-      "block_order": [
-        "select_dwAMRm",
-        "heading_7hghhE",
-        "text_cCzfBB",
-        "button_PU3YiY"
-      ],
+      "block_order": ["select_dwAMRm", "heading_7hghhE", "text_cCzfBB", "button_PU3YiY"],
       "settings": {
         "add_form_search": false
       }
@@ -71,12 +65,8 @@
           }
         }
       },
-      "block_order": [
-        "heading_cRk4Ft",
-        "text_cNCjBH"
-      ],
-      "settings": {
-      }
+      "block_order": ["heading_cRk4Ft", "text_cNCjBH"],
+      "settings": {}
     },
     "card_column_right_MGam8P": {
       "type": "card-column-right",
@@ -108,12 +98,7 @@
           }
         }
       },
-      "block_order": [
-        "image_ckDVMd",
-        "heading_NPJrCt",
-        "text_FTV4Y8",
-        "button_Uypb7R"
-      ],
+      "block_order": ["image_ckDVMd", "heading_NPJrCt", "text_FTV4Y8", "button_Uypb7R"],
       "settings": {
         "add_background_grey": false,
         "button_visibility": false
@@ -137,17 +122,11 @@
         "collection_RxJzHW": {
           "type": "collection",
           "settings": {
-            "product_list": [
-              "sobha-hartland-creek-vista-heights-t2"
-            ]
+            "product_list": ["sobha-hartland-creek-vista-heights-t2"]
           }
         }
       },
-      "block_order": [
-        "heading_naq9N4",
-        "text_9ehzcC",
-        "collection_RxJzHW"
-      ],
+      "block_order": ["heading_naq9N4", "text_9ehzcC", "collection_RxJzHW"],
       "settings": {
         "padding_bottom": false
       }
@@ -182,15 +161,38 @@
           }
         }
       },
-      "block_order": [
-        "image_w7LRhG",
-        "heading_cMpbKW",
-        "text_FpbAaN",
-        "button_MtKH8H"
-      ],
+      "block_order": ["image_w7LRhG", "heading_cMpbKW", "text_FpbAaN", "button_MtKH8H"],
       "settings": {
         "add_background_grey": false,
         "button_visibility": false
+      }
+    },
+    "cta_LhRKUM": {
+      "type": "cta",
+      "blocks": {
+        "heading_GeGHwM": {
+          "type": "heading",
+          "settings": {
+            "heading": "Don't miss a beat of Dubai's property sector"
+          }
+        },
+        "text_EDQeAY": {
+          "type": "text",
+          "settings": {
+            "text": "Sign up to our newsletter and receive monthly round-ups including market updates, news articles, and expert insights."
+          }
+        },
+        "button_mWpfWW": {
+          "type": "button",
+          "settings": {
+            "cta_button": "Subscribe Now",
+            "cta_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": ["heading_GeGHwM", "text_EDQeAY", "button_mWpfWW"],
+      "settings": {
+        "remove_padding_bottom": true
       }
     },
     "join_form_jKkzGb": {
@@ -213,17 +215,12 @@
         "html_rAExP8": {
           "type": "html",
           "settings": {
-            "form_embed": ""
+            "form_embed": "<script src=\"https://cdn.commoninja.com/sdk/latest/commonninja.js\" defer></script>\n<div class=\"commonninja_component pid-e04430e5-894e-4e39-96e0-7aeb993871dc\"></div>"
           }
         }
       },
-      "block_order": [
-        "heading_n3irFV",
-        "text_zwePYA",
-        "html_rAExP8"
-      ],
-      "settings": {
-      }
+      "block_order": ["heading_n3irFV", "text_zwePYA", "html_rAExP8"],
+      "settings": {}
     },
     "faq_QxKJMD": {
       "type": "faq",
@@ -294,8 +291,7 @@
         "text_XPeTcK",
         "text_gE9eCA"
       ],
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [
@@ -305,6 +301,7 @@
     "card_column_right_MGam8P",
     "off_plan_slider_eTX3LW",
     "card_column_left_cKir4J",
+    "cta_LhRKUM",
     "join_form_jKkzGb",
     "faq_QxKJMD"
   ]
