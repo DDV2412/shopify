@@ -16,12 +16,58 @@
     },
     "page-body": {
       "type": "page-body",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "header_title_HcpNcz": {
+      "type": "header-title",
+      "blocks": {
+        "heading_nicFUm": {
+          "type": "heading",
+          "settings": {
+            "heading": "Expert guides for smart real estate decisions in Dubai"
+          }
+        },
+        "text_zaqjQ4": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A successful property journey starts with reliable information and insights. From quarterly market reports to free property valuations in minutes, we've got your covered with the latest assets.</p><p></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_nicFUm",
+        "text_zaqjQ4"
+      ],
+      "settings": {
+        "is_hero": false
+      }
+    },
+    "grid_collection_TAgtXi": {
+      "type": "grid-collection",
+      "blocks": {
+        "collection_rfcrKq": {
+          "type": "collection",
+          "settings": {
+            "collection_image": "shopify://shop_images/haus_resources_news_25e86be0b9.webp",
+            "collection_heading": "News & Insights",
+            "team_position": "",
+            "collection_link": "shopify://blogs/news"
+          }
+        }
+      },
+      "block_order": [
+        "collection_rfcrKq"
+      ],
       "settings": {
       }
     }
   },
   "order": [
     "breadcrumb",
-    "page-body"
+    "page-body",
+    "header_title_HcpNcz",
+    "grid_collection_TAgtXi"
   ]
 }
