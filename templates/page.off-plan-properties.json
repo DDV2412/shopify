@@ -61,7 +61,8 @@
         "collection"
       ],
       "settings": {
-        "padding_bottom": false
+        "padding_bottom": false,
+        "sort_by": "best-selling"
       }
     },
     "off-plan-slider": {
@@ -92,7 +93,8 @@
         "collection"
       ],
       "settings": {
-        "padding_bottom": false
+        "padding_bottom": false,
+        "sort_by": "created-descending"
       }
     },
     "developers-slider": {
@@ -183,7 +185,8 @@
         "collection_Mw4jYy"
       ],
       "settings": {
-        "padding_bottom": true
+        "padding_bottom": true,
+        "sort_by": "price-descending"
       }
     }
   },
