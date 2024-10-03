@@ -14,6 +14,36 @@
       "settings": {
       }
     },
+    "top_area_HYHDc9": {
+      "type": "top-area",
+      "blocks": {
+        "heading_MxFVFK": {
+          "type": "heading",
+          "settings": {
+            "heading": "Popular Areas For Sale"
+          }
+        },
+        "text_Qtx7fP": {
+          "type": "text",
+          "settings": {
+            "description": "Find the ideal living space or business location to meet your needs."
+          }
+        },
+        "collection_AtVPMH": {
+          "type": "collection",
+          "settings": {
+            "collection_area": "dubai-creek-harbour"
+          }
+        }
+      },
+      "block_order": [
+        "heading_MxFVFK",
+        "text_Qtx7fP",
+        "collection_AtVPMH"
+      ],
+      "settings": {
+      }
+    },
     "cta_afVGhj": {
       "type": "cta",
       "blocks": {
@@ -44,36 +74,6 @@
       ],
       "settings": {
         "remove_padding_bottom": false
-      }
-    },
-    "top_area_HYHDc9": {
-      "type": "top-area",
-      "blocks": {
-        "heading_MxFVFK": {
-          "type": "heading",
-          "settings": {
-            "heading": "Commercial Popular Areas"
-          }
-        },
-        "text_Qtx7fP": {
-          "type": "text",
-          "settings": {
-            "description": "Discover the best commercial areas to grow your business."
-          }
-        },
-        "collection_AtVPMH": {
-          "type": "collection",
-          "settings": {
-            "collection_area": "dubai-creek-harbour"
-          }
-        }
-      },
-      "block_order": [
-        "heading_MxFVFK",
-        "text_Qtx7fP",
-        "collection_AtVPMH"
-      ],
-      "settings": {
       }
     },
     "join_form_Gq6wAW": {
