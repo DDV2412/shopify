@@ -23,20 +23,7 @@
               {%- for block in section.blocks -%}
           {%- case block.type -%}
           {%- when "collection" -%}
-          {% assign products =  collections[block.settings.collection_offplan].products %}
-
-          {% if section.settings.sort_by %}
-                {% case section.settings.sort_by %}
-                {% when 'best-selling' %}
-                {% assign products = products | sort: 'best-selling' %}
-                {% when 'price-ascending' %}
-                {% assign products = products | sort: 'price' %}
-                {% when 'price-descending' %}
-                {% assign products = products | sort: 'price' | reverse %}
-                {% when 'created-descending' %}
-                {% assign products = products | sort: 'created_at' | reverse %}
-                {% endcase %}
-              {% endif %}
+          {% assign products =  block.settings.collection_offplan %}
           {%- for product in  products -%}
             <div class="property-slider w-slide" aria-label="1 of 1" role="group"
                 style="transition: all; transform: translateX(0px); opacity: 1;">
@@ -222,9 +209,9 @@
     "limit": 1,
     "settings": [
         {
-        "type": "text",
-        "id": "collection_offplan",
-        "label": "t:sections.off-plan-slider.blocks.collection.settings.collection.label"
+        "type": "product_list",
+        "id": "product_list",
+        "label": "t:sections.off-plan.blocks.collection.settings.collection.label"
         }
       ]
     }

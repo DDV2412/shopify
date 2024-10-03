@@ -21,20 +21,7 @@
           {%- case block.type -%}
           {%- when "collection" -%}
             <div data-w-id="d32fc49e-95c7-35af-56f3-162b3ad4cc8e" class="blog-grid">
-              {% assign products =  collections[block.settings.collection_offplan].products %}
-
-              {% if section.settings.sort_by %}
-                {% case section.settings.sort_by %}
-                {% when 'best-selling' %}
-                {% assign products = products | sort: 'best-selling' %}
-                {% when 'price-ascending' %}
-                {% assign products = products | sort: 'price' %}
-                {% when 'price-descending' %}
-                {% assign products = products | sort: 'price' | reverse %}
-                {% when 'created-descending' %}
-                {% assign products = products | sort: 'created_at' | reverse %}
-                {% endcase %}
-              {% endif %}
+              {% assign products =  block.settings.collection_offplan %}
 
               {%- for product in products -%}
               {% if forloop.index <= 4 %}
@@ -195,8 +182,8 @@
     "limit": 1,
     "settings": [
       {
-        "type": "text",
-        "id": "collection_offplan",
+        "type": "product_list",
+        "id": "product_list",
         "label": "t:sections.off-plan.blocks.collection.settings.collection.label"
         }
       ]
