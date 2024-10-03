@@ -1800,10 +1800,6 @@ p {
   background-color: #0000;
 }
 
-.nav-dropdown_list.w--open {
-  right: 0;
-}
-
 .dropdown_list {
   border: 1px solid var(--border-color);
   background-color: var(--white);
