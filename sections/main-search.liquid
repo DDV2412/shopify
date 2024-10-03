@@ -33,7 +33,7 @@ assign search_url = '?q=' | append: terms | append: '&options%5Bprefix%5D=last&s
                         {%- for filter in search.filters -%}
                             {% case filter.type %}
                                 {%  when  'list' %}
-                                    <div class="select-wrapper no-border">
+                                    <div class="select-wrapper no-border hide-tablet">
                                         {%- liquid
                                             assign sorted_values = filter.values
                                             if filter.operator == 'OR'
@@ -70,7 +70,7 @@ assign search_url = '?q=' | append: terms | append: '&options%5Bprefix%5D=last&s
                                         </div>
                                     </div>
                                 {%  when  'price_range' %}
-                                    <div class="select-wrapper no-border">
+                                    <div class="select-wrapper no-border hide-tablet">
                                         {% assign min_price_values = "300000,600000,900000,1000000,3000000,5000000,7000000,9000000,10000000,20000000,30000000,40000000,50000000" | split: "," %}
                                         {%- liquid
                                             assign sorted_values = min_price_values
@@ -99,7 +99,7 @@ assign search_url = '?q=' | append: terms | append: '&options%5Bprefix%5D=last&s
                                                             <label class="propert-radio w-radio">
                                                                 <div class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input "></div>
                                                                 <input type="radio" name="{{ filter.min_value.param_name }}" id="{{ filter.min_value.param_name }}-{{ value }}" data-name="{{ value.param_name }}" style="opacity:0;position:absolute;z-index:-1" value="{{ value }}">
-                                                                <span class="type-label  w-form-label" for="{{ filter.min_value.param_name }}-{{ value }}"> {{ shop.currency }} {{ value | plus: 0 | divided_by: 1 | times: 1 }} </span>
+                                                                <span class="type-label  w-form-label" for="{{ filter.min_value.param_name }}-{{ value }}"> {{ shop.currency }} <span class="price_type">{{ value  }}</span>  </span>
                                                             </label>
                                                         {%- endfor -%}
                                                     </div>
@@ -107,7 +107,7 @@ assign search_url = '?q=' | append: terms | append: '&options%5Bprefix%5D=last&s
                                             </nav>
                                         </div>
                                     </div>
-                                    <div class="select-wrapper no-border">
+                                    <div class="select-wrapper no-border hide-tablet">
                                         {% assign max_price_values = "300000,600000,900000,1000000,3000000,5000000,7000000,9000000,10000000,20000000,30000000,40000000,50000000" | split: "," %}
                                         {%- liquid
                                             assign sorted_values = max_price_values
@@ -136,7 +136,7 @@ assign search_url = '?q=' | append: terms | append: '&options%5Bprefix%5D=last&s
                                                             <label class="propert-radio w-radio">
                                                                 <div class="w-form-formradioinput w-form-formradioinput--inputType-custom property-item w-radio-input"></div>
                                                                 <input type="radio" name="{{ filter.max_value.param_name }}" id="{{ filter.max_value.param_name }}-{{ value }}" data-name="{{ value.param_name }}" style="opacity:0;position:absolute;z-index:-1" value="{{ value }}">
-                                                                <span class="type-label w-form-label" for="{{ filter.max_value.param_name }}-{{ value }}"> {{ shop.currency }} {{ value | plus: 0 | divided_by: 1 | times: 1 }} </span>
+                                                                <span class="type-label w-form-label" for="{{ filter.max_value.param_name }}-{{ value }}"> {{ shop.currency }} <span class="price_type">{{ value  }}</span> </span>
                                                             </label>
                                                         {%- endfor -%}
                                                     </div>
@@ -235,8 +235,73 @@ assign search_url = '?q=' | append: terms | append: '&options%5Bprefix%5D=last&s
     </div>
 </section>
 
+<section class="section_component is-dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p> Filters</p>
+                <a data-w-id="e2af74cb-a8cf-fb62-51e6-6b6486e09610" href="#" class="btn-close w-inline-block">
+                    <div class="w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" fill="none" viewBox="0 0 16 17"><path stroke="#434343" stroke-linecap="round" stroke-linejoin="round" d="m12.5 4-9 9M12.5 13l-9-9"></path></svg>
+                    </div>
+                </a>
+            </div>
+            <div class="modal-body">
+                <div class="modal-form w-form">
+                    <form id="search-mobile-filter" name="email-form-4" data-name="Email Form 4" method="get" class="form" data-wf-page-id="66eaa6ae2a24a29c732b4aee" data-wf-element-id="e2af74cb-a8cf-fb62-51e6-6b6486e09614" aria-label="Email Form 4">
+                            {%- for filter in search.filters -%}
+                                {% case filter.type %}
+                                    {%  when  'list' %}
+                                        {%- liquid
+                                            assign sorted_values = filter.values
+                                            if filter.operator == 'OR'
+                                                assign active_filter_values = filter.values | where: 'active', true
+                                                assign inactive_filter_values = filter.values | where: 'active', false
+                                                assign sorted_values = active_filter_values | concat: inactive_filter_values
+                                            endif
+                                        -%}
+                                        <h4 class="top-large">{{ filter.label | escape }}</h4>
+                                        <div class="modal-filter-item">
+                                            {%- for value in sorted_values -%}
+                                                {% liquid
+                                                    assign input_id = 'Filter-' | append: filter.param_name | escape | append: '-' | append: forloop.index
+                                                %}
+                                                <label id="w-node-e2af74cb-a8cf-fb62-51e6-6b6486e0961b-732b4aee" class="w-checkbox list-inline-item-checkbox">
+                                                <div class="w-checkbox-input w-checkbox-input--inputType-custom list-inline-item {% if value.active %} w--redirected-checked {% endif %}"></div>
+                                                <input type="checkbox" name="{{ value.param_name }}" id="{{ value.param_name }}" data-name="{{ value.param_name }}" value="{{ value.value }}" checked="{{ value.active }}" style="opacity:0;position:absolute;z-index:-1">
+                                                <span class="type-label {% if value.active %} is-active {% endif %} w-form-label" for="{{ input_id }}">{{ value.label | escape }}</span>
+                                            </label>
+                                            {%- endfor -%}
+                                        </div>
+                                    {%  when  'price_range' %}
+                                        <h4 class="top-large">{{ filter.label | escape }}</h4>
+                                        <div class="modal-filter-item">
+                                            <div class="search-wrapper background-white is-form">
+                                                <input class="search-field w-input" maxlength="256" name="{{ filter.min_value.param_name }}" data-name="{{ filter.min_value.param_name }}" value="{{ filter.min_value.value }}" placeholder="Min Price" type="text" id="{{ filter.min_value.param_name }}">
+                                            </div>
+                                            <div id="w-node-ceff815e-2123-5686-e5ad-883213cc8221-732b4aee" class="search-wrapper background-white is-form">
+                                                <input class="search-field w-input" maxlength="256"  name="{{ filter.max_value.param_name }}" data-name="{{ filter.max_value.param_name }}" value="{{ filter.max_value.value }}" placeholder="Max Price" type="text" id="{{ filter.max_value.param_name }}">
+                                            </div>
+                                        </div>
+
+                                {% endcase %}
+                            {%- endfor -%}
+                            
+                            <input type="submit" data-wait="Please wait..." class="button top-large w-button" value="Filter">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dialog-overlay"></div>
+</section>
+
 <script>
     document.addEventListener('DOMContentLoaded', ()=>{
+        document.querySelectorAll('.price_type').forEach(function(span) {
+            let rawValue = span.textContent;
+            let formattedValue = Number(rawValue).toLocaleString();
+            span.textContent = formattedValue;
+        });
         const searchForm = document.getElementById('search-box');
         const searchField = document.getElementById('Search');
 
@@ -339,6 +404,24 @@ assign search_url = '?q=' | append: terms | append: '&options%5Bprefix%5D=last&s
             
         checkAndAssignValue();
         checkIfFilterIsActive();
+
+        document.getElementById('search-mobile-filter').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            let params = new URLSearchParams(window.location.search);
+
+            const formData = new FormData(event.target);
+
+            formData.forEach((value, key) => {
+                if (value) { 
+                    params.set(key, value);
+                } else {
+                    params.delete(key);
+                }
+            });
+
+            const newUrl = window.location.pathname + '?' + params.toString();
+            window.location.href = newUrl;
+        });
     })
 </script>
 

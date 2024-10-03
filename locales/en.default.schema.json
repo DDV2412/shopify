@@ -1004,6 +1004,23 @@
       "settings": {
         "class": {
           "label": "Add Padding Bottom"
+        },
+        "sort_by": {
+          "label": "Sort By",
+          "options": {
+            "recent": {
+              "label": "Recent"
+            },
+            "popular": {
+              "label": "Popular"
+            },
+            "price_low_to_high": {
+              "label": "Price Low to High"
+            },
+            "price_high_to_low": {
+              "label": "Price High to Low"
+            }
+          }
         }
       },
       "blocks": {
@@ -1043,6 +1060,23 @@
       "settings": {
         "class": {
           "label": "Add Padding Bottom"
+        },
+        "sort_by": {
+          "label": "Sort By",
+          "options": {
+            "recent": {
+              "label": "Recent"
+            },
+            "popular": {
+              "label": "Popular"
+            },
+            "price_low_to_high": {
+              "label": "Price Low to High"
+            },
+            "price_high_to_low": {
+              "label": "Price High to Low"
+            }
+          }
         }
       },
       "blocks": {

@@ -23,7 +23,11 @@
               {%- for block in section.blocks -%}
           {%- case block.type -%}
           {%- when "collection" -%}
-          {%- for product in collections[block.settings.collection_offplan].products -%}
+          {% assign products =  collections[block.settings.collection_offplan].products %}
+              {% if section.settings.sort_by %}
+                {% assign products = products | sort: section.settings.sort_by %}
+              {% endif %}
+          {%- for product in  products -%}
             <div class="property-slider w-slide" aria-label="1 of 1" role="group"
                 style="transition: all; transform: translateX(0px); opacity: 1;">
                    <div class="offplan-slider-item">
@@ -63,9 +67,10 @@
                           <p class="location-name">{{ product.variants[0].option3 }}</p>
                         </div>
                         <div class="infos-sec">
+                          <p class="paragraph">Delivery Date: <span class="text-span">{{ product.variants[3].option3 }}</span></p>
                           <p class="paragraph">Price from: <span class="text-span">{{ shop.currency }} {{ product.price |
                                     money_without_currency }}</span></p>
-                          <p class="paragraph">Developer: <span class="text-span">DAMAC</span></p>
+                          <p class="paragraph">Developer: <span class="text-span">{{ product.variants[2].option3 }}</span></p>
                         </div>
                       </div>
                       <div class="offplan_ctas">
@@ -152,6 +157,29 @@
       "type": "checkbox",
       "id": "padding_bottom",
       "label": "t:sections.off-plan-slider.settings.class.label"
+    },
+    {
+      "type": "select",
+      "id": "sort_by",
+      "label": "t:sections.off-plan.settings.sort_by.label",
+      "options": [
+        {
+          "value": "best-selling",
+          "label": "t:sections.off-plan.settings.sort_by.options.popular.label"
+        },
+        {
+          "value": "price-ascending",
+          "label": "t:sections.off-plan.settings.sort_by.options.price_low_to_high.label"
+        },
+        {
+          "value": "price-descending",
+          "label": "t:sections.off-plan.settings.sort_by.options.price_high_to_low.label"
+        },
+        {
+          "value": "created-descending",
+          "label": "t:sections.off-plan.settings.sort_by.options.recent.label"
+        }
+      ]
     }
   ],
   "blocks": [
