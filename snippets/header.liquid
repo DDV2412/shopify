@@ -19,9 +19,10 @@
               {% assign main_menu = linklists.main-menu.links %}
               {% for link in main_menu %}
                 {%if link.links.size > 0%}
-                  <div data-hover="true" data-delay="0" class="nav-dropdown w-dropdown">
+                  <div data-hover="true" data-delay="0" data-w-id="705e8b83-aefe-8bc1-ae7d-519f320751eb" class="nav-dropdown w-dropdown w--nav-dropdown-open">
                 <div class="nav-dropdown-toogle w-dropdown-toggle">
-                  <a href="{{ link.url }}" class="nav-link w-nav-link">{{ link.title }}</a>
+                  <a href="{{ link.url }}" class="nav-link is-dropdown w-nav-link w--nav-link-open">{{ link.title }}</a>
+                  <div class="dropdown_icon"><div class="icon_small plus w-embed" style="display: block;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-plus"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 5l0 14"></path><path d="M5 12l14 0"></path></svg></div><div class="icon_small minus w-embed" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-minus"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M5 12l14 0"></path></svg></div></div>
                 </div>
                 <nav class="nav-dropdown_list w-dropdown-list">
                   <div class="dropdown_list">
