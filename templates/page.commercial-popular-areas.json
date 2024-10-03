@@ -49,11 +49,70 @@
       "disabled": true,
       "settings": {
       }
+    },
+    "join_form_Gq6wAW": {
+      "type": "join-form",
+      "blocks": {
+        "heading_YtGL6Q": {
+          "type": "heading",
+          "settings": {
+            "heading": ""
+          }
+        },
+        "text_bt7GNC": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Register to receive market reports and our monthly investment newsletter with handpicked projects, podcasts, and market insights.</p>",
+            "email": "sales@jconproperties.ae",
+            "phone": "+971 4 580 8000"
+          }
+        }
+      },
+      "block_order": [
+        "heading_YtGL6Q",
+        "text_bt7GNC"
+      ],
+      "settings": {
+      }
+    },
+    "cta_afVGhj": {
+      "type": "cta",
+      "blocks": {
+        "heading_i4wii3": {
+          "type": "heading",
+          "settings": {
+            "heading": ""
+          }
+        },
+        "text_XHyDF9": {
+          "type": "text",
+          "settings": {
+            "text": ""
+          }
+        },
+        "button_EP6PGC": {
+          "type": "button",
+          "settings": {
+            "cta_button": "",
+            "cta_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_i4wii3",
+        "text_XHyDF9",
+        "button_EP6PGC"
+      ],
+      "settings": {
+        "remove_padding_bottom": false
+      }
     }
   },
   "order": [
     "breadcrumb",
     "top_area_HYHDc9",
-    "page-body"
+    "page-body",
+    "cta_afVGhj",
+    "join_form_Gq6wAW"
   ]
 }
