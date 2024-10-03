@@ -1044,10 +1044,10 @@
           }
         },
         "collection": {
-          "type": "collection",
+          "type": "product_list",
           "settings": {
             "collection": {
-              "label": "Collection"
+              "label": "Product List"
             }
           }
         }
@@ -1082,10 +1082,10 @@
           }
         },
         "collection": {
-          "type": "collection",
+          "type": "product_list",
           "settings": {
             "collection": {
-              "label": "Collection"
+              "label": "Product List"
             }
           }
         }
