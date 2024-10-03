@@ -136,7 +136,7 @@
           "type": "collection",
           "settings": {
             "product_list": [
-
+              "sobha-hartland-creek-vista-heights-t2"
             ]
           }
         }
@@ -221,6 +221,30 @@
       ],
       "settings": {
       }
+    },
+    "faq_HYLNgP": {
+      "type": "faq",
+      "blocks": {
+        "heading_qDGPpa": {
+          "type": "heading",
+          "settings": {
+            "heading": ""
+          }
+        },
+        "text_yEa48i": {
+          "type": "text",
+          "settings": {
+            "question": "",
+            "answer": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_qDGPpa",
+        "text_yEa48i"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
@@ -230,6 +254,7 @@
     "card_column_right_MGam8P",
     "off_plan_slider_eTX3LW",
     "card_column_left_cKir4J",
-    "join_form_jKkzGb"
+    "join_form_jKkzGb",
+    "faq_HYLNgP"
   ]
 }
