@@ -116,12 +116,120 @@
         "add_background_grey": false,
         "button_visibility": false
       }
+    },
+    "off_plan_slider_eTX3LW": {
+      "type": "off-plan-slider",
+      "blocks": {
+        "heading_naq9N4": {
+          "type": "heading",
+          "settings": {
+            "heading": ""
+          }
+        },
+        "text_9ehzcC": {
+          "type": "text",
+          "settings": {
+            "description": ""
+          }
+        },
+        "collection_RxJzHW": {
+          "type": "collection",
+          "settings": {
+            "product_list": [
+
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "heading_naq9N4",
+        "text_9ehzcC",
+        "collection_RxJzHW"
+      ],
+      "settings": {
+        "padding_bottom": false
+      }
+    },
+    "card_column_left_cKir4J": {
+      "type": "card-column-left",
+      "blocks": {
+        "image_w7LRhG": {
+          "type": "image",
+          "settings": {
+            "alt": ""
+          }
+        },
+        "heading_cMpbKW": {
+          "type": "heading",
+          "settings": {
+            "heading": "Why Dubai?"
+          }
+        },
+        "text_FpbAaN": {
+          "type": "text",
+          "settings": {
+            "text": "<p><p>A leading global hub, Dubai continues to attract investors all over the world thanks to its visionary plans, booming population, w<span>orld class education and healthcare</span>, safe environment, and thriving economy.&nbsp;</p><p>Investors can also benefit from:</p><p>Golden Visas<br>Competitive rental yields<br>Tax-free income<br>Attractive business environment</p></p>"
+          }
+        },
+        "button_MtKH8H": {
+          "type": "button",
+          "settings": {
+            "button_title": "Download Investment Guide",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_w7LRhG",
+        "heading_cMpbKW",
+        "text_FpbAaN",
+        "button_MtKH8H"
+      ],
+      "settings": {
+        "add_background_grey": false,
+        "button_visibility": false
+      }
+    },
+    "join_form_jKkzGb": {
+      "type": "join-form",
+      "blocks": {
+        "heading_n3irFV": {
+          "type": "heading",
+          "settings": {
+            "heading": "Join the Sobha Realty priority list"
+          }
+        },
+        "text_zwePYA": {
+          "type": "text",
+          "settings": {
+            "text": "Stay up to date with the latest launches and get access to exclusive inventory.",
+            "email": "sales@jconproperties.ae",
+            "phone": "https://wa.me/97145808000"
+          }
+        },
+        "html_rAExP8": {
+          "type": "html",
+          "settings": {
+            "form_embed": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_n3irFV",
+        "text_zwePYA",
+        "html_rAExP8"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
     "collection",
     "home_hero_gRncqQ",
     "section_title_T4eYaU",
-    "card_column_right_MGam8P"
+    "card_column_right_MGam8P",
+    "off_plan_slider_eTX3LW",
+    "card_column_left_cKir4J",
+    "join_form_jKkzGb"
   ]
 }
