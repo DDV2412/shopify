@@ -48,47 +48,15 @@
                     </div>
                     <div id="w-node-bc17c2cb-6525-3fb7-007c-e2d8a05c13b7-732b4aee" class="hero_content">
                         <div class="join-block w-form">
-                            <form action="/contact#contact_form" id="email-form-4" name="email-form-4" data-name="Email Form 4" method="post"
-                                class="form" data-wf-page-id="66eaa6ae2a24a29c732b4aee"
-                                data-wf-element-id="bc17c2cb-6525-3fb7-007c-e2d8a05c13b9" aria-label="Email Form 4">
-                                <div class="grid-2">
-                                    <div id="w-node-bc17c2cb-6525-3fb7-007c-e2d8a05c13bb-732b4aee"
-                                        class="search-wrapper background-white is-form"><input
-                                            class="search-field w-input" maxlength="256" name="contact[firts-name]"
-                                            data-name="First Name" placeholder="First Name" type="text"
-                                            id="First-Name"></div>
-                                    <div id="w-node-bc17c2cb-6525-3fb7-007c-e2d8a05c13bd-732b4aee"
-                                        class="search-wrapper background-white is-form"><input
-                                            class="search-field w-input" maxlength="256" name="contact[last-name]"
-                                            data-name="Last Name" placeholder="Last Name" type="text"
-                                            id="Last-Name"></div>
-                                </div>
-                                <div class="grid-1">
-                                    <div id="w-node-bc17c2cb-6525-3fb7-007c-e2d8a05c13c0-732b4aee"
-                                        class="search-wrapper background-white is-form"><input
-                                            class="search-field w-input" maxlength="256" name="contact[email]"
-                                            data-name="Email Address" placeholder="Email Address" type="text"
-                                            id="Email-Address">
-                                            </div>
-                                </div>
-                                <div class="grid-1">
-                                    <div id="w-node-bc17c2cb-6525-3fb7-007c-e2d8a05c13c3-732b4aee"
-                                        class="search-wrapper background-white is-form"><input
-                                            class="search-field w-input" maxlength="256" name="contact[phone]"
-                                            data-name="Phone Number" placeholder="Phone Number" type="tel"
-                                            id="Phone-Number"></div>
-                                </div>
-                                <div class="button-wrapper padding-top-large is-form"><input type="submit"
-                                        data-wait="Please wait..." class="button is-form w-button" value="Submit">
-                                    <div class="terms-and-privacy text-primary">By clicking Submit, you agree to our <a
-                                            target="_blank" href="{{ settings.terms_of_service }}"
-                                            class="terms-and-privacy text-primary">Terms &amp; Conditions </a>and<a
-                                            target="_blank" href="{{ settings.privacy_policy }}"
-                                            class="terms-and-privacy text-primary"> Privacy Policy </a>.</div>
-                                </div>
-                            </form>
-                            <div class="w-form-done" tabindex="-1" role="region" aria-label="Email Form 4 success"><div>Thank you! Your submission has been received!</div></div>
-                            <div class="w-form-fail" tabindex="-1" role="region" aria-label="Email Form 4 failure"><div>Oops! Something went wrong while submitting the form.</div></div>
+                           {%- for block in section.blocks -%}
+                            {%- case block.type -%}
+                                {%- when 'html' -%}
+                                <h2>{{ block.settings.heading }}</h2>
+
+                                {{ block.settings.form_embed }}
+                                
+                            {%- endcase -%}
+                            {%- endfor -%}
                         </div>
                     </div>
                 </div>
@@ -135,6 +103,18 @@
             "default": "t:sections.join-form.blocks.text.settings.phone.default"
           }
         ]
+      },
+      {
+        "type": "html",
+        "name": "Form Embed",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "html",
+            "id": "form_embed",
+            "label": "t:sections.join-form.blocks.heading.settings.form.label"
+          }
+        ]
       }
 
     ],
@@ -146,6 +126,9 @@
             "type": "heading"
           }, {
             "type": "text"
+          },
+          {
+            "type": "html"
           }
         ]
       }
