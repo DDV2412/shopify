@@ -76,11 +76,52 @@
       ],
       "settings": {
       }
+    },
+    "card_column_right_MGam8P": {
+      "type": "card-column-right",
+      "blocks": {
+        "image_ckDVMd": {
+          "type": "image",
+          "settings": {
+            "alt": ""
+          }
+        },
+        "heading_NPJrCt": {
+          "type": "heading",
+          "settings": {
+            "heading": "Key highlights"
+          }
+        },
+        "text_FTV4Y8": {
+          "type": "text",
+          "settings": {
+            "text": "<p>From apartments to villas and master communities, Sobha is widely recognised for its work in Dubai real estate. </p><p></p><ul><li>Luxury real estate developer:<br/>Sobha developments in Dubai include master communities like Sobha Hartland and stunning projects like the Riverside Crescent collection. </li></ul>"
+          }
+        },
+        "button_Uypb7R": {
+          "type": "button",
+          "settings": {
+            "button_title": "Book a Consultation",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_ckDVMd",
+        "heading_NPJrCt",
+        "text_FTV4Y8",
+        "button_Uypb7R"
+      ],
+      "settings": {
+        "add_background_grey": false,
+        "button_visibility": false
+      }
     }
   },
   "order": [
     "collection",
     "home_hero_gRncqQ",
-    "section_title_T4eYaU"
+    "section_title_T4eYaU",
+    "card_column_right_MGam8P"
   ]
 }
