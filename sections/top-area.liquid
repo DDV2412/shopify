@@ -46,7 +46,7 @@
                   {% assign product_ids = products_in_location | split: ',' %}
                   {% assign random_index = product_ids | size | modulo: product_ids.size %}
                   {% assign random_product = block.settings.collection_area.products | where: 'id', product_ids[random_index] | first %}
-                  {{ random_product | json }}
+                  {{ product_ids | json }}
 
 
                   {% if random_product %}
