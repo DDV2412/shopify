@@ -20,13 +20,13 @@
           {%- for block in section.blocks -%}
             {%- case block.type -%}
               {%- when "collection" -%}
-                {% assign products_by_location = {} %}
+                {% assign products_by_location = '' %}
                 {% for product in collections[block.settings.collection_area].products %}
                   {% assign location = product.metafields.custom.location %}
 
                   {% if location %}
                     {% if products_by_location[location] == nil %}
-                      {% assign products_by_location = products_by_location | merge: { location: [] } %}
+                      {% assign products_by_location = products_by_location | merge: { location:[] } %}
                     {% endif %}
 
                     {% assign products_by_location[location] = products_by_location[location] | push: product %}
