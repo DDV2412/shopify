@@ -1,23 +1,21 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "breadcrumb": {
       "type": "breadcrumb",
-      "settings": {
-      }
+      "settings": {}
     },
     "page-body": {
       "type": "page-body",
-      "settings": {
-      }
+      "settings": {}
     },
     "join_form_8Fia4w": {
       "type": "join-form",
@@ -39,17 +37,12 @@
         "html_yQLnXN": {
           "type": "html",
           "settings": {
-            "form_embed": "<script src=\"https://cdn.commoninja.com/sdk/latest/commonninja.js\" defer></script>\n<div class=\"commonninja_component pid-e04430e5-894e-4e39-96e0-7aeb993871dc\"></div>"
+            "form_embed": "<script src=\"https://cdn.commoninja.com/sdk/latest/commonninja.js\" defer></script>\n<div class=\"commonninja_component pid-a2c76935-1779-411b-b9fa-9fd6fb0e79c8\"></div>"
           }
         }
       },
-      "block_order": [
-        "heading_qQgzp8",
-        "text_HWGyqb",
-        "html_yQLnXN"
-      ],
-      "settings": {
-      }
+      "block_order": ["heading_qQgzp8", "text_HWGyqb", "html_yQLnXN"],
+      "settings": {}
     },
     "faq_GLdLYK": {
       "type": "faq",
@@ -120,14 +113,8 @@
         "text_VwWP8X",
         "text_3yTdEP"
       ],
-      "settings": {
-      }
+      "settings": {}
     }
   },
-  "order": [
-    "breadcrumb",
-    "page-body",
-    "join_form_8Fia4w",
-    "faq_GLdLYK"
-  ]
+  "order": ["breadcrumb", "page-body", "join_form_8Fia4w", "faq_GLdLYK"]
 }

@@ -21,6 +21,20 @@
   display: none !important;
 }
 
+.JFUxW .cn-form-content {
+  padding: 0 !important;
+}
+
+.sc-cPiKLX.kpoyOs.nindo-form-label {
+  display: none !important;
+}
+
+.dSdmKm .nindo-input,
+.dSdmKm .nindo-textarea {
+  padding: 0.75rem 1rem !important;
+  height: 100% !important;
+}
+
 .w-form-formradioinput--inputType-custom.w--redirected-focus {
   box-shadow: 0 0 3px 1px #3898ec;
 }
@@ -80,6 +94,7 @@ a {
   margin-top: 0;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+  line-height: 140%;
 }
 
 .richtext blockquote {
@@ -118,6 +133,8 @@ a {
 
 .richtext ul li {
   margin-bottom: 0.5rem;
+  line-height: 140%;
+  color: var(--text-primary);
 }
 
 .w-list-unstyled {
@@ -469,6 +486,11 @@ p {
   display: flex;
 }
 
+.navbar-menu.hide-desktop {
+  display: none !important;
+}
+
+
 .nav-link {
   color: var(--white);
   border-bottom: 1px solid #0000;
@@ -545,6 +567,7 @@ p {
 .hero_content {
   color: var(--white);
   text-align: center;
+  align-self: center;
 }
 
 .hero-text {
@@ -1442,7 +1465,6 @@ p {
   border-radius: .3125rem;
   margin-bottom: 1.5rem;
   overflow: hidden;
-  height: 100%;
 }
 
 .featured_image-wrapper {
@@ -1590,6 +1612,7 @@ p {
   padding-bottom: 5rem;
 }
 
+
 .footer-content {
   justify-content: space-between;
   align-items: center;
@@ -1604,7 +1627,10 @@ p {
   width: 100%;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  display: flex;
+}
+
+.ePhoSa .cn-form-buttons {
+  margin: 0 !important;
 }
 
 .subscribe-input {
@@ -1644,6 +1670,7 @@ p {
 }
 
 .footer-menu-item {
+  padding: 0.25rem 0;
   margin-bottom: .25rem;
 }
 
@@ -1651,6 +1678,7 @@ p {
   color: var(--white);
   border-bottom: 1px solid #0000;
   line-height: 120%;
+  padding: 0.25rem 0;
   text-decoration: none;
   transition: all .3s cubic-bezier(.645, .045, .355, 1);
 }
@@ -3200,6 +3228,7 @@ p {
   text-align: left;
   border-radius: .6rem;
   margin-bottom: 0;
+  padding: 2rem;
 }
 
 .cn-form {
@@ -3271,6 +3300,17 @@ p {
     padding: 6rem 1.25rem 2.5rem;
     overflow: auto;
   }
+
+  .navbar-menu.hide-tablet {
+    display: none !important;
+  }
+
+  .navbar-menu.hide-desktop {
+    padding: 0;
+    display: flex !important;
+  }
+
+
 
   .nav-link {
     border-bottom: 1px solid var(--border-color);

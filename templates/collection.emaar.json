@@ -1,19 +1,18 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "collection": {
       "type": "collection",
       "disabled": true,
-      "settings": {
-      }
+      "settings": {}
     },
     "home_hero_gRncqQ": {
       "type": "home-hero",
@@ -21,19 +20,19 @@
         "select_dwAMRm": {
           "type": "select",
           "settings": {
-            "background_image": "shopify://shop_images/Sobha_one_hausandhaus_13_e5dc1c6c0f.webp"
+            "background_image": "shopify://shop_images/19745_photo_1629723324.webp"
           }
         },
         "heading_7hghhE": {
           "type": "heading",
           "settings": {
-            "heading": "Sobha Realty"
+            "heading": "Emaar Properties"
           }
         },
         "text_cCzfBB": {
           "type": "text",
           "settings": {
-            "text": "With a strong focus on quality and craftsmanship, Sobha Realty has become one of the leading names in UAE real estate."
+            "text": "Known as the UAE’s leading real estate developer, Emaar boasts a strong background and a growing portfolio across the region."
           }
         },
         "button_PU3YiY": {
@@ -45,12 +44,7 @@
           }
         }
       },
-      "block_order": [
-        "select_dwAMRm",
-        "heading_7hghhE",
-        "text_cCzfBB",
-        "button_PU3YiY"
-      ],
+      "block_order": ["select_dwAMRm", "heading_7hghhE", "text_cCzfBB", "button_PU3YiY"],
       "settings": {
         "add_form_search": false
       }
@@ -61,22 +55,18 @@
         "heading_cRk4Ft": {
           "type": "heading",
           "settings": {
-            "heading": "About Sobha Realty"
+            "heading": "About Emaar"
           }
         },
         "text_cNCjBH": {
           "type": "text",
           "settings": {
-            "text": "<p>Sobha Realty is a reputable developer with a vast portfolio across the UAE, Oman, Bahrain, Brunei, and India. With a vision to redefine luxury living, they pride themselves on providing innovative spaces with sustainability at the core.</p>"
+            "text": "<p>Emaar Properties is one of the world’s most admired and valuable real estate developers. With a proven track record in residential properties, retail, shopping malls, hospitality and leisure, it has helped shape luxury lifestyles with a commitment to excellence and timely delivery.</p>"
           }
         }
       },
-      "block_order": [
-        "heading_cRk4Ft",
-        "text_cNCjBH"
-      ],
-      "settings": {
-      }
+      "block_order": ["heading_cRk4Ft", "text_cNCjBH"],
+      "settings": {}
     },
     "card_column_right_MGam8P": {
       "type": "card-column-right",
@@ -84,7 +74,7 @@
         "image_ckDVMd": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Sobha_Seahaven_hausandhaus_7_a896b93619.webp",
+            "image": "shopify://shop_images/Palace_Beach_Residence_Tower_2_18_016d84867f.webp",
             "alt": ""
           }
         },
@@ -97,7 +87,7 @@
         "text_FTV4Y8": {
           "type": "text",
           "settings": {
-            "text": "<p>From apartments to villas and master communities, Sobha is widely recognised for its work in Dubai real estate. </p><p></p><ul><li>Luxury real estate developer:<br/>Sobha developments in Dubai include master communities like Sobha Hartland and stunning projects like the Riverside Crescent collection. </li></ul>"
+            "text": "<p>By combining innovative visions with industry-leading strategies and materials, Emaar continues to lead the way for UAE real estate. </p><p></p><ul><li><strong>Master community builders:</strong><br/>Emaar is known for its exceptional Dubai master communities in sought after locations – including, Emaar South, Arabian Ranches, Dubai Hills Estate, and Dubai Creek Harbour.</li><li><strong>Outstanding reputation:</strong><br/>As an established developer with local and international projects, Emaar has climbed to the top in the global real estate scene.</li><li><strong>Emaar investment potential:</strong><br/>Investors often choose Emaar projects in Dubai due to their prime location, increased value, excellent build quality, and timely delivery.</li><li><strong>World class architecture and design:</strong> As the name behind record-breaking constructions like Dubai Mall and Burj Khalifa, Emaar has set a new standard of quality and excellence.</li></ul><h2></h2>"
           }
         },
         "button_Uypb7R": {
@@ -108,12 +98,7 @@
           }
         }
       },
-      "block_order": [
-        "image_ckDVMd",
-        "heading_NPJrCt",
-        "text_FTV4Y8",
-        "button_Uypb7R"
-      ],
+      "block_order": ["image_ckDVMd", "heading_NPJrCt", "text_FTV4Y8", "button_Uypb7R"],
       "settings": {
         "add_background_grey": false,
         "button_visibility": false
@@ -137,17 +122,11 @@
         "collection_RxJzHW": {
           "type": "collection",
           "settings": {
-            "product_list": [
-              "sobha-hartland-creek-vista-heights-t2"
-            ]
+            "product_list": ["sobha-hartland-creek-vista-heights-t2"]
           }
         }
       },
-      "block_order": [
-        "heading_naq9N4",
-        "text_9ehzcC",
-        "collection_RxJzHW"
-      ],
+      "block_order": ["heading_naq9N4", "text_9ehzcC", "collection_RxJzHW"],
       "settings": {
         "padding_bottom": false
       }
@@ -158,20 +137,20 @@
         "image_w7LRhG": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Sobha_One_hausandhaus_images_1_fada5a28c4_322e587e-63f7-4b2d-bff9-13767ec402a3.webp",
+            "image": "shopify://shop_images/Creek_Palace_at_Dubai_Creek_Harbour_2_7b1b31e0c5.webp",
             "alt": ""
           }
         },
         "heading_cMpbKW": {
           "type": "heading",
           "settings": {
-            "heading": "Top industry recognitions"
+            "heading": "An award winning name"
           }
         },
         "text_FpbAaN": {
           "type": "text",
           "settings": {
-            "text": "<p>Sobha Realty in Dubai has been recognised by leading names for its commitment to excellence in real estate. Some of their awards include the Lifetime Achievement Award by the NDTV Profit and 9th place in the Top 50 GCC Developers Ranking by the Construction Week. </p>"
+            "text": "<p>Emaar Properties has been awarded multiple recognitions throughout the years. Some of the most recent ones are Developer of the Year by Arabian Business, Sustainability Prize for Dubai Hills Park, and Most Unique Visitor Attraction (Skyviews Observatory).</p><p>Emaar is also famous for breaking numerous world records – including the world’s tallest tower (Burj Khalifa), world’s largest shopping mall (Dubai Mall), world’s tallest infinity pool (Address Beach Resort), and more.</p>"
           }
         },
         "button_MtKH8H": {
@@ -182,12 +161,7 @@
           }
         }
       },
-      "block_order": [
-        "image_w7LRhG",
-        "heading_cMpbKW",
-        "text_FpbAaN",
-        "button_MtKH8H"
-      ],
+      "block_order": ["image_w7LRhG", "heading_cMpbKW", "text_FpbAaN", "button_MtKH8H"],
       "settings": {
         "add_background_grey": false,
         "button_visibility": false
@@ -216,11 +190,7 @@
           }
         }
       },
-      "block_order": [
-        "heading_GeGHwM",
-        "text_EDQeAY",
-        "button_mWpfWW"
-      ],
+      "block_order": ["heading_GeGHwM", "text_EDQeAY", "button_mWpfWW"],
       "settings": {
         "remove_padding_bottom": false
       }
@@ -231,7 +201,7 @@
         "heading_n3irFV": {
           "type": "heading",
           "settings": {
-            "heading": "Join the Sobha Realty priority list"
+            "heading": "Join the Emaar priority list"
           }
         },
         "text_zwePYA": {
@@ -245,17 +215,12 @@
         "html_rAExP8": {
           "type": "html",
           "settings": {
-            "form_embed": "<script src=\"https://cdn.commoninja.com/sdk/latest/commonninja.js\" defer></script>\n<div class=\"commonninja_component pid-e04430e5-894e-4e39-96e0-7aeb993871dc\"></div>"
+            "form_embed": "<script src=\"https://cdn.commoninja.com/sdk/latest/commonninja.js\" defer></script>\n<div class=\"commonninja_component pid-a2c76935-1779-411b-b9fa-9fd6fb0e79c8\"></div>"
           }
         }
       },
-      "block_order": [
-        "heading_n3irFV",
-        "text_zwePYA",
-        "html_rAExP8"
-      ],
-      "settings": {
-      }
+      "block_order": ["heading_n3irFV", "text_zwePYA", "html_rAExP8"],
+      "settings": {}
     },
     "faq_QxKJMD": {
       "type": "faq",
@@ -326,8 +291,7 @@
         "text_XPeTcK",
         "text_gE9eCA"
       ],
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [

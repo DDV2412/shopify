@@ -16,29 +16,53 @@
               </div>
             </div>
             <div class="navbar-menu">
-              {% assign main_menu = linklists.main-menu.links %}
-              {% for link in main_menu %}
-                {%if link.links.size > 0%}
-                  <div data-hover="true" data-delay="0" data-w-id="705e8b83-aefe-8bc1-ae7d-519f320751eb" class="nav-dropdown w-dropdown w--nav-dropdown-open">
-                <div class="nav-dropdown-toogle w-dropdown-toggle">
-                  <a href="{{ link.url }}" class="nav-link is-dropdown w-nav-link w--nav-link-open">{{ link.title }}</a>
-                  <div class="dropdown_icon"><div class="icon_small plus w-embed" style="display: block;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-plus"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 5l0 14"></path><path d="M5 12l14 0"></path></svg></div><div class="icon_small minus w-embed" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-minus"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M5 12l14 0"></path></svg></div></div>
-                </div>
-                <nav class="nav-dropdown_list w-dropdown-list">
-                  <div class="dropdown_list">
-                    {% for sub_link in link.links %}
-                      <a href="{{ sub_link.url }}" class="dropdown-link w-nav-link">{{ sub_link.title }}</a>
-                    {% endfor %}
+              <div class="navbar-menu hide-tablet">
+                {% assign main_menu = linklists.main-menu.links %}
+                {% for link in main_menu %}
+                  {%if link.links.size > 0%}
+                    <div data-hover="true" data-delay="0" data-w-id="705e8b83-aefe-8bc1-ae7d-519f320751eb" class="nav-dropdown w-dropdown w--nav-dropdown-open">
+                  <div class="nav-dropdown-toogle w-dropdown-toggle">
+                    <a href="{{ link.url }}" aria-label="{{link.title}}" class="nav-link is-dropdown w-nav-link w--nav-link-open">{{ link.title }}</a>
+                    <div class="dropdown_icon"><div class="icon_small plus w-embed" style="display: block;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-plus"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 5l0 14"></path><path d="M5 12l14 0"></path></svg></div><div class="icon_small minus w-embed" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-minus"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M5 12l14 0"></path></svg></div></div>
                   </div>
-                </nav>
+                  <nav class="nav-dropdown_list w-dropdown-list">
+                    <div class="dropdown_list">
+                      {% for sub_link in link.links %}
+                        <a href="{{ sub_link.url }}" aria-label="{{sub_link.title}}" class="dropdown-link w-nav-link">{{ sub_link.title }}</a>
+                      {% endfor %}
+                    </div>
+                  </nav>
+                </div>
+                {%else%}
+                  <a href="{{ link.url }}" aria-label="{{link.title}}" class="nav-link w-nav-link">{{ link.title }}</a>
+                {%endif%}
+                {% endfor %}
               </div>
-              {%else%}
-                <a href="{{ link.url }}" class="nav-link w-nav-link">{{ link.title }}</a>
-              {%endif%}
-              {% endfor %}
+              <div class="navbar-menu hide-desktop">
+                {% assign main_menu = linklists.mobile-menu.links %}
+                {% for link in main_menu %}
+                  {%if link.links.size > 0%}
+                    <div data-hover="true" data-delay="0" data-w-id="705e8b83-aefe-8bc1-ae7d-519f320751eb" class="nav-dropdown w-dropdown w--nav-dropdown-open">
+                  <div class="nav-dropdown-toogle w-dropdown-toggle">
+                    <a href="{{ link.url }}"  aria-label="{{link.title}}"   class="nav-link is-dropdown w-nav-link w--nav-link-open">{{ link.title }}</a>
+                    <div class="dropdown_icon"><div class="icon_small plus w-embed" style="display: block;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-plus"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 5l0 14"></path><path d="M5 12l14 0"></path></svg></div><div class="icon_small minus w-embed" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-minus"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M5 12l14 0"></path></svg></div></div>
+                  </div>
+                  <nav class="nav-dropdown_list w-dropdown-list">
+                    <div class="dropdown_list">
+                      {% for sub_link in link.links %}
+                        <a href="{{ sub_link.url }}" aria-label="{{sub_link.title}}" class="dropdown-link w-nav-link">{{ sub_link.title }}</a>
+                      {% endfor %}
+                    </div>
+                  </nav>
+                </div>
+                {%else%}
+                  <a href="{{ link.url }}" aria-label="{{link.title}}"  class="nav-link w-nav-link">{{ link.title }}</a>
+                {%endif%}
+                {% endfor %}
+              </div>
               
               <div class="whatsapp-burger">
-                <a href="{{settings.whatsapp_link}}" class="whatsapp-button w-inline-block"  target="_blank">
+                <a href="{{settings.whatsapp_link}}" class="whatsapp-button w-inline-block" aria-label="whatsapp"  target="_blank">
                   <div class="whatsapp-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp">
                       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                       <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"></path>
@@ -50,7 +74,7 @@
             </div>
           </nav>
           <div class="menu-wrapper">
-            <a href="{{settings.whatsapp_link}}"  target="_blank" class="whatsapp-button w-inline-block">
+            <a href="{{settings.whatsapp_link}}" aria-label="whatsapp" target="_blank" class="whatsapp-button w-inline-block">
               <div class="whatsapp-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                   <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"></path>

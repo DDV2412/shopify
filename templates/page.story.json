@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "home_hero_GD8Ykx": {
@@ -40,12 +40,7 @@
           }
         }
       },
-      "block_order": [
-        "select_FweHGM",
-        "heading_iT4nU3",
-        "text_VjRTrq",
-        "button_NxgYVP"
-      ],
+      "block_order": ["select_FweHGM", "heading_iT4nU3", "text_VjRTrq", "button_NxgYVP"],
       "settings": {
         "add_form_search": false
       }
@@ -53,8 +48,7 @@
     "breadcrumb": {
       "type": "breadcrumb",
       "disabled": true,
-      "settings": {
-      }
+      "settings": {}
     },
     "section_title_4LWeeg": {
       "type": "section-title",
@@ -72,12 +66,8 @@
           }
         }
       },
-      "block_order": [
-        "heading_cTJkcz",
-        "text_MxqH4F"
-      ],
-      "settings": {
-      }
+      "block_order": ["heading_cTJkcz", "text_MxqH4F"],
+      "settings": {}
     },
     "card_column_right_wdmd9B": {
       "type": "card-column-right",
@@ -109,12 +99,7 @@
           }
         }
       },
-      "block_order": [
-        "image_G7TtJC",
-        "heading_7XqXmk",
-        "text_zTjWKf",
-        "button_idNzP4"
-      ],
+      "block_order": ["image_G7TtJC", "heading_7XqXmk", "text_zTjWKf", "button_idNzP4"],
       "settings": {
         "add_background_grey": true,
         "button_visibility": false
@@ -150,12 +135,7 @@
           }
         }
       },
-      "block_order": [
-        "image_aM3PY7",
-        "heading_QAJhzD",
-        "text_xN3hhg",
-        "button_8Cydcj"
-      ],
+      "block_order": ["image_aM3PY7", "heading_QAJhzD", "text_xN3hhg", "button_8Cydcj"],
       "settings": {
         "add_background_grey": false,
         "button_visibility": false
@@ -186,13 +166,8 @@
           }
         }
       },
-      "block_order": [
-        "heading",
-        "text",
-        "button"
-      ],
-      "settings": {
-      }
+      "block_order": ["heading", "text", "button"],
+      "settings": {}
     },
     "faq": {
       "type": "faq",
@@ -263,8 +238,7 @@
         "text_XPeTcK",
         "text_gE9eCA"
       ],
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [

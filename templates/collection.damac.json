@@ -1,13 +1,4 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
-/*
  * ------------------------------------------------------------
  * IMPORTANT: The contents of this file are auto-generated.
  *
@@ -29,19 +20,19 @@
         "select_dwAMRm": {
           "type": "select",
           "settings": {
-            "background_image": "shopify://shop_images/Sobha_one_hausandhaus_13_e5dc1c6c0f.webp"
+            "background_image": "shopify://shop_images/55831_photo_1675081731.webp"
           }
         },
         "heading_7hghhE": {
           "type": "heading",
           "settings": {
-            "heading": "Sobha Realty"
+            "heading": "DAMAC Properties"
           }
         },
         "text_cCzfBB": {
           "type": "text",
           "settings": {
-            "text": "With a strong focus on quality and craftsmanship, Sobha Realty has become one of the leading names in UAE real estate."
+            "text": ""
           }
         },
         "button_PU3YiY": {
@@ -64,13 +55,13 @@
         "heading_cRk4Ft": {
           "type": "heading",
           "settings": {
-            "heading": "About Sobha Realty"
+            "heading": "About DAMAC"
           }
         },
         "text_cNCjBH": {
           "type": "text",
           "settings": {
-            "text": "<p>Sobha Realty is a reputable developer with a vast portfolio across the UAE, Oman, Bahrain, Brunei, and India. With a vision to redefine luxury living, they pride themselves on providing innovative spaces with sustainability at the core.</p>"
+            "text": "<p>DAMAC Properties – the real estate arm of DAMAC Group – has been shaping the property sector in the Middle East and beyond since 1982. The name is widely known for its iconic residential, commercial, and leisure developments in the GCC area, Levant, USA, and UK.</p>"
           }
         }
       },
@@ -83,7 +74,7 @@
         "image_ckDVMd": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Sobha_Seahaven_hausandhaus_7_a896b93619.webp",
+            "image": "shopify://shop_images/30929_photo_1653634723.webp",
             "alt": ""
           }
         },
@@ -96,7 +87,7 @@
         "text_FTV4Y8": {
           "type": "text",
           "settings": {
-            "text": "<p>From apartments to villas and master communities, Sobha is widely recognised for its work in Dubai real estate. </p><p></p><ul><li>Luxury real estate developer:<br/>Sobha developments in Dubai include master communities like Sobha Hartland and stunning projects like the Riverside Crescent collection. </li></ul>"
+            "text": "<ul><li><strong>Established real estate developer: </strong>Offering a wide array of premium projects, DAMAC Properties aims to deliver architectural masterpieces in popular locations – featuring high end finishes and luxury interiors.</li><li><strong>Renowned portfolio:</strong> Some of the most acclaimed projects include DAMAC CASA, Coral Reef, Chic Tower, DAMAC Bay with interiors by Roberto Cavalli, and Safa Two branded by De Grisogono. </li><li><strong>Proven track record:</strong> DAMAC has delivered more than 46,000 completed units since its first residential project in 2002, thanks to effective business models and leading development practices.</li><li><strong>Sought after communities: </strong>Master communities include DAMAC Lagoons – an expansive project with clusters inspired by holiday destinations – and DAMAC Hills, a golf neighbourhood with landscaped greens and exclusive amenities.</li></ul>"
           }
         },
         "button_Uypb7R": {
@@ -146,20 +137,20 @@
         "image_w7LRhG": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Sobha_One_hausandhaus_images_1_fada5a28c4_322e587e-63f7-4b2d-bff9-13767ec402a3.webp",
+            "image": "shopify://shop_images/58400_photo_1678188845.webp",
             "alt": ""
           }
         },
         "heading_cMpbKW": {
           "type": "heading",
           "settings": {
-            "heading": "Top industry recognitions"
+            "heading": "Regionally recognised"
           }
         },
         "text_FpbAaN": {
           "type": "text",
           "settings": {
-            "text": "<p>Sobha Realty in Dubai has been recognised by leading names for its commitment to excellence in real estate. Some of their awards include the Lifetime Achievement Award by the NDTV Profit and 9th place in the Top 50 GCC Developers Ranking by the Construction Week. </p>"
+            "text": "<p>As a leading name in the Middle East real estate, DAMAC Properties has earned important industry awards – including Best Luxury High Rise Living for Cavalli Casa Tower, Leading Real Estate Developer 2023 by the World Business Outlook Awards, and Most Innovative Residential Community Developers.</p><p></p>"
           }
         },
         "button_MtKH8H": {
@@ -201,7 +192,7 @@
       },
       "block_order": ["heading_GeGHwM", "text_EDQeAY", "button_mWpfWW"],
       "settings": {
-        "remove_padding_bottom": true
+        "remove_padding_bottom": false
       }
     },
     "join_form_jKkzGb": {
@@ -210,7 +201,7 @@
         "heading_n3irFV": {
           "type": "heading",
           "settings": {
-            "heading": "Join the Sobha Realty priority list"
+            "heading": "Join the DAMAC priority list"
           }
         },
         "text_zwePYA": {
@@ -224,7 +215,7 @@
         "html_rAExP8": {
           "type": "html",
           "settings": {
-            "form_embed": "<script src=\"https://cdn.commoninja.com/sdk/latest/commonninja.js\" defer></script>\n<div class=\"commonninja_component pid-e04430e5-894e-4e39-96e0-7aeb993871dc\"></div>"
+            "form_embed": "<script src=\"https://cdn.commoninja.com/sdk/latest/commonninja.js\" defer></script>\n<div class=\"commonninja_component pid-a2c76935-1779-411b-b9fa-9fd6fb0e79c8\"></div>"
           }
         }
       },

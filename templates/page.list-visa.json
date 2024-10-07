@@ -1,18 +1,17 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "breadcrumb": {
       "type": "breadcrumb",
-      "settings": {
-      }
+      "settings": {}
     },
     "header_title_8XHmRF": {
       "type": "header-title",
@@ -30,10 +29,7 @@
           }
         }
       },
-      "block_order": [
-        "heading_XqUr7p",
-        "text_Y6Ymhw"
-      ],
+      "block_order": ["heading_XqUr7p", "text_Y6Ymhw"],
       "settings": {
         "is_hero": true
       }
@@ -41,8 +37,7 @@
     "page-body": {
       "type": "page-body",
       "disabled": true,
-      "settings": {
-      }
+      "settings": {}
     },
     "grid_collection_9LHXQC": {
       "type": "grid-collection",
@@ -84,14 +79,8 @@
           }
         }
       },
-      "block_order": [
-        "collection_exqx4i",
-        "collection_ypEeLC",
-        "collection_eX76bN",
-        "collection_Tzn6cQ"
-      ],
-      "settings": {
-      }
+      "block_order": ["collection_exqx4i", "collection_ypEeLC", "collection_eX76bN", "collection_Tzn6cQ"],
+      "settings": {}
     },
     "cta_LhRKUM": {
       "type": "cta",
@@ -116,11 +105,7 @@
           }
         }
       },
-      "block_order": [
-        "heading_GeGHwM",
-        "text_EDQeAY",
-        "button_mWpfWW"
-      ],
+      "block_order": ["heading_GeGHwM", "text_EDQeAY", "button_mWpfWW"],
       "settings": {
         "remove_padding_bottom": true
       }
@@ -194,16 +179,8 @@
         "text_VwWP8X",
         "text_3yTdEP"
       ],
-      "settings": {
-      }
+      "settings": {}
     }
   },
-  "order": [
-    "breadcrumb",
-    "header_title_8XHmRF",
-    "page-body",
-    "grid_collection_9LHXQC",
-    "cta_LhRKUM",
-    "faq_GLdLYK"
-  ]
+  "order": ["breadcrumb", "header_title_8XHmRF", "page-body", "grid_collection_9LHXQC", "cta_LhRKUM", "faq_GLdLYK"]
 }

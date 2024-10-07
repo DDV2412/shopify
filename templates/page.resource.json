@@ -1,24 +1,22 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "breadcrumb": {
       "type": "breadcrumb",
-      "settings": {
-      }
+      "settings": {}
     },
     "page-body": {
       "type": "page-body",
       "disabled": true,
-      "settings": {
-      }
+      "settings": {}
     },
     "header_title_HcpNcz": {
       "type": "header-title",
@@ -36,10 +34,7 @@
           }
         }
       },
-      "block_order": [
-        "heading_nicFUm",
-        "text_zaqjQ4"
-      ],
+      "block_order": ["heading_nicFUm", "text_zaqjQ4"],
       "settings": {
         "is_hero": true
       }
@@ -75,13 +70,8 @@
           }
         }
       },
-      "block_order": [
-        "collection_rfcrKq",
-        "collection_zaw6WC",
-        "collection_LAAUjt"
-      ],
-      "settings": {
-      }
+      "block_order": ["collection_rfcrKq", "collection_zaw6WC", "collection_LAAUjt"],
+      "settings": {}
     },
     "cta_card_Lt99nc": {
       "type": "cta-card",
@@ -108,20 +98,9 @@
           }
         }
       },
-      "block_order": [
-        "heading_qy6kV7",
-        "text_edVy96",
-        "button_qy43Ag"
-      ],
-      "settings": {
-      }
+      "block_order": ["heading_qy6kV7", "text_edVy96", "button_qy43Ag"],
+      "settings": {}
     }
   },
-  "order": [
-    "breadcrumb",
-    "page-body",
-    "header_title_HcpNcz",
-    "grid_collection_TAgtXi",
-    "cta_card_Lt99nc"
-  ]
+  "order": ["breadcrumb", "page-body", "header_title_HcpNcz", "grid_collection_TAgtXi", "cta_card_Lt99nc"]
 }

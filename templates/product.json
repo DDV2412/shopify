@@ -1,23 +1,21 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "breadcrumb": {
       "type": "breadcrumb",
-      "settings": {
-      }
+      "settings": {}
     },
     "product-body": {
       "type": "product-body",
-      "settings": {
-      }
+      "settings": {}
     },
     "cta-home": {
       "type": "cta-home",
@@ -43,13 +41,8 @@
           }
         }
       },
-      "block_order": [
-        "heading",
-        "text",
-        "button"
-      ],
-      "settings": {
-      }
+      "block_order": ["heading", "text", "button"],
+      "settings": {}
     },
     "faq": {
       "type": "faq",
@@ -120,14 +113,8 @@
         "text_XPeTcK",
         "text_gE9eCA"
       ],
-      "settings": {
-      }
+      "settings": {}
     }
   },
-  "order": [
-    "breadcrumb",
-    "product-body",
-    "cta-home",
-    "faq"
-  ]
+  "order": ["breadcrumb", "product-body", "cta-home", "faq"]
 }

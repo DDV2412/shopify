@@ -1,19 +1,18 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "collection": {
       "type": "collection",
       "disabled": true,
-      "settings": {
-      }
+      "settings": {}
     },
     "home_hero_gRncqQ": {
       "type": "home-hero",
@@ -45,12 +44,7 @@
           }
         }
       },
-      "block_order": [
-        "select_dwAMRm",
-        "heading_7hghhE",
-        "text_cCzfBB",
-        "button_PU3YiY"
-      ],
+      "block_order": ["select_dwAMRm", "heading_7hghhE", "text_cCzfBB", "button_PU3YiY"],
       "settings": {
         "add_form_search": false
       }
@@ -71,12 +65,8 @@
           }
         }
       },
-      "block_order": [
-        "heading_cRk4Ft",
-        "text_cNCjBH"
-      ],
-      "settings": {
-      }
+      "block_order": ["heading_cRk4Ft", "text_cNCjBH"],
+      "settings": {}
     },
     "card_column_right_MGam8P": {
       "type": "card-column-right",
@@ -97,7 +87,7 @@
         "text_FTV4Y8": {
           "type": "text",
           "settings": {
-            "text": "<p>From apartments to villas and master communities, Sobha is widely recognised for its work in Dubai real estate. </p><p></p><ul><li>Luxury real estate developer:<br/>Sobha developments in Dubai include master communities like Sobha Hartland and stunning projects like the Riverside Crescent collection. </li></ul>"
+            "text": "<p>From apartments to villas and master communities, Sobha is widely recognised for its work in Dubai real estate. </p><p></p><ul><li>Luxury real estate developer:<br/>Sobha developments in Dubai include master communities like Sobha Hartland and stunning projects like the Riverside Crescent collection. </li><li><strong>Global presence: </strong>Sobha has become a globally recognised developer with international investments and a diverse team of industry experts. </li><li><strong>Urban living at its finest:</strong> With a purpose to redefine urban living as we know it, Sobha has developed innovative communities with lagoons, lush greenery, private Zen spaces, and much more. </li><li><strong>Impeccable designs:</strong>Through precise planning, meticulous designs and high end materials, every project is carefully crafted to provide a sense of luxury and comfort.</li></ul>"
           }
         },
         "button_Uypb7R": {
@@ -108,12 +98,7 @@
           }
         }
       },
-      "block_order": [
-        "image_ckDVMd",
-        "heading_NPJrCt",
-        "text_FTV4Y8",
-        "button_Uypb7R"
-      ],
+      "block_order": ["image_ckDVMd", "heading_NPJrCt", "text_FTV4Y8", "button_Uypb7R"],
       "settings": {
         "add_background_grey": false,
         "button_visibility": false
@@ -137,17 +122,11 @@
         "collection_RxJzHW": {
           "type": "collection",
           "settings": {
-            "product_list": [
-              "sobha-hartland-creek-vista-heights-t2"
-            ]
+            "product_list": ["sobha-hartland-creek-vista-heights-t2"]
           }
         }
       },
-      "block_order": [
-        "heading_naq9N4",
-        "text_9ehzcC",
-        "collection_RxJzHW"
-      ],
+      "block_order": ["heading_naq9N4", "text_9ehzcC", "collection_RxJzHW"],
       "settings": {
         "padding_bottom": false
       }
@@ -182,12 +161,7 @@
           }
         }
       },
-      "block_order": [
-        "image_w7LRhG",
-        "heading_cMpbKW",
-        "text_FpbAaN",
-        "button_MtKH8H"
-      ],
+      "block_order": ["image_w7LRhG", "heading_cMpbKW", "text_FpbAaN", "button_MtKH8H"],
       "settings": {
         "add_background_grey": false,
         "button_visibility": false
@@ -216,11 +190,7 @@
           }
         }
       },
-      "block_order": [
-        "heading_GeGHwM",
-        "text_EDQeAY",
-        "button_mWpfWW"
-      ],
+      "block_order": ["heading_GeGHwM", "text_EDQeAY", "button_mWpfWW"],
       "settings": {
         "remove_padding_bottom": false
       }
@@ -245,17 +215,12 @@
         "html_rAExP8": {
           "type": "html",
           "settings": {
-            "form_embed": "<script src=\"https://cdn.commoninja.com/sdk/latest/commonninja.js\" defer></script>\n<div class=\"commonninja_component pid-e04430e5-894e-4e39-96e0-7aeb993871dc\"></div>"
+            "form_embed": "<script src=\"https://cdn.commoninja.com/sdk/latest/commonninja.js\" defer></script>\n<div class=\"commonninja_component pid-a2c76935-1779-411b-b9fa-9fd6fb0e79c8\"></div>"
           }
         }
       },
-      "block_order": [
-        "heading_n3irFV",
-        "text_zwePYA",
-        "html_rAExP8"
-      ],
-      "settings": {
-      }
+      "block_order": ["heading_n3irFV", "text_zwePYA", "html_rAExP8"],
+      "settings": {}
     },
     "faq_QxKJMD": {
       "type": "faq",
@@ -326,8 +291,7 @@
         "text_XPeTcK",
         "text_gE9eCA"
       ],
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [

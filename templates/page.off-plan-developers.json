@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "header-title": {
@@ -25,12 +25,8 @@
           }
         }
       },
-      "block_order": [
-        "heading",
-        "text"
-      ],
-      "settings": {
-      }
+      "block_order": ["heading", "text"],
+      "settings": {}
     },
     "featured-developers": {
       "type": "featured-developers",
@@ -66,14 +62,8 @@
           }
         }
       },
-      "block_order": [
-        "heading",
-        "collection",
-        "collection_UBrg7d",
-        "collection_yk8Nbc"
-      ],
-      "settings": {
-      }
+      "block_order": ["heading", "collection", "collection_UBrg7d", "collection_yk8Nbc"],
+      "settings": {}
     },
     "developers": {
       "type": "developers",
@@ -130,8 +120,7 @@
         "collection_cLHanQ",
         "collection_LdxDQx"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "cta-develop": {
       "type": "cta-develop",
@@ -148,11 +137,8 @@
           }
         }
       },
-      "block_order": [
-        "text"
-      ],
-      "settings": {
-      }
+      "block_order": ["text"],
+      "settings": {}
     },
     "faq": {
       "type": "faq",
@@ -223,15 +209,8 @@
         "text_XPeTcK",
         "text_gE9eCA"
       ],
-      "settings": {
-      }
+      "settings": {}
     }
   },
-  "order": [
-    "header-title",
-    "featured-developers",
-    "developers",
-    "cta-develop",
-    "faq"
-  ]
+  "order": ["header-title", "featured-developers", "developers", "cta-develop", "faq"]
 }

@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "header-title": {
@@ -25,10 +25,7 @@
           }
         }
       },
-      "block_order": [
-        "heading",
-        "text"
-      ],
+      "block_order": ["heading", "text"],
       "settings": {
         "is_hero": false
       }
@@ -60,11 +57,7 @@
           }
         }
       },
-      "block_order": [
-        "heading",
-        "text",
-        "collection"
-      ],
+      "block_order": ["heading", "text", "collection"],
       "settings": {
         "padding_bottom": false
       }
@@ -98,11 +91,7 @@
           }
         }
       },
-      "block_order": [
-        "heading",
-        "text",
-        "collection"
-      ],
+      "block_order": ["heading", "text", "collection"],
       "settings": {
         "padding_bottom": false
       }
@@ -129,13 +118,8 @@
           }
         }
       },
-      "block_order": [
-        "heading",
-        "text",
-        "collection"
-      ],
-      "settings": {
-      }
+      "block_order": ["heading", "text", "collection"],
+      "settings": {}
     },
     "top-area": {
       "type": "top-area",
@@ -159,13 +143,8 @@
           }
         }
       },
-      "block_order": [
-        "heading",
-        "text",
-        "collection"
-      ],
-      "settings": {
-      }
+      "block_order": ["heading", "text", "collection"],
+      "settings": {}
     },
     "off_plan_LqBDbx": {
       "type": "off-plan",
@@ -194,22 +173,11 @@
           }
         }
       },
-      "block_order": [
-        "heading_MJA7UU",
-        "text_8qaDnd",
-        "collection_Mw4jYy"
-      ],
+      "block_order": ["heading_MJA7UU", "text_8qaDnd", "collection_Mw4jYy"],
       "settings": {
         "padding_bottom": true
       }
     }
   },
-  "order": [
-    "header-title",
-    "off-plan",
-    "off-plan-slider",
-    "developers-slider",
-    "top-area",
-    "off_plan_LqBDbx"
-  ]
+  "order": ["header-title", "off-plan", "off-plan-slider", "developers-slider", "top-area", "off_plan_LqBDbx"]
 }

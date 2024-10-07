@@ -1,10 +1,21 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "breadcrumb": {
-      "type": "breadcrumb"
+      "type": "breadcrumb",
+      "settings": {}
     },
     "blog-body": {
-      "type": "blog-body"
+      "type": "blog-body",
+      "settings": {}
     },
     "latest-blog": {
       "type": "latest-blog",
@@ -16,7 +27,8 @@
           }
         }
       },
-      "block_order": ["heading"]
+      "block_order": ["heading"],
+      "settings": {}
     }
   },
   "order": ["breadcrumb", "blog-body", "latest-blog"]

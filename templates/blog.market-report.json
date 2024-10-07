@@ -1,23 +1,21 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "breadcrumb": {
       "type": "breadcrumb",
-      "settings": {
-      }
+      "settings": {}
     },
     "blog_list": {
       "type": "blog-list",
-      "settings": {
-      }
+      "settings": {}
     },
     "cta_ykc7nK": {
       "type": "cta",
@@ -42,11 +40,7 @@
           }
         }
       },
-      "block_order": [
-        "heading_LrwyTA",
-        "text_mK8pb9",
-        "button_VRqJ3g"
-      ],
+      "block_order": ["heading_LrwyTA", "text_mK8pb9", "button_VRqJ3g"],
       "settings": {
         "remove_padding_bottom": true
       }
@@ -76,19 +70,9 @@
           }
         }
       },
-      "block_order": [
-        "heading_wR3pen",
-        "text_dmzhCr",
-        "button_inihNK"
-      ],
-      "settings": {
-      }
+      "block_order": ["heading_wR3pen", "text_dmzhCr", "button_inihNK"],
+      "settings": {}
     }
   },
-  "order": [
-    "breadcrumb",
-    "blog_list",
-    "cta_ykc7nK",
-    "cta_card_pyUHx3"
-  ]
+  "order": ["breadcrumb", "blog_list", "cta_ykc7nK", "cta_card_pyUHx3"]
 }

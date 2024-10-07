@@ -1,18 +1,17 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "breadcrumb": {
       "type": "breadcrumb",
-      "settings": {
-      }
+      "settings": {}
     },
     "top_area_HYHDc9": {
       "type": "top-area",
@@ -36,13 +35,8 @@
           }
         }
       },
-      "block_order": [
-        "heading_MxFVFK",
-        "text_Qtx7fP",
-        "collection_AtVPMH"
-      ],
-      "settings": {
-      }
+      "block_order": ["heading_MxFVFK", "text_Qtx7fP", "collection_AtVPMH"],
+      "settings": {}
     },
     "cta_afVGhj": {
       "type": "cta",
@@ -67,11 +61,7 @@
           }
         }
       },
-      "block_order": [
-        "heading_i4wii3",
-        "text_XHyDF9",
-        "button_EP6PGC"
-      ],
+      "block_order": ["heading_i4wii3", "text_XHyDF9", "button_EP6PGC"],
       "settings": {
         "remove_padding_bottom": false
       }
@@ -96,17 +86,12 @@
         "html_7a7N46": {
           "type": "html",
           "settings": {
-            "form_embed": "<script src=\"https://cdn.commoninja.com/sdk/latest/commonninja.js\" defer></script>\n<div class=\"commonninja_component pid-e04430e5-894e-4e39-96e0-7aeb993871dc\"></div>"
+            "form_embed": "<script src=\"https://cdn.commoninja.com/sdk/latest/commonninja.js\" defer></script>\n<div class=\"commonninja_component pid-a2c76935-1779-411b-b9fa-9fd6fb0e79c8\"></div>"
           }
         }
       },
-      "block_order": [
-        "heading_YtGL6Q",
-        "text_bt7GNC",
-        "html_7a7N46"
-      ],
-      "settings": {
-      }
+      "block_order": ["heading_YtGL6Q", "text_bt7GNC", "html_7a7N46"],
+      "settings": {}
     },
     "faq_QxKJMD": {
       "type": "faq",
@@ -177,15 +162,8 @@
         "text_XPeTcK",
         "text_gE9eCA"
       ],
-      "settings": {
-      }
+      "settings": {}
     }
   },
-  "order": [
-    "breadcrumb",
-    "top_area_HYHDc9",
-    "cta_afVGhj",
-    "join_form_Gq6wAW",
-    "faq_QxKJMD"
-  ]
+  "order": ["breadcrumb", "top_area_HYHDc9", "cta_afVGhj", "join_form_Gq6wAW", "faq_QxKJMD"]
 }

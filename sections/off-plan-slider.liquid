@@ -23,7 +23,7 @@
               {%- for block in section.blocks -%}
           {%- case block.type -%}
           {%- when "collection" -%}
-          {% assign products =  block.settings.collection_offplan %}
+          {% assign products =  block.settings.product_list %}
           {%- for product in  products -%}
             <div class="property-slider w-slide" aria-label="1 of 1" role="group"
                 style="transition: all; transform: translateX(0px); opacity: 1;">
