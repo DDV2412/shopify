@@ -1,12 +1,12 @@
 /*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "header-title": {
@@ -25,7 +25,10 @@
           }
         }
       },
-      "block_order": ["heading", "text"],
+      "block_order": [
+        "heading",
+        "text"
+      ],
       "settings": {
         "is_hero": false
       }
@@ -48,18 +51,18 @@
         "collection": {
           "type": "collection",
           "settings": {
-            "product_list": [
-              "studio-the-palm-tower",
-              "studio-viewz-by-danube-furnished",
-              "studio-seven-city-jlt-golf-views",
-              "studio-furnished-the-palm-tower"
-            ]
+            "collection_name": ""
           }
         }
       },
-      "block_order": ["heading", "text", "collection"],
+      "block_order": [
+        "heading",
+        "text",
+        "collection"
+      ],
       "settings": {
-        "padding_bottom": false
+        "padding_bottom": false,
+        "sort_by": "manual"
       }
     },
     "off-plan-slider": {
@@ -80,20 +83,18 @@
         "collection": {
           "type": "collection",
           "settings": {
-            "product_list": [
-              "creek-harbour-the-grand",
-              "damac-lagoons-monte-carlo-best-community",
-              "downtown-forte-2",
-              "elie-sabb-tower-2-emaar-beachfront",
-              "furnished-huge-layout-damac-maison-de-ville-tenora",
-              "furnished-pool-view-damac-maison-de-villa-tenora"
-            ]
+            "collection_name": ""
           }
         }
       },
-      "block_order": ["heading", "text", "collection"],
+      "block_order": [
+        "heading",
+        "text",
+        "collection"
+      ],
       "settings": {
-        "padding_bottom": false
+        "padding_bottom": false,
+        "sort_by": "manual"
       }
     },
     "developers-slider": {
@@ -118,8 +119,13 @@
           }
         }
       },
-      "block_order": ["heading", "text", "collection"],
-      "settings": {}
+      "block_order": [
+        "heading",
+        "text",
+        "collection"
+      ],
+      "settings": {
+      }
     },
     "top-area": {
       "type": "top-area",
@@ -139,12 +145,17 @@
         "collection": {
           "type": "collection",
           "settings": {
-            "collection_area": "dubai-creek-harbour"
+            "collection_area": "properties-for-sale"
           }
         }
       },
-      "block_order": ["heading", "text", "collection"],
-      "settings": {}
+      "block_order": [
+        "heading",
+        "text",
+        "collection"
+      ],
+      "settings": {
+      }
     },
     "off_plan_LqBDbx": {
       "type": "off-plan",
@@ -164,20 +175,27 @@
         "collection_Mw4jYy": {
           "type": "collection",
           "settings": {
-            "product_list": [
-              "beachfront-marina-vista-t2",
-              "brand-new-fully-furnished-canal-view",
-              "business-bay-the-edge-tower-a",
-              "creek-harbour-harbour-gate-t2"
-            ]
+            "collection_name": ""
           }
         }
       },
-      "block_order": ["heading_MJA7UU", "text_8qaDnd", "collection_Mw4jYy"],
+      "block_order": [
+        "heading_MJA7UU",
+        "text_8qaDnd",
+        "collection_Mw4jYy"
+      ],
       "settings": {
-        "padding_bottom": true
+        "padding_bottom": true,
+        "sort_by": "manual"
       }
     }
   },
-  "order": ["header-title", "off-plan", "off-plan-slider", "developers-slider", "top-area", "off_plan_LqBDbx"]
+  "order": [
+    "header-title",
+    "off-plan",
+    "off-plan-slider",
+    "developers-slider",
+    "top-area",
+    "off_plan_LqBDbx"
+  ]
 }
