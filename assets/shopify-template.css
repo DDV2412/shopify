@@ -25,12 +25,12 @@
   padding: 0 !important;
 }
 
-.sc-cPiKLX.kpoyOs.nindo-form-label {
+nindo-form-label {
   display: none !important;
 }
 
-.dSdmKm .nindo-input,
-.dSdmKm .nindo-textarea {
+.nindo-input,
+.nindo-textarea {
   padding: 0.75rem 1rem !important;
   height: 100% !important;
 }
@@ -1629,7 +1629,7 @@ p {
   margin-bottom: 1rem;
 }
 
-.ePhoSa .cn-form-buttons {
+.cn-form-buttons {
   margin: 0 !important;
 }
 
@@ -3233,6 +3233,7 @@ p {
 
 .cn-form {
   max-width: none !important;
+  background-color: transparent !important;
 }
 
 .cta_image-wrapper {
