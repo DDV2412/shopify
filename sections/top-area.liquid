@@ -25,19 +25,29 @@
                   {% assign location = product.metafields.custom.location %}
 
                   {% if location %}
-                    {% if products_by_location[location] == nil %}
-                      {% assign products_by_location = products_by_location | merge: { location:[] } %}
+                    {% if products_by_location contains location %}
+                      {% assign products_by_location = products_by_location | append: ',' | append: location %}
+                    {% else %}
+                      {% assign products_by_location = products_by_location | append: location %}
                     {% endif %}
-
-                    {% assign products_by_location[location] = products_by_location[location] | push: product %}
                   {% endif %}
                 {% endfor %}
-                {% assign sorted_locations = products_by_location | sort_natural: 'size' | reverse %}
+                {% assign locations = products_by_location | split: ',' %}
+                {% assign unique_locations = locations | uniq %}
 
-                {% for location in sorted_locations %}
-                  {% assign products_in_location = products_by_location[location] %}
-                  {% assign random_index = products_in_location | size | times: 1000 | divided_by: products_in_location.size | modulo: products_in_location.size %}
-                  {% assign random_product = products_in_location[random_index] %}
+                {% for location in unique_locations %}
+                  {% assign products_in_location = '' %}
+
+                  {% for product in collections[block.settings.collection_area].products %}
+                    {% if product.metafields.custom.location == location %}
+                      {% assign products_in_location = products_in_location | append: product.id | append: ',' %}
+                    {% endif %}
+                  {% endfor %}
+
+                  {% assign product_ids = products_in_location | split: ',' %}
+                  {% assign random_index = product_ids | size | modulo: product_ids.size %}
+                  {% assign random_product = collections[block.settings.collection_area].products | where: 'id', product_ids[random_index] | first %}
+
                   {% if random_product %}
                     <a
                       id="w-node-bc17c2cb-6525-3fb7-007c-e2d8a05c12f4-732b4aee"
