@@ -45,10 +45,11 @@
 
                   {% assign product_ids = products_in_location | split: ',' %}
                   {% assign random_index = product_ids | size | modulo: product_ids.size %}
-                  {% assign random_product = block.settings.collection_area.products | where: 'id', product_ids[random_index] | first %}
-                  {{ product_ids | json }}
+                  {% assign random_product_id = product_ids[random_index] | plus: 0 %}
+                  {{ random_product_id | json }}
 
-
+                  {% assign random_product = block.settings.collection_area.products | where: 'id', random_product_id | first %}
+                  {{ random_product | json }}
                   {% if random_product %}
                     <a
                       id="w-node-bc17c2cb-6525-3fb7-007c-e2d8a05c12f4-732b4aee"
