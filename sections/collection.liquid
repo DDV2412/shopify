@@ -373,7 +373,7 @@ paginate: 20 %}
                                     </g>
                                 </svg>
                             </div>
-                            <p class="title-text">{{ product.variants[0].option3 }}</p>
+                            <p class="title-text">{{ product.metafields.custom.location }}</p>
                         </div>
                         <p class="intro-text-property">
                             <a href="{{product.url}}" id="property-title">{{product.title}}</a>
@@ -410,7 +410,7 @@ paginate: 20 %}
                                             </g>
                                         </g>
                                     </svg></div>
-                                <p class="icon-text">{{product.variants[0].option1 | plus: 0}}</p>
+                                <p class="icon-text">{{ product.metafields.custom.bedroom }}</p>
                             </div>
                             <div class="vetical-line-property"></div>
                             <div class="icon-bk-bathroom">
@@ -424,7 +424,7 @@ paginate: 20 %}
                                             stroke-width="2"></path>
                                     </svg>
                                 </div>
-                                <p class="icon-text">{{ product.variants[0].option2 | plus: 0}}
+                                <p class="icon-text">{{ product.metafields.custom.bathroom }}
                                 </p>
                             </div>
                             <div class="vetical-line-property"></div>
@@ -451,7 +451,7 @@ paginate: 20 %}
                                             </g>
                                         </g>
                                     </svg></div>
-                                <p class="icon-text">Lot Area: {{product.variants[1].option3}}</p>
+                                <p class="icon-text">BUA: {{ product.metafields.custom.bua }}</p>
                             </div>
                         </div>
                     </div>
