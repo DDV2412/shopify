@@ -21,7 +21,7 @@
             {%- case block.type -%}
               {%- when "collection" -%}
                 {% assign products_by_location = '' %}
-                {% for product in collections[block.settings.collection_area].products %}
+                {% for product in block.settings.collection_area.products %}
                   {% assign location = product.metafields.custom.location %}
 
                   {% if location %}
@@ -38,7 +38,7 @@
                 {% for location in unique_locations %}
                   {% assign products_in_location = '' %}
 
-                  {% for product in collections[block.settings.collection_area].products %}
+                  {% for product in block.settings.collection_area.products %}
                     {% if product.metafields.custom.location == location %}
                       {% assign products_in_location = products_in_location | append: product.id | append: ',' %}
                     {% endif %}
@@ -46,7 +46,7 @@
 
                   {% assign product_ids = products_in_location | split: ',' %}
                   {% assign random_index = product_ids | size | modulo: product_ids.size %}
-                  {% assign random_product = collections[block.settings.collection_area].products | where: 'id', product_ids[random_index] | first %}
+                  {% assign random_product = block.settings.collection_area.products | where: 'id', product_ids[random_index] | first %}
 
                   {% if random_product %}
                     <a
@@ -114,7 +114,7 @@
         "limit": 6,
         "settings": [
           {
-            "type": "text",
+            "type": "collection",
             "id": "collection_area",
             "label": "t:sections.top-area.blocks.collection.settings.collection.label",
             "default": "t:sections.top-area.blocks.collection.settings.collection.default"
