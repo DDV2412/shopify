@@ -1,18 +1,19 @@
 /*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "collection": {
       "type": "collection",
       "disabled": true,
-      "settings": {}
+      "settings": {
+      }
     },
     "home_hero_gRncqQ": {
       "type": "home-hero",
@@ -44,7 +45,12 @@
           }
         }
       },
-      "block_order": ["select_dwAMRm", "heading_7hghhE", "text_cCzfBB", "button_PU3YiY"],
+      "block_order": [
+        "select_dwAMRm",
+        "heading_7hghhE",
+        "text_cCzfBB",
+        "button_PU3YiY"
+      ],
       "settings": {
         "add_form_search": false
       }
@@ -65,8 +71,12 @@
           }
         }
       },
-      "block_order": ["heading_cRk4Ft", "text_cNCjBH"],
-      "settings": {}
+      "block_order": [
+        "heading_cRk4Ft",
+        "text_cNCjBH"
+      ],
+      "settings": {
+      }
     },
     "card_column_right_MGam8P": {
       "type": "card-column-right",
@@ -98,7 +108,12 @@
           }
         }
       },
-      "block_order": ["image_ckDVMd", "heading_NPJrCt", "text_FTV4Y8", "button_Uypb7R"],
+      "block_order": [
+        "image_ckDVMd",
+        "heading_NPJrCt",
+        "text_FTV4Y8",
+        "button_Uypb7R"
+      ],
       "settings": {
         "add_background_grey": false,
         "button_visibility": false
@@ -122,13 +137,18 @@
         "collection_RxJzHW": {
           "type": "collection",
           "settings": {
-            "product_list": ["sobha-hartland-creek-vista-heights-t2"]
+            "collection_name": "emaar"
           }
         }
       },
-      "block_order": ["heading_naq9N4", "text_9ehzcC", "collection_RxJzHW"],
+      "block_order": [
+        "heading_naq9N4",
+        "text_9ehzcC",
+        "collection_RxJzHW"
+      ],
       "settings": {
-        "padding_bottom": false
+        "padding_bottom": false,
+        "sort_by": "manual"
       }
     },
     "card_column_left_cKir4J": {
@@ -161,7 +181,12 @@
           }
         }
       },
-      "block_order": ["image_w7LRhG", "heading_cMpbKW", "text_FpbAaN", "button_MtKH8H"],
+      "block_order": [
+        "image_w7LRhG",
+        "heading_cMpbKW",
+        "text_FpbAaN",
+        "button_MtKH8H"
+      ],
       "settings": {
         "add_background_grey": false,
         "button_visibility": false
@@ -190,7 +215,11 @@
           }
         }
       },
-      "block_order": ["heading_GeGHwM", "text_EDQeAY", "button_mWpfWW"],
+      "block_order": [
+        "heading_GeGHwM",
+        "text_EDQeAY",
+        "button_mWpfWW"
+      ],
       "settings": {
         "remove_padding_bottom": false
       }
@@ -219,8 +248,13 @@
           }
         }
       },
-      "block_order": ["heading_n3irFV", "text_zwePYA", "html_rAExP8"],
-      "settings": {}
+      "block_order": [
+        "heading_n3irFV",
+        "text_zwePYA",
+        "html_rAExP8"
+      ],
+      "settings": {
+      }
     },
     "faq_QxKJMD": {
       "type": "faq",
@@ -291,7 +325,8 @@
         "text_XPeTcK",
         "text_gE9eCA"
       ],
-      "settings": {}
+      "settings": {
+      }
     }
   },
   "order": [
