@@ -145,7 +145,7 @@
         "collection": {
           "type": "collection",
           "settings": {
-            "collection_area": "properties-for-sale"
+            "collection_area": "off-plan-properties"
           }
         }
       },
@@ -175,7 +175,7 @@
         "collection_Mw4jYy": {
           "type": "collection",
           "settings": {
-            "collection_name": ""
+            "collection_name": "off-plan-properties"
           }
         }
       },
@@ -186,7 +186,7 @@
       ],
       "settings": {
         "padding_bottom": true,
-        "sort_by": "manual"
+        "sort_by": "best-selling"
       }
     }
   },
