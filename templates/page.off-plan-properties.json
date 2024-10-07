@@ -62,7 +62,7 @@
       ],
       "settings": {
         "padding_bottom": false,
-        "sort_by": "manual"
+        "sort_by": "created-descending"
       }
     },
     "off-plan-slider": {
