@@ -7,6 +7,7 @@ paginate: 20 %}
     <div class="container">
         <div class="property-card-wrapper-main">
             {% for product in products %}
+                
             <div data-w-id="e2af74cb-a8cf-fb62-51e6-6b6486e09526"
                 style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
                 class="property-card-wrapper">
@@ -95,7 +96,7 @@ paginate: 20 %}
                         <p class="price">AED 3,250,000</p>
                         <div class="title">
                             <div class="icon_tiny w-embed">
-                                <svg width="800px" height="800px" viewBox="-4 0 32 32" version="1.1"
+                                <svg width="32px" height="32px" viewBox="-4 0 32 32" version="1.1"
                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                     xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
 
@@ -117,7 +118,7 @@ paginate: 20 %}
                                     </g>
                                 </svg>
                             </div>
-                            <p class="title-text">{{ product.variants[0].option3 }}</p>
+                            <p class="title-text">{{ product.metafields.custom.address }}</p>
                         </div>
                         <p class="intro-text-property">
                             <a href="{{product.url}}" id="property-title">{{product.title}}</a>
@@ -126,7 +127,7 @@ paginate: 20 %}
                             <p class="bulding_type-prop">{{ product.type }}</p>
                             <div class="vetical-line-property"></div>
                             <div class="icon-bk-bedroom">
-                                <div class="icon_tiny w-embed"><svg fill="#000000" height="800px" width="800px"
+                                <div class="icon_tiny w-embed"><svg fill="#000000" height="32px" width="32px"
                                         version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                                         xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512"
                                         xml:space="preserve">
@@ -154,13 +155,13 @@ paginate: 20 %}
                                             </g>
                                         </g>
                                     </svg></div>
-                                <p class="icon-text">{{product.variants[0].option1 | plus: 0}}</p>
+                                <p class="icon-text">{{ product.metafields.custom.bedroom }}</p>
                             </div>
                             <div class="vetical-line-property"></div>
                             <div class="icon-bk-bathroom">
                                 <div class="icon_tiny w-embed">
                                     <!--?xml version="1.0" ?--><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-                                    <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none"
+                                    <svg width="32px" height="32px" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M3 12H4M20 12V12C20.5523 12 21 11.5523 21 11V7C21 6 20.4 4 18 4C15.6 4 15 6 15 7M20 12V14C20 15.1383 19.4169 17.2484 17.2551 17.8414M20 12H4M4 12V14C4 15.1383 4.58309 17.2484 6.74487 17.8414M6 20L6.74487 17.8414M6.74487 17.8414C7.11524 17.943 7.53195 18 8 18C11.2 18 14.6667 18 16 18C16.4681 18 16.8848 17.9429 17.2551 17.8414M18 20L17.2551 17.8414M15 7H13M15 7H17"
@@ -168,12 +169,12 @@ paginate: 20 %}
                                             stroke-width="2"></path>
                                     </svg>
                                 </div>
-                                <p class="icon-text">{{ product.variants[0].option2 | plus: 0}}
+                                <p class="icon-text">{{ product.metafields.custom.bathroom }}
                                 </p>
                             </div>
                             <div class="vetical-line-property"></div>
                             <div class="icon-bk-bathroom">
-                                <div class="icon_tiny w-embed"><svg width="800px" height="800px" viewBox="0 0 32 32"
+                                <div class="icon_tiny w-embed"><svg width="32px" height="32px" viewBox="0 0 32 32"
                                         version="1.1" xmlns="http://www.w3.org/2000/svg"
                                         xmlns:xlink="http://www.w3.org/1999/xlink"
                                         xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
@@ -195,7 +196,7 @@ paginate: 20 %}
                                             </g>
                                         </g>
                                     </svg></div>
-                                <p class="icon-text">Lot Area: {{product.variants[1].option3}}</p>
+                                <p class="icon-text">BUA: {{ product.metafields.custom.bua }}</p>
                             </div>
                         </div>
                     </div>
@@ -212,7 +213,7 @@ paginate: 20 %}
                         </div>
                         <div class="person-contact"><a href="tel:{{ settings.phone_number }}"
                                 class="button is-contact w-inline-block">
-                                <div class="icon_small w-embed"><svg fill="currentColor" width="800px" height="800px"
+                                <div class="icon_small w-embed"><svg fill="currentColor" width="32px" height="32px"
                                         viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M11.748 5.773S11.418 5 10.914 5c-.496 0-.754.229-.926.387S6.938 7.91 6.938 7.91s-.837.731-.773 2.106c.054 1.375.323 3.332 1.719 6.058 1.386 2.72 4.855 6.876 7.047 8.337 0 0 2.031 1.558 3.921 2.191.549.173 1.647.398 1.903.398.26 0 .719 0 1.246-.385.536-.389 3.543-2.807 3.543-2.807s.736-.665-.119-1.438c-.859-.773-3.467-2.492-4.025-2.944-.559-.459-1.355-.257-1.699.054-.343.313-.956.828-1.031.893-.112.086-.419.365-.763.226-.438-.173-2.234-1.148-3.899-3.426-1.655-2.276-1.837-3.02-2.084-3.824a.56.56 0 0 1 .225-.657c.248-.172 1.161-.933 1.161-.933s.591-.583.344-1.27-1.906-4.716-1.906-4.716z">
@@ -220,7 +221,7 @@ paginate: 20 %}
                                     </svg></div>
                                 <div>Call</div>
                             </a><a href="{{ settings.whatsapp_link }}" class="button is-contact w-inline-block">
-                                <div class="icon_small w-embed"><svg width="800px" height="800px" viewBox="0 0 20 20"
+                                <div class="icon_small w-embed"><svg width="32px" height="32px" viewBox="0 0 20 20"
                                         version="1.1" xmlns="http://www.w3.org/2000/svg"
                                         xmlns:xlink="http://www.w3.org/1999/xlink">
 
@@ -350,7 +351,7 @@ paginate: 20 %}
                         <p class="price">AED 3,250,000</p>
                         <div class="title">
                             <div class="icon_tiny w-embed">
-                                <svg width="800px" height="800px" viewBox="-4 0 32 32" version="1.1"
+                                <svg width="32px" height="32px" viewBox="-4 0 32 32" version="1.1"
                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                     xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
 
@@ -381,7 +382,7 @@ paginate: 20 %}
                             <p class="bulding_type-prop">{{ product.type }}</p>
                             <div class="vetical-line-property"></div>
                             <div class="icon-bk-bedroom">
-                                <div class="icon_tiny w-embed"><svg fill="#000000" height="800px" width="800px"
+                                <div class="icon_tiny w-embed"><svg fill="#000000" height="32px" width="32px"
                                         version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                                         xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512"
                                         xml:space="preserve">
@@ -415,7 +416,7 @@ paginate: 20 %}
                             <div class="icon-bk-bathroom">
                                 <div class="icon_tiny w-embed">
                                     <!--?xml version="1.0" ?--><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-                                    <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none"
+                                    <svg width="32px" height="32px" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M3 12H4M20 12V12C20.5523 12 21 11.5523 21 11V7C21 6 20.4 4 18 4C15.6 4 15 6 15 7M20 12V14C20 15.1383 19.4169 17.2484 17.2551 17.8414M20 12H4M4 12V14C4 15.1383 4.58309 17.2484 6.74487 17.8414M6 20L6.74487 17.8414M6.74487 17.8414C7.11524 17.943 7.53195 18 8 18C11.2 18 14.6667 18 16 18C16.4681 18 16.8848 17.9429 17.2551 17.8414M18 20L17.2551 17.8414M15 7H13M15 7H17"
@@ -428,7 +429,7 @@ paginate: 20 %}
                             </div>
                             <div class="vetical-line-property"></div>
                             <div class="icon-bk-bathroom">
-                                <div class="icon_tiny w-embed"><svg width="800px" height="800px" viewBox="0 0 32 32"
+                                <div class="icon_tiny w-embed"><svg width="32px" height="32px" viewBox="0 0 32 32"
                                         version="1.1" xmlns="http://www.w3.org/2000/svg"
                                         xmlns:xlink="http://www.w3.org/1999/xlink"
                                         xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
@@ -467,7 +468,7 @@ paginate: 20 %}
                         </div>
                         <div class="person-contact"><a href="tel:{{ settings.phone_number }}"
                                 class="button is-contact w-inline-block">
-                                <div class="icon_small w-embed"><svg fill="currentColor" width="800px" height="800px"
+                                <div class="icon_small w-embed"><svg fill="currentColor" width="32px" height="32px"
                                         viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M11.748 5.773S11.418 5 10.914 5c-.496 0-.754.229-.926.387S6.938 7.91 6.938 7.91s-.837.731-.773 2.106c.054 1.375.323 3.332 1.719 6.058 1.386 2.72 4.855 6.876 7.047 8.337 0 0 2.031 1.558 3.921 2.191.549.173 1.647.398 1.903.398.26 0 .719 0 1.246-.385.536-.389 3.543-2.807 3.543-2.807s.736-.665-.119-1.438c-.859-.773-3.467-2.492-4.025-2.944-.559-.459-1.355-.257-1.699.054-.343.313-.956.828-1.031.893-.112.086-.419.365-.763.226-.438-.173-2.234-1.148-3.899-3.426-1.655-2.276-1.837-3.02-2.084-3.824a.56.56 0 0 1 .225-.657c.248-.172 1.161-.933 1.161-.933s.591-.583.344-1.27-1.906-4.716-1.906-4.716z">
@@ -475,7 +476,7 @@ paginate: 20 %}
                                     </svg></div>
                                 <div>Call</div>
                             </a><a href="{{ settings.whatsapp_link }}" class="button is-contact w-inline-block">
-                                <div class="icon_small w-embed"><svg width="800px" height="800px" viewBox="0 0 20 20"
+                                <div class="icon_small w-embed"><svg width="32px" height="32px" viewBox="0 0 20 20"
                                         version="1.1" xmlns="http://www.w3.org/2000/svg"
                                         xmlns:xlink="http://www.w3.org/1999/xlink">
 

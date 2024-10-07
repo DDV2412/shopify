@@ -83,7 +83,7 @@
                         </p>
                         <div class="title">
                             <div class="icon_tiny w-embed">
-                                <svg width="800px" height="800px" viewbox="-4 0 32 32" version="1.1"
+                                <svg width="32px" height="32px" viewbox="-4 0 32 32" version="1.1"
                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                     xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
                                     <title>location</title>
@@ -101,7 +101,7 @@
                                     </g>
                                 </svg>
                             </div>
-                            <p class="title-text">{{product.variants[2].option2}}</p>
+                            <p class="title-text"> {{ product.metafields.custom.address }} </p>
                         </div>
                         <p class="intro-text-property">{{product.title}}</p>
                         <div class="icon-items">
@@ -140,7 +140,7 @@
                                             </g>
                                         </g>
                                     </svg></div>
-                                <p class="icon-text">{{product.variants[0].option1 | plus: 0}}</p>
+                                <p class="icon-text">{{ product.metafields.custom.bedroom }}</p>
                             </div>
                             <div class="vetical-line-property"></div>
                             <div class="icon-bk-bathroom">
@@ -154,7 +154,7 @@
                                     </svg>
                                 </div>
 
-                                <p class="icon-text">{{ product.variants[0].option2 | plus: 0}}
+                                <p class="icon-text">{{ product.metafields.custom.bathroom }}
                                 </p>
                             </div>
                             <div class="vetical-line-property"></div>
@@ -177,7 +177,7 @@
                                             </g>
                                         </g>
                                     </svg></div>
-                                <p class="icon-text">Lot Area: {{product.variants[1].option3}}</p>
+                                <p class="icon-text">BUA: {{ product.metafields.custom.bua }}</p>
                             </div>
                         </div>
                     </div>
