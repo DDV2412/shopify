@@ -958,6 +958,26 @@
       "settings": {
         "class": {
           "label": "Add Padding Bottom"
+        },
+        "sort_by": {
+          "label": "Sort By",
+          "options": {
+            "featured": {
+              "label": "Featured"
+            },
+            "low_to_high": {
+              "label": "Price: Low to High"
+            },
+            "high_to_low": {
+              "label": "Price: High to Low"
+            },
+            "best_selling": {
+              "label": "Best Selling"
+            },
+            "newest": {
+              "label": "Most Recent"
+            }
+          }
         }
       },
       "blocks": {
@@ -980,10 +1000,10 @@
           }
         },
         "collection": {
-          "type": "product_list",
+          "type": "collection",
           "settings": {
             "collection": {
-              "label": "Product List"
+              "label": "Collection"
             }
           }
         }
@@ -997,6 +1017,26 @@
       "settings": {
         "class": {
           "label": "Add Padding Bottom"
+        },
+        "sort_by": {
+          "label": "Sort By",
+          "options": {
+            "featured": {
+              "label": "Featured"
+            },
+            "low_to_high": {
+              "label": "Price: Low to High"
+            },
+            "high_to_low": {
+              "label": "Price: High to Low"
+            },
+            "best_selling": {
+              "label": "Best Selling"
+            },
+            "newest": {
+              "label": "Most Recent"
+            }
+          }
         }
       },
       "blocks": {
@@ -1018,10 +1058,10 @@
           }
         },
         "collection": {
-          "type": "product_list",
+          "type": "collection",
           "settings": {
             "collection": {
-              "label": "Product List"
+              "label": "Collection"
             }
           }
         }

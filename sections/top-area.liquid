@@ -20,25 +20,48 @@
           {%- for block in section.blocks -%}
             {%- case block.type -%}
               {%- when "collection" -%}
-                <a
-                  id="w-node-bc17c2cb-6525-3fb7-007c-e2d8a05c12f4-732b4aee"
-                  href="{{collections[block.settings.collection_area].url}}"
-                  class="article-card w-inline-block">
-                  <div data-w-id="a07ff5be-ff10-9d67-7e0b-0ab3038fffa5" class="featured_image-wrapper"><img
-                      src="{{ collections[block.settings.collection_area].featured_image | img_url : 'original' }}"
-                      loading="lazy"
-                      width="318"
-                      height="160"
-                      alt="{{ collections[block.settings.collection_area].title }}"
-                      style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                      class="featured_image">
-                  </div>
-                  <div class="article_detail">
-                    <div>{{ collections[block.settings.collection_area].title }}</div>
-                  </div>
+                {% assign products_by_location = {} %}
+                {% for product in collections[block.settings.collection_area].products %}
+                  {% assign location = product.metafields.custom.location %}
 
-                  <div class="article-date">{{ collections[block.settings.collection_area].all_products_count }} Properties</div>
-                </a>
+                  {% if location %}
+                    {% if products_by_location[location] == nil %}
+                      {% assign products_by_location = products_by_location | merge: { location: [] } %}
+                    {% endif %}
+
+                    {% assign products_by_location[location] = products_by_location[location] | push: product %}
+                  {% endif %}
+                {% endfor %}
+                {% assign sorted_locations = products_by_location | sort_natural: 'size' | reverse %}
+
+                {% for location in sorted_locations %}
+                  {% assign products_in_location = products_by_location[location] %}
+                  {% assign random_index = products_in_location | size | times: 1000 | divided_by: products_in_location.size | modulo: products_in_location.size %}
+                  {% assign random_product = products_in_location[random_index] %}
+                  {% if random_product %}
+                    <a
+                      id="w-node-bc17c2cb-6525-3fb7-007c-e2d8a05c12f4-732b4aee"
+                      href="{{ random_product.url }}"
+                      class="article-card w-inline-block">
+                      <div data-w-id="a07ff5be-ff10-9d67-7e0b-0ab3038fffa5" class="featured_image-wrapper"><img
+                          src="{{ random_product.featured_image | img_url : 'original' }}"
+                          loading="lazy"
+                          width="318"
+                          height="160"
+                          alt="{{ random_product.title }}"
+                          style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+                          class="featured_image">
+                      </div>
+                      <div class="article_detail">
+                        <div>{{ random_product.title }}</div>
+                      </div>
+
+                      <div class="article-date">{{ products_in_location.size }} Properties</div>
+                    </a>
+
+                  {% endif %}
+                {% endfor %}
+
             {%- endcase -%}
           {%- endfor -%}
         </div>
