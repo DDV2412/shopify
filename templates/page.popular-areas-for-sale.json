@@ -1,17 +1,18 @@
 /*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "breadcrumb": {
       "type": "breadcrumb",
-      "settings": {}
+      "settings": {
+      }
     },
     "top_area_HYHDc9": {
       "type": "top-area",
@@ -31,12 +32,17 @@
         "collection_AtVPMH": {
           "type": "collection",
           "settings": {
-            "collection_area": "dubai-creek-harbour"
+            "collection_area": "properties-for-sale"
           }
         }
       },
-      "block_order": ["heading_MxFVFK", "text_Qtx7fP", "collection_AtVPMH"],
-      "settings": {}
+      "block_order": [
+        "heading_MxFVFK",
+        "text_Qtx7fP",
+        "collection_AtVPMH"
+      ],
+      "settings": {
+      }
     },
     "cta_afVGhj": {
       "type": "cta",
@@ -61,7 +67,11 @@
           }
         }
       },
-      "block_order": ["heading_i4wii3", "text_XHyDF9", "button_EP6PGC"],
+      "block_order": [
+        "heading_i4wii3",
+        "text_XHyDF9",
+        "button_EP6PGC"
+      ],
       "settings": {
         "remove_padding_bottom": false
       }
@@ -90,8 +100,13 @@
           }
         }
       },
-      "block_order": ["heading_YtGL6Q", "text_bt7GNC", "html_bAUkQt"],
-      "settings": {}
+      "block_order": [
+        "heading_YtGL6Q",
+        "text_bt7GNC",
+        "html_bAUkQt"
+      ],
+      "settings": {
+      }
     },
     "faq_QxKJMD": {
       "type": "faq",
@@ -162,8 +177,15 @@
         "text_XPeTcK",
         "text_gE9eCA"
       ],
-      "settings": {}
+      "settings": {
+      }
     }
   },
-  "order": ["breadcrumb", "top_area_HYHDc9", "cta_afVGhj", "join_form_Gq6wAW", "faq_QxKJMD"]
+  "order": [
+    "breadcrumb",
+    "top_area_HYHDc9",
+    "cta_afVGhj",
+    "join_form_Gq6wAW",
+    "faq_QxKJMD"
+  ]
 }
