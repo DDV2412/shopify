@@ -23,8 +23,6 @@
                 {% assign products_by_location = '' %}
                 {% for product in block.settings.collection_area.products %}
                   {% assign location = product.metafields.custom.location %}
-                  {{ location | json }}
-
                   {% if location %}
                     {% if products_by_location contains location %}
                       {% assign products_by_location = products_by_location | append: ',' | append: location %}
@@ -48,6 +46,8 @@
                   {% assign product_ids = products_in_location | split: ',' %}
                   {% assign random_index = product_ids | size | modulo: product_ids.size %}
                   {% assign random_product = block.settings.collection_area.products | where: 'id', product_ids[random_index] | first %}
+                  {{ random_product | json }}
+
 
                   {% if random_product %}
                     <a
