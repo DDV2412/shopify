@@ -23,6 +23,7 @@
                 {% assign products_by_location = '' %}
                 {% for product in block.settings.collection_area.products %}
                   {% assign location = product.metafields.custom.location %}
+                  {{ location | json }}
 
                   {% if location %}
                     {% if products_by_location contains location %}
