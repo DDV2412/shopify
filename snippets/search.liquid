@@ -43,7 +43,8 @@ endif
                                                 assign sorted_values = active_filter_values | concat: inactive_filter_values
                                             endif
                                         -%}
-                                        <div data-hover="true" data-delay="0" id="property-dropdown-content" class="property_select-wrapper is-filter w-dropdown" style="">
+                                        {% if filter.label != "Location" %}
+                                            <div data-hover="true" data-delay="0" id="property-dropdown-content" class="property_select-wrapper is-filter w-dropdown" style="">
                                             <div id="property-dropdown-select" class="property-select is-select w-dropdown-toggle" aria-controls="property-dropdown-nav" aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0">
                                                 <div id="{{ filter.param_name }}">
                                                     {{ filter.label | escape }}
@@ -69,6 +70,8 @@ endif
                                                     
                                             </nav>
                                         </div>
+                                        {%endif%}
+                                        
                                     </div>
                                 {%  when  'price_range' %}
                                     <div class="select-wrapper no-border hide-tablet">
@@ -343,7 +346,7 @@ endif
         const radioButtons = document.querySelectorAll('.property-wrapper input[type="radio"]');
 
         radioButtons.forEach(radio => {
-            radio.addEventListener('change', function() {
+            radio.addEventListener('click', function() {
             if (this.checked) {
                 const queryParam = this.name;  
                 const queryValue = this.value; 

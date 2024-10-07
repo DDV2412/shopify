@@ -333,7 +333,7 @@ assign search_url = '?q=' | append: terms | append: '&options%5Bprefix%5D=last&s
         const radioButtons = document.querySelectorAll('.property-wrapper input[type="radio"]');
 
         radioButtons.forEach(radio => {
-            radio.addEventListener('change', function() {
+            radio.addEventListener('click', function() {
             if (this.checked) {
                 const queryParam = this.name;  
                 const queryValue = this.value; 
