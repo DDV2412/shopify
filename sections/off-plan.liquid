@@ -73,13 +73,18 @@
                         </g>
                       </svg>
                     </div>
-                    <p class="location-name">{{ product.variants[0].option3 }}</p>
+                    <p class="location-name">{{ product.metafields.custom.location }}</p>
                   </div>
                   <div class="infos-sec">
-                    <p class="paragraph">Delivery Date: <span class="text-span">{{ product.variants[3].option3 }}</span></p>
+                    {% if  product.metafields.custom.delivery_date %} 
+                       <p class="paragraph">Delivery Date: <span class="text-span">{{ product.metafields.custom.delivery_date }}</span></p>
+                    {% endif %}
                     <p class="paragraph">Price from: <span class="text-span">{{ shop.currency }} {{ product.price |
                                     money_without_currency }}</span></p>
-                    <p class="paragraph">Developer: <span class="text-span">{{ product.variants[2].option3 }}</span></p>
+                    {% if  product.metafields.custom.developer %} 
+                      <p class="paragraph">Developer: <span class="text-span">{{ product.metafields.custom.developer }}</span></p>
+                    {% endif %}
+                   
                   </div>
                 </div>
                 <div class="offplan_ctas">
