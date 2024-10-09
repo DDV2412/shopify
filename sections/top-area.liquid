@@ -36,10 +36,11 @@
 
                 {% for location in unique_locations %}
                   {% assign products_in_location = '' %}
-
+                  {% assign product_count = 0 %}
                   {% for product in block.settings.collection_area.products %}
                     {% if product.metafields.custom.location == location %}
                       {% assign products_in_location = products_in_location | append: product.id | append: ',' %}
+                      {% assign product_count = product_count | plus: 1 %}
                     {% endif %}
                   {% endfor %}
 
@@ -66,7 +67,7 @@
                         <div>{{ random_product.metafields.custom.location }}</div>
                       </div>
 
-                      <div class="article-date">{{ products_in_location.size }} Properties</div>
+                      <div class="article-date">{{ product_count }} Properties</div>
                     </a>
 
                   {% endif %}
